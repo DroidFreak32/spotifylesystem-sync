@@ -1,0 +1,5 @@
+tinytag~=1.7.0
+mutagen~=1.45.1
+pathos~=0.2.8
+peewee~=3.14.8
+tqdm~=4.62.3
