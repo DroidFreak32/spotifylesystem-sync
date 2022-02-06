@@ -6,7 +6,7 @@ import zlib
 from glob import glob
 from itertools import repeat
 import _05_spotify_fetch as spotify_fetch
-
+import ast
 import pathos.multiprocessing as multiprocessing
 import taglib
 import tqdm
@@ -57,6 +57,16 @@ class Music(BaseModel):
     LYRICS = BlobField(unindexed=True)
     STREAMHASH = CharField(max_length=32, unique=True)
     PATH = TextField(unindexed=True)
+
+
+def str_to_list(unsurestr=None):
+    if isinstance(unsurestr, list):
+        return unsurestr
+    try:
+        str2list = ast.literal_eval(unsurestr)
+        return str2list
+    except:
+        return unsurestr
 
 
 def find_flacs(music_dir):
@@ -152,12 +162,12 @@ def generate_metadata(music_dir, flac_files):
             metadata_result[album_artist] = []
 
         metadata_result[album_artist].append({
-            'ALBUM': item['ALBUM'],
-            'ARTIST': item['ARTIST'],
+            'ALBUM': str_to_list(item['ALBUM']),
+            'ARTIST': str_to_list(item['ARTIST']),
             'TITLE': item['TITLE'],
             'LYRICS': item['LYRICS'],
             'STREAMHASH': item['STREAMHASH'],
-            'PATH': item['PATH']
+            'PATH': str_to_list(item['PATH'])
         })
     return metadata_result
 
@@ -179,11 +189,11 @@ def generate_metadata_single_thread(music_dir, flac_files):
 
         metadata_result[album_artist].append({
             'ALBUM': item['ALBUM'],
-            'ARTIST': item['ARTIST'],
+            'ARTIST': str_to_list(item['ARTIST']),
             'TITLE': item['TITLE'],
             'LYRICS': item['LYRICS'],
             'STREAMHASH': item['STREAMHASH'],
-            'PATH': item['PATH']
+            'PATH': str_to_list(item['PATH'])
         })
     return metadata_result
 
@@ -222,19 +232,22 @@ def main():
                 multi_album = []
                 for row in query:
                     """
-                    Either append to existing Albums & Paths
-                    or convert to a list of Albums and Paths
+                    Either append to existing Albums & Paths or convert to a list of Albums and Paths.
+                    Also handle *-copy.flac files which ONLY have a different PATH
                     """
 
-                    if isinstance(row['PATH'], list):
-                        multi_path = row['PATH']
+                    if isinstance(str_to_list(row['PATH']), list):
+                        multi_path = str_to_list(row['PATH'])
                         multi_path.append(track['PATH'])
                     else:
                         multi_path.append(row['PATH'])
                         multi_path.append(track['PATH'])
-                    if isinstance(row['ALBUM'], list):
-                        multi_album = row['ALBUM']
+                    if isinstance(str_to_list(row['ALBUM']), list):
+                        multi_album = str_to_list(row['ALBUM'])
                         multi_album.append(track['ALBUM'])
+                    elif track['ALBUM'] == row['ALBUM']:
+                        print(f"{bcolors.WARNING}Is this file a duplicate copy?{bcolors.ENDC}")
+                        multi_album = track['ALBUM']
                     else:
                         multi_album.append(row['ALBUM'])
                         multi_album.append(track['ALBUM'])
@@ -257,40 +270,51 @@ def main():
     db.backup(master)
     master.execute_sql('VACUUM;')
 
+    # =============== TODO: SEPARATE SPOTIFY INTEGRATION FILE NEEDED ===============
+    # =============== TODO: For each unmatched result check for a whitelist file to resolve known false-negatives
+
     spot_playlist_tracks = spotify_fetch.main()
 
-    tmp=0
+    tmp = 0
 
     def search_track_in_db(track_metadata=None):
-        result = []
+        """
+        Scans the DB for a given spotify track and returns a match or an empty list.
+        :param track_metadata:
+        :return:
+        """
+        result = dict()
+        spotify_album_artist = track_metadata['ALBUMARTIST']
         try:
-            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST == track_metadata['ALBUMARTIST'])
+            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST == spotify_album_artist)
         except DoesNotExist:
             return result
 
         for row in album_artist.tracks:
             if row.TITLE == track_metadata['TITLE']:
-                result.append({
-                    'PATH': row.PATH,
-                    'STREAMHASH': row.STREAMHASH
-                })
+                if spotify_album_artist not in result.keys():
+                    result[spotify_album_artist] = []
+                    result[spotify_album_artist].append({
+                        'PATH': str_to_list(row.PATH),
+                        'STREAMHASH': row.STREAMHASH
+                    })
         return result
 
     matched_list = []
+    unmatched_list = []
     for playlist_track in spot_playlist_tracks:
         result = search_track_in_db(track_metadata=playlist_track)
         if len(result) > 1:
-            print(f"Multuple Matches found: {result}")
+            print(f"Multiple Matches found: {result}")
         elif len(result) == 0:
+            unmatched_list.append(playlist_track)
             print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
             continue
         else:
             matched_list.append(result)
     print(matched_list)
 
-    tmp=0
-
-
+    tmp = 0
 
     db.close()
     master.close()
