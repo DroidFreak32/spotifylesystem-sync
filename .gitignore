@@ -1,3 +1,4 @@
 /.cache
 /test.db
 __pycache__/
+venv/
