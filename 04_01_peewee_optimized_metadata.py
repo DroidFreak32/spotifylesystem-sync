@@ -91,7 +91,7 @@ def asyncmetadata(music_dir, flac_file):
 
 def generate_metadata(music_dir, flac_files):
     a_pool = multiprocessing.Pool(16)
-    # result = a_pool.starmap(asyncmetadata, zip(repeat(music_dir), flac_files))
+    # result = a_pool.starmap(fetch_metadata_in_background, zip(repeat(music_dir), flac_files))
     inputs = zip(repeat(music_dir), flac_files)
     # fancy progress bar
     result = a_pool.starmap(asyncmetadata, tqdm.tqdm(inputs, total=len(flac_files)), chunksize=1)

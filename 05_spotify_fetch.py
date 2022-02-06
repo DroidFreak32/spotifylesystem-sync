@@ -99,7 +99,6 @@ def main():
     selected_playlist_tracktotal = playlist_ids[selected_playlist_id][1]
     selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
 
-
     pprint(selected_playlist_tracks)
 
 
