@@ -17,6 +17,34 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
+def get_proper_albumartist(artist_list=None):
+    """
+    Multiple Album artists should not exist. Artist tag should be used for featured artists.
+    :param artist_list:
+    :return: 1st name in AlbumArtists
+    """
+    if len(artist_list) > 1:
+        print(f"\n{bcolors.FAIL}Multiple Album Artists in track.\n"
+              f"Only storing the first one: {artist_list[0]['name']}{bcolors.ENDC}")
+
+    return artist_list[0]['name']
+
+
+def get_proper_artist(artist_list=None):
+    """
+    Helper to lookup all available artists
+    :param artist_list:
+    :return: Either a string or a list of artists
+    """
+    if len(artist_list) == 1:
+        alist = artist_list[0]['name']
+    else:
+        alist = []
+        for artist in artist_list:
+            alist.append(artist['name'])
+    return alist
+
+
 def cleanup_playlist(playlist_raw=None):
     """
     Cleans up unnecessary cruft from spotify playlist objects like urls, thumbnails, added_at etc
@@ -24,33 +52,6 @@ def cleanup_playlist(playlist_raw=None):
     :return: Cleaned up list of tracks in provided playlist.
     Each item contains the track's TITLE, ALBUM, ALBUMARTIST, ARTIST & SPOTIFY URI
     """
-    print("Received ", type(playlist_raw))
-
-    def get_proper_albumartist(artist_list=None):
-        """
-        Multiple Album artists should not exist. Artist tag should be used for featured artists.
-        :param artist_list:
-        :return: 1st name in AlbumArtists
-        """
-        if len(artist_list) > 1:
-            print(f"\n{bcolors.FAIL}Multiple Album Artists: {artist_list} in track.\n"
-                  f"Only storing the first one: {artist_list[0]['name']}{bcolors.ENDC}")
-
-        return artist_list[0]['name']
-
-    def get_proper_artist(artist_list=None):
-        """
-        Helper to lookup all available artists
-        :param artist_list:
-        :return: Either a string or a list of artists
-        """
-        if len(artist_list) == 1:
-            alist = artist_list[0]['name']
-        else:
-            alist = []
-            for artist in artist_list:
-                alist.append(artist['name'])
-        return alist
 
     cleaned_playlist = []
     for item in playlist_raw:
@@ -67,14 +68,14 @@ def cleanup_playlist(playlist_raw=None):
 def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal):
     offset = 0
     playlist_raw = sp.playlist_items(playlist_id=selected_playlist_id, offset=offset,
-                                     fields='items.track.album.artists,items.track.album.name,items.track.artists,'
+                                     fields='items.track.album.artists.name,items.track.album.name,items.track.artists,'
                                             'items.track.name,items.track.external_urls.spotify',
                                      additional_types=['track'])
     full_playlist_raw = playlist_raw
     offset = offset + len(playlist_raw['items'])
     while True:
         playlist_raw = sp.playlist_items(playlist_id=selected_playlist_id, offset=offset,
-                                         fields='items.track.album.artists,items.track.album.name,items.track.artists,'
+                                         fields='items.track.album.artists.name,items.track.album.name,items.track.artists,'
                                                 'items.track.name,items.track.external_urls.spotify',
                                          additional_types=['track'])
 
@@ -82,7 +83,7 @@ def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal):
             break
 
         full_playlist_raw['items'].extend(playlist_raw['items'])
-        print(f"Fetched {offset} / {selected_playlist_tracktotal} tracks")
+        print(f"Fetched {offset} / {selected_playlist_tracktotal} tracks", end='\r')
         offset = offset + len(playlist_raw['items'])
 
     return cleanup_playlist(full_playlist_raw['items'])
@@ -111,7 +112,6 @@ def main():
     selected_playlist_tracktotal = playlist_ids[selected_playlist_id][1]
     selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
 
-    pprint(selected_playlist_tracks)
     return selected_playlist_tracks
 
 

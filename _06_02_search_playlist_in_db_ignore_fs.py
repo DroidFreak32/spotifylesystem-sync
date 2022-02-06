@@ -1,4 +1,5 @@
 import ast
+import json
 import os
 import subprocess
 import zlib
@@ -13,7 +14,6 @@ from peewee import BlobField
 from peewee import CharField
 from peewee import DoesNotExist
 from peewee import ForeignKeyField
-from peewee import IntegrityError
 from peewee import Model
 from peewee import TextField
 from playhouse.sqlite_ext import CSqliteExtDatabase
@@ -219,74 +219,6 @@ def generate_metadata_single_thread(music_dir, flac_files):
 def main():
     music_root_dir = "/home/horcrux/Music/Muzik"
 
-    flac_files = find_flacs(music_root_dir)
-    metadata = generate_metadata(music_root_dir, flac_files)
-
-    db.drop_tables([AlbumArtist, Music])
-    db.create_tables([AlbumArtist, Music])
-    music_db_orm = None
-
-    for album_artists, track_list in metadata.items():
-        AlbumArtist.create(ALBUMARTIST=album_artists)
-        for track in track_list:
-            """
-            Get an AlbumArtist object, maybe for backref?? Blind copy pasta
-            """
-            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST == album_artists)
-            try:
-                music_db_orm = Music.create(ALBUMARTIST=album_artist, ALBUM=track['ALBUM'],
-                                            TITLE=track['TITLE'], ARTIST=track['ARTIST'], LYRICS=track['LYRICS'],
-                                            STREAMHASH=track['STREAMHASH'],
-                                            PATH=track['PATH'])
-            except IntegrityError as IE:
-                """
-                Some music files may belong to multiple albums, for ex. "Self titled" and "Greatest hits"
-                So we can just query the existing file and convert the relevant columns to a list of values 
-                """
-                music_db_orm.save()
-                print(f"{bcolors.WARNING}Identical Track found!")
-                query = Music.select().where(Music.STREAMHASH == track["STREAMHASH"]).dicts()
-                multi_path = []
-                multi_album = []
-                for row in query:
-                    """
-                    Either append to existing Albums & Paths or convert to a list of Albums and Paths.
-                    Also handle *-copy.flac files which ONLY have a different PATH
-                    """
-
-                    if isinstance(str_to_list(row['PATH']), list):
-                        multi_path = str_to_list(row['PATH'])
-                        multi_path.append(track['PATH'])
-                    else:
-                        multi_path.append(row['PATH'])
-                        multi_path.append(track['PATH'])
-                    if isinstance(str_to_list(row['ALBUM']), list):
-                        multi_album = str_to_list(row['ALBUM'])
-                        multi_album.append(track['ALBUM'])
-                    elif track['ALBUM'] == row['ALBUM']:
-                        print(f"{bcolors.WARNING}Is this file a duplicate copy?{bcolors.ENDC}")
-                        multi_album = track['ALBUM']
-                    else:
-                        multi_album.append(row['ALBUM'])
-                        multi_album.append(track['ALBUM'])
-                    # print(multi_path)
-                    query = Music.update(ALBUM=multi_album, PATH=multi_path).where(
-                        Music.STREAMHASH == track["STREAMHASH"])
-                    query.execute()
-                print(f"Previous file: {multi_path[0]}\nCurrent file: {multi_path[1]}{bcolors.ENDC}")
-
-    """
-    Now we can query tracks from individual artists:
-    
-    artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST == "Linkin Park")
-    for row in artist.tracks:
-        if row.TITLE == playlist_track['TITLE']:
-        print(row.PATH)
-        
-    """
-    music_db_orm.save()
-    db.backup(master)
-    master.execute_sql('VACUUM;')
 
     # =============== TODO: SEPARATE SPOTIFY INTEGRATION FILE NEEDED ===============
     # =============== TODO: For each unmatched result check for a whitelist file to resolve known false-negatives
@@ -338,8 +270,12 @@ def main():
         matched_list += result
 
     unmatched_dict = list2dictmerge(unmatched_list)
+    matched_dict = list2dictmerge(matched_list)
 
-    tmp = 0
+    with open("unmatched.json", "w") as jsonfile:
+        jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
+    with open("matched.json", "w") as jsonfile:
+        jsonfile.write(json.dumps(matched_dict, indent=4, sort_keys=True))
 
     db.close()
     master.close()

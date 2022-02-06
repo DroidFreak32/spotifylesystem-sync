@@ -1,7 +1,7 @@
-import yaml
-import json
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+
+import json
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="327d9a61415f4e98b36a8964485e7f41",
                                                client_secret="2909fdb6d8a148bd950fcf4298e0f30e",
