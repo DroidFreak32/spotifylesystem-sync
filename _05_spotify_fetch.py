@@ -19,13 +19,26 @@ class bcolors:
 
 def cleanup_playlist(playlist_raw=None):
     """
-    Cleans up unnecessary cruft from spotify playlist objects like urls, thumbnails, added_at etc :param
-    playlist_raw: raw Spotify playlist object :return: Cleaned up list of tracks in provided playlist. Each item
-    contains the track's TITLE, ALBUM, ALBUMARTIST and ARTIST
+    Cleans up unnecessary cruft from spotify playlist objects like urls, thumbnails, added_at etc
+    :param playlist_raw: raw Spotify playlist object
+    :return: Cleaned up list of tracks in provided playlist.
+    Each item contains the track's TITLE, ALBUM, ALBUMARTIST, ARTIST & SPOTIFY URI
     """
     print("Received ", type(playlist_raw))
 
-    def get_artist(artist_list=None):
+    def get_proper_albumartist(artist_list=None):
+        """
+        Multiple Album artists should not exist. Artist tag should be used for featured artists.
+        :param artist_list:
+        :return: 1st name in AlbumArtists
+        """
+        if len(artist_list) > 1:
+            print(f"\n{bcolors.FAIL}Multiple Album Artists: {artist_list} in track.\n"
+                  f"Only storing the first one: {artist_list[0]['name']}{bcolors.ENDC}")
+
+        return artist_list[0]['name']
+
+    def get_proper_artist(artist_list=None):
         """
         Helper to lookup all available artists
         :param artist_list:
@@ -37,16 +50,15 @@ def cleanup_playlist(playlist_raw=None):
             alist = []
             for artist in artist_list:
                 alist.append(artist['name'])
-        print(f"Artists list: {alist}")
         return alist
 
     cleaned_playlist = []
     for item in playlist_raw:
         track = dict()
-        track['TITLE'] = item['track']['name']
+        track['ALBUMARTIST'] = get_proper_albumartist(item['track']['album']['artists'])
         track['ALBUM'] = item['track']['album']['name']
-        track['ALBUMARTIST'] = get_artist(item['track']['album']['artists'])
-        track['ARTIST'] = get_artist(item['track']['artists'])
+        track['TITLE'] = item['track']['name']
+        track['ARTIST'] = get_proper_artist(item['track']['artists'])
         track['SPOTIFY'] = item['track']['external_urls']['spotify']
         cleaned_playlist.append(track)
     return cleaned_playlist
@@ -100,6 +112,7 @@ def main():
     selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
 
     pprint(selected_playlist_tracks)
+    return selected_playlist_tracks
 
 
 if __name__ == '__main__':
