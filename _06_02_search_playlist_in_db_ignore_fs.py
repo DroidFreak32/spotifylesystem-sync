@@ -52,7 +52,7 @@ class Music(BaseModel):
     ARTIST = TextField(index=True)
     ALBUM = TextField(index=True)
     TITLE = TextField(index=True)
-    LYRICS = BlobField(unindexed=True)
+    LYRICS = BlobField(unindexed=True, null=True)
     STREAMHASH = CharField(max_length=32, unique=True)
     PATH = TextField(unindexed=True)
 
@@ -226,7 +226,42 @@ def generate_metadata_single_thread(music_dir, flac_files):
         })
     return metadata_result
 
+def search_track_in_db(track_metadata=None):
+    """
+    Scans the DB for a given spotify track and returns a match or an empty list.
+        - First perform a case-insensitive match of the AlbumArtist
+        - Match the title of track
+        - Match the album if title matches to avoid duplicate matches!
+            - TODO: Separate logging for such tracks
+    :param track_metadata: A spotify track
+    :return: Matched item's PATH & STREAMHASH from database.
+    """
+    result = []
+    spotify_album_artist = track_metadata['ALBUMARTIST']
+    try:
+        # ** here is for case insensitive matching
+        album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST ** spotify_album_artist)
+    except DoesNotExist:
+        return result
 
+    for row in album_artist.tracks:
+        if row.TITLE.casefold() == track_metadata['TITLE'].casefold():
+            if row.ALBUM.casefold() in track_metadata['ALBUM'].casefold():
+                result.append({
+                    'ALBUMARTIST': spotify_album_artist,
+                    'PATH': str_to_list(row.PATH),
+                    'STREAMHASH': row.STREAMHASH
+                })
+
+            # if spotify_album_artist not in result.keys():
+            #     result[spotify_album_artist] = []
+            #
+            # result[spotify_album_artist].append({
+            #     'PATH': str_to_list(row.PATH),
+            #     'STREAMHASH': row.STREAMHASH
+            # })
+    return result
+    
 def main():
     music_root_dir = "/home/horcrux/Music/Muzik"
 
@@ -236,40 +271,9 @@ def main():
 
     spot_playlist_tracks = spotify_fetch.main()
 
-    tmp = 0
-
-    def search_track_in_db(track_metadata=None):
-        """
-        Scans the DB for a given spotify track and returns a match or an empty list.
-        :param track_metadata:
-        :return:
-        """
-        result = []
-        spotify_album_artist = track_metadata['ALBUMARTIST']
-        try:
-            # ** here is for case insensitive matching
-            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST ** spotify_album_artist)
-        except DoesNotExist:
-            return result
-
-        for row in album_artist.tracks:
-            if row.TITLE.casefold() == track_metadata['TITLE'].casefold():
-                result.append({
-                    'ALBUMARTIST': spotify_album_artist,
-                    'PATH': str_to_list(row.PATH),
-                    'STREAMHASH': row.STREAMHASH
-                })
-                # if spotify_album_artist not in result.keys():
-                #     result[spotify_album_artist] = []
-                #
-                # result[spotify_album_artist].append({
-                #     'PATH': str_to_list(row.PATH),
-                #     'STREAMHASH': row.STREAMHASH
-                # })
-        return result
-
     matched_list = []
     unmatched_list = []
+
     for playlist_track in spot_playlist_tracks:
         result = search_track_in_db(track_metadata=playlist_track)
         if len(result) > 1:
@@ -284,7 +288,7 @@ def main():
     unmatched_dict = list2dictmerge(unmatched_list)
     matched_dict = list2dictmerge(matched_list)
 
-    print(f"{len(matched_list)}/{len(unmatched_list)+len(unmatched_list)} tracks Matched. ")
+    print(f"{len(matched_list)}/{len(matched_list)+len(unmatched_list)} tracks Matched. ")
 
     with open("unmatched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
@@ -293,6 +297,7 @@ def main():
 
     db.close()
     master.close()
+    #debug
 
 
 if __name__ == '__main__':
