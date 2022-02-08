@@ -58,6 +58,10 @@ class Music(BaseModel):
 
 
 def str_to_list(unsurestr=None):
+    """
+    When retreiving a list from DB, it gets saved as a string '["somestring", "somestring2"]'
+    This helper function will return such strings as a list or leave it untouched.
+    """
     if isinstance(unsurestr, list):
         return unsurestr
     try:
@@ -110,6 +114,13 @@ def fetch_metadata_in_background(music_dir, flac_file):
     audiofile = taglib.File(os.path.join(music_dir, flac_file))
     md5sum = subprocess.run(["metaflac", "--show-md5sum", audiofile.path], capture_output=True,
                             universal_newlines=True).stdout.strip()
+
+    if md5sum == "00000000000000000000000000000000":
+        print(f"FLAC file {audiofile.path} possibly corrupted. STREAMHASH is 000..!")
+        md5sum = subprocess.run(["md5sum", audiofile.path], capture_output=True,
+                            universal_newlines=True).stdout.strip()
+        md5sum = md5sum[0:32]
+        
     audiofile_dict = dict()
 
     if len(audiofile.tags['ALBUMARTIST']) > 1:
@@ -236,12 +247,13 @@ def main():
         result = []
         spotify_album_artist = track_metadata['ALBUMARTIST']
         try:
-            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST == spotify_album_artist)
+            # ** here is for case insensitive matching
+            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST ** spotify_album_artist)
         except DoesNotExist:
             return result
 
         for row in album_artist.tracks:
-            if row.TITLE == track_metadata['TITLE']:
+            if row.TITLE.casefold() == track_metadata['TITLE'].casefold():
                 result.append({
                     'ALBUMARTIST': spotify_album_artist,
                     'PATH': str_to_list(row.PATH),
@@ -271,6 +283,8 @@ def main():
 
     unmatched_dict = list2dictmerge(unmatched_list)
     matched_dict = list2dictmerge(matched_list)
+
+    print(f"{len(matched_list)}/{len(unmatched_list)+len(unmatched_list)} tracks Matched. ")
 
     with open("unmatched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))

@@ -2,3 +2,7 @@
 /test.db
 __pycache__/
 venv/
+matched.json
+unmatched.json
+*.diff
+*.DS_Store
