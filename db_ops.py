@@ -10,10 +10,9 @@ from peewee import Model
 from peewee import TextField
 from playhouse.sqlite_ext import CSqliteExtDatabase
 
-import common
 import spotify_ops
-from common import bcolors
-from common import str_to_list
+from common import bcolors, generate_metadata, list2dictmerge, music_root_dir, db_path
+from common import str_to_list, find_flacs
 
 db = CSqliteExtDatabase(":memory:")
 
@@ -145,11 +144,12 @@ def dump_to_db(metadata):
 
 
 def complete_sync(flac_files, db_path):
+    flac_files = find_flacs(music_root_dir)
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     db.drop_tables([AlbumArtist, Music])
     db.create_tables([AlbumArtist, Music])
-    metadata = common.generate_metadata(common.music_root_dir, flac_files)
+    metadata = generate_metadata(music_root_dir, flac_files)
     dump_to_db(metadata)
     print("METADATA SYNCED")
     db.backup(master)
@@ -160,13 +160,13 @@ def partial_sync(flac_files, db_path):
     new_files = []
     db_mtime = os.path.getmtime(db_path)
     for flac_file in flac_files:
-        if db_mtime < os.path.getmtime(os.path.join(common.music_root_dir, flac_file)):
+        if db_mtime < os.path.getmtime(os.path.join(music_root_dir, flac_file)):
             new_files.append(flac_file)
     print(f"New files: {new_files}")
 
 
 def generate_playlist():
-    master = CSqliteExtDatabase(common.db_path)
+    master = CSqliteExtDatabase(db_path)
     master.backup(db)
     spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
     matched_list = []
@@ -183,8 +183,8 @@ def generate_playlist():
             continue
         matched_list += result
 
-    unmatched_dict = common.list2dictmerge(unmatched_list)
-    matched_dict = common.list2dictmerge(matched_list)
+    unmatched_dict = list2dictmerge(unmatched_list)
+    matched_dict = list2dictmerge(matched_list)
 
     print(f"{len(matched_list)}/{len(matched_list)+len(unmatched_list)} tracks Matched. ")
 
@@ -192,3 +192,6 @@ def generate_playlist():
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
     with open("matched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(matched_dict, indent=4, sort_keys=True))
+
+
+input("INSIDE DB")

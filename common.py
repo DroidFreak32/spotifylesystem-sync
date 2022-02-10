@@ -230,3 +230,8 @@ def generate_metadata(music_dir, flac_files):
             'PATH': item['PATH']
         })
     return metadata_result
+
+input("INSIDE COMMON")
+if __name__ == '__main__':
+    print("Main")
+

@@ -5,3 +5,4 @@ matched.json
 unmatched.json
 *.diff
 *.DS_Store
+config.ini

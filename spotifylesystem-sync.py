@@ -1,8 +1,7 @@
-import db_ops
-import spotify_ops
+from db_ops import complete_sync, partial_sync, generate_playlist
 
-from common import *
-
+from common import cls
+print("outside common")
 
 
 def menu():
@@ -22,13 +21,13 @@ def main():
     while True:
         choice = menu()
         if choice == '1':
-            db_ops.complete_sync(find_flacs(music_root_dir), db_path)
+            complete_sync()
         elif choice == '2':
-            db_ops.partial_sync(find_flacs(music_root_dir), db_path)
+            partial_sync()
         elif choice == '3':
-            db_ops.generate_playlist()
+            generate_playlist()
         elif choice == '4':
-            db_ops.generate_playlist()
+            generate_playlist()
         else:
             break
     print("Received config")
