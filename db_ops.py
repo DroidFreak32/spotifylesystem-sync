@@ -49,7 +49,9 @@ def is_item_in_db(db_tag=None, track_tag=None):
 
 
 def add_alt_album(db_row, param):
-    pass
+    # TODO: This is just a POC. add more functions to get existing values/lists before adding
+    query = Music.update(altALBUM=param['ALBUM']).where(Music.STREAMHASH == db_row.STREAMHASH)
+    query.execute()
 
 
 def search_track_in_db(track_metadata=None):
@@ -85,8 +87,14 @@ def search_track_in_db(track_metadata=None):
                       f"Track in DB: {row.PATH}\n"
                       f"Are these the same?")
                 answer = input("Y/N: ")
-                if answer != 'Y' and answer != 'y':
-                    add_alt_album(row, track_metadata['ALBUM'])
+                if answer == 'Y' or answer == 'y':
+                    add_alt_album(row, track_metadata)
+                    result.append({
+                        'ALBUMARTIST': spotify_album_artist,
+                        'PATH': str_to_list(row.PATH),
+                        'STREAMHASH': row.STREAMHASH
+                    })
+                else:
                     continue
             # if spotify_album_artist not in result.keys():
             #     result[spotify_album_artist] = []
@@ -201,6 +209,7 @@ def generate_playlist():
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
     with open("matched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(matched_dict, indent=4, sort_keys=True))
-
+    db.backup(master)
+    master.execute_sql('VACUUM;')
 
 input("INSIDE DB")
