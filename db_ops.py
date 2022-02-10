@@ -30,7 +30,9 @@ class Music(BaseModel):
     ALBUMARTIST = ForeignKeyField(AlbumArtist, backref="tracks")
     ARTIST = TextField(index=True)
     ALBUM = TextField(index=True)
+    altALBUM = TextField(null=True, unindexed=True)
     TITLE = TextField(index=True)
+    altTITLE = TextField(null=True, unindexed=True)
     LYRICS = BlobField(unindexed=True, null=True)
     STREAMHASH = CharField(max_length=32, unique=True)
     PATH = TextField(unindexed=True)
@@ -44,6 +46,10 @@ def is_item_in_db(db_tag=None, track_tag=None):
     if db_tag.casefold() == track_tag.casefold():
         return True
     return False
+
+
+def add_alt_album(db_row, param):
+    pass
 
 
 def search_track_in_db(track_metadata=None):
@@ -65,7 +71,7 @@ def search_track_in_db(track_metadata=None):
         return result
 
     for row in album_artist.tracks:
-        if is_item_in_db(row.TITLE, track_metadata['TITLE']):
+        if row.TITLE.casefold() == track_metadata['TITLE'].casefold():
             if is_item_in_db(row.ALBUM, track_metadata['ALBUM']):
                 result.append({
                     'ALBUMARTIST': spotify_album_artist,
@@ -74,11 +80,13 @@ def search_track_in_db(track_metadata=None):
                 })
             else:
                 print(f"Spotify track: "
-                      f"{track_metadata['ALBUMARTIST']} - {track_metadata['TITLE']}: {track_metadata['SPOTIFY']}\n"
+                      f"{track_metadata['ALBUMARTIST']} - {track_metadata['ALBUM']} - {track_metadata['TITLE']}"
+                      f"\n{track_metadata['SPOTIFY']}\n"
                       f"Track in DB: {row.PATH}\n"
                       f"Are these the same?")
                 answer = input("Y/N: ")
                 if answer != 'Y' and answer != 'y':
+                    add_alt_album(row, track_metadata['ALBUM'])
                     continue
             # if spotify_album_artist not in result.keys():
             #     result[spotify_album_artist] = []
@@ -143,7 +151,7 @@ def dump_to_db(metadata):
             music_db_orm.save()
 
 
-def complete_sync(flac_files, db_path):
+def complete_sync():
     flac_files = find_flacs(music_root_dir)
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
@@ -156,7 +164,8 @@ def complete_sync(flac_files, db_path):
     master.execute_sql('VACUUM;')
 
 
-def partial_sync(flac_files, db_path):
+def partial_sync():
+    flac_files = find_flacs(music_root_dir)
     new_files = []
     db_mtime = os.path.getmtime(db_path)
     for flac_file in flac_files:
