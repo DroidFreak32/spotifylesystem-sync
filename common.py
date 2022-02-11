@@ -10,6 +10,7 @@ import spotipy
 import glob
 
 from configparser import ConfigParser
+from natsort import natsorted
 
 import pathos.multiprocessing as multiprocessing
 import taglib
@@ -18,6 +19,7 @@ from spotipy import SpotifyOAuth
 
 global music_root_dir
 global db_path
+global db_mtime_marker
 global spotify_client_id
 global spotify_client_secret
 global redirect_uri
@@ -27,7 +29,7 @@ config.read("config.ini")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--music-dir', type=str, help='Path to the music directory', required=False)
-parser.add_argument('--db-path', type=str, help='Path to the music db file', required=False)
+parser.add_argument('--db-name', type=str, help='Name of the music db file', required=False)
 parser.add_argument('--spotify-client-id', type=str, help='Your spotify client ID', required=False)
 parser.add_argument('--spotify-client-secret', type=str, help='Your spotify client secret', required=False)
 parser.add_argument('--redirect-uri', type=str, help='Spotify redirect-uri', required=False)
@@ -38,10 +40,13 @@ if args.music_dir is not None:
 else:
     music_root_dir = os.path.expanduser(config['DEFAULT']['music-dir'])
 
-if args.db_path is not None:
-    db_path = os.path.expanduser(args.db_path)
+if args.db_name is not None:
+    db_path = os.path.join(music_root_dir, args.db_name)
+    db_mtime_marker = os.path.join(music_root_dir, '.' + args.db_name + '.marker')
 else:
-    db_path = config['DEFAULT']['musicdb']
+    db_path = os.path.join(music_root_dir, config['DEFAULT']['musicdb'])
+    db_mtime_marker = os.path.join(music_root_dir, '.' + config['DEFAULT']['musicdb'] + '.marker')
+
 
 if args.spotify_client_id is not None:
     spotify_client_id = args.spotify_client_id
@@ -124,17 +129,23 @@ def list2dictmerge(listobj=None):
     return merged_dict
 
 
-def find_flacs(music_dir):
+def find_flacs(music_dir=None):
     print("Scanning directory tree for flac files. Please wait...")
     # for root, dirs, files in os.walk(music_dir, topdown=False):
     #     for file in files:
     #         if file.endswith(".flac"):
     #             flac_files.append(os.path.relpath(os.path.join(root, file), music_dir))
     flac_files = glob.glob("**/*.flac", root_dir=music_dir, recursive=True)
-
-    print("Size of list: " + str(flac_files.__sizeof__()))
-
     return flac_files
+
+def get_last_flac_mtime(flac_files=[]):
+    last_flac_mtime = os.path.getmtime(os.path.join(music_root_dir, flac_files[0]))
+    for file_path in flac_files:
+        file_mtime = os.path.getmtime(os.path.join(music_root_dir, file_path))
+        if file_mtime > last_flac_mtime:
+            last_flac_mtime = file_mtime
+    return last_flac_mtime
+
 
 def fetch_metadata_in_background(music_dir, flac_file):
     """
@@ -187,7 +198,7 @@ def fetch_metadata_in_background(music_dir, flac_file):
     TODO: Remove base64 conversion
     """
     if 'LYRICS' not in audiofile.tags:
-        audiofile_dict['LYRICS'] = 'NULL'
+        audiofile_dict['LYRICS'] = None
     else:
         audiofile_dict['LYRICS'] = b64encode(zlib.compress(audiofile.tags['LYRICS'][0].encode("utf-8"),
                                                            zlib.Z_BEST_COMPRESSION))
@@ -209,7 +220,7 @@ def generate_metadata(music_dir, flac_files):
     :return: A dictionary with key=AlbumArtist and Value=[metadata of all their tracks]
     """
     metadata_result = {}
-    a_pool = multiprocessing.Pool(12)
+    a_pool = multiprocessing.Pool(4)
     # result = a_pool.starmap(fetch_metadata_in_background, zip(repeat(music_dir), flac_files))
     inputs = zip(repeat(music_dir), flac_files)
 
@@ -232,7 +243,13 @@ def generate_metadata(music_dir, flac_files):
         })
     return metadata_result
 
-input("INSIDE COMMON")
+def generate_m3u(playlist_name='playlist', track_paths=[]):
+    with open(playlist_name + '.m3u', 'w', encoding='utf-8') as p:
+        print(f"#EXTM3U\n#PLAYLIST:{playlist_name}", file=p)
+        for item in track_paths:
+            print(item, file=p)
+
+
 if __name__ == '__main__':
     print("Main")
 

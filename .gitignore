@@ -6,3 +6,4 @@ unmatched.json
 *.diff
 *.DS_Store
 config.ini
+*.m3u
