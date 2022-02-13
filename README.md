@@ -109,3 +109,5 @@ Identical Track found!
 - Dependency checker (Windows may not work with CSqliteExt)
 - Scan each unmatched query again using a whitelist/exceptions file
 - common.py can load the whitelists/exceptions
+- inverstigate why few spot playlist dont have AArtist
+{'ALBUM': '1-800-273-8255', 'TITLE': '1-800-273-8255', 'ARTIST': 'Our Last Night', 'SPOTIFY': 'https://open.spotify.com/track/1wp1aHirvZihTdrtdFuFv0'}
