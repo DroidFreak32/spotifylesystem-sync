@@ -1,3 +1,5 @@
+from copy import copy, deepcopy
+
 from importlib.resources import path
 import json
 import os
@@ -32,8 +34,8 @@ class AlbumArtist(BaseModel):
 class Music(BaseModel):
     ALBUMARTIST = ForeignKeyField(AlbumArtist, backref="tracks")
     ARTIST = TextField(index=True)
+    
     ALBUM = TextField(index=True)
-
     # List of alternate album names, usually from spotify
     altALBUM = TextField(null=True)
     # List of albums that is not present in the DB but the track exists in another Album
@@ -41,6 +43,8 @@ class Music(BaseModel):
     
     TITLE = TextField(index=True)
     altTITLE = TextField(null=True)
+    blackTITLE = TextField(null=True, unindexed=True)
+
     LYRICS = BlobField(unindexed=True, null=True)
     STREAMHASH = CharField(max_length=32, unique=True)
     PATH = TextField(unindexed=True)
@@ -63,6 +67,9 @@ def is_item_in_db_column(db_tag=None, track_tag=None):
 
 
 def is_album_in_alt_album(db_row, track_metadata):
+    """
+    Separate this as it is always a list
+    """
     if db_row.altALBUM is not None:
         for item in str_to_list(db_row.altALBUM):
             if item.casefold() == track_metadata['ALBUM'].casefold():
@@ -70,7 +77,21 @@ def is_album_in_alt_album(db_row, track_metadata):
 
     return False
 
+def is_title_in_alt_title(db_row, track_metadata):
+    """
+    Separate this as it is always a list
+    """
+    if db_row.altTITLE is not None:
+        for item in str_to_list(db_row.altTITLE):
+            if item.casefold() == track_metadata['TITLE'].casefold():
+                return True
+
+    return False
+
 def add_to_alt_album(db_row, track_metadata):
+    """
+    Function to add to a whitelist column.
+    """
     altALBUM_to_add = str_to_list(db_row.altALBUM)
     # TODO: This is just a POC. add more functions to get existing values/lists before adding
     if isinstance(altALBUM_to_add, list):
@@ -80,6 +101,21 @@ def add_to_alt_album(db_row, track_metadata):
 
     print(f"\n{bcolors.OKGREEN}Adding {altALBUM_to_add} to alt Albums{bcolors.ENDC}\n")
     query = Music.update(altALBUM = altALBUM_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    query.execute()
+
+def add_to_alt_title(db_row, track_metadata):
+    """
+    Function to add to a whitelist column.
+    """
+    altTITLE_to_add = str_to_list(db_row.altTITLE)
+    # TODO: This is just a POC. add more functions to get existing values/lists before adding
+    if isinstance(altTITLE_to_add, list):
+        altTITLE_to_add.append(track_metadata['TITLE'])
+    else:
+        altTITLE_to_add = [track_metadata['TITLE']]
+
+    print(f"\n{bcolors.OKGREEN}Adding {altTITLE_to_add} to alt Titles{bcolors.ENDC}\n")
+    query = Music.update(altTITLE = altTITLE_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 
@@ -96,6 +132,18 @@ def add_to_black_album(db_row, track_metadata):
     query.execute()
 
 
+def add_to_black_title(db_row, track_metadata):
+    blackTITLE_to_add = str_to_list(db_row.blackTITLE)
+    # TODO: This is just a POC. add more functions to get existing values/lists before adding
+    if isinstance(blackTITLE_to_add, list):
+        blackTITLE_to_add.append(track_metadata['TITLE'])
+    else:
+        blackTITLE_to_add = [track_metadata['TITLE']]
+
+    print(f"\n{bcolors.HEADER}Adding {blackTITLE_to_add} to blacklist{bcolors.ENDC}\n")
+    query = Music.update(blackTITLE = blackTITLE_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    query.execute()
+
 
 def search_track_in_db(track_metadata=None):
     """
@@ -109,6 +157,8 @@ def search_track_in_db(track_metadata=None):
     """
     result = []
     spotify_album_artist = track_metadata['ALBUMARTIST']
+    if spotify_album_artist.casefold() == 'Halsey':
+        pass
     try:
         # ** here is for case-insensitive matching
         album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST ** spotify_album_artist)
@@ -116,47 +166,77 @@ def search_track_in_db(track_metadata=None):
         return result
 
     for row in album_artist.tracks:
-        if row.TITLE.casefold() == track_metadata['TITLE'].casefold():
-            if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
-                result.append({
-                    'ALBUMARTIST': spotify_album_artist,
-                    'PATH': str_to_list(row.PATH),
-                    'STREAMHASH': row.STREAMHASH
-                })
-            else:
-                if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
-                    # This track belongs to another existing album in the DB or we do not have it.
-                    # If subsequent iterations do not get this track then it will be a part of unmatched list.
-                    continue
+        db_title = deepcopy(row.TITLE.casefold())
+        spotify_title = deepcopy(track_metadata['TITLE'].casefold())
 
+        db_album = deepcopy(row.ALBUM.casefold())
+        spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
+
+
+
+        if db_title in spotify_title or is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+            # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
+
+            if is_item_in_db_column(row.blackTITLE, track_metadata['TITLE']):
+                # This track is probably another edition, i.e. Acoustic Version
+                # If subsequent iterations do not get this track then it will be a part of unmatched list.
+                continue
+
+            if db_title != spotify_title and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
                 print(f"\nSpotify URL:"
-                      f"\n{track_metadata['SPOTIFY']}"
-                      f"\nSpotify / DB Album:"
-                      f"\n{bcolors.OKBLUE}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
-                      f"\n\nPATH {row.PATH}"
-                      f"\nAre these the same?\n")
+                    f"\n{track_metadata['SPOTIFY']}"
+                    f"\nSpotify / DB Title:"
+                    f"\n{bcolors.OKBLUE}{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}"
+                    f"\n\nPATH {row.PATH}"
+                    f"\nAre these the same?\n")
                 answer = input("Y/N: ")
-                
-                if answer == 'n' or answer == 'N':
-                    add_to_black_album(row, track_metadata)
-                    continue
-
                 if answer == 'Y' or answer == 'y':
-                    add_to_alt_album(row, track_metadata)
+                    print(f"*** Ignoring Title ***")
+                    add_to_alt_title(db_row=row, track_metadata=track_metadata)
+                else:
+                    add_to_black_title(db_row=row, track_metadata=track_metadata)
+
+            if db_title == spotify_title or is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+                if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
                     result.append({
                         'ALBUMARTIST': spotify_album_artist,
                         'PATH': str_to_list(row.PATH),
                         'STREAMHASH': row.STREAMHASH
                     })
                 else:
-                    continue
-            # if spotify_album_artist not in result.keys():
-            #     result[spotify_album_artist] = []
-            #
-            # result[spotify_album_artist].append({
-            #     'PATH': str_to_list(row.PATH),
-            #     'STREAMHASH': row.STREAMHASH
-            # })
+                    if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
+                        # This track belongs to another existing album in the DB or we do not have it.
+                        # If subsequent iterations do not get this track then it will be a part of unmatched list.
+                        continue
+
+                    print(f"\nSpotify URL:"
+                        f"\n{track_metadata['SPOTIFY']}"
+                        f"\nSpotify / DB Album:"
+                        f"\n{bcolors.OKBLUE}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
+                        f"\n\nPATH {row.PATH}"
+                        f"\nAre these the same?\n")
+                    answer = input("Y/N: ")
+                    
+                    if answer == 'n' or answer == 'N':
+                        add_to_black_album(row, track_metadata)
+                        continue
+
+                    if answer == 'Y' or answer == 'y':
+                        add_to_alt_album(row, track_metadata)
+                        result.append({
+                            'ALBUMARTIST': spotify_album_artist,
+                            'PATH': str_to_list(row.PATH),
+                            'STREAMHASH': row.STREAMHASH
+                        })
+                    else:
+                        continue
+                # if spotify_album_artist not in result.keys():
+                #     result[spotify_album_artist] = []
+                #
+                # result[spotify_album_artist].append({
+                #     'PATH': str_to_list(row.PATH),
+                #     'STREAMHASH': row.STREAMHASH
+                # })
     return result
 
 
@@ -170,8 +250,8 @@ def dump_to_db(metadata):
             """
             album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST == album_artists)
             try:
-                music_db_orm = Music.create(ALBUMARTIST=album_artist, ALBUM=track['ALBUM'], altALBUM=None, blackALBUM=None,
-                                            TITLE=track['TITLE'], altTITLE=None, ARTIST=track['ARTIST'], LYRICS=track['LYRICS'],
+                music_db_orm = Music.create(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=track['ALBUM'], altALBUM=None, blackALBUM=None,
+                                            TITLE=track['TITLE'], altTITLE=None, blackTITLE=None, LYRICS=track['LYRICS'],
                                             STREAMHASH=track['STREAMHASH'],
                                             PATH=track['PATH'])
             except IntegrityError as IE:
@@ -179,7 +259,8 @@ def dump_to_db(metadata):
                 Some music files may belong to multiple albums, for ex. "Self titled" and "Greatest hits"
                 So we can just query the existing file and convert the relevant columns to a list of values 
                 """
-                music_db_orm.save()
+                if music_db_orm is not None:
+                    music_db_orm.save()
                 print(f"{bcolors.WARNING}Identical Track found!")
                 query = Music.select().where(Music.STREAMHASH == track["STREAMHASH"]).dicts()
                 multi_path = []
@@ -206,12 +287,12 @@ def dump_to_db(metadata):
                         multi_album.append(row['ALBUM'])
                         multi_album.append(track['ALBUM'])
                     # print(multi_path)
-                    query = Music.update(ALBUMARTIST=album_artist, ALBUM=multi_album, altALBUM=row['altALBUM'], blackALBUM=row['blackALBUM'],
-                                        TITLE=track['TITLE'], altTITLE=row['altTITLE'], ARTIST=track['ARTIST'], LYRICS=track['LYRICS'],
+                    query = Music.update(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=multi_album, altALBUM=row['altALBUM'], blackALBUM=row['blackALBUM'],
+                                        TITLE=track['TITLE'], altTITLE=row['altTITLE'], blackTITLE=row['blackTITLE'], LYRICS=track['LYRICS'],
                                         PATH=multi_path).where(Music.STREAMHASH == track["STREAMHASH"])
                     query.execute()
                 print(f"Previous file: {multi_path[0]}\nCurrent file: {multi_path[1]}{bcolors.ENDC}")
-            music_db_orm.save()
+    music_db_orm.save()
 
 
 def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last_flac_mtime=1):
@@ -284,18 +365,20 @@ def generate_playlist():
     db.backup(master)
     master.execute_sql('VACUUM;')
 
+
 def export_altColumns():
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     alt_columns = []
-    tracks = Music.select().where( (Music.altALBUM.is_null(False)) | (Music.altTITLE.is_null(False) | Music.blackALBUM.is_null(False)) )
+    tracks = Music.select().where( Music.altALBUM.is_null(False) | Music.altTITLE.is_null(False) | Music.blackALBUM.is_null(False) | Music.blackTITLE.is_null(False) )
     for row in tracks:
         alt_columns.append(
             {
                 'STREAMHASH': row.STREAMHASH,
                 'altALBUM': str_to_list(row.altALBUM),
                 'blackALBUM': str_to_list(row.blackALBUM),
-                'altTITLE': str_to_list(row.altTITLE)
+                'altTITLE': str_to_list(row.altTITLE),
+                'blackTITLE': str_to_list(row.blackTITLE)
             }
         )
 
@@ -313,7 +396,7 @@ def import_altColumns():
         altColumn = json.loads(j.read())
 
     for item in altColumn:
-        query = Music.update(altALBUM = item['altALBUM'], blackALBUM = item['blackALBUM'], altTITLE = item['altTITLE']).where(Music.STREAMHASH == item['STREAMHASH'])
+        query = Music.update(altALBUM = item['altALBUM'], blackALBUM = item['blackALBUM'], altTITLE = item['altTITLE'], blackTITLE = item['blackTITLE']).where(Music.STREAMHASH == item['STREAMHASH'])
         query.execute()
     
     db.backup(master)
