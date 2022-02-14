@@ -70,6 +70,8 @@ def cleanup_playlist(playlist_raw=None):
         track['TITLE'] = item['track']['name']
         track['ARTIST'] = get_proper_artist(item['track']['artists'])
         track['SPOTIFY'] = item['track']['external_urls']['spotify']
+        if track['ALBUMARTIST'] == 'Various Artists':
+            track['ALBUMARTIST'] = get_proper_albumartist(item['track']['artists'])
         cleaned_playlist.append(track)
     return cleaned_playlist
 
