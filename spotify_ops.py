@@ -140,6 +140,8 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
     user_id = sp.me()['id']
     if playlist_name is None:
         playlist_name = "Missing_spotifyle_" + datetime.today().strftime('%Y%m%d_%H%M')
+    else:
+        playlist_name = playlist_name + ' - ' + datetime.today().strftime('%Y%m%d_%H%M')
 
     if playlist_id is None:
         new_playlist = sp.user_playlist_create(user=user_id, name=playlist_name, public=False)
@@ -157,6 +159,7 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
         print(f"Few Tracks Missing")
         generate_missing_track_playlist(
             unmatched_track_ids=missing_playlist_items, playlist_name=playlist_name, playlist_id=playlist_id)
+    print(f"Playlist: {playlist_name} created!")
 
     return None
 
