@@ -10,7 +10,6 @@ import spotipy
 import glob
 
 from configparser import ConfigParser
-from natsort import natsorted
 
 import pathos.multiprocessing as multiprocessing
 import taglib
@@ -87,12 +86,14 @@ class bcolors:
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+
 def get_spotify_connection():
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=spotify_client_id,
                                                    client_secret=spotify_client_secret,
                                                    redirect_uri=redirect_uri,
-                                                   scope="user-library-read"))
+                                                   scope="user-library-read playlist-modify-private"))
     return sp
+
 
 def str_to_list(unsurestr=None):
     """
@@ -252,4 +253,3 @@ def generate_m3u(playlist_name='playlist', track_paths=[]):
 
 if __name__ == '__main__':
     print("Main")
-

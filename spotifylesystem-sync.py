@@ -1,4 +1,4 @@
-from db_ops import sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, generate_playlist
+from db_ops import sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, generate_local_playlist
 
 from common import cls
 print("outside common")
@@ -26,7 +26,7 @@ def main():
         elif choice == '2':
             partial_sync()
         elif choice == '3':
-            generate_playlist()
+            generate_local_playlist()
         elif choice == '4':
             export_altColumns()
         elif choice == '5':
