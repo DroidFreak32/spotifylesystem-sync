@@ -195,6 +195,7 @@ def search_track_in_db(track_metadata=None):
                 if answer == 'Y' or answer == 'y':
                     print(f"*** Ignoring Title ***")
                     add_to_alt_title(db_row=row, track_metadata=track_metadata)
+                    spotify_title = db_title
                 else:
                     add_to_black_title(db_row=row, track_metadata=track_metadata)
 
@@ -362,7 +363,7 @@ def generate_local_playlist():
     if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
         generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
     if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
-        spotify_ops.generate_missing_track_playlist(unmatched_track_ids)
+        spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids, playlist_name=spotify_playlist_name)
 
     with open("unmatched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
