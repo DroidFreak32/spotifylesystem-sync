@@ -3,6 +3,7 @@ from copy import copy, deepcopy
 from importlib.resources import path
 import json
 import os
+import sys
 from urllib import request
 from pathlib import Path
 
@@ -16,7 +17,8 @@ from peewee import TextField
 from playhouse.sqlite_ext import CSqliteExtDatabase
 
 import spotify_ops
-from common import bcolors, generate_m3u, generate_metadata, get_last_flac_mtime, list2dictmerge, music_root_dir, db_path, db_mtime_marker
+from common import bcolors, generate_m3u, generate_metadata, get_last_flac_mtime, list2dictmerge, music_root_dir, \
+    db_path, db_mtime_marker
 from common import str_to_list, find_flacs
 
 db = CSqliteExtDatabase(":memory:")
@@ -40,7 +42,7 @@ class Music(BaseModel):
     altALBUM = TextField(null=True)
     # List of albums that is not present in the DB but the track exists in another Album
     blackALBUM = TextField(null=True, unindexed=True)
-    
+
     TITLE = TextField(index=True)
     altTITLE = TextField(null=True)
     blackTITLE = TextField(null=True, unindexed=True)
@@ -100,7 +102,7 @@ def add_to_alt_album(db_row, track_metadata):
         altALBUM_to_add = [track_metadata['ALBUM']]
 
     print(f"\n{bcolors.OKGREEN}Adding {altALBUM_to_add} to alt Albums{bcolors.ENDC}\n")
-    query = Music.update(altALBUM = altALBUM_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    query = Music.update(altALBUM=altALBUM_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 def add_to_alt_title(db_row, track_metadata):
@@ -128,7 +130,7 @@ def add_to_black_album(db_row, track_metadata):
         blackALBUM_to_add = [track_metadata['ALBUM']]
 
     print(f"\n{bcolors.HEADER}Adding {blackALBUM_to_add} to blacklist{bcolors.ENDC}\n")
-    query = Music.update(blackALBUM = blackALBUM_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    query = Music.update(blackALBUM=blackALBUM_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 
@@ -215,7 +217,7 @@ def search_track_in_db(track_metadata=None):
                         f"\n{bcolors.OKBLUE}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
                         f"\n\nPATH {row.PATH}"
                         f"\nAre these the same?\n")
-                    answer = input("Y/N: ")
+                    answer = input("Y/N/q: ")
                     
                     if answer == 'n' or answer == 'N':
                         add_to_black_album(row, track_metadata)
@@ -228,6 +230,8 @@ def search_track_in_db(track_metadata=None):
                             'PATH': str_to_list(row.PATH),
                             'STREAMHASH': row.STREAMHASH
                         })
+                    elif answer == 'q' or answer == 'Q':
+                        sys.exit()
                     else:
                         continue
                 # if spotify_album_artist not in result.keys():
@@ -296,7 +300,6 @@ def dump_to_db(metadata):
 
 
 def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last_flac_mtime=1):
-
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     if force_resync:
@@ -314,7 +317,6 @@ def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last
     print(os.path.getmtime(db_mtime_marker))
 
 
-
 def partial_sync():
     flac_files = find_flacs(music_root_dir)
     new_files = []
@@ -327,12 +329,13 @@ def partial_sync():
         sync_fs_to_db(force_resync=False, flac_files=new_files, last_flac_mtime=db_mtime)
 
 
-def generate_playlist():
+def generate_local_playlist():
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
     matched_list = []
     matched_paths = []
+    unmatched_track_ids = []
     unmatched_list = []
 
     for playlist_track in spotify_playlist_tracks:
@@ -343,6 +346,7 @@ def generate_playlist():
             continue
         elif len(result) == 0:
             unmatched_list.append(playlist_track)
+            unmatched_track_ids.append(playlist_track['SPOTIFY'][-22:])
             # print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
             continue
         matched_list += result
@@ -353,15 +357,18 @@ def generate_playlist():
     unmatched_dict = list2dictmerge(unmatched_list)
     matched_dict = list2dictmerge(matched_list)
 
-    print(f"{len(matched_list)}/{len(matched_list)+len(unmatched_list)} tracks Matched. ")
+    print(f"{len(matched_list)}/{len(matched_list) + len(unmatched_list)} tracks Matched. ")
 
-    generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
+    if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
+        generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
+    if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
+        spotify_ops.generate_missing_track_playlist(unmatched_track_ids)
 
     with open("unmatched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
     with open("matched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(matched_dict, indent=4, sort_keys=True))
-    
+
     db.backup(master)
     master.execute_sql('VACUUM;')
 
@@ -387,6 +394,7 @@ def export_altColumns():
     db.backup(master)
     master.execute_sql('VACUUM;')
 
+
 def import_altColumns():
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
@@ -398,9 +406,10 @@ def import_altColumns():
     for item in altColumn:
         query = Music.update(altALBUM = item['altALBUM'], blackALBUM = item['blackALBUM'], altTITLE = item['altTITLE'], blackTITLE = item['blackTITLE']).where(Music.STREAMHASH == item['STREAMHASH'])
         query.execute()
-    
+
     db.backup(master)
     master.execute_sql('VACUUM;')
+
 
 if __name__ == '__main__':
     print("Use spotifylesystem-sync.py")
