@@ -4,7 +4,7 @@ from importlib.resources import path
 import json
 import os
 import sys
-from urllib import request
+import re
 from pathlib import Path
 
 from peewee import BlobField
@@ -36,7 +36,7 @@ class AlbumArtist(BaseModel):
 class Music(BaseModel):
     ALBUMARTIST = ForeignKeyField(AlbumArtist, backref="tracks")
     ARTIST = TextField(index=True)
-    
+
     ALBUM = TextField(index=True)
     # List of alternate album names, usually from spotify
     altALBUM = TextField(null=True)
@@ -79,6 +79,7 @@ def is_album_in_alt_album(db_row, track_metadata):
 
     return False
 
+
 def is_title_in_alt_title(db_row, track_metadata):
     """
     Separate this as it is always a list
@@ -89,6 +90,7 @@ def is_title_in_alt_title(db_row, track_metadata):
                 return True
 
     return False
+
 
 def add_to_alt_album(db_row, track_metadata):
     """
@@ -105,6 +107,7 @@ def add_to_alt_album(db_row, track_metadata):
     query = Music.update(altALBUM=altALBUM_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
+
 def add_to_alt_title(db_row, track_metadata):
     """
     Function to add to a whitelist column.
@@ -116,8 +119,8 @@ def add_to_alt_title(db_row, track_metadata):
     else:
         altTITLE_to_add = [track_metadata['TITLE']]
 
-    print(f"\n{bcolors.OKGREEN}Adding {altTITLE_to_add} to alt Titles{bcolors.ENDC}\n")
-    query = Music.update(altTITLE = altTITLE_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    print(f"{bcolors.OKGREEN}Adding {altTITLE_to_add} to alt Titles{bcolors.ENDC}\n")
+    query = Music.update(altTITLE=altTITLE_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 
@@ -143,7 +146,7 @@ def add_to_black_title(db_row, track_metadata):
         blackTITLE_to_add = [track_metadata['TITLE']]
 
     print(f"\n{bcolors.HEADER}Adding {blackTITLE_to_add} to blacklist{bcolors.ENDC}\n")
-    query = Music.update(blackTITLE = blackTITLE_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    query = Music.update(blackTITLE=blackTITLE_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 
@@ -174,9 +177,7 @@ def search_track_in_db(track_metadata=None):
         db_album = deepcopy(row.ALBUM.casefold())
         spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
 
-
-
-        if db_title in spotify_title or is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+        if re.search(rf"\b{re.escape(db_title)}\b", spotify_title) is not None or is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
             # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
 
             if is_item_in_db_column(row.blackTITLE, track_metadata['TITLE']):
@@ -186,21 +187,26 @@ def search_track_in_db(track_metadata=None):
 
             if db_title != spotify_title and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
                 print(f"\nSpotify URL:"
-                    f"\n{track_metadata['SPOTIFY']}"
-                    f"\nSpotify / DB Title:"
-                    f"\n{bcolors.OKBLUE}{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}"
-                    f"\n\nPATH {row.PATH}"
-                    f"\nAre these the same?\n")
-                answer = input("Y/N: ")
+                      f"\n{track_metadata['SPOTIFY']}"
+                      f"\nSpotify / DB Title:"
+                      f"\n{bcolors.OKBLUE}{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}"
+                      f"\n\nPATH {row.PATH}"
+                      f"\n\nAre these the same?")
+                answer = input("Y/N/Q: ")
                 if answer == 'Y' or answer == 'y':
-                    print(f"*** Ignoring Title ***")
+                    print(f"\n*** Ignoring Title ***")
                     add_to_alt_title(db_row=row, track_metadata=track_metadata)
                     spotify_title = db_title
-                else:
+                elif answer == 'q' or answer == 'Q':
+                    return 999
+                elif answer == 'n' or answer == 'N':
                     add_to_black_title(db_row=row, track_metadata=track_metadata)
+                else:
+                    continue
 
             if db_title == spotify_title or is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
-                if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
+                if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) or is_album_in_alt_album(db_row=row,
+                                                                                                     track_metadata=track_metadata):
                     result.append({
                         'ALBUMARTIST': spotify_album_artist,
                         'PATH': str_to_list(row.PATH),
@@ -213,13 +219,13 @@ def search_track_in_db(track_metadata=None):
                         continue
 
                     print(f"\nSpotify URL:"
-                        f"\n{track_metadata['SPOTIFY']}"
-                        f"\nSpotify / DB Album:"
-                        f"\n{bcolors.OKBLUE}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
-                        f"\n\nPATH {row.PATH}"
-                        f"\nAre these the same?\n")
+                          f"\n{track_metadata['SPOTIFY']}"
+                          f"\nSpotify / DB Album:"
+                          f"\n{bcolors.OKBLUE}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
+                          f"\n\nPATH {row.PATH}"
+                          f"\nAre these the same?")
                     answer = input("Y/N/q: ")
-                    
+
                     if answer == 'n' or answer == 'N':
                         add_to_black_album(row, track_metadata)
                         continue
@@ -232,7 +238,7 @@ def search_track_in_db(track_metadata=None):
                             'STREAMHASH': row.STREAMHASH
                         })
                     elif answer == 'q' or answer == 'Q':
-                        sys.exit()
+                        return 999
                     else:
                         continue
                 # if spotify_album_artist not in result.keys():
@@ -255,8 +261,10 @@ def dump_to_db(metadata):
             """
             album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST == album_artists)
             try:
-                music_db_orm = Music.create(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=track['ALBUM'], altALBUM=None, blackALBUM=None,
-                                            TITLE=track['TITLE'], altTITLE=None, blackTITLE=None, LYRICS=track['LYRICS'],
+                music_db_orm = Music.create(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=track['ALBUM'],
+                                            altALBUM=None, blackALBUM=None,
+                                            TITLE=track['TITLE'], altTITLE=None, blackTITLE=None,
+                                            LYRICS=track['LYRICS'],
                                             STREAMHASH=track['STREAMHASH'],
                                             PATH=track['PATH'])
             except IntegrityError as IE:
@@ -292,9 +300,11 @@ def dump_to_db(metadata):
                         multi_album.append(row['ALBUM'])
                         multi_album.append(track['ALBUM'])
                     # print(multi_path)
-                    query = Music.update(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=multi_album, altALBUM=row['altALBUM'], blackALBUM=row['blackALBUM'],
-                                        TITLE=track['TITLE'], altTITLE=row['altTITLE'], blackTITLE=row['blackTITLE'], LYRICS=track['LYRICS'],
-                                        PATH=multi_path).where(Music.STREAMHASH == track["STREAMHASH"])
+                    query = Music.update(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=multi_album,
+                                         altALBUM=row['altALBUM'], blackALBUM=row['blackALBUM'],
+                                         TITLE=track['TITLE'], altTITLE=row['altTITLE'], blackTITLE=row['blackTITLE'],
+                                         LYRICS=track['LYRICS'],
+                                         PATH=multi_path).where(Music.STREAMHASH == track["STREAMHASH"])
                     query.execute()
                 print(f"Previous file: {multi_path[0]}\nCurrent file: {multi_path[1]}{bcolors.ENDC}")
     music_db_orm.save()
@@ -326,14 +336,18 @@ def partial_sync():
         if db_mtime < os.path.getmtime(os.path.join(music_root_dir, flac_file)):
             new_files.append(flac_file)
     print(f"New files: {new_files}")
+    input("Press enter to continue..")
     if len(new_files) > 0:
-        sync_fs_to_db(force_resync=False, flac_files=new_files, last_flac_mtime=db_mtime)
+        sync_fs_to_db(force_resync=False, flac_files=new_files, last_flac_mtime=int(db_mtime))
 
 
-def generate_local_playlist():
+def generate_local_playlist(all_saved_tracks=False):
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
-    spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
+    if not all_saved_tracks:
+        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
+    else:
+        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
     matched_list = []
     matched_paths = []
     unmatched_track_ids = []
@@ -341,6 +355,8 @@ def generate_local_playlist():
 
     for playlist_track in spotify_playlist_tracks:
         result = search_track_in_db(track_metadata=playlist_track)
+        if result == 999:
+            break
         if len(result) > 1:
             print(f"{bcolors.FAIL}Multiple Matches found: {result}{bcolors.ENDC}")
             # TODO: Ask user for correct match by checking playlist_track['SPOTIFY']
@@ -363,7 +379,8 @@ def generate_local_playlist():
     if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
         generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
     if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
-        spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids, playlist_name=spotify_playlist_name)
+        spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
+                                                    playlist_name=spotify_playlist_name)
 
     with open("unmatched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
@@ -378,7 +395,9 @@ def export_altColumns():
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     alt_columns = []
-    tracks = Music.select().where( Music.altALBUM.is_null(False) | Music.altTITLE.is_null(False) | Music.blackALBUM.is_null(False) | Music.blackTITLE.is_null(False) )
+    tracks = Music.select().where(
+        Music.altALBUM.is_null(False) | Music.altTITLE.is_null(False) | Music.blackALBUM.is_null(
+            False) | Music.blackTITLE.is_null(False))
     for row in tracks:
         alt_columns.append(
             {
@@ -405,7 +424,8 @@ def import_altColumns():
         altColumn = json.loads(j.read())
 
     for item in altColumn:
-        query = Music.update(altALBUM = item['altALBUM'], blackALBUM = item['blackALBUM'], altTITLE = item['altTITLE'], blackTITLE = item['blackTITLE']).where(Music.STREAMHASH == item['STREAMHASH'])
+        query = Music.update(altALBUM=item['altALBUM'], blackALBUM=item['blackALBUM'], altTITLE=item['altTITLE'],
+                             blackTITLE=item['blackTITLE']).where(Music.STREAMHASH == item['STREAMHASH'])
         query.execute()
 
     db.backup(master)

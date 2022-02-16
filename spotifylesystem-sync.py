@@ -9,8 +9,9 @@ def menu():
     menu_output = ("1) Complete Sync filesystem to Local DB\n"
                    "2) Update modified files in DB\n"
                    "3) Generate spotify playlists locally\n"
-                   "4) Export whitelist & blacklist\n"
-                   "5) Import whitelist & blacklist\n"
+                   "4) Create a playlist of all saved spotify tracks\n"
+                   "5) Export whitelist & blacklist\n"
+                   "6) Import whitelist & blacklist\n"
                    "Q - Quit\n"
                    "Enter your choice: ")
     choice = input(menu_output)
@@ -28,8 +29,10 @@ def main():
         elif choice == '3':
             generate_local_playlist()
         elif choice == '4':
-            export_altColumns()
+            generate_local_playlist(all_saved_tracks=True)
         elif choice == '5':
+            export_altColumns()
+        elif choice == '6':
             import_altColumns()
         else:
             break
