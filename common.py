@@ -50,12 +50,12 @@ else:
 if args.spotify_client_id is not None:
     spotify_client_id = args.spotify_client_id
 else:
-    spotify_client_id = config['DEFAULT']['spotify-client']
+    spotify_client_id = config['DEFAULT']['SPOTIPY_CLIENT_ID']
 
 if args.spotify_client_secret is not None:
     spotify_client_secret = args.spotify_client_secret
 else:
-    spotify_client_secret = config['DEFAULT']['spotify-secret']
+    spotify_client_secret = config['DEFAULT']['SPOTIPY_CLIENT_SECRET']
 
 if args.redirect_uri is not None:
     redirect_uri = args.redirect_uri
