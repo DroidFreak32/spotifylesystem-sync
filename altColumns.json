@@ -9,6 +9,80 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "19864e80be6428115a1f1b442dcf8e0b",
+        "altALBUM": [
+            "Gameshow (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "420600f9476239f3e20f765673283be0",
+        "altALBUM": [
+            "dead"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1225a97386ba51564942d250c277c6f8",
+        "altALBUM": "",
+        "altTITLE": null,
+        "blackALBUM": [
+            "everything means nothing"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "09580b503ad9ef675ce36d3ab971f959",
+        "altALBUM": "",
+        "altTITLE": null,
+        "blackALBUM": [
+            "hot girl bummer"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "13bf7bd58714f387287544a70f262200",
+        "altALBUM": [
+            "i feel 2 much"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ce5020266af16a22d6404ed8d825c65c",
+        "altALBUM": null,
+        "altTITLE": [
+            "if i were u (with Lauv)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bd0a3c5487113fc7005332c620c424c3",
+        "altALBUM": [
+            "deadroses"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ee15b6ba4fc438eb6d766ae19d58fca9",
+        "altALBUM": [
+            "deadroses"
+        ],
+        "altTITLE": [
+            "90210 (feat. G-Eazy)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "9b2762ae3c0fc6cd5d33469544ba31e1",
         "altALBUM": null,
         "altTITLE": null,
@@ -16,6 +90,15 @@
             "Vessel"
         ],
         "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "29b3cb1523b90f7c8f68592e4335f6c9",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Here Without You - Acoustic Version"
+        ]
     },
     {
         "STREAMHASH": "fd17a4e9a81e15898876d4f2da75e584",
@@ -51,7 +134,9 @@
         ],
         "altTITLE": null,
         "blackALBUM": null,
-        "blackTITLE": null
+        "blackTITLE": [
+            "Doomsday - Piano Reprise"
+        ]
     },
     {
         "STREAMHASH": "bc718c854276a5f71a10baf2e7b7a670",
@@ -108,12 +193,102 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "2e0b8171ef6a0687e0333185105f6ad5",
+        "altALBUM": "",
+        "altTITLE": null,
+        "blackALBUM": [
+            "NF"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9fb835877cb28733af6d0fa573466e54",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "NF"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5d1e7a202890c73c63b1c308b60d8376",
+        "altALBUM": [
+            "WHY"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cc1f036f81a16168aeb95fdad9398e47",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Mansion"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3fdd2dd43af931d88714ef5e388143ad",
+        "altALBUM": "",
+        "altTITLE": null,
+        "blackALBUM": [
+            "Mansion"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e0b7f144f48a391571f68171e3de4473",
+        "altALBUM": [
+            "Chip Chrome & The Mono-Tones (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "92bd3bff5b9072725368143ad2f6a365",
+        "altALBUM": [
+            "Thank You,"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0ca8aa59e7aeeb2d5b310b7fa4234bcb",
+        "altALBUM": [
+            "Triumph & Disaster"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "6a3eb8ecdc385273dda42b28e3630983",
         "altALBUM": null,
         "altTITLE": [
             "Blood - End Credits"
         ],
         "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "563c907b1174b009bcde08b44bfb5b18",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Appetite For Destruction"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e0e20c50adf852914a7ccbae0af95e22",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Appetite For Destruction"
+        ],
         "blackTITLE": null
     },
     {
@@ -164,9 +339,244 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "ab1bb8015703dd514dd714ea617b2843",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d0cc96f61d786eec6547a1ac5464a817",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b9773e6ddfb978cff6e1c1bae7c39633",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9ffee11110f7e1f036b51a1e051d8c4f",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ce477c190c9425ffc7d5f3ca4c6c58f2",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4b1366f13c93e193fb0845ac5eb9ca1a",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8f55e33ff170ece30b3f2bd2f4cf3adc",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "30ed8c1d0419efb2a921a90f7385a863",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c6936baf9610001eaa448f92fee7b7fe",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "18a671eaa3c471ae9b8e10160dbc491e",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "333de41471a45ffa68ccfb2372978e9a",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e4fb2fac17b5eedffa26347313ecad3e",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a291d48f447bea5647230fa4380c6eef",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "32044d3421e4486433c541410034659c",
+        "altALBUM": [
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "4f1c8072c3660cb4661fceca2d5f0c29",
         "altALBUM": [
-            "Nirvana"
+            "Nirvana",
+            "In Utero - 20th Anniversary - Deluxe Edition"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0c2296bb3a3be075e568224523fd2ab4",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "136d8a6ca46c3b1cc24aacdc1822b8be",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d9af69810d5773b38fb9456124a2d5ef",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cc554060a10a23d270d125361f288652",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "48dc3376fc89b01f41d360378a4cbf5b",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1f65e92a03e0821f1f6976ffedb684b8",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "65d1fa9fa334f2b6e9db49927657fb3a",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7f7685bd9b74f29cabcfd78a7c40f21c",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0dbc44229db4caed83f0295791c67133",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "35af2c6ddd9ca0a717d123929f59a5c6",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6127309dd39cb40c2556aec877eee5b1",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5f30bc43ef6d00d8e2805b6e7dc627c0",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -174,6 +584,15 @@
     },
     {
         "STREAMHASH": "a34e85c3f7dd812da99819ca58b8f9cf",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "09fc4039a5239b6968f8b68c6045f4b8",
         "altALBUM": [
             "Nevermind (Deluxe Edition)"
         ],
@@ -191,6 +610,96 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "877dd050dcad0817350d19f32f035357",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e4b72b20da17247593fae32f7307ac84",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "490653adc8a97d511b26ef7f0c7e19ad",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "97bc8c09b36fe276fa556f467d620fe8",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "87afeb0e9f94c4b628000f7ba2c5271c",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bd132c4e4934a1f9732b1de61b3d287a",
+        "altALBUM": [
+            "Nevermind (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "dab94d6acf3027191d1546de2c7ef386",
+        "altALBUM": [
+            "Tickets To My Downfall (SOLD OUT Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2b61a028313f57188fb0f9eb596781e0",
+        "altALBUM": null,
+        "altTITLE": [
+            "my ex's best friend (with blackbear)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d725d146e319608a79c7f001c6b3bb85",
+        "altALBUM": null,
+        "altTITLE": [
+            "banyan tree - interlude"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d462c7183198ceabf710c19be4ea68ef",
+        "altALBUM": null,
+        "altTITLE": [
+            "forget me too (feat. Halsey)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "1e6581bade18533ff5a48c80045a2ce9",
         "altALBUM": null,
         "altTITLE": [
@@ -200,8 +709,112 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "9f6fa02842e707a90b053d0eb726401c",
+        "STREAMHASH": "63524811f1b6df2d7eedeeacc87658b5",
         "altALBUM": null,
+        "altTITLE": [
+            "bloody valentine - Acoustic"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6f905b0269fb04ed05c68fe0884a4dcf",
+        "altALBUM": null,
+        "altTITLE": [
+            "all I know (feat. Trippie Redd)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a12c55368e484d37acb02b25d6b59c38",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "bloody valentine - Acoustic"
+        ]
+    },
+    {
+        "STREAMHASH": "e17cf4f6e6e178a66fa5473e98bf3859",
+        "altALBUM": [
+            "Jazz (2011 Remaster)"
+        ],
+        "altTITLE": [
+            "Don't Stop Me Now - Remastered 2011"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b1cb6330ec42274ce52993140b72d4cc",
+        "altALBUM": null,
+        "altTITLE": [
+            "Bohemian Rhapsody - Remastered 2011"
+        ],
+        "blackALBUM": [
+            "A Night At The Opera (2011 Remaster)"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "62b5e1604549d146463b8d2ec309f9b7",
+        "altALBUM": [
+            "A Night At The Opera (2011 Remaster)"
+        ],
+        "altTITLE": [
+            "Bohemian Rhapsody - Remastered 2011"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5421e22ee3af3114a2c9875f37a4e2af",
+        "altALBUM": null,
+        "altTITLE": [
+            "Bohemian Rhapsody - Remastered 2011"
+        ],
+        "blackALBUM": [
+            "A Night At The Opera (2011 Remaster)"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9d1dd0cdb305adb5273ee8a220193c7a",
+        "altALBUM": null,
+        "altTITLE": [
+            "Another One Bites The Dust - Remastered 2011"
+        ],
+        "blackALBUM": [
+            "The Game (2011 Remaster)"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "785d9bf597479895db79d0a727549461",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Don't Stop Me Now - Remastered 2011"
+        ]
+    },
+    {
+        "STREAMHASH": "fe170ebaadd1c819c52326ab4adf9dc6",
+        "altALBUM": [
+            "The Game (2011 Remaster)"
+        ],
+        "altTITLE": [
+            "Another One Bites The Dust - Remastered 2011"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9f6fa02842e707a90b053d0eb726401c",
+        "altALBUM": [
+            "Sweet FA"
+        ],
         "altTITLE": null,
         "blackALBUM": [
             "Being So Normal"
@@ -227,7 +840,25 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "812ec76544af2a67fa9b118eaa9fad03",
+        "altALBUM": [
+            "You and Your Friends (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "7e2b608dfd5d847fada5764009f8df4f",
+        "altALBUM": [
+            "You and Your Friends (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "22ae65a3bc68405d4cc4fff2419ccf33",
         "altALBUM": [
             "You and Your Friends (Deluxe)"
         ],
@@ -240,14 +871,19 @@
         "altALBUM": null,
         "altTITLE": null,
         "blackALBUM": [
-            "Being So Normal"
+            "Being So Normal",
+            "Sweet FA"
         ],
         "blackTITLE": null
     },
     {
         "STREAMHASH": "39e1ec7ca6182c6361890bbe51e9fdea",
-        "altALBUM": null,
-        "altTITLE": null,
+        "altALBUM": [
+            "Peach Pit on Audiotree Live"
+        ],
+        "altTITLE": [
+            "Private Presley - Audiotree Live Version"
+        ],
         "blackALBUM": [
             "Being So Normal"
         ],
@@ -282,12 +918,43 @@
     },
     {
         "STREAMHASH": "899fb29fdf5ec907bb655326aedb68cd",
-        "altALBUM": null,
-        "altTITLE": null,
+        "altALBUM": [
+            "Peach Pit on Audiotree Live"
+        ],
+        "altTITLE": [
+            "Alrighty Aphrodite - Audiotree Live Version"
+        ],
         "blackALBUM": [
             "Being So Normal"
         ],
         "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3bc5bd11879152da45d3b4798f06f743",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Sweet FA"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "40f590aebb5b8da33a1ccb1390022fd1",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Private Presley - Audiotree Live Version"
+        ]
+    },
+    {
+        "STREAMHASH": "31c70e77aced18e366463f7c6c48442e",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Alrighty Aphrodite - Audiotree Live Version"
+        ]
     },
     {
         "STREAMHASH": "64ccb5364ea12ffc32fdc099a50ebc5d",
@@ -299,7 +966,34 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "0dc29385e3a425e15957d5ae254cfb78",
+        "altALBUM": [
+            "Brothers (Deluxe Remastered Anniversary Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6bf156f45e8d422e5890961c1ec41cf1",
+        "altALBUM": [
+            "Brothers (Deluxe Remastered Anniversary Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "9b98529c1ef87db9f3b767b1a209bc9d",
+        "altALBUM": [
+            "Brothers (Deluxe Remastered Anniversary Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c4b77c3473503353f7e095632a50e01c",
         "altALBUM": [
             "Brothers (Deluxe Remastered Anniversary Edition)"
         ],
@@ -326,6 +1020,35 @@
         ]
     },
     {
+        "STREAMHASH": "1fcb14d006dc909788f20edd7df7ef37",
+        "altALBUM": [
+            "Leave a Whisper (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bf812c538a3aad815e3d510b2616f985",
+        "altALBUM": null,
+        "altTITLE": [
+            "It's Just Forever (feat. Alison Mosshart)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "76fd94f4788f093fd80614183b1b9dd5",
+        "altALBUM": [
+            "Cage The Elephant (Expanded Edition)"
+        ],
+        "altTITLE": [
+            "Ain't No Rest For The Wicked - Original Version"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "ba3a2958e6e5f2481809023ef7966215",
         "altALBUM": [
             "Cage The Elephant (Expanded Edition)"
@@ -344,6 +1067,80 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "8adf6066777f6181017918adf5ba8b69",
+        "altALBUM": [
+            "Broken Boy (feat. Iggy Pop)"
+        ],
+        "altTITLE": [
+            "Broken Boy (feat. Iggy Pop)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "82148f58a141fe4dc42baa2350ffcac5",
+        "altALBUM": [
+            "Poison The Parish (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "86279c40f3488f6207e9b255724d34f9",
+        "altALBUM": [
+            "Poison The Parish (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "441b2c486bf5c048769354b362494370",
+        "altALBUM": [
+            "Poison The Parish (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "23b77e29c89bd9205af8b196e73c4745",
+        "altALBUM": [
+            "Poison The Parish (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8b291bb0ac3838b0fa89ee2810560823",
+        "altALBUM": [
+            "Poison The Parish (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "43df11762dca6429f4478cacd116b47b",
+        "altALBUM": [
+            "Poison The Parish (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d29915d6b9ffdbc4121c91e396944ed8",
+        "altALBUM": [
+            "Seether: 2002-2013"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "139b561f36adbddf87604d846192b2cc",
         "altALBUM": null,
         "altTITLE": null,
@@ -351,6 +1148,73 @@
         "blackTITLE": [
             "Breakdown"
         ]
+    },
+    {
+        "STREAMHASH": "983198011be9482d70604234f3b29617",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Seether: 2002-2013"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3f1b3e1354d01314750448982c80fc80",
+        "altALBUM": [
+            "Isolate And Medicate (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": [
+            "Seether: 2002-2013"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f9a340f741d88515004f82a78c40ba36",
+        "altALBUM": [
+            "Isolate And Medicate (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d06e0fc497ce6ff18025e3f921416363",
+        "altALBUM": [
+            "Curiosities, Rarities And Pariahs"
+        ],
+        "altTITLE": null,
+        "blackALBUM": [
+            "Seether: 2002-2013"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e1a4b79ea66757ec9c7bf9a6eefea63f",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Disclaimer"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "065e5f1a7b1f0828791f40d8d40dc124",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Disclaimer"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9cd38d6dc12d127e0e00cac7673e10db",
+        "altALBUM": [
+            "Curiosities, Rarities And Pariahs"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "29936af2291696b8486ed4430a94943d",
@@ -380,6 +1244,15 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "0f32ca5b10bb5cf72ead81b473444d97",
+        "altALBUM": [
+            "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "db48b512168576d6292f5ca58945720c",
         "altALBUM": [
             "Finding Beauty In Negative Spaces (Bonus Track Version)"
@@ -398,7 +1271,36 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "e7779aa627ded74d2a169b72689927cc",
+        "altALBUM": [
+            "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "2ffe42bbca0d61590b40e1722ae68a4c",
+        "altALBUM": [
+            "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Careless Whisper - Strings Version"
+        ]
+    },
+    {
+        "STREAMHASH": "3d38a2b2aa12ad05a496cb2b14cb47a0",
+        "altALBUM": [
+            "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "946cee2a3fd6bd28dfd306ecccac8619",
         "altALBUM": [
             "Finding Beauty In Negative Spaces (Bonus Track Version)"
         ],
@@ -416,6 +1318,71 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "90dbfdbd9e300f1db7388f69966879b1",
+        "altALBUM": [
+            "Beg"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "aa9bf2d240d5ec9c671b78c459cbe30b",
+        "altALBUM": [
+            "Dangerous"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cf47a80ae78a1a467b4df8f019e3f263",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Curiosities, Rarities And Pariahs",
+            "Disclaimer II"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e7f557e2cb42c0cabe6ad242facbafc2",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Isolate And Medicate (Deluxe Edition)"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "54eb9b441144bdc590e00e68ccfb99f4",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Curiosities, Rarities And Pariahs",
+            "Disclaimer II"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9ca29cda3d35d89e3f132787f7c93246",
+        "altALBUM": [
+            "Curiosities, Rarities And Pariahs"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2875c535371506963cc04a0f271f425a",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Holding Onto Strings Better Left To Fray"
+        ],
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "5c29238b4996bee0a3c141ab88e48b57",
         "altALBUM": null,
         "altTITLE": null,
@@ -425,11 +1392,48 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "a348acf4d44a1fc4079cd05f7249dbea",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Holding Onto Strings Better Left To Fray"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "48d528b2d550d8087f1015934f96002c",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Holding Onto Strings Better Left To Fray"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4f9a6ab42a8af91c44904349a5458490",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Karma and Effect"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4252d40a8ca6b8fe757e2797773b8be5",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Disclaimer"
+        ],
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "9a1d986d5c796f995680a23a86e28d48",
         "altALBUM": null,
         "altTITLE": null,
         "blackALBUM": [
-            "Disclaimer II"
+            "Disclaimer II",
+            "Disclaimer"
         ],
         "blackTITLE": null
     },
@@ -448,6 +1452,17 @@
         "altTITLE": null,
         "blackALBUM": [
             "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "blackTITLE": [
+            "Careless Whisper - Strings Version"
+        ]
+    },
+    {
+        "STREAMHASH": "8c1fa45da0985641a1e8a440a6334a07",
+        "altALBUM": "",
+        "altTITLE": null,
+        "blackALBUM": [
+            "Holding Onto Strings Better Left To Fray"
         ],
         "blackTITLE": null
     },
@@ -470,6 +1485,15 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "10b22b63d707fd67fb3c8078979bc69d",
+        "altALBUM": [
+            "Citizen"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "8e3de8fab9f5ae09c21048c28f2e7e48",
         "altALBUM": [
             "Transmissions (Deluxe Version)"
@@ -488,12 +1512,39 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "75f9cf5004aac73899f3b92b763030cc",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Californication (Deluxe Edition)"
+        ],
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "00c3ea03c241e879114eaf4bf800d768",
         "altALBUM": null,
         "altTITLE": null,
         "blackALBUM": [
             "By the Way (Deluxe Edition)"
         ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3d8dff1af85a8659b834833679b2d18c",
+        "altALBUM": [
+            "Californication (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bb05c06b64860ad4bf35cdff4f6ac68e",
+        "altALBUM": [
+            "Californication (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -504,6 +1555,24 @@
         "blackTITLE": [
             "Californication"
         ]
+    },
+    {
+        "STREAMHASH": "2c0e9314508c89d3464cf840c8ea4baf",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Snow (Hey Oh)"
+        ]
+    },
+    {
+        "STREAMHASH": "62dd7f656d69c2b7fe0b9e336845f046",
+        "altALBUM": [
+            "By the Way (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "644bf03441bd7f1dcdc2649e452088dc",
@@ -521,6 +1590,24 @@
         ],
         "altTITLE": null,
         "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "628cd5e3c43ed36aff9e1bfe018b872f",
+        "altALBUM": [
+            "By the Way (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bcf72e4f4812f02978f4ceae74252daa",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Meddle"
+        ],
         "blackTITLE": null
     },
     {
@@ -542,6 +1629,15 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "eb7fe3d413eea6b0232ce222edbc8205",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Shine On You Crazy Diamond (Pts. 1-5)"
+        ]
+    },
+    {
         "STREAMHASH": "57abfd4be0dd5619e4728a2288a699d9",
         "altALBUM": [
             "Blood / / Water"
@@ -553,11 +1649,106 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "716f5a045020b5345a4ff8c25a73e504",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "You And Whose Army?"
+        ]
+    },
+    {
+        "STREAMHASH": "6a35549f8b25689d8fdf4d7bdf03da57",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "The Best Of"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8dd473e1b463a4142610e8e8faa3f804",
+        "altALBUM": [
+            "OK Computer OKNOTOK 1997 2017"
+        ],
+        "altTITLE": [
+            "Let Down - Remastered"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "afd2dfb25edf5ef0c31e67de120644e8",
+        "altALBUM": [
+            "OK Computer OKNOTOK 1997 2017"
+        ],
+        "altTITLE": [
+            "Paranoid Android - Remastered"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e400a1f9d6cb5510667d0284e57cf1d5",
+        "altALBUM": [
+            "OK Computer OKNOTOK 1997 2017"
+        ],
+        "altTITLE": [
+            "Subterranean Homesick Alien - Remastered"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cd904fcf43a6c2bad66830fae87daf7a",
+        "altALBUM": [
+            "OK Computer OKNOTOK 1997 2017"
+        ],
+        "altTITLE": [
+            "Climbing Up the Walls - Remastered"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "ce012110254f13fe75de84288671b9e9",
         "altALBUM": [
             "Surround You // Stay In"
         ],
         "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "fb247e2367b9027a3ccff3a4020570b2",
+        "altALBUM": [
+            "Led Zeppelin IV (Deluxe Edition)"
+        ],
+        "altTITLE": [
+            "Black Dog - Remaster"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "acbe736d27b09be1a15e2a91d8aa589b",
+        "altALBUM": [
+            "Physical Graffiti (Deluxe Edition)"
+        ],
+        "altTITLE": [
+            "Kashmir - Remaster"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5452c9bfc281623392d643ee4bc9f9d6",
+        "altALBUM": [
+            "Led Zeppelin II (1994 Remaster)"
+        ],
+        "altTITLE": [
+            "Whole Lotta Love - 1990 Remaster"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -582,7 +1773,8 @@
     {
         "STREAMHASH": "96e91c7def52090e6cfcfa18bd69b89f",
         "altALBUM": [
-            "Cross Road"
+            "Cross Road",
+            "Cross Road (Sound & Vision) [International Version]"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -594,6 +1786,24 @@
         "altTITLE": null,
         "blackALBUM": [
             "Crush"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b8844deb1b122a69bff5cadf85174542",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Slippery When Wet"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a8b15fdf7fe9965edfcbc568c88a91c8",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Slippery When Wet"
         ],
         "blackTITLE": null
     },
@@ -611,7 +1821,8 @@
         "altALBUM": null,
         "altTITLE": null,
         "blackALBUM": [
-            "Cross Road"
+            "Cross Road",
+            "Cross Road (Sound & Vision) [International Version]"
         ],
         "blackTITLE": null
     },
@@ -625,6 +1836,33 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "df3eb1c58167b52ae917e2f3bfb7a785",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Slippery When Wet"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "95e74d0f080304be6a6778bc66c47c7f",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Slippery When Wet"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "da4c8ec29e553d752c6db92b365e28a7",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "I'm Not A Vampire - Revamped"
+        ]
+    },
+    {
         "STREAMHASH": "ab26addd059863dd2e01259188b35f67",
         "altALBUM": [
             "Weezer (Deluxe Edition)"
@@ -634,12 +1872,263 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "6377ce2ad19cc38d8b67d366d4ea98b6",
+        "altALBUM": [
+            "Submarine - Original Songs From The Film By Alex Turner"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f751c04ad7ce8228caa7938687c900f7",
+        "altALBUM": [
+            "Submarine - Original Songs From The Film By Alex Turner"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "57f66bfd4155f66e0c1ac5fed925e636",
+        "altALBUM": [
+            "Submarine - Original Songs From The Film By Alex Turner"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "afab78c08b028c8f279faf8d57812ae8",
+        "altALBUM": [
+            "Submarine - Original Songs From The Film By Alex Turner"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cc404224e4eb4463409f9f89564e3384",
+        "altALBUM": [
+            "Submarine - Original Songs From The Film By Alex Turner"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e1ab8493eda586a0bb2bd47398d22b16",
+        "altALBUM": null,
+        "altTITLE": [
+            "Good to Know That If I Ever Need Attention"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "613ccc1a2ebba0a38ca6f1a8b1ef1903",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Bed - Live In Studio"
+        ]
+    },
+    {
+        "STREAMHASH": "b542516b899f43d0cd070ead8d75d69f",
+        "altALBUM": [
+            "Your Favorite Weapon (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "53da191d8f08ccdd51402d2ec4a0b803",
+        "altALBUM": null,
+        "altTITLE": [
+            "Same Logic / Teeth"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9d221f84350a5c59346565e45f665154",
+        "altALBUM": [
+            "Brand New Eyes (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c7b3167fd97521204ddebb70d4ffce0c",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Sgt. Pepper's Lonely Hearts Club Band - Remix"
+        ]
+    },
+    {
+        "STREAMHASH": "db35e98a203488818962728a433251dd",
+        "altALBUM": [
+            "The Beatles 1967 - 1970 (Remastered)"
+        ],
+        "altTITLE": [
+            "Revolution - Remastered 2009"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "21b96b1bc6846a3192cabdd13f18d207",
+        "altALBUM": [
+            "1 (Remastered)"
+        ],
+        "altTITLE": [
+            "Hey Jude - Remastered 2015"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "091ab337a6982421b54443408c6bc83e",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Sgt. Pepper's Lonely Hearts Club Band - Remix"
+        ]
+    },
+    {
+        "STREAMHASH": "9c5024bd5dfc036f2fc18e8a4f5aae57",
+        "altALBUM": null,
+        "altTITLE": [
+            "Yesterday - Remastered"
+        ],
+        "blackALBUM": [
+            "Help! (Remastered)"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "97c6f0a4a89e02b562bc7b7ce02a5317",
+        "altALBUM": [
+            "Help! (Remastered)"
+        ],
+        "altTITLE": [
+            "Yesterday - Remastered"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "20ecac24b3b63ad4b0c31b7ebebbe094",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Brianstorm - Live"
+        ]
+    },
+    {
+        "STREAMHASH": "6f9a21bc8c0af89e4ff3cc00714b78f4",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "She Looks Like Fun - Live"
+        ]
+    },
+    {
         "STREAMHASH": "6fd82c3b5db5e1f09cf8fd318cfcb455",
         "altALBUM": null,
         "altTITLE": null,
         "blackALBUM": [
             "Whatever People Say I Am, That's What I'm Not"
         ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "129d0b7c1fc9bfa72477f5fa2da0a922",
+        "altALBUM": [
+            "I Bet You Look Good On The Dance Floor"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d46f318556354602882546539aa6f452",
+        "altALBUM": [
+            "One For The Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "06317d25c1caae21be5b703c049b32d9",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Arabella - Live"
+        ]
+    },
+    {
+        "STREAMHASH": "f4e65cd83e4932db005213e952e89b33",
+        "altALBUM": [
+            "Favourite Worst Nightmare (Standard Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d9e4253f72c79a3c0ddbe38984bf7406",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Do Me A Favour - Live"
+        ]
+    },
+    {
+        "STREAMHASH": "4582be16588948f34c9be2b376a3433b",
+        "altALBUM": [
+            "Favourite Worst Nightmare (Standard Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d7817422fcd58efbb253775f28b76d53",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "505 - Live"
+        ]
+    },
+    {
+        "STREAMHASH": "140c8aca3cbf040333ea3f16f4bf019f",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Crying Lightning - Live"
+        ]
+    },
+    {
+        "STREAMHASH": "b71c18cc55d043ae79b72ecae16f461a",
+        "altALBUM": null,
+        "altTITLE": [
+            "The Bakery - B Side"
+        ],
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -661,6 +2150,24 @@
         ],
         "blackALBUM": null,
         "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c550b7b1b3f2ebbf65f0edbe0fa80620",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Horseshoe Crab - Audiotree Live Version"
+        ]
+    },
+    {
+        "STREAMHASH": "c5bf06790f78fe485114040bb23e27e8",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Like a Child Hiding Behind Your Tombstone - Audiotree Live Version"
+        ]
     },
     {
         "STREAMHASH": "039b547486dfbab8599f0b665aa35589",
@@ -701,6 +2208,15 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "452fe951c11e5749af0881fb3822f332",
+        "altALBUM": [
+            "Phobia (Explicit Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "fd8216235535f29aa4fc4927feaa2413",
         "altALBUM": [
             "Phobia (Clean Version)"
@@ -710,9 +2226,202 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "90770c644c868277f72370a490083a9e",
+        "altALBUM": [
+            "Phobia (Explicit Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "abebd70c18fa435eb03a18271215ba82",
         "altALBUM": [
             "Shallow Bay: The Best Of Breaking Benjamin (Explicit)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "dc61f6151f869e97759693daec12e94e",
+        "altALBUM": [
+            "2009 Hits"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Dear Agony - Aurora Version"
+        ]
+    },
+    {
+        "STREAMHASH": "2ed143523b86147d9210fea4da8dc796",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Far Away"
+        ]
+    },
+    {
+        "STREAMHASH": "13be2e68080a3278ec869f12b21f85dd",
+        "altALBUM": [
+            "Shallow Bay: The Best Of Breaking Benjamin (Explicit)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2a167117ac29bd8376143bb4b069eccf",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "37c8eef88576482987dabdd745f044d0",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7a78796d1339fa857ed6977f7ee976e4",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1dcfbfd9d02d9afd0a46ad70dc6705c6",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "09aea99df181c7f3f611f44c86755e9b",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a62c696e57b1e78bbd614419b09d479f",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Hall of Fame (feat. will.i.am)"
+        ]
+    },
+    {
+        "STREAMHASH": "45a19c78410910381404ec1fd80ae402",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0d8dca795475fd6a6f07ffd60f403889",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0e51d62e576c4efd3cfcd3966e49ea92",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d9b190a7d292b96ac4287584a04b2878",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a4052ea73dcff4050c7ca6a9299a58e8",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c5b019eff59187b527981549682e2500",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b901020bcd2fba4ed1e226722aedeb58",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4eadf3f0c2a37ffd30e981114662b7cf",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "45ad930a186ee52f8e42465f6ce618d4",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ffcd282fb0f0d8b8adbc420b3f0ce944",
+        "altALBUM": [
+            "#3 Deluxe Version"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5ab4e632b4c737f3631d19064409c647",
+        "altALBUM": [
+            "#3 Deluxe Version"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -811,6 +2520,15 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "a466f174846f817522041c2589d5de9b",
+        "altALBUM": [
+            "There is a Hell Believe Me I've Seen It. There is a Heaven Let's Keep it a Secret"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "040fa31db11721e30181e23ab95f69c7",
         "altALBUM": [
             "There Is A Hell Believe Me I've Seen It. There Is A Heaven Let's Keep It A Secret"
@@ -822,7 +2540,8 @@
     {
         "STREAMHASH": "699e734281e4daf2cb7bef63e1992bf1",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -840,7 +2559,8 @@
     {
         "STREAMHASH": "813e94b776976fd051d97b80b6fdd4b9",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -849,7 +2569,8 @@
     {
         "STREAMHASH": "de9e20b6ebe9291d69b090db5d8dc513",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -858,7 +2579,8 @@
     {
         "STREAMHASH": "1522a3deff032046267e8c8c0e6b0685",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -867,7 +2589,17 @@
     {
         "STREAMHASH": "67f5d0ae447eb2182a6808e3d20169be",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ad992d4c4804bbf10507228fbfaa5f85",
+        "altALBUM": [
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -875,6 +2607,15 @@
     },
     {
         "STREAMHASH": "d5185eed8c48a2482cc016041c328c38",
+        "altALBUM": [
+            "Sempiternal (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "11c4e4b564ebc1efa093ebef548f5743",
         "altALBUM": [
             "Sempiternal (Expanded Edition)"
         ],
@@ -894,7 +2635,182 @@
     {
         "STREAMHASH": "53d0ea0b3256a9bacab8a54af4ea7117",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "25fd16f5760327d08fbeff7869fd065f",
+        "altALBUM": [
+            "Sempiternal (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ca2398c61bead17029d027e8eb462019",
+        "altALBUM": [
+            "Transformers: Revenge Of The Fallen The Album",
+            "New Divide (Int'l DMD Maxi)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2ec980015932df517ad62078e6c02cab",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0785d5dd93e643a3f94ba60c1dd6db7c",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "912a2bf1702cd6fd16768f866243f2bf",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d7db4f988aa0a11cc855cadf4a1c7371",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "48ae1ae1cfb8f9b8fad968b06153741b",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ed0e3931f1ee6fb3da082f7934408d57",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e66b6cbb49c3efd46718ef932fb1473c",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "be8dd425cb2142e179df78dab0aabb23",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "68d0999c9b99e0490aaabba2fe05e273",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2e4f19e3093278612155ab840d65530b",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9255405edcb32be7c0a7e69898deb4cd",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e3be43db9759de6b922b15a12eb5ffe6",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "07c3b59e7e38a33f0b287ba727e124cc",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Lying from You - Live"
+        ]
+    },
+    {
+        "STREAMHASH": "f05eeeeb1b5a4e2268c44fbf44d6d259",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4f7235f2b81ef54f715cfd7285de298c",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b7518d3da19cde6d19a7f4fa7eda2240",
+        "altALBUM": [
+            "Meteora (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1915e37298da75f721f21abb1a871cdf",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -910,7 +2826,45 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "65826b8797946201480a2e21edcca840",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "acf1c032d52ab98d2d9c8e7b1fc4a696",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6e052effd23e0ef70f9bb0d3cebbd13f",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Runaway - Live"
+        ]
+    },
+    {
+        "STREAMHASH": "6604c0b6ccb4a6d325294443eb4eb89f",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "91392590f911e6d6d191dc87cf37278d",
         "altALBUM": [
             "Hybrid Theory (Bonus Edition)"
         ],
@@ -937,9 +2891,220 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "c9117513f6b3d15e4e5b827e046d6647",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "38a9f0461946330c30c33e94f4ed4d8c",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6fffde2bd7762026b51390aecbe87515",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e65e10985dc367763742411d8e16983b",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9011ef35ea10d4be258639281aaa7448",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2c4fcd7512da9822addda72dfbf9fdfa",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b11a6800c9cbd1f044f00b675480602a",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "377d4048737221de3736d7496c0f4e35",
+        "altALBUM": null,
+        "altTITLE": [
+            "Pts.Of.Athrty - Jay Gordon Reanimation"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4769c4b5107dfc99aa47e24344d3309d",
+        "altALBUM": null,
+        "altTITLE": [
+            "Enth E Nd (Kutmasta Kurt Reanimation) [feat. Motion Man]"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3cdc84f26e3ea05a4e2fc65b0f6c3b44",
+        "altALBUM": null,
+        "altTITLE": "P5hng Me A*wy - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8de59e7aa310d15f6a90b790143b43ac",
+        "altALBUM": null,
+        "altTITLE": "Numb - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bc0114df21b1dce53f92f3d55461ef04",
+        "altALBUM": null,
+        "altTITLE": "Points of Authority - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cd7a44a467d37d6e66754724dc8aed82",
+        "altALBUM": null,
+        "altTITLE": "One Step Closer - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "655f50d73f706887ebc924715490a5da",
+        "altALBUM": null,
+        "altTITLE": "In the End - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "dd4e0f212e9e29539b962fce93380342",
+        "altALBUM": null,
+        "altTITLE": "Lying from You - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4708eacec9b7a2880431149d2c1f342d",
+        "altALBUM": null,
+        "altTITLE": "Crawling - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "11d2bcb2fc50be07d9cfe6a6749b1846",
+        "altALBUM": null,
+        "altTITLE": "Papercut - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6c357466d33cb44630787dd61c0b41f4",
+        "altALBUM": null,
+        "altTITLE": "Runaway - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "eb91ad684d73771b3c9a75f312a012ee",
+        "altALBUM": null,
+        "altTITLE": "Somewhere I Belong - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "260c19cb48a756e9cf201d97380b6eb7",
+        "altALBUM": null,
+        "altTITLE": "Faint - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "85452b918af0ddcc25d5fca121acbb33",
+        "altALBUM": null,
+        "altTITLE": "From the Inside - Live",
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "b9d6ccb4d298a37ad7f716a31f46cc62",
         "altALBUM": [
-            "Numb / Encore: MTV Ultimate Mash-Ups Presents Collision Course"
+            "Numb / Encore: MTV Ultimate Mash-Ups Presents Collision Course",
+            "Collision Course (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "84dc868aa3733b26a820a1ce957b0928",
+        "altALBUM": [
+            "Collision Course (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "540d2bc7d243768d79c78c5462c9bef8",
+        "altALBUM": [
+            "Collision Course (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "97bd2bc0e7c69655260ef2655d7b2cfd",
+        "altALBUM": [
+            "Collision Course (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "70adfaa760bdb729d5ac8e2f8e624f83",
+        "altALBUM": [
+            "Collision Course (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5a727012678712114f2adf0ac00b15a7",
+        "altALBUM": [
+            "Collision Course (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
