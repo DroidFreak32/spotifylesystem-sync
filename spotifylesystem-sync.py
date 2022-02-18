@@ -1,4 +1,4 @@
-from db_ops import sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, generate_local_playlist
+from db_ops import cleanup_db, sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, generate_local_playlist
 
 from common import cls
 print("outside common")
@@ -12,6 +12,7 @@ def menu():
                    "4) Create a playlist of all saved spotify tracks\n"
                    "5) Export whitelist & blacklist\n"
                    "6) Import whitelist & blacklist\n"
+                   "7) Cleanup duplicates in db\n"
                    "Q - Quit\n"
                    "Enter your choice: ")
     choice = input(menu_output)
@@ -34,6 +35,8 @@ def main():
             export_altColumns()
         elif choice == '6':
             import_altColumns()
+        elif choice == '7':
+            cleanup_db()
         else:
             break
         input("Press enter to go back to the main menu")
