@@ -139,11 +139,11 @@ def get_my_saved_tracks():
     # Results is a dict with key next indicating offset.
     # Only 20 tracks can be retrieved per API call.
     with tqdm.tqdm(total=total_tracks, desc="Loading tracks") as pbar:
-        while results['next']:
+        while offset < total_tracks:
             for item in results['items']:
                 results_raw += [ {'track': item['track']} ]
             pbar.update(20)
-            # offset += 20
+            offset += 20
             # print(f"Retrieving {offset+20} / {total_tracks} tracks.", end="\r", flush=True)
             results = sp.next(results)
     all_my_tracks = cleanup_playlist(playlist_raw=results_raw)
