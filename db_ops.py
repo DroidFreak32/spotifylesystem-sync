@@ -15,6 +15,7 @@ from peewee import IntegrityError
 from peewee import Model
 from peewee import TextField
 from playhouse.sqlite_ext import CSqliteExtDatabase
+from tqdm import tqdm
 
 import spotify_ops
 from common import bcolors, generate_m3u, generate_metadata, get_last_flac_mtime, list2dictmerge, music_root_dir, \
@@ -50,6 +51,7 @@ class Music(BaseModel):
     LYRICS = BlobField(unindexed=True, null=True)
     STREAMHASH = CharField(max_length=32, unique=True)
     PATH = TextField(unindexed=True)
+
 
 
 def is_item_in_db_column(db_tag=None, track_tag=None):
@@ -177,7 +179,7 @@ def search_track_in_db(track_metadata=None):
         db_album = deepcopy(row.ALBUM.casefold())
         spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
 
-        if re.search(rf"\b{re.escape(db_title)}\b", spotify_title) is not None or is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+        if re.search(rf"\b{re.escape(db_title)}\b", spotify_title) is not None or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) or spotify_title == db_title:
             # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
 
             if is_item_in_db_column(row.blackTITLE, track_metadata['TITLE']):
@@ -224,19 +226,24 @@ def search_track_in_db(track_metadata=None):
                           f"\n{bcolors.OKBLUE}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
                           f"\n\nPATH {row.PATH}"
                           f"\nAre these the same?")
-                    answer = input("Y/N/q: ")
+                    answer = input("Y/N/A (All Album)/Q: ")
 
                     if answer == 'n' or answer == 'N':
                         add_to_black_album(row, track_metadata)
                         continue
 
-                    if answer == 'Y' or answer == 'y':
-                        add_to_alt_album(row, track_metadata)
-                        result.append({
-                            'ALBUMARTIST': spotify_album_artist,
-                            'PATH': str_to_list(row.PATH),
-                            'STREAMHASH': row.STREAMHASH
-                        })
+                    if answer == 'Y' or answer == 'y' or answer == 'A':
+                        if answer ==  'A':
+                            query = Music.select().where( (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM) )
+                            for row2 in query:
+                                add_to_alt_album(row2, track_metadata)
+                        else:
+                            add_to_alt_album(row, track_metadata)
+                            result.append({
+                                'ALBUMARTIST': spotify_album_artist,
+                                'PATH': str_to_list(row.PATH),
+                                'STREAMHASH': row.STREAMHASH
+                            })
                     elif answer == 'q' or answer == 'Q':
                         return 999
                     else:
@@ -307,7 +314,9 @@ def dump_to_db(metadata):
                                          PATH=multi_path).where(Music.STREAMHASH == track["STREAMHASH"])
                     query.execute()
                 print(f"Previous file: {multi_path[0]}\nCurrent file: {multi_path[1]}{bcolors.ENDC}")
-    music_db_orm.save()
+
+    if music_db_orm is not None:
+        music_db_orm.save()
 
 
 def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last_flac_mtime=1):
@@ -332,28 +341,41 @@ def partial_sync():
     flac_files = find_flacs(music_root_dir)
     new_files = []
     db_mtime = os.path.getmtime(db_mtime_marker)
+    last_flac_mtime = get_last_flac_mtime(flac_files)
     for flac_file in flac_files:
         if db_mtime < os.path.getmtime(os.path.join(music_root_dir, flac_file)):
             new_files.append(flac_file)
     print(f"New files: {new_files}")
     input("Press enter to continue..")
     if len(new_files) > 0:
-        sync_fs_to_db(force_resync=False, flac_files=new_files, last_flac_mtime=int(db_mtime))
+        sync_fs_to_db(force_resync=False, flac_files=new_files, last_flac_mtime=last_flac_mtime)
 
 
 def generate_local_playlist(all_saved_tracks=False):
+    """
+    TODO: Instead of scanning each track, merge th AlbumArtist and just have 1 lookup per AA in DB
+    """
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     if not all_saved_tracks:
         spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
     else:
-        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
+        # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
+        import json as json
+        with open('allmytracks.json', 'r') as j:
+            spotify_playlist_tracks = json.loads(j.read())
+        spotify_playlist_name = 'RuMAN'
+
+    spotify_playlist_track_total = len(spotify_playlist_tracks)
     matched_list = []
     matched_paths = []
     unmatched_track_ids = []
     unmatched_list = []
 
+    offset = 0
     for playlist_track in spotify_playlist_tracks:
+        offset += 1
+        print(f"Querying DB for tracks: {offset} / {spotify_playlist_track_total}", end="\r")
         result = search_track_in_db(track_metadata=playlist_track)
         if result == 999:
             break
@@ -368,6 +390,7 @@ def generate_local_playlist(all_saved_tracks=False):
             continue
         matched_list += result
         if isinstance(str_to_list(result[0]['PATH']), list):
+            # Use the 1st PATH. TODO: Make this more accurate by checking Album
             result[0]['PATH'] = result[0]['PATH'][0]
         matched_paths.append(result[0]['PATH'])
 
@@ -431,6 +454,54 @@ def import_altColumns():
     db.backup(master)
     master.execute_sql('VACUUM;')
 
+
+def cleanup_db():
+    master = CSqliteExtDatabase(db_path)
+    master.backup(db)
+
+    query = Music.select()
+    total_tracks = Music.select().count()
+    count = 0
+    for row in query:
+        db_ALBUMARTIST = row.ALBUMARTIST
+        db_ARTIST = str_to_list(row.ARTIST)
+        db_ALBUM = str_to_list(row.ALBUM)
+        db_altALBUM = str_to_list(row.altALBUM)
+        db_blackALBUM = str_to_list(row.blackALBUM)
+        db_TITLE = row.TITLE
+        db_altTITLE = str_to_list(row.altTITLE)
+        db_blackTITLE = str_to_list(row.blackTITLE)
+        db_LYRICS = row.LYRICS
+        db_STREAMHASH = row.STREAMHASH
+        db_PATH = str_to_list(row.PATH)
+
+        # Remove duplicate paths
+        if isinstance(db_PATH, list):
+            new_paths = []
+            for path in list(set(db_PATH)):
+                if os.path.exists(os.path.join(music_root_dir, path)):
+                    new_paths.append(path)
+            if len(new_paths) == 1:
+                db_PATH = new_paths[0]
+            else:
+                db_PATH = new_paths
+        
+        if db_altALBUM is not None:
+            db_altALBUM = list(set(db_altALBUM))
+        if db_blackALBUM is not None:
+            db_blackALBUM = list(set(db_blackALBUM))        
+        if db_altTITLE is not None:
+            db_altTITLE = list(set(db_altTITLE))
+        if db_blackTITLE is not None:
+            db_blackTITLE = list(set(db_blackTITLE))
+
+        update_query = Music.update(altALBUM=db_altALBUM, blackALBUM=db_blackALBUM, altTITLE=db_altTITLE, blackTITLE=db_blackTITLE, PATH=db_PATH).where(Music.STREAMHASH == db_STREAMHASH)
+        update_query.execute()
+        count += 1
+        print(f"Cleaned {count}/{total_tracks} rows", end="\r")
+
+    db.backup(master)
+    master.execute_sql('VACUUM;')
 
 if __name__ == '__main__':
     print("Use spotifylesystem-sync.py")
