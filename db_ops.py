@@ -53,7 +53,6 @@ class Music(BaseModel):
     PATH = TextField(unindexed=True)
 
 
-
 def is_item_in_db_column(db_tag=None, track_tag=None):
     """
     Checks if a particular tag is present on a given db column
@@ -179,7 +178,9 @@ def search_track_in_db(track_metadata=None):
         db_album = deepcopy(row.ALBUM.casefold())
         spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
 
-        if re.search(rf"\b{re.escape(db_title)}\b", spotify_title) is not None or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) or spotify_title == db_title:
+        if re.search(rf"\b{re.escape(db_title)}\b", spotify_title) is not None \
+                or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) \
+                or spotify_title == db_title:
             # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
 
             if is_item_in_db_column(row.blackTITLE, track_metadata['TITLE']):
@@ -207,8 +208,8 @@ def search_track_in_db(track_metadata=None):
                     continue
 
             if db_title == spotify_title or is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
-                if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) or is_album_in_alt_album(db_row=row,
-                                                                                                     track_metadata=track_metadata):
+                if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) \
+                        or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
                     result.append({
                         'ALBUMARTIST': spotify_album_artist,
                         'PATH': str_to_list(row.PATH),
@@ -233,8 +234,9 @@ def search_track_in_db(track_metadata=None):
                         continue
 
                     if answer == 'Y' or answer == 'y' or answer == 'A':
-                        if answer ==  'A':
-                            query = Music.select().where( (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM) )
+                        if answer == 'A':
+                            query = Music.select().where(
+                                (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM))
                             for row2 in query:
                                 add_to_alt_album(row2, track_metadata)
                         else:
@@ -360,11 +362,11 @@ def generate_local_playlist(all_saved_tracks=False):
     if not all_saved_tracks:
         spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
     else:
-        # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
-        import json as json
-        with open('allmytracks.json', 'r') as j:
-            spotify_playlist_tracks = json.loads(j.read())
-        spotify_playlist_name = 'RuMAN'
+        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
+        # import json as json
+        # with open('allmytracks.json', 'r') as j:
+        #     spotify_playlist_tracks = json.loads(j.read())
+        # spotify_playlist_name = 'RuMAN'
 
     spotify_playlist_track_total = len(spotify_playlist_tracks)
     matched_list = []
@@ -485,23 +487,25 @@ def cleanup_db():
                 db_PATH = new_paths[0]
             else:
                 db_PATH = new_paths
-        
+
         if db_altALBUM is not None:
             db_altALBUM = list(set(db_altALBUM))
         if db_blackALBUM is not None:
-            db_blackALBUM = list(set(db_blackALBUM))        
+            db_blackALBUM = list(set(db_blackALBUM))
         if db_altTITLE is not None:
             db_altTITLE = list(set(db_altTITLE))
         if db_blackTITLE is not None:
             db_blackTITLE = list(set(db_blackTITLE))
 
-        update_query = Music.update(altALBUM=db_altALBUM, blackALBUM=db_blackALBUM, altTITLE=db_altTITLE, blackTITLE=db_blackTITLE, PATH=db_PATH).where(Music.STREAMHASH == db_STREAMHASH)
+        update_query = Music.update(altALBUM=db_altALBUM, blackALBUM=db_blackALBUM, altTITLE=db_altTITLE,
+                                    blackTITLE=db_blackTITLE, PATH=db_PATH).where(Music.STREAMHASH == db_STREAMHASH)
         update_query.execute()
         count += 1
         print(f"Cleaned {count}/{total_tracks} rows", end="\r")
 
     db.backup(master)
     master.execute_sql('VACUUM;')
+
 
 if __name__ == '__main__':
     print("Use spotifylesystem-sync.py")
