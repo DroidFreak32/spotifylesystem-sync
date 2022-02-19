@@ -10,3 +10,5 @@ config.ini
 .idea/musicdb.iml
 .idea/misc.xml
 old_stuff/credentials.json
+old_stuff/token.json
+old_stuff/drive_files.json
