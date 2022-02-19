@@ -1,7 +1,8 @@
-mutagen~=1.45.1
-pathos~=0.2.8
-peewee~=3.14.8
-pytaglib~=1.5.0
-spotipy~=2.19.0
-tinytag~=1.7.0
-tqdm~=4.62.3
+mutagen==1.45.1
+pathos==0.2.8
+peewee==3.14.8
+protobuf==3.19.4
+pytaglib==1.5.0
+spotipy==2.19.0
+tinytag==1.7.0
+tqdm==4.62.3
