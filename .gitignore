@@ -7,3 +7,5 @@ unmatched.json
 *.DS_Store
 config.ini
 *.m3u
+.idea/musicdb.iml
+.idea/misc.xml
