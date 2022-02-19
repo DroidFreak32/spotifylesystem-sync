@@ -18,7 +18,7 @@ from playhouse.sqlite_ext import CSqliteExtDatabase
 from tqdm import tqdm
 
 import spotify_ops
-from common import bcolors, generate_m3u, generate_metadata, get_last_flac_mtime, list2dictmerge, music_root_dir, \
+from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata, get_last_flac_mtime, list2dictmerge, music_root_dir, \
     db_path, db_mtime_marker
 from common import str_to_list, find_flacs
 
@@ -151,7 +151,7 @@ def add_to_black_title(db_row, track_metadata):
     query.execute()
 
 
-def search_track_in_db(track_metadata=None):
+def search_track_in_db(track_metadata=None, album_artist=None):
     """
     Scans the DB for a given spotify track and returns a match or an empty list.
         - First perform a case-insensitive match of the AlbumArtist
@@ -162,14 +162,6 @@ def search_track_in_db(track_metadata=None):
     :return: Matched item's PATH & STREAMHASH from database.
     """
     result = []
-    spotify_album_artist = track_metadata['ALBUMARTIST']
-    if spotify_album_artist.casefold() == 'Halsey':
-        pass
-    try:
-        # ** here is for case-insensitive matching
-        album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST ** spotify_album_artist)
-    except DoesNotExist:
-        return result
 
     for row in album_artist.tracks:
         db_title = deepcopy(row.TITLE.casefold())
@@ -211,7 +203,7 @@ def search_track_in_db(track_metadata=None):
                 if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) \
                         or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
                     result.append({
-                        'ALBUMARTIST': spotify_album_artist,
+                        'ALBUMARTIST': album_artist.ALBUMARTIST,
                         'PATH': str_to_list(row.PATH),
                         'STREAMHASH': row.STREAMHASH
                     })
@@ -242,7 +234,7 @@ def search_track_in_db(track_metadata=None):
                         else:
                             add_to_alt_album(row, track_metadata)
                             result.append({
-                                'ALBUMARTIST': spotify_album_artist,
+                                'ALBUMARTIST': album_artist.ALBUMARTIST,
                                 'PATH': str_to_list(row.PATH),
                                 'STREAMHASH': row.STREAMHASH
                             })
@@ -362,50 +354,64 @@ def generate_local_playlist(all_saved_tracks=False):
     if not all_saved_tracks:
         spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
     else:
-        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
-        # import json as json
-        # with open('allmytracks.json', 'r') as j:
-        #     spotify_playlist_tracks = json.loads(j.read())
-        # spotify_playlist_name = 'RuMAN'
-
+        # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
+        import json as json
+        with open('allmytracks.json', 'r') as j:
+            spotify_playlist_tracks = json.loads(j.read())
+        spotify_playlist_name = 'RuMAN'
     spotify_playlist_track_total = len(spotify_playlist_tracks)
     matched_list = []
     matched_paths = []
     unmatched_track_ids = []
     unmatched_list = []
+    spotify_playlist_tracks_merged = list2dictmerge(deepcopy(spotify_playlist_tracks))
 
     offset = 0
-    for playlist_track in spotify_playlist_tracks:
-        offset += 1
-        print(f"Querying DB for tracks: {offset} / {spotify_playlist_track_total}", end="\r")
-        result = search_track_in_db(track_metadata=playlist_track)
-        if result == 999:
-            break
-        if len(result) > 1:
-            print(f"{bcolors.FAIL}Multiple Matches found: {result}{bcolors.ENDC}")
-            # TODO: Ask user for correct match by checking playlist_track['SPOTIFY']
+    for spotify_album_artist in spotify_playlist_tracks_merged.keys():
+        try:
+            # ** here is for case-insensitive matching
+            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST ** spotify_album_artist.casefold())
+        except DoesNotExist:
+            skipped_tracks = []
+            for track in spotify_playlist_tracks_merged[spotify_album_artist]:
+                skipped_tracks.append({'ALBUMARTIST': spotify_album_artist}|track)
+            unmatched_list += skipped_tracks
+            offset += len(skipped_tracks)
             continue
-        elif len(result) == 0:
-            unmatched_list.append(playlist_track)
-            unmatched_track_ids.append(playlist_track['SPOTIFY'][-22:])
-            # print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
-            continue
-        matched_list += result
-        if isinstance(str_to_list(result[0]['PATH']), list):
-            # Use the 1st PATH. TODO: Make this more accurate by checking Album
-            result[0]['PATH'] = result[0]['PATH'][0]
-        matched_paths.append(result[0]['PATH'])
 
-    unmatched_dict = list2dictmerge(unmatched_list)
-    matched_dict = list2dictmerge(matched_list)
+        
+        for playlist_track in spotify_playlist_tracks_merged[spotify_album_artist]:
+            offset += 1
+            print(f"Querying DB for tracks: {offset} / {spotify_playlist_track_total}", end="\r")
+            result = search_track_in_db(track_metadata=playlist_track, album_artist=album_artist)
+            if result == 999:
+                break
+            if len(result) > 1:
+                print(f"{bcolors.FAIL}Multiple Matches found: {result}{bcolors.ENDC}")
+                # TODO: Ask user for correct match by checking playlist_track['SPOTIFY']
+                continue
+            elif len(result) == 0:
+                unmatched_track = {'ALBUMARTIST': spotify_album_artist}|playlist_track
+                unmatched_list.append(unmatched_track)
+                unmatched_track_ids.append(unmatched_track['SPOTIFY'][-22:])
+                # print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
+                continue
+            matched_list += result
+            if isinstance(str_to_list(result[0]['PATH']), list):
+                # Use the 1st PATH. TODO: Make this more accurate by checking Album
+                result[0]['PATH'] = result[0]['PATH'][0]
+            matched_paths.append(result[0]['PATH'])
 
-    print(f"{len(matched_list)}/{len(matched_list) + len(unmatched_list)} tracks Matched. ")
+    unmatched_dict = list2dictmerge(deepcopy(unmatched_list))
+    matched_dict = list2dictmerge(deepcopy(matched_list))
 
-    if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
-        generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
-    if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
-        spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
-                                                    playlist_name=spotify_playlist_name)
+    print(f"{len(matched_list)}/{spotify_playlist_track_total} tracks Matched. ")
+
+    # if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
+    #     generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
+    # if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
+    #     spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
+    #                                                 playlist_name=spotify_playlist_name)
 
     with open("unmatched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
@@ -414,6 +420,7 @@ def generate_local_playlist(all_saved_tracks=False):
 
     db.backup(master)
     master.execute_sql('VACUUM;')
+
 
 
 def export_altColumns():
@@ -488,16 +495,37 @@ def cleanup_db():
             else:
                 db_PATH = new_paths
 
+        # Handles cases where modifying a tag in a track keeps the old tag in a list.
+        if isinstance(db_ALBUM, list):
+            if isinstance(db_PATH, list):
+                album_list=[]
+                for paths in db_PATH:
+                    track = fetch_metadata_in_background(music_dir=music_root_dir, flac_file=paths)
+                    album_list.append(track['ALBUM'])
+            else:
+                album_list = fetch_metadata_in_background(music_dir=music_root_dir, flac_file=db_PATH)['ALBUM']
+            db_ALBUM = album_list
+
+        # These are always List items
         if db_altALBUM is not None:
             db_altALBUM = list(set(db_altALBUM))
+            if len(db_altALBUM) == 0:
+                db_altALBUM = None
         if db_blackALBUM is not None:
             db_blackALBUM = list(set(db_blackALBUM))
+            if len(db_blackALBUM) == 0:
+                db_blackALBUM = None
         if db_altTITLE is not None:
             db_altTITLE = list(set(db_altTITLE))
+            if len(db_altTITLE) == 0:
+                db_altTITLE = None
         if db_blackTITLE is not None:
             db_blackTITLE = list(set(db_blackTITLE))
+            if len(db_blackTITLE) == 0:
+                db_blackTITLE = None
+        
 
-        update_query = Music.update(altALBUM=db_altALBUM, blackALBUM=db_blackALBUM, altTITLE=db_altTITLE,
+        update_query = Music.update(ALBUM = db_ALBUM ,altALBUM=db_altALBUM, blackALBUM=db_blackALBUM, altTITLE=db_altTITLE,
                                     blackTITLE=db_blackTITLE, PATH=db_PATH).where(Music.STREAMHASH == db_STREAMHASH)
         update_query.execute()
         count += 1
@@ -508,4 +536,6 @@ def cleanup_db():
 
 
 if __name__ == '__main__':
-    print("Use spotifylesystem-sync.py")
+    pass
+else:
+    input("\nPress enter to go back to the main menu")
