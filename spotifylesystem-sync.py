@@ -37,9 +37,10 @@ def main():
             import_altColumns()
         elif choice == '7':
             cleanup_db()
-        else:
+        elif choice.casefold() == 'q':
             break
-        input("Press enter to go back to the main menu")
+        else:
+            continue
     print("Received config")
 
 
