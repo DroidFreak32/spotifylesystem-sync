@@ -162,13 +162,14 @@ def search_track_in_db(track_metadata=None, album_artist=None):
     :return: Matched item's PATH & STREAMHASH from database.
     """
     result = []
-
+    spotify_title = deepcopy(track_metadata['TITLE'].casefold())
+    spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
+    
     for row in album_artist.tracks:
         db_title = deepcopy(row.TITLE.casefold())
-        spotify_title = deepcopy(track_metadata['TITLE'].casefold())
+        
 
         db_album = deepcopy(row.ALBUM.casefold())
-        spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
 
         if re.search(rf"\b{re.escape(db_title)}\b", spotify_title) is not None \
                 or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) \
@@ -405,13 +406,13 @@ def generate_local_playlist(all_saved_tracks=False):
     unmatched_dict = list2dictmerge(deepcopy(unmatched_list))
     matched_dict = list2dictmerge(deepcopy(matched_list))
 
-    print(f"{len(matched_list)}/{spotify_playlist_track_total} tracks Matched. ")
+    print(f"\n{len(matched_list)}/{spotify_playlist_track_total} tracks Matched. ")
 
-    # if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
-    #     generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
-    # if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
-    #     spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
-    #                                                 playlist_name=spotify_playlist_name)
+    if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
+        generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
+    if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
+        spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
+                                                    playlist_name=spotify_playlist_name)
 
     with open("unmatched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
@@ -474,7 +475,7 @@ def cleanup_db():
     for row in query:
         db_ALBUMARTIST = row.ALBUMARTIST
         db_ARTIST = str_to_list(row.ARTIST)
-        db_ALBUM = str_to_list(row.ALBUM)
+        db_ALBUM = row.ALBUM
         db_altALBUM = str_to_list(row.altALBUM)
         db_blackALBUM = str_to_list(row.blackALBUM)
         db_TITLE = row.TITLE
@@ -537,5 +538,5 @@ def cleanup_db():
 
 if __name__ == '__main__':
     pass
-else:
-    input("\nPress enter to go back to the main menu")
+# else:
+#     input("\nPress enter to go back to the main menu")
