@@ -104,8 +104,10 @@ def add_to_alt_album(db_row, track_metadata):
     else:
         altALBUM_to_add = [track_metadata['ALBUM']]
 
-    print(f"\n{bcolors.OKGREEN}Adding {altALBUM_to_add} to alt Albums{bcolors.ENDC}\n")
-    query = Music.update(altALBUM=altALBUM_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    print(
+        f"\n{bcolors.OKGREEN}Adding {altALBUM_to_add} to alt Albums{bcolors.ENDC}\n")
+    query = Music.update(altALBUM=altALBUM_to_add).where(
+        Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 
@@ -121,7 +123,8 @@ def add_to_alt_title(db_row, track_metadata):
         altTITLE_to_add = [track_metadata['TITLE']]
 
     print(f"{bcolors.OKGREEN}Adding {altTITLE_to_add} to alt Titles{bcolors.ENDC}\n")
-    query = Music.update(altTITLE=altTITLE_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    query = Music.update(altTITLE=altTITLE_to_add).where(
+        Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 
@@ -133,8 +136,10 @@ def add_to_black_album(db_row, track_metadata):
     else:
         blackALBUM_to_add = [track_metadata['ALBUM']]
 
-    print(f"\n{bcolors.HEADER}Adding {blackALBUM_to_add} to blacklist{bcolors.ENDC}\n")
-    query = Music.update(blackALBUM=blackALBUM_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    print(
+        f"\n{bcolors.HEADER}Adding {blackALBUM_to_add} to blacklist{bcolors.ENDC}\n")
+    query = Music.update(blackALBUM=blackALBUM_to_add).where(
+        Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 
@@ -146,8 +151,10 @@ def add_to_black_title(db_row, track_metadata):
     else:
         blackTITLE_to_add = [track_metadata['TITLE']]
 
-    print(f"\n{bcolors.HEADER}Adding {blackTITLE_to_add} to blacklist{bcolors.ENDC}\n")
-    query = Music.update(blackTITLE=blackTITLE_to_add).where(Music.STREAMHASH == db_row.STREAMHASH)
+    print(
+        f"\n{bcolors.HEADER}Adding {blackTITLE_to_add} to blacklist{bcolors.ENDC}\n")
+    query = Music.update(blackTITLE=blackTITLE_to_add).where(
+        Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
 
@@ -164,10 +171,9 @@ def search_track_in_db(track_metadata=None, album_artist=None):
     result = []
     spotify_title = deepcopy(track_metadata['TITLE'].casefold())
     spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
-    
+
     for row in album_artist.tracks:
         db_title = deepcopy(row.TITLE.casefold())
-        
 
         db_album = deepcopy(row.ALBUM.casefold())
 
@@ -196,7 +202,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 elif answer == 'q' or answer == 'Q':
                     return 999
                 elif answer == 'n' or answer == 'N':
-                    add_to_black_title(db_row=row, track_metadata=track_metadata)
+                    add_to_black_title(
+                        db_row=row, track_metadata=track_metadata)
                 else:
                     continue
 
@@ -261,7 +268,8 @@ def dump_to_db(metadata):
             """
             Get an AlbumArtist object, maybe for backref?? Blind copy pasta
             """
-            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST == album_artists)
+            album_artist = AlbumArtist.get(
+                AlbumArtist.ALBUMARTIST == album_artists)
             try:
                 music_db_orm = Music.create(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=track['ALBUM'],
                                             altALBUM=None, blackALBUM=None,
@@ -277,7 +285,8 @@ def dump_to_db(metadata):
                 if music_db_orm is not None:
                     music_db_orm.save()
                 print(f"{bcolors.WARNING}Identical Track found!")
-                query = Music.select().where(Music.STREAMHASH == track["STREAMHASH"]).dicts()
+                query = Music.select().where(Music.STREAMHASH ==
+                                             track["STREAMHASH"]).dicts()
                 multi_path = []
                 multi_album = []
                 for row in query:
@@ -296,7 +305,8 @@ def dump_to_db(metadata):
                         multi_album = str_to_list(row['ALBUM'])
                         multi_album.append(track['ALBUM'])
                     elif track['ALBUM'] == row['ALBUM']:
-                        print(f"{bcolors.WARNING}Is this file a duplicate copy?{bcolors.ENDC}")
+                        print(
+                            f"{bcolors.WARNING}Is this file a duplicate copy?{bcolors.ENDC}")
                         multi_album = track['ALBUM']
                     else:
                         multi_album.append(row['ALBUM'])
@@ -308,7 +318,8 @@ def dump_to_db(metadata):
                                          LYRICS=track['LYRICS'],
                                          PATH=multi_path).where(Music.STREAMHASH == track["STREAMHASH"])
                     query.execute()
-                print(f"Previous file: {multi_path[0]}\nCurrent file: {multi_path[1]}{bcolors.ENDC}")
+                print(
+                    f"Previous file: {multi_path[0]}\nCurrent file: {multi_path[1]}{bcolors.ENDC}")
 
     if music_db_orm is not None:
         music_db_orm.save()
@@ -343,7 +354,8 @@ def partial_sync():
     print(f"New files: {new_files}")
     input("Press enter to continue..")
     if len(new_files) > 0:
-        sync_fs_to_db(force_resync=False, flac_files=new_files, last_flac_mtime=last_flac_mtime)
+        sync_fs_to_db(force_resync=False, flac_files=new_files,
+                      last_flac_mtime=last_flac_mtime)
 
 
 def generate_local_playlist(all_saved_tracks=False):
@@ -356,6 +368,9 @@ def generate_local_playlist(all_saved_tracks=False):
         spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
     else:
         # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
+        # with open("allmytracks.json", "w") as jsonfile:
+        #     jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
+
         import json as json
         with open('allmytracks.json', 'r') as j:
             spotify_playlist_tracks = json.loads(j.read())
@@ -365,34 +380,42 @@ def generate_local_playlist(all_saved_tracks=False):
     matched_paths = []
     unmatched_track_ids = []
     unmatched_list = []
-    spotify_playlist_tracks_merged = list2dictmerge(deepcopy(spotify_playlist_tracks))
+    spotify_playlist_tracks_merged = list2dictmerge(
+        deepcopy(spotify_playlist_tracks))
 
     offset = 0
     for spotify_album_artist in spotify_playlist_tracks_merged.keys():
         try:
             # ** here is for case-insensitive matching
-            album_artist = AlbumArtist.get(AlbumArtist.ALBUMARTIST ** spotify_album_artist.casefold())
+            album_artist = AlbumArtist.get(
+                AlbumArtist.ALBUMARTIST ** spotify_album_artist.casefold())
         except DoesNotExist:
+            # Add all tracks of this artist to unmatched tracks and increase offset accordingly
             skipped_tracks = []
             for track in spotify_playlist_tracks_merged[spotify_album_artist]:
-                skipped_tracks.append({'ALBUMARTIST': spotify_album_artist}|track)
+                skipped_tracks.append(
+                    {'ALBUMARTIST': spotify_album_artist} | track)
+                unmatched_track_ids.append(track['SPOTIFY'][-22:])
             unmatched_list += skipped_tracks
             offset += len(skipped_tracks)
             continue
 
-        
         for playlist_track in spotify_playlist_tracks_merged[spotify_album_artist]:
             offset += 1
-            print(f"Querying DB for tracks: {offset} / {spotify_playlist_track_total}", end="\r")
-            result = search_track_in_db(track_metadata=playlist_track, album_artist=album_artist)
+            print(
+                f"Querying DB for tracks: {offset} / {spotify_playlist_track_total}", end="\r")
+            result = search_track_in_db(
+                track_metadata=playlist_track, album_artist=album_artist)
             if result == 999:
                 break
             if len(result) > 1:
-                print(f"{bcolors.FAIL}Multiple Matches found: {result}{bcolors.ENDC}")
+                print(
+                    f"{bcolors.FAIL}Multiple Matches found: {result}{bcolors.ENDC}")
                 # TODO: Ask user for correct match by checking playlist_track['SPOTIFY']
                 continue
             elif len(result) == 0:
-                unmatched_track = {'ALBUMARTIST': spotify_album_artist}|playlist_track
+                unmatched_track = {
+                    'ALBUMARTIST': spotify_album_artist} | playlist_track
                 unmatched_list.append(unmatched_track)
                 unmatched_track_ids.append(unmatched_track['SPOTIFY'][-22:])
                 # print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
@@ -409,7 +432,8 @@ def generate_local_playlist(all_saved_tracks=False):
     print(f"\n{len(matched_list)}/{spotify_playlist_track_total} tracks Matched. ")
 
     if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
-        generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
+        generate_m3u(playlist_name=spotify_playlist_name,
+                     track_paths=matched_paths)
     if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
         spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
                                                     playlist_name=spotify_playlist_name)
@@ -421,7 +445,6 @@ def generate_local_playlist(all_saved_tracks=False):
 
     db.backup(master)
     master.execute_sql('VACUUM;')
-
 
 
 def export_altColumns():
@@ -499,12 +522,14 @@ def cleanup_db():
         # Handles cases where modifying a tag in a track keeps the old tag in a list.
         if isinstance(db_ALBUM, list):
             if isinstance(db_PATH, list):
-                album_list=[]
+                album_list = []
                 for paths in db_PATH:
-                    track = fetch_metadata_in_background(music_dir=music_root_dir, flac_file=paths)
+                    track = fetch_metadata_in_background(
+                        music_dir=music_root_dir, flac_file=paths)
                     album_list.append(track['ALBUM'])
             else:
-                album_list = fetch_metadata_in_background(music_dir=music_root_dir, flac_file=db_PATH)['ALBUM']
+                album_list = fetch_metadata_in_background(
+                    music_dir=music_root_dir, flac_file=db_PATH)['ALBUM']
             db_ALBUM = album_list
 
         # These are always List items
@@ -524,9 +549,8 @@ def cleanup_db():
             db_blackTITLE = list(set(db_blackTITLE))
             if len(db_blackTITLE) == 0:
                 db_blackTITLE = None
-        
 
-        update_query = Music.update(ALBUM = db_ALBUM ,altALBUM=db_altALBUM, blackALBUM=db_blackALBUM, altTITLE=db_altTITLE,
+        update_query = Music.update(ALBUM=db_ALBUM, altALBUM=db_altALBUM, blackALBUM=db_blackALBUM, altTITLE=db_altTITLE,
                                     blackTITLE=db_blackTITLE, PATH=db_PATH).where(Music.STREAMHASH == db_STREAMHASH)
         update_query.execute()
         count += 1
