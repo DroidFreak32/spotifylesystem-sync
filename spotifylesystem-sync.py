@@ -41,6 +41,7 @@ def main():
             break
         else:
             continue
+        input("Press Enter key to continue")
     print("Received config")
 
 
