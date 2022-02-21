@@ -110,4 +110,8 @@ Identical Track found!
 - Scan each unmatched query again using a whitelist/exceptions file
 - common.py can load the whitelists/exceptions
 - inverstigate why few spot playlist dont have AArtist
+```python
 {'ALBUM': '1-800-273-8255', 'TITLE': '1-800-273-8255', 'ARTIST': 'Our Last Night', 'SPOTIFY': 'https://open.spotify.com/track/1wp1aHirvZihTdrtdFuFv0'}
+```
+
+- Make it more pythonic by referring to other projects like: [spotify-dl](https://github.com/SathyaBhat/spotify-dl)
