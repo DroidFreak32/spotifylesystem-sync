@@ -79,6 +79,10 @@ def cleanup_playlist(playlist_raw=None):
 def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal):
     offset = 0
     loops = int(selected_playlist_tracktotal / 100) + 1
+
+    if loops%100 == 0:
+        loops -= 1
+        
     full_playlist_raw = []
     for i in range(loops):
         playlist_raw = sp.playlist_items(playlist_id=selected_playlist_id, offset=offset,
@@ -157,6 +161,10 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
     total_tracks = len(unmatched_track_ids)
     offset = 0
     loops = int(total_tracks / 10) + 1
+
+    if loops%10 == 0:
+        loops -= 1
+    
     user_id = sp.me()['id']
     if playlist_name is None:
         playlist_name = "Missing_spotifyle_" + datetime.today().strftime('%Y%m%d_%H%M')
@@ -168,9 +176,11 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
         playlist_id = new_playlist['id']
 
     for i in range(loops):
+        print(f"Creating playlist {playlist_name}: {offset}/{total_tracks} tracks", end="\r")
         current_batch_of_tracks = unmatched_track_ids[offset:offset + 10]
         sp.playlist_add_items(playlist_id=playlist_id, items=current_batch_of_tracks)
         offset += 10
+
 
     missing_playlist_items = get_missing_playlist_items_from_trackids(
         playlist_id=playlist_id, track_ids=unmatched_track_ids)
