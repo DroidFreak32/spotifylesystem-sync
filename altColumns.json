@@ -109,20 +109,33 @@
         ]
     },
     {
+        "STREAMHASH": "d740ac924480871eeaa681db7a5d592e",
+        "altALBUM": [
+            "Music From The Motion Picture Not Another Teen Movie"
+        ],
+        "altTITLE": [
+            "Please, Please, Please, Let Me Get What I Want"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "67bb7c24b1daf91b2cc6a8de02effe09",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Something Human (Acoustic)"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
         "STREAMHASH": "6e333ce417c7aa4f3822d394cd275182",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -133,8 +146,8 @@
     {
         "STREAMHASH": "92c5caded45de0eb0a0113108c384b33",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -143,8 +156,8 @@
     {
         "STREAMHASH": "20572f70a6fc16a8866ace6df2bf823f",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -153,8 +166,8 @@
     {
         "STREAMHASH": "bd729beacfb307cc0b86c73a02eb8cc5",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -165,9 +178,9 @@
     {
         "STREAMHASH": "883fcd905bab26ae1d8d0e1980835f75",
         "altALBUM": [
+            "Simulation Theory (Super Deluxe)",
             "Something Human",
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -178,19 +191,21 @@
     {
         "STREAMHASH": "1bf62d593be046fe3c92caa9b033f9ce",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "The Void (Acoustic)"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
         "STREAMHASH": "783f68e5214de3892c83e4ba60c28d56",
         "altALBUM": [
-            "Dig Down",
             "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -201,9 +216,9 @@
     {
         "STREAMHASH": "175d95e690266619a3052704d2fc01e2",
         "altALBUM": [
+            "Simulation Theory (Super Deluxe)",
             "Thought Contagion",
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -214,8 +229,8 @@
     {
         "STREAMHASH": "24a4b1e8865d420a0f7a0e320a28e5eb",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -224,8 +239,8 @@
     {
         "STREAMHASH": "e37b68270ee4da1ee4a2f8664494a182",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -234,8 +249,8 @@
     {
         "STREAMHASH": "247a6c1e3282799330fc02404248e3b0",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -246,18 +261,20 @@
     {
         "STREAMHASH": "3c4f9c8f1bce0c83374f378e14a5ab58",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Propaganda (Acoustic)"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
         "STREAMHASH": "98ffe7b355e8e513309ca17be8b726a1",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -266,8 +283,8 @@
     {
         "STREAMHASH": "9115b552ac329436b31919ebb31bc0ac",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -278,8 +295,8 @@
     {
         "STREAMHASH": "4b4b1c144b717e1ebd74bb4c8dc477f7",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -288,8 +305,8 @@
     {
         "STREAMHASH": "ea2e7a8db6d1c130ea33820dda00d62b",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -301,8 +318,8 @@
     {
         "STREAMHASH": "3714a2da29e1150dd3607c9a4587ef6b",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -311,10 +328,145 @@
     {
         "STREAMHASH": "6693b01a08e6c9929a8c7b3d6c09f079",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
-            "Simulation Theory (Super Deluxe)"
+            "Simulation Theory (Super Deluxe)",
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c7c27967b89757774574097e55292af2",
+        "altALBUM": null,
+        "altTITLE": [
+            "(JFK)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2dd4bbb6d7fc3942c9c5cf6e9b19491a",
+        "altALBUM": null,
+        "altTITLE": [
+            "(Drill Sergeant)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "88ffaa8f42f7b1c942f3b514376311cd",
+        "altALBUM": null,
+        "altTITLE": [
+            "Supremacy - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d9a39dee1ca6bad42409596024182357",
+        "altALBUM": null,
+        "altTITLE": [
+            "Knights of Cydonia - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "996a80ce3e9ed8bf69eec8821f8744d1",
+        "altALBUM": null,
+        "altTITLE": [
+            "Uprising - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "330d9d46011b21266c13edb876c937f5",
+        "altALBUM": null,
+        "altTITLE": [
+            "Explorers - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ca74c616623a84e13272482f62865abd",
+        "altALBUM": null,
+        "altTITLE": [
+            "Follow Me - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "18322f1f8da53ac7a494952f3cfdf096",
+        "altALBUM": null,
+        "altTITLE": [
+            "Supermassive Black Hole - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "409f7691187c73bca2331326d8ff629c",
+        "altALBUM": null,
+        "altTITLE": [
+            "Starlight - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2378210aaf4523ca98c0f41a366332da",
+        "altALBUM": null,
+        "altTITLE": [
+            "Resistance - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9442176da90154b8ee5536803b267598",
+        "altALBUM": null,
+        "altTITLE": [
+            "Madness - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "44f9ba6ca97da8193bc6f74c579cedfc",
+        "altALBUM": null,
+        "altTITLE": [
+            "Animals - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "dda0f2bc6a0176a035f88972a359adf2",
+        "altALBUM": null,
+        "altTITLE": [
+            "Guiding Light - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1277f25c8f2f30519609e75909b16f98",
+        "altALBUM": null,
+        "altTITLE": [
+            "Panic Station - Live at Rome Olympic Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "27928e068b24a356b2bc6ad996cd7da2",
+        "altALBUM": null,
+        "altTITLE": [
+            "Hysteria - Live at Rome Olympic Stadium"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -363,9 +515,144 @@
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": [
-            "Starlight - Live at Rome Olympic Stadium",
-            "Starlight - Live from Wembley Stadium"
+            "Starlight - Live from Wembley Stadium",
+            "Starlight - Live at Rome Olympic Stadium"
         ]
+    },
+    {
+        "STREAMHASH": "4c4b406d07f4ff63bf576ad001dea333",
+        "altALBUM": null,
+        "altTITLE": [
+            "Intro - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1ccaf90b973454806a9b2e11cc75b6ce",
+        "altALBUM": null,
+        "altTITLE": [
+            "Stockholm Syndrome - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ecee4ebe0c28367e3dc04528a5b371ef",
+        "altALBUM": null,
+        "altTITLE": [
+            "Unintended - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ea2b14f09c6b56271a5a922af7543e58",
+        "altALBUM": null,
+        "altTITLE": [
+            "Hysteria - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a27d6a8359e139f6da298ca43b3f4d98",
+        "altALBUM": null,
+        "altTITLE": [
+            "Invincible - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5dc66c0fb3eb9dc67f421de75ae2e66a",
+        "altALBUM": null,
+        "altTITLE": [
+            "Starlight - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c73355e6ae46a987e6a3b39efac97ab9",
+        "altALBUM": null,
+        "altTITLE": [
+            "Butterflies and Hurricanes - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "97dbfdf0a196edacd43e3e184b3299a0",
+        "altALBUM": null,
+        "altTITLE": [
+            "Micro Cuts - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e0ee1555f0132be42127d164279727f0",
+        "altALBUM": null,
+        "altTITLE": [
+            "Supermassive Black Hole - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3ae9348fd788a34fb3afa7884f7cd0c0",
+        "altALBUM": null,
+        "altTITLE": [
+            "Knights of Cydonia - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9bba6847e761148ad27452d17a0ea86d",
+        "altALBUM": null,
+        "altTITLE": [
+            "Time Is Running Out - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c11054d9fce35e4ab713434f7bf42a72",
+        "altALBUM": null,
+        "altTITLE": [
+            "City of Delusion - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1560b6cc270b88ec1dab65f07ba60e08",
+        "altALBUM": null,
+        "altTITLE": [
+            "Take a Bow - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0d699f18edf05fc64248b68fdc9aa833",
+        "altALBUM": null,
+        "altTITLE": [
+            "Map of the Problematique - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "79701bba13283f584036b58cb7a249a0",
+        "altALBUM": null,
+        "altTITLE": [
+            "New Born - Live from Wembley Stadium"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "467ea95730c861e5244d38ab14c9efe4",
@@ -386,6 +673,15 @@
         ]
     },
     {
+        "STREAMHASH": "f39fbe4c0ee9aa01a9b45159441ff4bf",
+        "altALBUM": null,
+        "altTITLE": [
+            "Exogenesis: Symphony Pt. 1 (Overture)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "134cd492dba2c2793bf4efed316006ee",
         "altALBUM": null,
         "altTITLE": null,
@@ -404,6 +700,15 @@
         ]
     },
     {
+        "STREAMHASH": "b84216b8e4948a5e165643e88400ea1b",
+        "altALBUM": null,
+        "altTITLE": [
+            "Exogenesis: Symphony Pt. 2 (Cross-pollination)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "02b1dcf38a1e77756d52f72065613c03",
         "altALBUM": null,
         "altTITLE": null,
@@ -411,6 +716,15 @@
         "blackTITLE": [
             "Resistance - Live at Rome Olympic Stadium"
         ]
+    },
+    {
+        "STREAMHASH": "d750882f660ee982d162936851681fe1",
+        "altALBUM": null,
+        "altTITLE": [
+            "Exogenesis: Symphony Pt. 3 (Redemption)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "fb90c7ca6071bd2dca19992673206de4",
@@ -474,8 +788,8 @@
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": [
-            "Hysteria - Live from Wembley Stadium",
-            "Hysteria - Live at Rome Olympic Stadium"
+            "Hysteria - Live at Rome Olympic Stadium",
+            "Hysteria - Live from Wembley Stadium"
         ]
     },
     {
@@ -709,6 +1023,15 @@
             "Trench"
         ],
         "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "77926114bb010cf01192aefbc859f997",
+        "altALBUM": null,
+        "altTITLE": [
+            "Oh Ms Believer"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -950,7 +1273,9 @@
         "STREAMHASH": "bb0cebea0e3dd6c9c897b4c4cecb2f86",
         "altALBUM": null,
         "altTITLE": null,
-        "blackALBUM": null,
+        "blackALBUM": [
+            "Vessel"
+        ],
         "blackTITLE": [
             "Trees - Bonus Commentary"
         ]
@@ -959,7 +1284,9 @@
         "STREAMHASH": "9a7031abb3695a9f4ee4ac9310da1baa",
         "altALBUM": null,
         "altTITLE": null,
-        "blackALBUM": null,
+        "blackALBUM": [
+            "Vessel"
+        ],
         "blackTITLE": [
             "Holding on to You - Bonus Commentary"
         ]
@@ -990,7 +1317,9 @@
         "STREAMHASH": "dc62922d952ae641062cb3959ec69f7f",
         "altALBUM": null,
         "altTITLE": null,
-        "blackALBUM": null,
+        "blackALBUM": [
+            "Vessel"
+        ],
         "blackTITLE": [
             "Ode to Sleep - Bonus Commentary"
         ]
@@ -1025,8 +1354,8 @@
     {
         "STREAMHASH": "6fef864c9322e03a2f26f25800dc6a63",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1035,8 +1364,8 @@
     {
         "STREAMHASH": "c74b7c680beebcb13103fa67826cced5",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1045,8 +1374,8 @@
     {
         "STREAMHASH": "015b535e99313ceb6ae91c009b77bd96",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1055,8 +1384,8 @@
     {
         "STREAMHASH": "bd901dbd0aa10c8ef01870c9606b8053",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1065,8 +1394,8 @@
     {
         "STREAMHASH": "1db89cc8546beabaabc6fba93048e379",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1075,8 +1404,8 @@
     {
         "STREAMHASH": "9c76d5b0f5ba8ade88b129f71abe34ad",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1085,8 +1414,8 @@
     {
         "STREAMHASH": "17035be51416075d0df0e11b94a65515",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1095,8 +1424,8 @@
     {
         "STREAMHASH": "e56d08fc774d2deb4fd1be7a3ec17412",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1105,8 +1434,8 @@
     {
         "STREAMHASH": "9e155b240f20307c85e130ea3e88478a",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1115,8 +1444,8 @@
     {
         "STREAMHASH": "783ef8c3f0072cda5f44fec1c8d541a4",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1125,8 +1454,8 @@
     {
         "STREAMHASH": "ed484f9bab7ffc474462ee0d7d7fcdce",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1135,8 +1464,8 @@
     {
         "STREAMHASH": "c00f280f823ecc7c81980be4b761c5f0",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1145,8 +1474,8 @@
     {
         "STREAMHASH": "b41a31c03ae0f2724873e44494cfaef7",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1155,8 +1484,8 @@
     {
         "STREAMHASH": "6ec86fd1f8a834fbe95611ed8cf09192",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1165,8 +1494,8 @@
     {
         "STREAMHASH": "8c37fb0c1f7849ba875574709521d5e1",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1175,8 +1504,8 @@
     {
         "STREAMHASH": "529016933a102ef145008d41df757568",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1185,8 +1514,8 @@
     {
         "STREAMHASH": "eb50dd3747472b5197b784f9d664dec4",
         "altALBUM": [
-            "Post Traumatic (Deluxe Version)",
-            "Post Traumatic EP"
+            "Post Traumatic EP",
+            "Post Traumatic (Deluxe Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1289,12 +1618,11 @@
         "STREAMHASH": "4d0a30d9d70563e0a20a9a1f22b53eac",
         "altALBUM": [
             "A Kind Of Magic (2011 Remaster)",
+            "Bohemian Rhapsody (The Original Soundtrack)",
             "A Kind of Magic (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
-        "blackALBUM": [
-            "Bohemian Rhapsody (The Original Soundtrack)"
-        ],
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -1403,12 +1731,11 @@
     {
         "STREAMHASH": "3763dd6904ea83ad835f07d531390ec1",
         "altALBUM": [
-            "The Works (2011 Remaster)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": [
+            "The Works (2011 Remaster)",
             "Bohemian Rhapsody (The Original Soundtrack)"
         ],
+        "altTITLE": null,
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -1445,8 +1772,8 @@
     {
         "STREAMHASH": "e944cdb3171f32bc43da78f8f89fdb20",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1455,8 +1782,8 @@
     {
         "STREAMHASH": "772c8f4b49126bacda63d32391f1cab5",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1465,8 +1792,8 @@
     {
         "STREAMHASH": "ed4dc821ff565f996d5f0605450676ba",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1475,8 +1802,8 @@
     {
         "STREAMHASH": "e427d6f82bd2ddfbd4cd67a913f06f63",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1485,8 +1812,8 @@
     {
         "STREAMHASH": "cce2bb935f1829ab47d77ab3ae07e403",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1495,8 +1822,8 @@
     {
         "STREAMHASH": "88d14aa11f1668613075bf2aa7409da0",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1505,8 +1832,8 @@
     {
         "STREAMHASH": "4a47c319c0159088cd5db5b9a4803003",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1515,8 +1842,8 @@
     {
         "STREAMHASH": "1910c7a3bf8c3592534b0d137eef6c5a",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1525,8 +1852,8 @@
     {
         "STREAMHASH": "8f4d20982019a1095507b42a11f0197b",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1535,8 +1862,8 @@
     {
         "STREAMHASH": "b98ab9ef1e13d6134979d0a2efc0d6da",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1545,8 +1872,8 @@
     {
         "STREAMHASH": "68dcd9f41ef6a9dcfbf58b19c40ebbe0",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1555,9 +1882,9 @@
     {
         "STREAMHASH": "e17cf4f6e6e178a66fa5473e98bf3859",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
             "Jazz (2011 Remaster)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": [
             "Don't Stop Me Now - Remastered 2011"
@@ -1568,8 +1895,8 @@
     {
         "STREAMHASH": "bd0dcbbd7a88e21a68801fe148c31a7d",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1578,8 +1905,8 @@
     {
         "STREAMHASH": "a48ad580c9f254074eee54de0efb4741",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1588,8 +1915,8 @@
     {
         "STREAMHASH": "6943b4de16bdd31aebfa1f16f3d3c34e",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": [
             "Bicycle Race - Remastered 2011"
@@ -1600,8 +1927,8 @@
     {
         "STREAMHASH": "9c0e3f26ca6e526fdeac1c8089b2b339",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": [
             "Fat Bottomed Girls - Single Version / Remastered 2011"
@@ -1612,8 +1939,8 @@
     {
         "STREAMHASH": "034e884e00dcb1c498d90024e9e4fe0f",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1622,8 +1949,8 @@
     {
         "STREAMHASH": "807a53fe37573d4f4d3da3031d54ec63",
         "altALBUM": [
-            "Jazz (Deluxe Remastered Version)",
-            "Jazz (Deluxe Edition 2011 Remaster)"
+            "Jazz (Deluxe Edition 2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1820,30 +2147,29 @@
     {
         "STREAMHASH": "fe170ebaadd1c819c52326ab4adf9dc6",
         "altALBUM": [
+            "Bohemian Rhapsody (The Original Soundtrack)",
             "The Game (2011 Remaster)"
         ],
         "altTITLE": [
             "Another One Bites The Dust - Remastered 2011"
         ],
-        "blackALBUM": [
-            "Bohemian Rhapsody (The Original Soundtrack)"
-        ],
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
         "STREAMHASH": "cb5bbab93dddf5e37b87048b353a2d6c",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": [
+        "altALBUM": [
             "Bohemian Rhapsody (The Original Soundtrack)"
         ],
+        "altTITLE": null,
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
         "STREAMHASH": "59fac7fec1010f7b31752100f34d048e",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1852,8 +2178,8 @@
     {
         "STREAMHASH": "6f8435cfd27648ae253cb30bdeaaecfb",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1862,8 +2188,8 @@
     {
         "STREAMHASH": "dec4a826e9438f5347476f71a13be5a3",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1872,8 +2198,8 @@
     {
         "STREAMHASH": "0b0410153485fc4ba43606e0bdeed9b3",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1882,8 +2208,8 @@
     {
         "STREAMHASH": "75c1a49f8047981d731eef94bccf2d1b",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1892,8 +2218,8 @@
     {
         "STREAMHASH": "dfe10e52dc5966700ec62feb6f41680c",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": [
             "Spread Your Wings - Remastered 2011"
@@ -1904,8 +2230,8 @@
     {
         "STREAMHASH": "168687055c1804986ec8edecfc295bfc",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1914,8 +2240,8 @@
     {
         "STREAMHASH": "fa8edef3fe97f0a2cd03ae1a912ac96f",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": [
             "We Will Rock You - Remastered 2011"
@@ -1926,8 +2252,8 @@
     {
         "STREAMHASH": "0224d255368526a8dff58c7c8918b6d0",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1936,8 +2262,8 @@
     {
         "STREAMHASH": "acdd795040f8077cf5d63a36c039481d",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": [
             "We Are The Champions - Remastered 2011"
@@ -1948,8 +2274,8 @@
     {
         "STREAMHASH": "b677f5dc6281216a87e1b8c5349f3176",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1958,8 +2284,8 @@
     {
         "STREAMHASH": "6e79268ac39ac1d5c13c2d5392bbae16",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1968,8 +2294,8 @@
     {
         "STREAMHASH": "41d9533285d8d737ac059d15d399d932",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1978,8 +2304,8 @@
     {
         "STREAMHASH": "957acb63730767899a0373295b017fe6",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1988,8 +2314,8 @@
     {
         "STREAMHASH": "75fdfeee675f48857e71c712bfe3e863",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1998,8 +2324,8 @@
     {
         "STREAMHASH": "4b25a917734f6650e2d64855056881c3",
         "altALBUM": [
-            "News Of The World (Deluxe Remastered Version)",
-            "News Of The World (2011 Remaster)"
+            "News Of The World (2011 Remaster)",
+            "News Of The World (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2019,16 +2345,20 @@
     {
         "STREAMHASH": "b39dac4573212fb9bef6dd33c1a6b663",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "'39 - Remastered 2011"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
         "STREAMHASH": "0d9099b963d91ed2d170a16bc5d4905b",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2037,7 +2367,8 @@
     {
         "STREAMHASH": "4434b0d340eb0415a7491ad5cb891824",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2046,7 +2377,8 @@
     {
         "STREAMHASH": "ff91f153efee763643eb1194e23833a4",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2055,7 +2387,8 @@
     {
         "STREAMHASH": "79b4cb452437016491e21160034e5261",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2064,7 +2397,8 @@
     {
         "STREAMHASH": "51c7843cba7c9c7034b827010917576c",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2073,7 +2407,8 @@
     {
         "STREAMHASH": "9ab59e662614dcf096d7d6aa69edc09e",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2082,7 +2417,8 @@
     {
         "STREAMHASH": "a59660e0d6508e5b261827bdc88f0bcb",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2091,7 +2427,8 @@
     {
         "STREAMHASH": "aba22fd321520c59c472f24c5bdc0ae7",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": [
             "Love Of My Life - Remastered 2011"
@@ -2106,8 +2443,8 @@
             "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": [
-            "Bohemian Rhapsody - Remastered 2011",
-            "Bohemian Rhapsody - 2011 Remaster"
+            "Bohemian Rhapsody - 2011 Remaster",
+            "Bohemian Rhapsody - Remastered 2011"
         ],
         "blackALBUM": [
             "Greatest Hits (2011 Remaster)"
@@ -2117,7 +2454,8 @@
     {
         "STREAMHASH": "9d002adb71c9643bb98499480bf9d6a8",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2126,7 +2464,8 @@
     {
         "STREAMHASH": "7e2ede15851322f13cf663403030f4f5",
         "altALBUM": [
-            "A Night At The Opera (Deluxe Remastered Version)"
+            "A Night At The Opera (Deluxe Remastered Version)",
+            "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2188,6 +2527,7 @@
         "STREAMHASH": "f832d430518b6424f14539f8f63035b1",
         "altALBUM": [
             "Greatest Hits II (2011 Remaster)",
+            "A Day At The Races (Deluxe Remastered Version)",
             "The Platinum Collection (2011 Remaster)"
         ],
         "altTITLE": null,
@@ -2222,12 +2562,11 @@
         "STREAMHASH": "fce23dbd7cc80722d891b2a429af542b",
         "altALBUM": [
             "Greatest Hits II (2011 Remaster)",
+            "Bohemian Rhapsody (The Original Soundtrack)",
             "The Platinum Collection (2011 Remaster)"
         ],
         "altTITLE": null,
-        "blackALBUM": [
-            "Bohemian Rhapsody (The Original Soundtrack)"
-        ],
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -2254,8 +2593,8 @@
             "Another One Bites The Dust - Remastered 2011"
         ],
         "blackALBUM": [
-            "The Game (2011 Remaster)",
-            "Bohemian Rhapsody (The Original Soundtrack)"
+            "Bohemian Rhapsody (The Original Soundtrack)",
+            "The Game (2011 Remaster)"
         ],
         "blackTITLE": null
     },
@@ -2456,9 +2795,9 @@
     {
         "STREAMHASH": "ca750875207e1e490c387c2717840ceb",
         "altALBUM": [
+            "Greatest Hits III",
             "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)",
-            "Greatest Hits III"
+            "The Platinum Collection (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2589,8 +2928,8 @@
             "The Platinum Collection (2011 Remaster)"
         ],
         "altTITLE": [
-            "Bohemian Rhapsody - Remastered 2011",
-            "Bohemian Rhapsody - 2011 Remaster"
+            "Bohemian Rhapsody - 2011 Remaster",
+            "Bohemian Rhapsody - Remastered 2011"
         ],
         "blackALBUM": [
             "A Night At The Opera (Deluxe Remastered Version)",
@@ -2673,8 +3012,8 @@
         "STREAMHASH": "b1cb6330ec42274ce52993140b72d4cc",
         "altALBUM": null,
         "altTITLE": [
-            "Bohemian Rhapsody - Remastered 2011",
-            "Bohemian Rhapsody - 2011 Remaster"
+            "Bohemian Rhapsody - 2011 Remaster",
+            "Bohemian Rhapsody - Remastered 2011"
         ],
         "blackALBUM": [
             "A Night At The Opera (Deluxe Remastered Version)",
@@ -2751,12 +3090,11 @@
     {
         "STREAMHASH": "c1013be3b48aeb4fbc9e8be8453d3606",
         "altALBUM": [
+            "Bohemian Rhapsody (The Original Soundtrack)",
             "Innuendo (2011 Remaster)"
         ],
         "altTITLE": null,
-        "blackALBUM": [
-            "Bohemian Rhapsody (The Original Soundtrack)"
-        ],
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -2782,14 +3120,13 @@
     {
         "STREAMHASH": "ce43533712aa01954a28ab17039a41f1",
         "altALBUM": [
+            "Forever",
             "Innuendo (2011 Remaster)"
         ],
         "altTITLE": [
             "These Are The Days Of Our Lives - 2011 Remaster"
         ],
-        "blackALBUM": [
-            "Forever"
-        ],
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -3195,7 +3532,9 @@
         "altALBUM": [
             "Night Visions (Deluxe)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Nothing Left To Say / Rocks"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -3434,6 +3773,24 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "f9c9b7e7609071d576a43967f10c54af",
+        "altALBUM": [
+            "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a0cd298980b1628cb6c28ff1b3b51a4b",
+        "altALBUM": [
+            "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "946cee2a3fd6bd28dfd306ecccac8619",
         "altALBUM": [
             "Finding Beauty In Negative Spaces (Bonus Track Version)"
@@ -3463,6 +3820,17 @@
         ]
     },
     {
+        "STREAMHASH": "15eb8fe2947099c271a6d91f40466a03",
+        "altALBUM": [
+            "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "altTITLE": [
+            "Careless Whisper - Strings Version"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "e7779aa627ded74d2a169b72689927cc",
         "altALBUM": [
             "Finding Beauty In Negative Spaces (Bonus Track Version)"
@@ -3473,6 +3841,15 @@
     },
     {
         "STREAMHASH": "d83d99a6cbd6caf143578a0b2b9f911c",
+        "altALBUM": [
+            "Finding Beauty In Negative Spaces (Bonus Track Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1ff5417fc5173bcd1d0753c2e1a6673f",
         "altALBUM": [
             "Finding Beauty In Negative Spaces (Bonus Track Version)"
         ],
@@ -3627,8 +4004,8 @@
         "altALBUM": null,
         "altTITLE": null,
         "blackALBUM": [
-            "Disclaimer",
-            "Disclaimer II"
+            "Disclaimer II",
+            "Disclaimer"
         ],
         "blackTITLE": null
     },
@@ -4146,8 +4523,8 @@
     {
         "STREAMHASH": "2da5a28fdf5e5ae5d0526af59d1d3bd9",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4156,8 +4533,8 @@
     {
         "STREAMHASH": "fd8216235535f29aa4fc4927feaa2413",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4166,8 +4543,8 @@
     {
         "STREAMHASH": "452fe951c11e5749af0881fb3822f332",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4176,8 +4553,8 @@
     {
         "STREAMHASH": "858e77befd35711af7fa10756880ac88",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4186,8 +4563,8 @@
     {
         "STREAMHASH": "604c093ea4a14e3022dd2b60505c7b7f",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4196,8 +4573,8 @@
     {
         "STREAMHASH": "d8a3712c4955d1c707845084c2b9333c",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4206,8 +4583,8 @@
     {
         "STREAMHASH": "01a8acc628f80b6278c6a09dad36751c",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4216,8 +4593,8 @@
     {
         "STREAMHASH": "78df08cbb93029d414b7efb07dc335b8",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4226,8 +4603,8 @@
     {
         "STREAMHASH": "abb9db9a9eea0e8adfb0fa8d1138caf1",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": [
             "The Diary of Jane - Single Version"
@@ -4238,8 +4615,8 @@
     {
         "STREAMHASH": "a2e7c43fa5413df5d5b199889f6395ef",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4248,8 +4625,8 @@
     {
         "STREAMHASH": "c94a4f123a46e946d8aaa4ed503b83ae",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4258,8 +4635,8 @@
     {
         "STREAMHASH": "1b558762a792f196aff0e51466fee47d",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4268,8 +4645,8 @@
     {
         "STREAMHASH": "15c41d9ed7a4511d6912eb1f2d6e7afa",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4278,8 +4655,8 @@
     {
         "STREAMHASH": "524560480e25e8636940c1331efba2b8",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4288,8 +4665,8 @@
     {
         "STREAMHASH": "946b7ec2640c0d528dda5565c455f9e9",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4298,8 +4675,8 @@
     {
         "STREAMHASH": "90770c644c868277f72370a490083a9e",
         "altALBUM": [
-            "Phobia (Clean Version)",
-            "Phobia (Explicit Version)"
+            "Phobia (Explicit Version)",
+            "Phobia (Clean Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4527,9 +4904,13 @@
     {
         "STREAMHASH": "1578c67ffc61331e6295d2d82de3e416",
         "altALBUM": [
-            "Curtain Call: The Hits (Deluxe Edition)"
+            "Curtain Call: The Hits (Deluxe Edition)",
+            "Lose Yourself"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Lose Yourself - From \"8 Mile\" Soundtrack",
+            "Lose Yourself - Soundtrack Version"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -5694,6 +6075,15 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "3e355710022379a5c1655bbe8f0d25f0",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "I Won't See You Tonight Part 1"
+        ]
+    },
+    {
         "STREAMHASH": "e61b58fc7f602ae11845cf5a33fe7869",
         "altALBUM": [
             "The Stage (Deluxe Edition)"
@@ -5973,6 +6363,15 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "467e96a1fc4d628c560cc11832128cd5",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "The Unforgiven"
+        ]
+    },
+    {
         "STREAMHASH": "4fa8a1bdb550f787e7ee2555607f85da",
         "altALBUM": [
             "Ride The Lightning (Deluxe / Remastered)"
@@ -5997,7 +6396,9 @@
         "altALBUM": [
             "Transmissions (Deluxe Version)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Halo - Acoustic"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -6024,7 +6425,9 @@
         "altALBUM": [
             "Transmissions (Deluxe Version)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "My Demons - Acoustic"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -6112,7 +6515,9 @@
         "altALBUM": [
             "Transmissions (Deluxe Version)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Let It Die - Acoustic"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -6132,7 +6537,9 @@
         "altALBUM": [
             "Transmissions (Deluxe Version)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Point Of No Return - Acoustic"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -6146,6 +6553,17 @@
         "blackTITLE": [
             "Let It Die - Acoustic"
         ]
+    },
+    {
+        "STREAMHASH": "8c2a7b47a9397044858205b663e0fff8",
+        "altALBUM": [
+            "Ricochet"
+        ],
+        "altTITLE": [
+            "Ricochet - Acoustic Version"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "13ed1555b837df59ad8bdec44bb9040a",
@@ -6278,8 +6696,8 @@
     {
         "STREAMHASH": "4f1c8072c3660cb4661fceca2d5f0c29",
         "altALBUM": [
-            "In Utero - 20th Anniversary - Deluxe Edition",
-            "Nirvana"
+            "Nirvana",
+            "In Utero - 20th Anniversary - Deluxe Edition"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -6956,11 +7374,11 @@
     },
     {
         "STREAMHASH": "b8844deb1b122a69bff5cadf85174542",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": [
+        "altALBUM": [
             "Slippery When Wet"
         ],
+        "altTITLE": null,
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -6994,11 +7412,11 @@
     },
     {
         "STREAMHASH": "a8b15fdf7fe9965edfcbc568c88a91c8",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": [
+        "altALBUM": [
             "Slippery When Wet"
         ],
+        "altTITLE": null,
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -7014,11 +7432,11 @@
     },
     {
         "STREAMHASH": "1ec6188c5a9b89329784904cc06c5a0c",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": [
+        "altALBUM": [
             "Slippery When Wet"
         ],
+        "altTITLE": null,
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -7570,6 +7988,24 @@
             "American Idiot"
         ],
         "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3e897c9568eebbb9dc1287513f94cb09",
+        "altALBUM": null,
+        "altTITLE": [
+            "Holiday / Boulevard of Broken Dreams"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7050256a0fa1fca2a4b93906c58d6577",
+        "altALBUM": null,
+        "altTITLE": [
+            "Give Me Novacaine / She's a Rebel"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -9230,8 +9666,8 @@
     {
         "STREAMHASH": "699e734281e4daf2cb7bef63e1992bf1",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9240,8 +9676,8 @@
     {
         "STREAMHASH": "de9e20b6ebe9291d69b090db5d8dc513",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9250,8 +9686,8 @@
     {
         "STREAMHASH": "57e5365d35d49962e0d830a959fd1a1d",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9260,8 +9696,8 @@
     {
         "STREAMHASH": "cc887803f932b05aa9129254abe64e2d",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9270,8 +9706,8 @@
     {
         "STREAMHASH": "e310198b3db5e1004bb3fa37a42ff7c7",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9280,8 +9716,8 @@
     {
         "STREAMHASH": "25fd16f5760327d08fbeff7869fd065f",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9290,8 +9726,8 @@
     {
         "STREAMHASH": "53d0ea0b3256a9bacab8a54af4ea7117",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9300,8 +9736,8 @@
     {
         "STREAMHASH": "11c4e4b564ebc1efa093ebef548f5743",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9310,8 +9746,8 @@
     {
         "STREAMHASH": "1522a3deff032046267e8c8c0e6b0685",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9320,8 +9756,8 @@
     {
         "STREAMHASH": "d5185eed8c48a2482cc016041c328c38",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9330,8 +9766,8 @@
     {
         "STREAMHASH": "813e94b776976fd051d97b80b6fdd4b9",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9340,8 +9776,8 @@
     {
         "STREAMHASH": "67f5d0ae447eb2182a6808e3d20169be",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9350,8 +9786,8 @@
     {
         "STREAMHASH": "a10f0ba7bd9df650cc5659eb6987a6be",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9360,8 +9796,8 @@
     {
         "STREAMHASH": "ad992d4c4804bbf10507228fbfaa5f85",
         "altALBUM": [
-            "Sempiternal (Expanded Edition)",
-            "Sempiternal (Deluxe Edition)"
+            "Sempiternal (Deluxe Edition)",
+            "Sempiternal (Expanded Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9590,6 +10026,15 @@
         ]
     },
     {
+        "STREAMHASH": "4014b809a3c559cb83ac63cbaaf3516b",
+        "altALBUM": null,
+        "altTITLE": [
+            "I'm Not A Vampire - Revamped"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "2e5ce3fb2f20a4b4b0fbd8288e293923",
         "altALBUM": [
             "Coming Home (Deluxe Edition)"
@@ -9707,10 +10152,64 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "b9d6c690c46f97d81c3c6e83586b7d41",
+        "STREAMHASH": "5d3d24b1db1e052803af37a6e59b0525",
+        "altALBUM": null,
+        "altTITLE": [
+            "Stiches"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1ed080bafe60e41d03383fdd5b89435f",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Weight Of The World"
+        ]
+    },
+    {
+        "STREAMHASH": "690bab217de6dbab552703c1ee6280d9",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "The Weight of the World"
+        ]
+    },
+    {
+        "STREAMHASH": "4aeeb958378f322a323188c7c0df7461",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Weight Of The World"
+        ]
+    },
+    {
+        "STREAMHASH": "c9688903eb01883265df20e05e5541a7",
         "altALBUM": null,
         "altTITLE": [
             "I Want Out - Single Version"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b9d6c690c46f97d81c3c6e83586b7d41",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "I Want Out - Single Version"
+        ]
+    },
+    {
+        "STREAMHASH": "cdd0c9a73bd84f169a26fd4a05ab4c2c",
+        "altALBUM": null,
+        "altTITLE": [
+            "Hymn For All I've Lost"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -9770,6 +10269,196 @@
         "blackTITLE": [
             "505 - Live"
         ]
+    },
+    {
+        "STREAMHASH": "43d31f7cc5dfcfb57eb21669c82d3947",
+        "altALBUM": null,
+        "altTITLE": [
+            "Don't Sit Down 'Cause I've Moved Your Chair - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Don't Sit Down 'Cause I've Moved Your Chair"
+        ]
+    },
+    {
+        "STREAMHASH": "940dcd19b4237e38923cc0bdb286aa83",
+        "altALBUM": null,
+        "altTITLE": [
+            "Do Me a Favour - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "62a068fdc421bfe1d9d26633726d6bea",
+        "altALBUM": [
+            "Arabella (Live At The Royal Albert Hall)"
+        ],
+        "altTITLE": [
+            "Arabella - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3495be4d22cc769d7d33314a88ab2dcb",
+        "altALBUM": null,
+        "altTITLE": [
+            "Do I Wanna Know? - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "899f7a68819817d273b3299860f7a3f3",
+        "altALBUM": null,
+        "altTITLE": [
+            "One Point Perspective - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "46c41598c149544eee58ae18b5e7b954",
+        "altALBUM": null,
+        "altTITLE": [
+            "Brianstorm - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b7beea61366dde6b5b7689ee1e95115f",
+        "altALBUM": null,
+        "altTITLE": [
+            "Tranquility Base Hotel & Casino - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8b1d805ef5ebc45dae48f379010cebc4",
+        "altALBUM": null,
+        "altTITLE": [
+            "Knee Socks - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "df0f7b5fb530cbc4277e6a147ce8b976",
+        "altALBUM": null,
+        "altTITLE": [
+            "Star Treatment - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cfa9f482af099bf5b61af36246980249",
+        "altALBUM": [
+            "505 (Live At The Royal Albert Hall)"
+        ],
+        "altTITLE": [
+            "505 - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d8d9c8283b911f9b5badf6267e08675d",
+        "altALBUM": null,
+        "altTITLE": [
+            "Cornerstone - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "19291c5a3b66d178c6d5d36bc6748947",
+        "altALBUM": null,
+        "altTITLE": [
+            "Pretty Visitors - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "58354936460c1b7adee593193d493da0",
+        "altALBUM": null,
+        "altTITLE": [
+            "She Looks Like Fun - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "45b59451714f23c8eac6e37d22c2213e",
+        "altALBUM": null,
+        "altTITLE": [
+            "Crying Lightning - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "503c5b55f9885608db792e6d69aed0c6",
+        "altALBUM": null,
+        "altTITLE": [
+            "Why'd You Only Call Me When You're High? - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Why'd You Only Call Me When You're High?"
+        ]
+    },
+    {
+        "STREAMHASH": "4c7a76d9ba871fd009f68681aa16ce8e",
+        "altALBUM": null,
+        "altTITLE": [
+            "I Bet You Look Good on the Dancefloor - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": [
+            "I Bet You Look Good On The Dancefloor"
+        ]
+    },
+    {
+        "STREAMHASH": "f1aedc7618aa21d138f06317e0e181a0",
+        "altALBUM": null,
+        "altTITLE": [
+            "From the Ritz to the Rubble - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b7a30c8b8395d80016eed56f7c530a38",
+        "altALBUM": null,
+        "altTITLE": [
+            "R U Mine? - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f82dae4ffacd3a3457657c801b169143",
+        "altALBUM": null,
+        "altTITLE": [
+            "Four Out of Five - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a4de8e0652354232dbd58269e80c4662",
+        "altALBUM": null,
+        "altTITLE": [
+            "The View from the Afternoon - Live"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "6fd82c3b5db5e1f09cf8fd318cfcb455",
@@ -9847,19 +10536,7 @@
         "STREAMHASH": "4708eacec9b7a2880431149d2c1f342d",
         "altALBUM": null,
         "altTITLE": [
-            "v",
-            "L",
-            "e",
-            "C",
-            "g",
-            "l",
-            "i",
-            "-",
-            " ",
-            "a",
-            "r",
-            "w",
-            "n"
+            "Crawling - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -9868,21 +10545,7 @@
         "STREAMHASH": "dd4e0f212e9e29539b962fce93380342",
         "altALBUM": null,
         "altTITLE": [
-            "v",
-            "L",
-            "e",
-            "m",
-            "g",
-            "u",
-            "o",
-            "y",
-            "i",
-            "-",
-            "f",
-            " ",
-            "r",
-            "n",
-            "Y"
+            "Lying from You - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -9891,23 +10554,7 @@
         "STREAMHASH": "bc0114df21b1dce53f92f3d55461ef04",
         "altALBUM": null,
         "altTITLE": [
-            "v",
-            "L",
-            "e",
-            "P",
-            "o",
-            "u",
-            "h",
-            "y",
-            "i",
-            "-",
-            "f",
-            " ",
-            "s",
-            "r",
-            "A",
-            "n",
-            "t"
+            "Points of Authority - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -9916,16 +10563,7 @@
         "STREAMHASH": "260c19cb48a756e9cf201d97380b6eb7",
         "altALBUM": null,
         "altTITLE": [
-            "v",
-            "e",
-            "F",
-            "i",
-            "-",
-            " ",
-            "a",
-            "L",
-            "n",
-            "t"
+            "Faint - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -9934,22 +10572,7 @@
         "STREAMHASH": "cd7a44a467d37d6e66754724dc8aed82",
         "altALBUM": null,
         "altTITLE": [
-            "v",
-            "L",
-            "e",
-            "C",
-            "p",
-            "o",
-            "t",
-            "r",
-            "l",
-            "i",
-            "-",
-            " ",
-            "s",
-            "S",
-            "n",
-            "O"
+            "One Step Closer - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -9958,19 +10581,7 @@
         "STREAMHASH": "11d2bcb2fc50be07d9cfe6a6749b1846",
         "altALBUM": null,
         "altTITLE": [
-            "v",
-            "L",
-            "e",
-            "c",
-            "P",
-            "u",
-            "p",
-            "i",
-            "-",
-            " ",
-            "a",
-            "r",
-            "t"
+            "Papercut - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -9979,23 +10590,7 @@
         "STREAMHASH": "eb91ad684d73771b3c9a75f312a012ee",
         "altALBUM": null,
         "altTITLE": [
-            "v",
-            "L",
-            "m",
-            "e",
-            "g",
-            "o",
-            "B",
-            "h",
-            "l",
-            "i",
-            "-",
-            "I",
-            " ",
-            "r",
-            "S",
-            "w",
-            "n"
+            "Somewhere I Belong - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -10004,18 +10599,7 @@
         "STREAMHASH": "655f50d73f706887ebc924715490a5da",
         "altALBUM": null,
         "altTITLE": [
-            "d",
-            "v",
-            "e",
-            "h",
-            "i",
-            "-",
-            "I",
-            " ",
-            "E",
-            "L",
-            "n",
-            "t"
+            "In the End - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -10024,18 +10608,7 @@
         "STREAMHASH": "6c357466d33cb44630787dd61c0b41f4",
         "altALBUM": null,
         "altTITLE": [
-            "R",
-            "v",
-            "e",
-            "u",
-            "y",
-            "i",
-            "-",
-            " ",
-            "a",
-            "L",
-            "w",
-            "n"
+            "Runaway - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -10044,16 +10617,7 @@
         "STREAMHASH": "8de59e7aa310d15f6a90b790143b43ac",
         "altALBUM": null,
         "altTITLE": [
-            "b",
-            "N",
-            "v",
-            "e",
-            "m",
-            "u",
-            "i",
-            "-",
-            " ",
-            "L"
+            "Numb - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -10062,22 +10626,7 @@
         "STREAMHASH": "3cdc84f26e3ea05a4e2fc65b0f6c3b44",
         "altALBUM": null,
         "altTITLE": [
-            "A",
-            "v",
-            "*",
-            "e",
-            "M",
-            "g",
-            "P",
-            "h",
-            "y",
-            "i",
-            "-",
-            " ",
-            "5",
-            "L",
-            "w",
-            "n"
+            "P5hng Me A*wy - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -10086,22 +10635,7 @@
         "STREAMHASH": "85452b918af0ddcc25d5fca121acbb33",
         "altALBUM": null,
         "altTITLE": [
-            "d",
-            "v",
-            "L",
-            "m",
-            "e",
-            "o",
-            "h",
-            "F",
-            "i",
-            "-",
-            "I",
-            " ",
-            "s",
-            "r",
-            "n",
-            "t"
+            "From the Inside - Live"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -10257,7 +10791,9 @@
         "altALBUM": [
             "Meteora (Bonus Edition)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Easier to Run - Live LP Underground Tour 2003"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -10398,7 +10934,9 @@
         "altALBUM": [
             "Meteora (Bonus Edition)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "From the Inside - Live LP Underground Tour 2003"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -10649,6 +11187,24 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "4cca2533f4a5607983fced8ac58ef590",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Shine On You Crazy Diamond (Pts. 1-5)"
+        ]
+    },
+    {
+        "STREAMHASH": "fa0b0516fe1646a583f1457df6e2041a",
+        "altALBUM": null,
+        "altTITLE": [
+            "Shine On You Crazy Diamond (Pts. 1-5)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "fcfc458d718b04ddbc91242069d67d5f",
         "altALBUM": null,
         "altTITLE": [
@@ -10712,6 +11268,24 @@
             "The Wall"
         ],
         "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "353e26ad5cbb15413df424c7fa1da7be",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Another Brick in the Wall, Pt. 2"
+        ]
+    },
+    {
+        "STREAMHASH": "3d98e9adff319d46aca45361f49e67ea",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Another Brick in the Wall, Pt. 2"
+        ]
     },
     {
         "STREAMHASH": "185f8eac97d03b432357c4217b68f444",
@@ -10866,6 +11440,171 @@
         "blackALBUM": [
             "Lest We Forget - The Best Of"
         ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6a1aa11853b0bdfb90e420ca58947d38",
+        "altALBUM": [
+            "Wild Youth EP"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b2133a91fb4d173df0073d3bc9c7d7c1",
+        "altALBUM": [
+            "Wild Youth EP"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4abbda8da1c040211dc97042a8358849",
+        "altALBUM": [
+            "Wild Youth EP"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "71b0ae50fd3816f3e1850d171ae63eff",
+        "altALBUM": [
+            "Wild Youth EP"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c0bd0aa5a721e478d47d270f5870a304",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Wild Youth EP"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a344a5c2704eddcbd13c548960795f4e",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Sleep Eater - Audiotree Live Version"
+        ]
+    },
+    {
+        "STREAMHASH": "cf44d09d4b092d8e57411c8fa2f9dad3",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Magnets, Pt. 2"
+        ]
+    },
+    {
+        "STREAMHASH": "b9aea0dd5f172174c2b070645e506f77",
+        "altALBUM": [
+            "Milking the Snake - Single"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c74eb11207437019705b98dbb1463a9c",
+        "altALBUM": [
+            "Strange Astrology"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c23ebc0f295a615f9f9744af5c5f2e51",
+        "altALBUM": [
+            "Heat Waves"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "99bbf57182f0b9f51d3817ad32e8a78b",
+        "altALBUM": [
+            "Maps (Rock)"
+        ],
+        "altTITLE": [
+            "Maps - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "08efb24d3e2f92d8d7ca231b27d8c77b",
+        "altALBUM": [
+            "Dark Horse (Rock)"
+        ],
+        "altTITLE": [
+            "Dark Horse - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "14354a2656311f2f42c00a40621f1c70",
+        "altALBUM": [
+            "Selective Hearing"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "580db0eaffc667f855ce8aead6e3f971",
+        "altALBUM": [
+            "Drag Me Down (Rock)"
+        ],
+        "altTITLE": [
+            "Drag Me Down - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "29891cd58c37ae09c43e071fd29e1744",
+        "altALBUM": [
+            "All We Know (Rock)"
+        ],
+        "altTITLE": [
+            "All We Know - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9b5102abcae3ad09c5b54dd6aacbd9c0",
+        "altALBUM": [
+            "The Heart Wants What It Wants (Rock)"
+        ],
+        "altTITLE": [
+            "The Heart Wants What It Wants - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "285bd49b9a6f653a486a6341f2124b75",
+        "altALBUM": [
+            "Shape of You (Rock)"
+        ],
+        "altTITLE": [
+            "Shape of You - Rock"
+        ],
+        "blackALBUM": null,
         "blackTITLE": null
     }
 ]
