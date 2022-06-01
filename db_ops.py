@@ -2,7 +2,7 @@ from copy import copy, deepcopy
 from fuzzywuzzy import fuzz
 
 from importlib.resources import path
-import json
+import json as json
 import os
 import re
 from pathlib import Path
@@ -472,7 +472,7 @@ def generate_local_playlist(all_saved_tracks=False):
         # with open("allmytracks.json", "w") as jsonfile:
         #     jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
 
-        import json as json
+
         with open('allmytracks.json', 'r') as j:
             spotify_playlist_tracks = json.loads(j.read())
         spotify_playlist_name = 'RuMAN'

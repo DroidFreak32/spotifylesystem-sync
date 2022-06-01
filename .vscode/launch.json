@@ -26,7 +26,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "internalConsole",
-            "args": ["--music-dir", "MSUIC"]
+            "args": ["--music-dir", "MUSIC"]
         }
     ]
 }
