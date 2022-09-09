@@ -1,12 +1,11 @@
-from copy import copy, deepcopy
-from fuzzywuzzy import fuzz
-from pprint import pprint
-from importlib.resources import path
-import json
 import os
 import re
+from asyncio import subprocess
+from copy import deepcopy
 from pathlib import Path
+from pprint import pprint
 
+from fuzzywuzzy import fuzz
 from peewee import BlobField
 from peewee import CharField
 from peewee import DoesNotExist
@@ -15,10 +14,10 @@ from peewee import IntegrityError
 from peewee import Model
 from peewee import TextField
 from playhouse.sqlite_ext import CSqliteExtDatabase
-from tqdm import tqdm
 
 import spotify_ops
-from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata, get_last_flac_mtime, list2dictmerge, music_root_dir, \
+from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata, get_last_flac_mtime, \
+    list2dictmerge, music_root_dir, \
     db_path, db_mtime_marker
 from common import str_to_list, find_flacs
 
@@ -157,6 +156,7 @@ def add_to_black_title(db_row, track_metadata):
         Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
+
 @DeprecationWarning
 def search_track_in_db_nonfuzz(track_metadata=None, album_artist=None):
     """
@@ -258,6 +258,7 @@ def search_track_in_db_nonfuzz(track_metadata=None, album_artist=None):
                 #     'STREAMHASH': row.STREAMHASH
                 # })
     return result
+
 
 def search_track_in_db(track_metadata=None, album_artist=None):
     """
@@ -435,19 +436,34 @@ def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last
         db.create_tables([AlbumArtist, Music])
 
     metadata = generate_metadata(music_root_dir, flac_files)
-    dump_to_db(metadata)
-    print("METADATA SYNCED")
-    db.backup(master)
-    master.execute_sql('VACUUM;')
-    Path(db_mtime_marker).touch()
-    os.utime(db_mtime_marker, (last_flac_mtime, last_flac_mtime))
-    print(os.path.getmtime(db_mtime_marker))
+    answer = input("\nIf there are warnings above, for example - Multiple Album Artist tag in a file " +
+                   "\nstop this program and fix them. Else, type F to ignore the warnings and continue.")
+    if answer == 'F' or answer == 'f':
+        answer = input("Are you really sure you want to ignore the warnings? (Y/N)")
+        if answer == 'Y' or answer == 'y':
+            dump_to_db(metadata)
+            print("METADATA SYNCED")
+            db.backup(master)
+            master.execute_sql('VACUUM;')
+            Path(db_mtime_marker).touch()
+            # Write the timestamp  to the file
+            command = f"echo {str(last_flac_mtime)} > {db_mtime_marker}"
+            subprocess.Popen(command, shell=True)
+            os.utime(db_mtime_marker, (last_flac_mtime, last_flac_mtime))
+            print(os.path.getmtime(db_mtime_marker))
+            return
+
+        # Exit due to warnings
+        print("\nExiting!")
+        exit(1)
 
 
 def partial_sync():
     flac_files = find_flacs(music_root_dir)
     new_files = []
-    db_mtime = os.path.getmtime(db_mtime_marker)
+    # read the last modified time
+    with open(db_mtime_marker) as f:
+        db_mtime = float(f.readline().strip())
     last_flac_mtime = get_last_flac_mtime(flac_files)
     for flac_file in flac_files:
         if db_mtime < os.path.getmtime(os.path.join(music_root_dir, flac_file)):
@@ -518,7 +534,7 @@ def generate_local_playlist(all_saved_tracks=False):
                 continue
             elif len(result) == 0:
                 unmatched_track = {
-                    'ALBUMARTIST': spotify_album_artist} | playlist_track
+                                      'ALBUMARTIST': spotify_album_artist} | playlist_track
                 unmatched_list.append(unmatched_track)
                 unmatched_track_ids.append(unmatched_track['SPOTIFY'][-22:])
                 # print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
@@ -653,7 +669,8 @@ def cleanup_db():
             if len(db_blackTITLE) == 0:
                 db_blackTITLE = None
 
-        update_query = Music.update(ALBUM=db_ALBUM, altALBUM=db_altALBUM, blackALBUM=db_blackALBUM, altTITLE=db_altTITLE,
+        update_query = Music.update(ALBUM=db_ALBUM, altALBUM=db_altALBUM, blackALBUM=db_blackALBUM,
+                                    altTITLE=db_altTITLE,
                                     blackTITLE=db_blackTITLE, PATH=db_PATH).where(Music.STREAMHASH == db_STREAMHASH)
         update_query.execute()
         count += 1
