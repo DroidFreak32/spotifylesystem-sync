@@ -1,17 +1,15 @@
 import argparse
 import ast
+import glob
 import os
+import subprocess
 import zlib
 from base64 import b64encode
-import subprocess
+from configparser import ConfigParser
 from itertools import repeat
 
-import spotipy
-import glob
-
-from configparser import ConfigParser
-
 import pathos.multiprocessing as multiprocessing
+import spotipy
 import taglib
 import tqdm
 from spotipy import SpotifyOAuth
@@ -22,7 +20,9 @@ global db_mtime_marker
 global spotify_client_id
 global spotify_client_secret
 global redirect_uri
+global multitag_files
 
+multitag_files = []
 config = ConfigParser()
 config.read("config.ini")
 
@@ -45,7 +45,6 @@ if args.db_name is not None:
 else:
     db_path = os.path.join(music_root_dir, config['DEFAULT']['musicdb'])
     db_mtime_marker = os.path.join(music_root_dir, '.' + config['DEFAULT']['musicdb'] + '.marker')
-
 
 if args.spotify_client_id is not None:
     spotify_client_id = args.spotify_client_id
@@ -139,6 +138,7 @@ def find_flacs(music_dir=None):
     flac_files = glob.glob("**/*.flac", root_dir=music_dir, recursive=True)
     return flac_files
 
+
 def get_last_flac_mtime(flac_files=[]):
     last_flac_mtime = os.path.getmtime(os.path.join(music_root_dir, flac_files[0]))
     for file_path in flac_files:
@@ -151,6 +151,7 @@ def get_last_flac_mtime(flac_files=[]):
 def fetch_metadata_in_background(music_dir, flac_file):
     """
     Gets & generates all the required metadata for a flac track.
+    :param multitag_files:
     :param music_dir: Root music directory
     :param flac_file: Relative path to the flac file from root
     :return: A dictionary of track's relevant metadata
@@ -162,7 +163,7 @@ def fetch_metadata_in_background(music_dir, flac_file):
     if md5sum == "00000000000000000000000000000000":
         print(f"FLAC file {audiofile.path} possibly corrupted. STREAMHASH is 000..!")
         md5sum = subprocess.run(["md5sum", audiofile.path], capture_output=True,
-                            universal_newlines=True).stdout.strip()
+                                universal_newlines=True).stdout.strip()
         md5sum = md5sum[0:32]
 
     audiofile_dict = dict()
@@ -172,9 +173,12 @@ def fetch_metadata_in_background(music_dir, flac_file):
         Ideally ALBUMARTIST should be just one.
         Multiple artists should be listed in the ARTIST tag
         """
-        print(f"\n{bcolors.FAIL}Multiple Album Artists: {audiofile.tags['ALBUMARTIST']} in track.\n"
-              f"Only storing the first one: {audiofile.tags['ALBUMARTIST'][0]}\n"
-              f"Check {flac_file}.{bcolors.ENDC}")
+        # This print was for debugging
+        # print(f"\n{bcolors.WARNING}Multiple Album Artists: {audiofile.tags['ALBUMARTIST']} in track.\n"
+        #       f"Only storing the first one: {audiofile.tags['ALBUMARTIST'][0]}\nCheck "
+        #       f"{bcolors.ENDC}{bcolors.BOLD}{bcolors.UNDERLINE}{flac_file}.{bcolors.ENDC}")
+
+        audiofile_dict['multitag'] = flac_file
 
     audiofile_dict['ALBUMARTIST'] = audiofile.tags['ALBUMARTIST'][0]
 
@@ -227,9 +231,13 @@ def generate_metadata(music_dir, flac_files):
 
     # fancy progress bar
     result = a_pool.starmap(fetch_metadata_in_background, tqdm.tqdm(inputs, total=len(flac_files)), chunksize=1)
-    print(f"Metadata fetched")
+    print(f"\nMetadata fetched!\n")
 
     for item in result:
+        # Create a list of files having multiple albumartists
+        if 'multitag' in item.keys():
+            multitag_files.append(item['multitag'])
+            item.pop('multitag')
         album_artist = item['ALBUMARTIST']
         if album_artist not in metadata_result.keys():
             metadata_result[album_artist] = []
@@ -242,13 +250,23 @@ def generate_metadata(music_dir, flac_files):
             'STREAMHASH': item['STREAMHASH'],
             'PATH': item['PATH']
         })
+
+    print(f"{bcolors.BOLD}{bcolors.WARNING}These files have multiple album artists:\n{bcolors.ENDC}")
+    print(multitag_files)
+    answer = input(f"{bcolors.BOLD}{bcolors.WARNING}Generate a playlist for easy import into mp3tag, foobar2k etc? (Y/N){bcolors.ENDC}\n")
+    if answer == 'Y' or answer == 'y':
+        generate_m3u('fixme_multiple_albumartists', multitag_files)
     return metadata_result
 
+
 def generate_m3u(playlist_name='playlist', track_paths=[]):
-    with open(playlist_name + '.m3u', 'w', encoding='utf-8') as p:
+    print(track_paths[0])
+    location = os.path.join(music_root_dir, playlist_name + '.m3u')
+    with open(location, 'w', encoding='utf-8') as p:
         print(f"#EXTM3U\n#PLAYLIST:{playlist_name}", file=p)
         for item in track_paths:
             print(item, file=p)
+    print("\nPlaylist generated at: " + location)
 
 
 if __name__ == '__main__':
