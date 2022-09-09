@@ -1,6 +1,6 @@
 from copy import copy, deepcopy
 from fuzzywuzzy import fuzz
-
+from pprint import pprint
 from importlib.resources import path
 import json
 import os
@@ -452,7 +452,8 @@ def partial_sync():
     for flac_file in flac_files:
         if db_mtime < os.path.getmtime(os.path.join(music_root_dir, flac_file)):
             new_files.append(flac_file)
-    print(f"New files: {new_files}")
+    print(f"New files:\n_________")
+    pprint(new_files)
     input("Press enter to continue..")
     if len(new_files) > 0:
         sync_fs_to_db(force_resync=False, flac_files=new_files,
@@ -463,6 +464,7 @@ def generate_local_playlist(all_saved_tracks=False):
     """
     TODO: Instead of scanning each track, merge th AlbumArtist and just have 1 lookup per AA in DB
     """
+    global json
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     if not all_saved_tracks:
