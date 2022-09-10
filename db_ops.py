@@ -460,29 +460,44 @@ def dump_to_db(metadata):
 
 def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last_flac_mtime=1):
     master = CSqliteExtDatabase(db_path)
-    master.backup(db)
+    try:
+        """
+        TODO: Test this. Useing this for now to prevent crashes on a fresh setup without db created
+        """
+        master.backup(db)
+    except:
+        master.create_tables([AlbumArtist, Music])
+        master.commit()
+        master.backup(db)
     if force_resync:
+        # Rescan again to avoid crash when file is deleted while running this program
+        flac_files = find_flacs(music_root_dir)
         last_flac_mtime = get_last_flac_mtime(flac_files)
         db.drop_tables([AlbumArtist, Music])
         db.create_tables([AlbumArtist, Music])
 
-    metadata = generate_metadata(music_root_dir, flac_files)
-    answer = input("\nIf there are warnings above, for example - Multiple Album Artist tag in a file " +
-                   "\nstop this program and fix them. Else, type F to ignore the warnings and continue.")
-    if answer == 'F' or answer == 'f':
-        answer = input("Are you really sure you want to ignore the warnings? (Y/N)")
-        if answer == 'Y' or answer == 'y':
-            dump_to_db(metadata)
-            print("METADATA SYNCED")
-            db.backup(master)
-            master.execute_sql('VACUUM;')
-            Path(db_mtime_marker).touch()
-            # Write the timestamp  to the file
-            command = f"echo {str(last_flac_mtime)} > {db_mtime_marker}"
-            subprocess.Popen(command, shell=True)
-            os.utime(db_mtime_marker, (last_flac_mtime, last_flac_mtime))
-            print(os.path.getmtime(db_mtime_marker))
-            return
+    metadata, warning_flag = generate_metadata(music_root_dir, flac_files)
+    if warning_flag:
+        answer = input("\nIf there are warnings above, for example - Multiple Album Artist tag in a file " +
+                       "\nstop this program and fix them. Else, type F to ignore the warnings and continue.")
+        if answer == 'F' or answer == 'f':
+            answer = input("Are you really sure you want to ignore the warnings? (Y/N)")
+            if answer == 'Y' or answer == 'y':
+                warning_flag = False
+
+    # User agrees to continue
+    if not warning_flag:
+        dump_to_db(metadata)
+        print("METADATA SYNCED")
+        db.backup(master)
+        master.execute_sql('VACUUM;')
+        Path(db_mtime_marker).touch()
+        # Write the timestamp  to the file
+        command = f"echo {str(last_flac_mtime)} > {db_mtime_marker}"
+        subprocess.Popen(command, shell=True)
+        os.utime(db_mtime_marker, (last_flac_mtime, last_flac_mtime))
+        print(os.path.getmtime(db_mtime_marker))
+        return
 
         # Exit due to warnings
         print("\nExiting!")
