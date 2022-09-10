@@ -1,12 +1,12 @@
 import os
 import re
-from asyncio import subprocess
+import subprocess
 from copy import deepcopy
 from pathlib import Path
 from pprint import pprint
-
+import json
 from fuzzywuzzy import fuzz
-from peewee import BlobField
+from peewee import BlobField, SQL
 from peewee import CharField
 from peewee import DoesNotExist
 from peewee import ForeignKeyField
@@ -26,11 +26,13 @@ db = CSqliteExtDatabase(":memory:")
 
 class BaseModel(Model):
     class Meta:
+        # constraints = [SQL('PRIMARYKEY ("ALBUMARTIST" COLLATE NOCASE)')]
         database = db
 
 
 class AlbumArtist(BaseModel):
-    ALBUMARTIST = TextField(index=True)
+    # collation=NOCASE seems to avoid duplicate artist names due to caps in verbs
+    ALBUMARTIST = TextField(index=True, collation='NOCASE')
 
 
 class Music(BaseModel):
