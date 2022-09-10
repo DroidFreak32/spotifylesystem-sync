@@ -390,13 +390,18 @@ def search_track_in_db(track_metadata=None, album_artist=None):
 def dump_to_db(metadata):
     music_db_orm = None
     for album_artists, track_list in metadata.items():
-        AlbumArtist.create(ALBUMARTIST=album_artists)
         for track in track_list:
             """
             Get an AlbumArtist object, maybe for backref?? Blind copy pasta
             """
-            album_artist = AlbumArtist.get(
-                AlbumArtist.ALBUMARTIST == album_artists)
+            try:
+                # Avoids duplicates if artist already exists
+                album_artist = AlbumArtist.get(
+                    AlbumArtist.ALBUMARTIST == album_artists)
+            except DoesNotExist:
+                AlbumArtist.create(ALBUMARTIST=album_artists)
+                album_artist = AlbumArtist.get(
+                    AlbumArtist.ALBUMARTIST == album_artists)
             try:
                 music_db_orm = Music.create(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=track['ALBUM'],
                                             altALBUM=None, blackALBUM=None,
@@ -404,6 +409,7 @@ def dump_to_db(metadata):
                                             LYRICS=track['LYRICS'],
                                             STREAMHASH=track['STREAMHASH'],
                                             PATH=track['PATH'])
+                music_db_orm.save()
             except IntegrityError as IE:
                 """
                 Some music files may belong to multiple albums, for ex. "Self titled" and "Greatest hits"
@@ -433,7 +439,7 @@ def dump_to_db(metadata):
                         multi_album.append(track['ALBUM'])
                     elif track['ALBUM'] == row['ALBUM']:
                         print(
-                            f"{bcolors.WARNING}Is this file a duplicate copy?{bcolors.ENDC}")
+                            f"{bcolors.WARNING}Is this file a duplicate copy?{bcolors.ENDC}\n")
                         multi_album = track['ALBUM']
                     else:
                         multi_album.append(row['ALBUM'])
@@ -506,7 +512,6 @@ def generate_local_playlist(all_saved_tracks=False):
     """
     TODO: Instead of scanning each track, merge th AlbumArtist and just have 1 lookup per AA in DB
     """
-    global json
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     if not all_saved_tracks:
@@ -515,8 +520,6 @@ def generate_local_playlist(all_saved_tracks=False):
         # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
         # with open("allmytracks.json", "w") as jsonfile:
         #     jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
-
-        import json as json
         with open('allmytracks.json', 'r') as j:
             spotify_playlist_tracks = json.loads(j.read())
         spotify_playlist_name = 'RuMAN'
