@@ -115,3 +115,54 @@ Identical Track found!
 ```
 
 - Make it more pythonic by referring to other projects like: [spotify-dl](https://github.com/SathyaBhat/spotify-dl)
+
+
+### Console example:
+```
+1) Complete Sync filesystem to Local DB
+2) Update modified files in DB
+3) Generate spotify playlists locally
+4) Create a playlist of all saved spotify tracks
+5) Export whitelist & blacklist
+6) Import whitelist & blacklist
+7) Cleanup duplicates in db
+Q - Quit
+Enter your choice: 3
+Playlists found in your account:
+ID: 1LinCArgs5903itZ6IEsp2 Name: White Rock Noise                         Total Tracks: 318            
+ID: 3wxUTHoNAT60QsyXfCJRaG Name: My Shazam Tracks                         Total Tracks: 10             
+ID: 03m0iBzmmSFmoEuKcQLDZz Name: Post Rock                                Total Tracks: 8              
+ID: 18n6rIA0rAkk20PQdgcA6j Name: Arctic Monkeys being a cardiologist      Total Tracks: 22             
+ID: 62V0MssVsUYGcmWp75D833 Name: Hot stuff                                Total Tracks: 24             
+ID: 0K8Z3rRTTON1V348WDQz8Z Name: Something different                      Total Tracks: 18             
+ID: 6ro7JwspABtrlTErGYO53a Name: Modern Instrumentals                     Total Tracks: 15             
+ID: 1MyrUZxvtixPsblkXjDioP Name: Calm Waters                              Total Tracks: 45             
+ID: 6MMOZBrYL07sfaPdVnQ38c Name: Rockless Bottom                          Total Tracks: 57             
+ID: 2hEP8skwpqslLEVQ2E1H6f Name: Anguish!                                 Total Tracks: 43             
+ID: 2fr0uT8blZ4YujtYCz8WdO Name: Old is gold                              Total Tracks: 48             
+ID: 4Kb9y65b3bV1jwEGhADCC2 Name: Anime                                    Total Tracks: 26             
+Enter the playlist ID: 18n6rIA0rAkk20PQdgcA6j
+Querying DB for tracks: 11 / 22playlist.
+Spotify URL:
+https://open.spotify.com/track/086myS9r57YsLbJpU0TgK9
+Spotify / DB Title:
+Why'd You Only Call Me When You're High? / Why'd You Only Call Me When You're High? (Live)
+PATH Arctic Monkeys/2020 - Live at the Royal Albert Hall/Arctic Monkeys - Why'd You Only Call Me When You're High_ (Live).flac
+Are these the same?
+Y/N/Q: n
+Adding ["Why'd You Only Call Me When You're High?"] to blacklist
+Querying DB for tracks: 22 / 22
+Spotify URL:
+https://open.spotify.com/track/3DQVgcqaP3iSMbaKsd57l5
+Spotify / DB Title:
+I Bet You Look Good On The Dancefloor / I Bet You Look Good on the Dancefloor (Live)
+PATH Arctic Monkeys/2020 - Live at the Royal Albert Hall/Arctic Monkeys - I Bet You Look Good on the Dancefloor (Live).flac
+Are these the same?
+Y/N/Q: n
+Adding ['I Bet You Look Good On The Dancefloor'] to blacklist
+22/22 tracks Matched. 
+Do you want to generate an m3u file for the matched songs?
+Y/N: Y
+Do you want to generate a new spotify playlist for the UNMATCHED songs?
+Y/N: n
+```
