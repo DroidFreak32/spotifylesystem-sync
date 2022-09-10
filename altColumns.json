@@ -1,5 +1,14 @@
 [
     {
+        "STREAMHASH": "709a8ef720c4658ed56744274d32c610",
+        "altALBUM": [
+            "Panic Switch"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "0f3cd9aac3ea627c79e4aec669f3c6d2",
         "altALBUM": null,
         "altTITLE": null,
@@ -1018,15 +1027,6 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "fbd584035aad99f76df72bc3e8c2b3fd",
-        "altALBUM": [
-            "Trench"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
         "STREAMHASH": "77926114bb010cf01192aefbc859f997",
         "altALBUM": null,
         "altTITLE": [
@@ -1326,15 +1326,6 @@
     },
     {
         "STREAMHASH": "caa2ffce092fc940d8da6ab297707f47",
-        "altALBUM": [
-            "Trench"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "21571d32357de576907ae23bb7c29efa",
         "altALBUM": [
             "Trench"
         ],
@@ -2763,7 +2754,7 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "f585bfdb6d5caf54dfc0575f974e0258",
+        "STREAMHASH": "cff44989963c56fccbe678c1681efe9e",
         "altALBUM": [
             "Greatest Hits II (2011 Remaster)",
             "The Platinum Collection (2011 Remaster)"
@@ -2773,7 +2764,7 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "cff44989963c56fccbe678c1681efe9e",
+        "STREAMHASH": "f585bfdb6d5caf54dfc0575f974e0258",
         "altALBUM": [
             "Greatest Hits II (2011 Remaster)",
             "The Platinum Collection (2011 Remaster)"
@@ -3354,6 +3345,51 @@
         ],
         "altTITLE": null,
         "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6a1aa11853b0bdfb90e420ca58947d38",
+        "altALBUM": [
+            "Wild Youth EP"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b2133a91fb4d173df0073d3bc9c7d7c1",
+        "altALBUM": [
+            "Wild Youth EP"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4abbda8da1c040211dc97042a8358849",
+        "altALBUM": [
+            "Wild Youth EP"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "71b0ae50fd3816f3e1850d171ae63eff",
+        "altALBUM": [
+            "Wild Youth EP"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c0bd0aa5a721e478d47d270f5870a304",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Wild Youth EP"
+        ],
         "blackTITLE": null
     },
     {
@@ -4328,6 +4364,24 @@
         ]
     },
     {
+        "STREAMHASH": "a344a5c2704eddcbd13c548960795f4e",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Sleep Eater - Audiotree Live Version"
+        ]
+    },
+    {
+        "STREAMHASH": "cf44d09d4b092d8e57411c8fa2f9dad3",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Magnets, Pt. 2"
+        ]
+    },
+    {
         "STREAMHASH": "582dcbdbc48106b04673c1ab1865a8ec",
         "altALBUM": [
             "Double Down"
@@ -4339,9 +4393,56 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "b9aea0dd5f172174c2b070645e506f77",
+        "altALBUM": [
+            "Milking the Snake - Single"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "cc2adbdafa48dfe60e062f44c0522809",
         "altALBUM": [
-            "Once More For The Ocean"
+            "Once More For The Ocean",
+            "Cranium"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0e1d7ccddc6f41089c6fdb000e42c4d0",
+        "altALBUM": [
+            "Cranium"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8443939a782bb80476ebce5c200bf760",
+        "altALBUM": [
+            "Cranium"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c5bfe333bf35195465a112429bae144b",
+        "altALBUM": [
+            "Cranium"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c74eb11207437019705b98dbb1463a9c",
+        "altALBUM": [
+            "Strange Astrology",
+            "Cranium"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4350,7 +4451,44 @@
     {
         "STREAMHASH": "039b547486dfbab8599f0b665aa35589",
         "altALBUM": [
-            "The Next Curse"
+            "The Next Curse",
+            "Cranium"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "683ded4248a6e1e35a50e0c8b1f70ef8",
+        "altALBUM": [
+            "Cranium"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c99b093fda276ff57c3b09454fc0863e",
+        "altALBUM": [
+            "Cranium"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0b60965beb967d1d99c4664a29b478b6",
+        "altALBUM": [
+            "Cranium"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "474829f7b2dad0dc7f814b86a0278dd9",
+        "altALBUM": [
+            "Cranium"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4512,11 +4650,112 @@
         ]
     },
     {
+        "STREAMHASH": "71167b48dd5da53a6e7451ed7b3ea8df",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "056a319beba763fccc65315ed37ada8f",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "eeae8df2d3c8edfa906bc1d74a878b7a",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7c9d01a53ecc86ab3b09570662584440",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5984f713d470b9525acc61924fdf6ee2",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6d1230b64b3be6c68d271351ed2f5987",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6c1b387af3f5a75b3f543ef972aaed78",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f060ce294b2520fcee243dc95e9b4da2",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f7cf052c5a81400f1d606161cb9e0148",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "030b4d5e2c8064d59fd8a5063a67c46f",
-        "altALBUM": null,
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
         "altTITLE": [
             "Youthanasia - Remastered 2004"
         ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4ed54d7a880e2324354ddea1f48f1c41",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4f32159d661b3b6a6ede53cf406bd0e1",
+        "altALBUM": [
+            "Youthanasia (Expanded Edition)"
+        ],
+        "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -6129,21 +6368,21 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "a7b4653098f6a69fad462e5d0e84ae4e",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": [
-            "Californication"
-        ]
-    },
-    {
         "STREAMHASH": "2c0e9314508c89d3464cf840c8ea4baf",
         "altALBUM": null,
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": [
             "Snow (Hey Oh)"
+        ]
+    },
+    {
+        "STREAMHASH": "a7b4653098f6a69fad462e5d0e84ae4e",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "Californication"
         ]
     },
     {
@@ -6986,36 +7225,325 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "15de8e17bcad8607b42714e962b88cc8",
+        "STREAMHASH": "cb97811698a5cf9fa602ccc91118dc0e",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "50251b68f72362d924e34ca4e4bbe90b",
+        "STREAMHASH": "6cbdba38e5bd38345069b82840ffba30",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "cfa880ebadb95065f8740e6d225906c9",
+        "STREAMHASH": "3d9e261ece7b3664df489e4370ff4443",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "b68fb6b59f3023c31fe2882660041e9b",
+        "STREAMHASH": "da6b844359dc73cea9e132a874ca8e9e",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "58683bd4ef13af2bbc230459919e6062",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d40acd8f4194802cf4138032e5415c47",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c40b1bd4b87fc7ced980484a28d16dcf",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "99271d6f964f7e1e8c73fdef2fed0ef1",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f3b8d772d436f8af85958bbcdffe2599",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "379f19b946e1e5c6283c41b29e424219",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "13799f41ef9df994590bf0058c4ab7f1",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "eb35efe172f3cbb4b29dfff5abb2e655",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3f353b7058a218cafeca51e7097dcc4e",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9275fe96ef7f8c9617aa23eaed338712",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "daaeb965dcdee5320dd41c5e935689d9",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b8b138031b207597663e1654b32c03f9",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "badf13b8b5c7c00099e87eec26fea419",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a9f3579badcdc751c63346d5e0b10ec5",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "071242b75146d275971220713549ed97",
+        "altALBUM": [
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cd2b7086b965f2a196cceeb95eca0bad",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b89c945b10593cc569e9bdd097c38e35",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e87beb67064bb3c0dc38d4130b660ff4",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f980a13167f643c51e90ad199d6cc59f",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2429a407a6314828fb4419a0d5f4c339",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d138a56db2381f7a860e863860c607c9",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0dffdfd8be487ac0d181ea470bc76e71",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "aab26a18e1e3f2d0c2fc2fef24ba5b27",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": [
+            "Lay Your Hands On Me - Edit"
+        ],
+        "blackALBUM": [
+            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "3b2e18d96bd1fa1bfc8491e8286b8b3e",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7565982ea30ae47b6692737c8496b45b",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a739c82bd1952a979cd419c56a2c3db6",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "85004f1f20679be67bedbed5ca3d21a0",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "737a808f3403a6a964f2ef1a7164f4aa",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6d6185eb7ea5bf093692fd753ccbc944",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4ba266a49e40ff8a1e6fca79e8790b0a",
+        "altALBUM": [
+            "New Jersey (Deluxe Edition)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7024,7 +7552,18 @@
     {
         "STREAMHASH": "14b6e04135f1598efd1f32db3193c8e1",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Keep The Faith (Remastered)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b68fb6b59f3023c31fe2882660041e9b",
+        "altALBUM": [
+            "Keep The Faith (Remastered)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7033,34 +7572,18 @@
     {
         "STREAMHASH": "7056405790d8f8c93a9afea78931e27b",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Keep The Faith (Remastered)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "6d95bcd2628f5c80e12a020c35c22824",
+        "STREAMHASH": "50251b68f72362d924e34ca4e4bbe90b",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "eef937bcdc1399ef3d2c0ff0c5a2ae59",
-        "altALBUM": [
-            "Keep The Faith (Remastered)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "c8dbcf29a4781e166a41edd79f5b4f4e",
-        "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Keep The Faith (Remastered)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7069,16 +7592,48 @@
     {
         "STREAMHASH": "546866c6ab9a2cd453c5b5e97243c856",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Keep The Faith (Remastered)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "db9647bd92bd82b06346d9e000f24104",
+        "STREAMHASH": "c8dbcf29a4781e166a41edd79f5b4f4e",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Keep The Faith (Remastered)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "eef937bcdc1399ef3d2c0ff0c5a2ae59",
+        "altALBUM": [
+            "Keep The Faith (Remastered)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cfa880ebadb95065f8740e6d225906c9",
+        "altALBUM": [
+            "Keep The Faith (Remastered)",
+            "Cross Road"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6d95bcd2628f5c80e12a020c35c22824",
+        "altALBUM": [
+            "Keep The Faith (Remastered)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7087,223 +7642,28 @@
     {
         "STREAMHASH": "7a14e4487eb00908871f68b13310d6d6",
         "altALBUM": [
-            "Keep The Faith (Remastered)"
+            "Keep The Faith (Remastered)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "f5cc262d730eec9c55851dbd7b4817bf",
+        "STREAMHASH": "15de8e17bcad8607b42714e962b88cc8",
         "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
+            "Keep The Faith (Remastered)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "99d14531167b64f37d0fa5604af9cc78",
+        "STREAMHASH": "db9647bd92bd82b06346d9e000f24104",
         "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "817cf5aaad26bd071e80b94a7c7ce6b8",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "c79664dd5724ee66e6ef3af357542f35",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "acc076eb74396506e85bc829584b7bc7",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "22e5e6c1b942f720d318fd6513d41506",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "8cfe8b9880b72dee5e6492a0c9736a31",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "503e4107cce2c713f928d12f1ca85f8c",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "490538fdfeca32c5a9c9625cc52e2341",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "13433d427b24a0d969dcf4789376c321",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "bdd1a0bfb0007116b6542e5aa7a30e15",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "d4c86772276d137574de5791388c4b4c",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "68982e66b85b0e79c172e2a7f2fe7dc0",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "ef0c0b8480c64c2bfaab0e68f76216d4",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "660590b733b276bd25caaf162f78ffaa",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "9c7d038ea534988a8b1a6c6deed78255",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "59c11badfe279bc3ab2b7694f76ec052",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "70370782887fb4d139f503e98dca274c",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "ba4554cb209e56fd9be7a060c6582783",
-        "altALBUM": [
-            "This House Is Not For Sale (Deluxe)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "47f7d0e8cd6e3757dd0b5d21b60aa34e",
-        "altALBUM": [
-            "These Days (Remastered)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "78964b6dd238d6f1a249ce3951816d85",
-        "altALBUM": [
-            "These Days (Remastered)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "4591d30c1fe1fae3cbfcce2f199510ea",
-        "altALBUM": [
-            "These Days (Remastered)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "7eae18e3a13409be95591d8888428188",
-        "altALBUM": [
-            "These Days (Remastered)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "4d359bfcc196987624e33432f357ca11",
-        "altALBUM": [
-            "These Days (Remastered)"
+            "Keep The Faith (Remastered)",
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7328,6 +7688,33 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "560c59f5893026c570718848d05bfe18",
+        "altALBUM": [
+            "These Days (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4591d30c1fe1fae3cbfcce2f199510ea",
+        "altALBUM": [
+            "These Days (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4d359bfcc196987624e33432f357ca11",
+        "altALBUM": [
+            "These Days (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "ff69b6c26e892e5249df8ebee2ac9d68",
         "altALBUM": [
             "These Days (Remastered)"
@@ -7337,7 +7724,7 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "8c626339cae25b4df61a38d886dee3cd",
+        "STREAMHASH": "47f7d0e8cd6e3757dd0b5d21b60aa34e",
         "altALBUM": [
             "These Days (Remastered)"
         ],
@@ -7346,7 +7733,16 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "560c59f5893026c570718848d05bfe18",
+        "STREAMHASH": "78964b6dd238d6f1a249ce3951816d85",
+        "altALBUM": [
+            "These Days (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8c626339cae25b4df61a38d886dee3cd",
         "altALBUM": [
             "These Days (Remastered)"
         ],
@@ -7373,139 +7769,193 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "b8844deb1b122a69bff5cadf85174542",
+        "STREAMHASH": "7eae18e3a13409be95591d8888428188",
         "altALBUM": [
-            "Slippery When Wet"
+            "These Days (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "76e3f8a38bdd91a8acaa12289610916f",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": [
-            "New Jersey",
-            "New Jersey (Deluxe Edition)"
-        ],
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "6be344850cf2285e09e0c7fc8fb8c351",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": [
-            "Crush"
-        ],
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "96e91c7def52090e6cfcfa18bd69b89f",
+        "STREAMHASH": "ef0c0b8480c64c2bfaab0e68f76216d4",
         "altALBUM": [
-            "Cross Road (Sound & Vision) [International Version]",
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "490538fdfeca32c5a9c9625cc52e2341",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d4c86772276d137574de5791388c4b4c",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "660590b733b276bd25caaf162f78ffaa",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9c7d038ea534988a8b1a6c6deed78255",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "817cf5aaad26bd071e80b94a7c7ce6b8",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "68982e66b85b0e79c172e2a7f2fe7dc0",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "13433d427b24a0d969dcf4789376c321",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "acc076eb74396506e85bc829584b7bc7",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bdd1a0bfb0007116b6542e5aa7a30e15",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "59c11badfe279bc3ab2b7694f76ec052",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "99d14531167b64f37d0fa5604af9cc78",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f5cc262d730eec9c55851dbd7b4817bf",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "70370782887fb4d139f503e98dca274c",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c79664dd5724ee66e6ef3af357542f35",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "22e5e6c1b942f720d318fd6513d41506",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8cfe8b9880b72dee5e6492a0c9736a31",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ba4554cb209e56fd9be7a060c6582783",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "503e4107cce2c713f928d12f1ca85f8c",
+        "altALBUM": [
+            "This House Is Not For Sale (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "22074299f0bb271b3e82f447544f0fb9",
+        "altALBUM": [
+            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": [
             "Cross Road"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "a8b15fdf7fe9965edfcbc568c88a91c8",
-        "altALBUM": [
-            "Slippery When Wet"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "eb4b0fc0359e1ffe36268014f063767a",
-        "altALBUM": null,
-        "altTITLE": [
-            "Lay Your Hands On Me - Edit"
-        ],
-        "blackALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "1ec6188c5a9b89329784904cc06c5a0c",
-        "altALBUM": [
-            "Slippery When Wet"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "df3eb1c58167b52ae917e2f3bfb7a785",
-        "altALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": [
-            "Slippery When Wet"
-        ],
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "df0c8a7657d43ba29c4a723e4b6a9647",
-        "altALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": [
-            "New Jersey",
-            "New Jersey (Deluxe Edition)"
-        ],
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "513798e9ec0d319bdd12c880f41f5335",
-        "altALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "000fc8fa190754c5690748c4a19e2c26",
-        "altALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "d050694eed3816e0418dc07bbca5642f",
-        "altALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "6735161842f84022869c24f29f52158c",
-        "altALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "2cdbdbe7ff063edd3b8e81e0d4cf16d0",
-        "altALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": [
-            "Crush"
         ],
         "blackTITLE": null
     },
@@ -7522,12 +7972,48 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "7635ac25e082b391faf50ca19af6eb96",
+        "STREAMHASH": "36f74ff41db179d39ec56a2366b4f903",
         "altALBUM": [
             "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "df0c8a7657d43ba29c4a723e4b6a9647",
+        "altALBUM": [
+            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": [
+            "New Jersey",
+            "New Jersey (Deluxe Edition)"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2cdbdbe7ff063edd3b8e81e0d4cf16d0",
+        "altALBUM": [
+            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": [
+            "Crush"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d490a1be66cf4f4aebd3b77834371f34",
+        "altALBUM": [
+            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
+        ],
+        "altTITLE": [
+            "Lay Your Hands On Me - Edit"
+        ],
+        "blackALBUM": [
+            "Cross Road"
+        ],
         "blackTITLE": null
     },
     {
@@ -7542,7 +8028,7 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "22074299f0bb271b3e82f447544f0fb9",
+        "STREAMHASH": "d050694eed3816e0418dc07bbca5642f",
         "altALBUM": [
             "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
         ],
@@ -7551,14 +8037,14 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "d490a1be66cf4f4aebd3b77834371f34",
+        "STREAMHASH": "513798e9ec0d319bdd12c880f41f5335",
         "altALBUM": [
             "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
         ],
-        "altTITLE": [
-            "Lay Your Hands On Me - Edit"
+        "altTITLE": null,
+        "blackALBUM": [
+            "Cross Road"
         ],
-        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -7568,19 +8054,39 @@
         ],
         "altTITLE": null,
         "blackALBUM": [
-            "Slippery When Wet"
+            "Slippery When Wet",
+            "Cross Road"
         ],
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "a8503534e0f3cbfe00ba9ee014751715",
+        "STREAMHASH": "6735161842f84022869c24f29f52158c",
+        "altALBUM": [
+            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "df3eb1c58167b52ae917e2f3bfb7a785",
         "altALBUM": [
             "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
         ],
         "altTITLE": null,
         "blackALBUM": [
-            "Have A Nice Day"
+            "Slippery When Wet",
+            "Cross Road"
         ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7635ac25e082b391faf50ca19af6eb96",
+        "altALBUM": [
+            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -7593,148 +8099,90 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "36f74ff41db179d39ec56a2366b4f903",
+        "STREAMHASH": "3786f6e781f1b7b4af02e5033970f2d1",
         "altALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "3b2e18d96bd1fa1bfc8491e8286b8b3e",
+        "STREAMHASH": "5246eab6a7a9ea6af038a6c0492b328d",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "6d6185eb7ea5bf093692fd753ccbc944",
+        "STREAMHASH": "dba13ab37b4eb21543a83ac5e5fe5a15",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "0dffdfd8be487ac0d181ea470bc76e71",
+        "STREAMHASH": "5cc0bf3da3f4c5a4a9c3af65ac6931c5",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "cd2b7086b965f2a196cceeb95eca0bad",
+        "STREAMHASH": "de82b404a634d1afecaf18befc2cd40e",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "f980a13167f643c51e90ad199d6cc59f",
+        "STREAMHASH": "2b720eefe631fa214acead4fa7729a82",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "b89c945b10593cc569e9bdd097c38e35",
+        "STREAMHASH": "1bd02f124c0c0ff87c5ef5edfb2e344b",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "85004f1f20679be67bedbed5ca3d21a0",
+        "STREAMHASH": "33695be90cf24a8e2ecaea117d56c6f4",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "737a808f3403a6a964f2ef1a7164f4aa",
+        "STREAMHASH": "f5524d9b5cd6055fe548c9d65db39dd7",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "d138a56db2381f7a860e863860c607c9",
+        "STREAMHASH": "c081881af6b2cde399ad2c2fd1673ffb",
         "altALBUM": [
-            "New Jersey (Deluxe Edition)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "2429a407a6314828fb4419a0d5f4c339",
-        "altALBUM": [
-            "New Jersey (Deluxe Edition)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "e87beb67064bb3c0dc38d4130b660ff4",
-        "altALBUM": [
-            "New Jersey (Deluxe Edition)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "4ba266a49e40ff8a1e6fca79e8790b0a",
-        "altALBUM": [
-            "New Jersey (Deluxe Edition)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "aab26a18e1e3f2d0c2fc2fef24ba5b27",
-        "altALBUM": [
-            "New Jersey (Deluxe Edition)"
-        ],
-        "altTITLE": [
-            "Lay Your Hands On Me - Edit"
-        ],
-        "blackALBUM": [
-            "Bon Jovi Greatest Hits - The Ultimate Collection (Int'l Deluxe Package)"
-        ],
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "7565982ea30ae47b6692737c8496b45b",
-        "altALBUM": [
-            "New Jersey (Deluxe Edition)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "a739c82bd1952a979cd419c56a2c3db6",
-        "altALBUM": [
-            "New Jersey (Deluxe Edition)"
+            "Cross Road"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9079,6 +9527,24 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "e8d063f86321e668ecef6980772e47aa",
+        "altALBUM": [
+            "\u30d7\u30ec\u30a4\u30e4\u30fc\u30ba\u30fb\u30d5\u30a9\u30fc\u30fb\u30b6\u30fb\u30c0\u30e0\u30c9"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "6c85848afb964187f48a8090183e4aed",
+        "altALBUM": [
+            "\u30d7\u30ec\u30a4\u30e4\u30fc\u30ba\u30fb\u30d5\u30a9\u30fc\u30fb\u30b6\u30fb\u30c0\u30e0\u30c9"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "0ca8aa59e7aeeb2d5b310b7fa4234bcb",
         "altALBUM": [
             "Triumph & Disaster"
@@ -9102,6 +9568,15 @@
         "altTITLE": null,
         "blackALBUM": [
             "May Death Never Stop You"
+        ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1b89205551c9ad5eccec5c86f4383c9a",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": [
+            "Three Cheers for Sweet Revenge"
         ],
         "blackTITLE": null
     },
@@ -9930,6 +10405,88 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "c23ebc0f295a615f9f9744af5c5f2e51",
+        "altALBUM": [
+            "Heat Waves"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "99bbf57182f0b9f51d3817ad32e8a78b",
+        "altALBUM": [
+            "Maps (Rock)"
+        ],
+        "altTITLE": [
+            "Maps - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "08efb24d3e2f92d8d7ca231b27d8c77b",
+        "altALBUM": [
+            "Dark Horse (Rock)"
+        ],
+        "altTITLE": [
+            "Dark Horse - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "14354a2656311f2f42c00a40621f1c70",
+        "altALBUM": [
+            "Selective Hearing"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "580db0eaffc667f855ce8aead6e3f971",
+        "altALBUM": [
+            "Drag Me Down (Rock)"
+        ],
+        "altTITLE": [
+            "Drag Me Down - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "29891cd58c37ae09c43e071fd29e1744",
+        "altALBUM": [
+            "All We Know (Rock)"
+        ],
+        "altTITLE": [
+            "All We Know - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "757ab14a51d9bfd07d5e88088ef554ea",
+        "altALBUM": [
+            "Selective Hearing"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9b5102abcae3ad09c5b54dd6aacbd9c0",
+        "altALBUM": [
+            "The Heart Wants What It Wants (Rock)"
+        ],
+        "altTITLE": [
+            "The Heart Wants What It Wants - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "754e482345c01b36bd44f699fa06b974",
         "altALBUM": [
             "Overcome The Darkness"
@@ -9950,11 +10507,13 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "757ab14a51d9bfd07d5e88088ef554ea",
+        "STREAMHASH": "285bd49b9a6f653a486a6341f2124b75",
         "altALBUM": [
-            "Selective Hearing"
+            "Shape of You (Rock)"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "Shape of You - Rock"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -10017,15 +10576,6 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "da4c8ec29e553d752c6db92b365e28a7",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": [
-            "I'm Not A Vampire - Revamped"
-        ]
-    },
-    {
         "STREAMHASH": "4014b809a3c559cb83ac63cbaaf3516b",
         "altALBUM": null,
         "altTITLE": [
@@ -10033,6 +10583,15 @@
         ],
         "blackALBUM": null,
         "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "da4c8ec29e553d752c6db92b365e28a7",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "I'm Not A Vampire - Revamped"
+        ]
     },
     {
         "STREAMHASH": "2e5ce3fb2f20a4b4b0fbd8288e293923",
@@ -11044,15 +11603,6 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "c9117513f6b3d15e4e5b827e046d6647",
-        "altALBUM": [
-            "Hybrid Theory (Bonus Edition)"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
         "STREAMHASH": "e65e10985dc367763742411d8e16983b",
         "altALBUM": [
             "Hybrid Theory (Bonus Edition)"
@@ -11109,6 +11659,15 @@
         "blackTITLE": [
             "One Step Closer - Live UK/US 2003 - Underground Tour"
         ]
+    },
+    {
+        "STREAMHASH": "c9117513f6b3d15e4e5b827e046d6647",
+        "altALBUM": [
+            "Hybrid Theory (Bonus Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "b5aede0e22a024cea262f42316005b6d",
@@ -11443,167 +12002,29 @@
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "6a1aa11853b0bdfb90e420ca58947d38",
+        "STREAMHASH": "db4cf9b2efe133426d1dd61dc279c0d0",
         "altALBUM": [
-            "Wild Youth EP"
+            "Smokin' Hearts & Broken Guns (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "b2133a91fb4d173df0073d3bc9c7d7c1",
+        "STREAMHASH": "0a50ec949feeb5e5a08b0c0be430db9c",
         "altALBUM": [
-            "Wild Youth EP"
+            "Smokin' Hearts & Broken Guns (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
     {
-        "STREAMHASH": "4abbda8da1c040211dc97042a8358849",
+        "STREAMHASH": "c015b4b11e66347ea0bf0ef4348b1c61",
         "altALBUM": [
-            "Wild Youth EP"
+            "Smokin' Hearts & Broken Guns (Deluxe Edition)"
         ],
         "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "71b0ae50fd3816f3e1850d171ae63eff",
-        "altALBUM": [
-            "Wild Youth EP"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "c0bd0aa5a721e478d47d270f5870a304",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": [
-            "Wild Youth EP"
-        ],
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "a344a5c2704eddcbd13c548960795f4e",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": [
-            "Sleep Eater - Audiotree Live Version"
-        ]
-    },
-    {
-        "STREAMHASH": "cf44d09d4b092d8e57411c8fa2f9dad3",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": [
-            "Magnets, Pt. 2"
-        ]
-    },
-    {
-        "STREAMHASH": "b9aea0dd5f172174c2b070645e506f77",
-        "altALBUM": [
-            "Milking the Snake - Single"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "c74eb11207437019705b98dbb1463a9c",
-        "altALBUM": [
-            "Strange Astrology"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "c23ebc0f295a615f9f9744af5c5f2e51",
-        "altALBUM": [
-            "Heat Waves"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "99bbf57182f0b9f51d3817ad32e8a78b",
-        "altALBUM": [
-            "Maps (Rock)"
-        ],
-        "altTITLE": [
-            "Maps - Rock"
-        ],
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "08efb24d3e2f92d8d7ca231b27d8c77b",
-        "altALBUM": [
-            "Dark Horse (Rock)"
-        ],
-        "altTITLE": [
-            "Dark Horse - Rock"
-        ],
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "14354a2656311f2f42c00a40621f1c70",
-        "altALBUM": [
-            "Selective Hearing"
-        ],
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "580db0eaffc667f855ce8aead6e3f971",
-        "altALBUM": [
-            "Drag Me Down (Rock)"
-        ],
-        "altTITLE": [
-            "Drag Me Down - Rock"
-        ],
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "29891cd58c37ae09c43e071fd29e1744",
-        "altALBUM": [
-            "All We Know (Rock)"
-        ],
-        "altTITLE": [
-            "All We Know - Rock"
-        ],
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "9b5102abcae3ad09c5b54dd6aacbd9c0",
-        "altALBUM": [
-            "The Heart Wants What It Wants (Rock)"
-        ],
-        "altTITLE": [
-            "The Heart Wants What It Wants - Rock"
-        ],
-        "blackALBUM": null,
-        "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "285bd49b9a6f653a486a6341f2124b75",
-        "altALBUM": [
-            "Shape of You (Rock)"
-        ],
-        "altTITLE": [
-            "Shape of You - Rock"
-        ],
         "blackALBUM": null,
         "blackTITLE": null
     }
