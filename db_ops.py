@@ -110,6 +110,7 @@ def add_to_alt_album(db_row, track_metadata):
     query = Music.update(altALBUM=altALBUM_to_add).where(
         Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
+    return
 
 
 def add_to_alt_title(db_row, track_metadata):
@@ -248,6 +249,7 @@ def search_track_in_db_nonfuzz(track_metadata=None, album_artist=None):
                                 'PATH': str_to_list(row.PATH),
                                 'STREAMHASH': row.STREAMHASH
                             })
+                            continue
                     elif answer == 'q' or answer == 'Q':
                         return 999
                     else:
@@ -272,9 +274,25 @@ def search_track_in_db(track_metadata=None, album_artist=None):
     :param track_metadata: A spotify track
     :return: Matched item's PATH & STREAMHASH from database.
     """
+    bypass_title = False
     result = []
     spotify_title = deepcopy(track_metadata['TITLE'].casefold())
     spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
+
+    def safe_title_substring(_db_title='test', _spotify_title='test'):
+        """
+        On many cases the title we need is already a substring of Spotify's title
+        This function matches these, without too many false positive matches on shorter titles.
+        10 characters matching should be a good sweet spot to avoid false positives like
+        Ex: "AbcArtist - SHORT.flac" should not match "AbcArtist - This is not a SHORTER title.flac"
+        """
+        if len(_db_title) > 10 and _db_title.casefold() in _spotify_title.casefold():
+            return True
+        return False
+
+    tempvar = []
+    for row in album_artist.tracks:
+        tempvar.append(row)
 
     for row in album_artist.tracks:
         db_title = deepcopy(row.TITLE.casefold())
@@ -283,7 +301,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
 
         if fuzz.ratio(db_title, spotify_title) >= 90 \
                 or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) \
-                or spotify_title == db_title:
+                or spotify_title == db_title or safe_title_substring(db_title, spotify_title):
             # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
 
             if is_item_in_db_column(row.blackTITLE, track_metadata['TITLE']):
@@ -292,6 +310,9 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 continue
 
             if db_title != spotify_title and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+                """
+                We don't have an exact match, so prompt user to verify and update alternate / blacklist tags in DB.
+                """
                 print(f"\nSpotify URL:"
                       f"\n{track_metadata['SPOTIFY']}"
                       f"\nSpotify / DB Title:"
@@ -302,7 +323,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 if answer == 'Y' or answer == 'y':
                     print(f"\n*** Ignoring Title ***")
                     add_to_alt_title(db_row=row, track_metadata=track_metadata)
-                    spotify_title = db_title
+                    # Force skip next section
+                    bypass_title = True
                 elif answer == 'q' or answer == 'Q':
                     return 999
                 elif answer == 'n' or answer == 'N':
@@ -311,7 +333,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 else:
                     continue
 
-            if db_title == spotify_title or is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+            if bypass_title or db_title == spotify_title or \
+                    is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
                 if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) \
                         or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
                     result.append({
