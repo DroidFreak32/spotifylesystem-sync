@@ -368,11 +368,11 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                                 add_to_alt_album(row2, track_metadata)
                         else:
                             add_to_alt_album(row, track_metadata)
-                            result.append({
-                                'ALBUMARTIST': album_artist.ALBUMARTIST,
-                                'PATH': str_to_list(row.PATH),
-                                'STREAMHASH': row.STREAMHASH
-                            })
+                        result.append({
+                            'ALBUMARTIST': album_artist.ALBUMARTIST,
+                            'PATH': str_to_list(row.PATH),
+                            'STREAMHASH': row.STREAMHASH
+                        })
                     elif answer == 'q' or answer == 'Q':
                         return 999
                     else:
@@ -499,9 +499,9 @@ def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last
         print(os.path.getmtime(db_mtime_marker))
         return
 
-        # Exit due to warnings
-        print("\nExiting!")
-        exit(1)
+    # Exit due to warnings
+    print("\nExiting!")
+    exit(1)
 
 
 def partial_sync():
