@@ -486,7 +486,7 @@ def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last
 def partial_sync():
     flac_files = find_flacs(music_root_dir)
     new_files = []
-    # read the last modified time
+    # read the last modified time from marker
     with open(db_mtime_marker) as f:
         db_mtime = float(f.readline().strip())
     last_flac_mtime = get_last_flac_mtime(flac_files)
@@ -499,6 +499,7 @@ def partial_sync():
     if len(new_files) > 0:
         sync_fs_to_db(force_resync=False, flac_files=new_files,
                       last_flac_mtime=last_flac_mtime)
+    cleanup_db()
 
 
 def generate_local_playlist(all_saved_tracks=False):
@@ -635,9 +636,10 @@ def import_altColumns():
 def cleanup_db():
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
-
+    deleted_files = []
     query = Music.select()
-    total_tracks = Music.select().count()
+    total_tracks = Music.select().__len__()
+    # total_tracks = Music.select().count() now gives error
     count = 0
     for row in query:
         db_ALBUMARTIST = row.ALBUMARTIST
@@ -652,8 +654,9 @@ def cleanup_db():
         db_STREAMHASH = row.STREAMHASH
         db_PATH = str_to_list(row.PATH)
 
-        # Remove duplicate paths
+        # Remove duplicate / non-existent paths
         if isinstance(db_PATH, list):
+            # If the paths are a list, the same track is present on multiple locations
             new_paths = []
             for path in list(set(db_PATH)):
                 if os.path.exists(os.path.join(music_root_dir, path)):
@@ -662,6 +665,19 @@ def cleanup_db():
                 db_PATH = new_paths[0]
             else:
                 db_PATH = new_paths
+        else:
+            # There is just one copy of the file.
+            # If this one copy doesn't exist, delete the entire row.
+            if not os.path.exists(os.path.join(music_root_dir, db_PATH)):
+                deleted_files.append(db_PATH)
+                # https://docs.peewee-orm.com/en/latest/peewee/api.html#Model.delete_instance
+                row.delete_instance()
+                count += 1
+                print(f"{bcolors.WARNING}The track {db_PATH} no longer exists!{bcolors.ENDC}")
+                print(f"Cleaned {count}/{total_tracks} rows", end="\r")
+                db.backup(master)
+                master.execute_sql('VACUUM;')
+                continue
 
         # Handles cases where modifying a tag in a track keeps the old tag in a list.
         if isinstance(db_ALBUM, list):
