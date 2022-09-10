@@ -224,6 +224,7 @@ def generate_metadata(music_dir, flac_files):
     :param flac_files: List of flac files
     :return: A dictionary with key=AlbumArtist and Value=[metadata of all their tracks]
     """
+    warning_flag = False
     metadata_result = {}
     a_pool = multiprocessing.Pool(4)
     # result = a_pool.starmap(fetch_metadata_in_background, zip(repeat(music_dir), flac_files))
@@ -251,12 +252,15 @@ def generate_metadata(music_dir, flac_files):
             'PATH': item['PATH']
         })
 
-    print(f"{bcolors.BOLD}{bcolors.WARNING}These files have multiple album artists:\n{bcolors.ENDC}")
-    print(multitag_files)
-    answer = input(f"{bcolors.BOLD}{bcolors.WARNING}Generate a playlist for easy import into mp3tag, foobar2k etc? (Y/N){bcolors.ENDC}\n")
-    if answer == 'Y' or answer == 'y':
-        generate_m3u('fixme_multiple_albumartists', multitag_files)
-    return metadata_result
+    if len(multitag_files) > 0:
+        warning_flag = True
+        print(f"{bcolors.BOLD}{bcolors.WARNING}These files have multiple album artists:\n{bcolors.ENDC}")
+        print(multitag_files)
+        answer = input(f"{bcolors.BOLD}{bcolors.WARNING}Generate a playlist for easy import into mp3tag, foobar2k "
+                       f"etc? (Y/N){bcolors.ENDC}\n")
+        if answer == 'Y' or answer == 'y':
+            generate_m3u('fixme_multiple_albumartists', multitag_files)
+    return metadata_result, warning_flag
 
 
 def generate_m3u(playlist_name='playlist', track_paths=[]):
