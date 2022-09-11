@@ -90,7 +90,9 @@ def get_spotify_connection():
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=spotify_client_id,
                                                    client_secret=spotify_client_secret,
                                                    redirect_uri=redirect_uri,
-                                                   scope="user-library-read playlist-modify-private"))
+                                                   scope="user-library-read playlist-modify-private "
+                                                         "playlist-read-private playlist-read-collaborative"))
+
     return sp
 
 
