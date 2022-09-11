@@ -86,6 +86,18 @@ def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+def openfile(filepath=None):
+    # https://stackoverflow.com/a/435669/6437140
+    if not os.path.exists(filepath):
+        return
+    if platform.system() == 'Linux':  # Linux
+        subprocess.call(('xdg-open', filepath))
+    elif platform.system() == 'Windows':  # Windows
+        os.startfile(filepath)
+    else:  # macOS
+        subprocess.call(('open', filepath))
+
+
 def get_spotify_connection():
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=spotify_client_id,
                                                    client_secret=spotify_client_secret,
