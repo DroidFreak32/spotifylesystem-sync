@@ -597,9 +597,10 @@ def generate_local_playlist(all_saved_tracks=False):
     if input("Do you want to generate an m3u file for the matched songs?\nY/N: ") == 'Y':
         generate_m3u(playlist_name=spotify_playlist_name,
                      track_paths=matched_paths)
-    if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
-        spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
-                                                    playlist_name=spotify_playlist_name)
+    if len(unmatched_track_ids) > 0:
+        if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ") == 'Y':
+            spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
+                                                        playlist_name=spotify_playlist_name)
 
     with open("unmatched.json", "w") as jsonfile:
         jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
