@@ -274,7 +274,6 @@ def search_track_in_db(track_metadata=None, album_artist=None):
     :param track_metadata: A spotify track
     :return: Matched item's PATH & STREAMHASH from database.
     """
-    bypass_title = False
     result = []
     spotify_title = deepcopy(track_metadata['TITLE'].casefold())
     spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
@@ -295,6 +294,10 @@ def search_track_in_db(track_metadata=None, album_artist=None):
         tempvar.append(row)
 
     for row in album_artist.tracks:
+        # Reset these flags in each iteration
+        bypass_title = False
+        bypass_album = False
+
         db_title = deepcopy(row.TITLE.casefold())
 
         db_album = deepcopy(row.ALBUM.casefold())
