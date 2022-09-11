@@ -133,6 +133,42 @@ def get_playlist(playlist_id=None):
     return selected_playlist_name, selected_playlist_tracks
 
 
+def get_user_playlists(user_id=None, playlist_id=None):
+    if user_id is None:
+        print("No user ID provided, using the current authenticated user's ID")
+        user_id = sp.me()['id']
+    if playlist_id is None:
+        playlist_limited_batch = sp.user_playlists(user=user_id, limit=50)
+        total_playlists = playlist_limited_batch['total']
+        offset = 0
+        playlist_list = dict()
+        while offset < total_playlists:
+            for item in playlist_limited_batch['items']:
+                # Every playlist has a unique ID which we can use as the key without worrying about appending logic
+                # to a list
+                playlist_list[item['id']] = (item['name'], item['tracks']['total'])
+            offset += 50
+            playlist_limited_batch = sp.next(playlist_limited_batch)
+
+        print("Playlists found in your account:")
+        for key, value in playlist_list.items():
+            print("ID: {:<10} Name: {:<40} Total Tracks: {:<15}".format(key, value[0], value[1]))
+
+        selected_playlist_id = input("Enter the playlist ID: ")
+
+        selected_playlist_name = playlist_ids[selected_playlist_id][0]
+        selected_playlist_tracktotal = playlist_ids[selected_playlist_id][1]
+        selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
+    else:
+        playlist = sp.playlist(playlist_id)
+        selected_playlist_id = playlist_id
+        selected_playlist_name = playlist['name']
+        selected_playlist_tracktotal = playlist['tracks']['total']
+        selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
+
+    return selected_playlist_name, selected_playlist_tracks
+
+
 def get_my_saved_tracks():
     results = sp.current_user_saved_tracks()
     total_tracks = results['total']
