@@ -1,4 +1,4 @@
-# spotifylesystem-sync
+# spotifylesystem_sync
 
 
 The aim of this project is to be able to scan my filesystem's Lossless Music directory and sync playlists from spotify into m3u files.
@@ -26,7 +26,7 @@ Main goals I want to achieve include:
 ### Desired workflow:
 
 ```bash
-python3.10 spotifylesystem-sync.py --music-dir ~/Music --db-path ~/Music/MusicDB.db --spotify-client-id XYZ --spotify-client-secret ABC
+python3.10 spotifylesystem_sync.py --music-dir ~/Music --db-path ~/Music/MusicDB.db --spotify-client-id XYZ --spotify-client-secret ABC
 ```
 
 Defaults will be read from a config.ini file which can be changed

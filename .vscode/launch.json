@@ -9,7 +9,7 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/spotifylesystem-sync.py",
+            "program": "${workspaceFolder}/spotifylesystem_sync.py",
             "console": "integratedTerminal",
             "justMyCode": true
         }
