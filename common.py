@@ -121,8 +121,9 @@ def play_files_in_order(paths=None):
     paths = str_to_list(paths)
     if isinstance(paths, list):
         if len(paths) > 1:
-            print(f"Multiple files found! Select the file number to play or enter Q to quit:")
+            print(f"Multiple files found!")
             while True:
+                print("\nSelect the file number to play or enter Q to quit:")
                 index = 1
                 for file in paths:
                     print(f"{index}) {file}")
