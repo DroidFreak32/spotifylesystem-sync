@@ -54,21 +54,27 @@ class Music(BaseModel):
     PATH = TextField(unindexed=True)
 
 
-def is_item_in_db_column(db_tag=None, track_tag=None):
+def is_item_in_db_column_with_index(db_tag=None, track_tag=None):
     """
     Checks if a particular tag is present on a given db column
     Handles cases where column may contain a list.
     """
     if db_tag is None:
-        return False
+        return False, None
     if isinstance(str_to_list(db_tag), list):
-        for tag in str_to_list(db_tag):
+        db_tag = deepcopy(str_to_list(db_tag))
+        index = 0
+        for tag in db_tag:
             if tag.casefold() == track_tag.casefold():
-                return True
-    if db_tag.casefold() == track_tag.casefold():
-        return True
-    return False
+                return True, index
+            index += 1
+    elif db_tag.casefold() == track_tag.casefold():
+        return True, None
+    return False, None
 
+def is_item_in_db_column(db_tag=None, track_tag=None):
+    return_item, _ = is_item_in_db_column_with_index(db_tag, track_tag)
+    return return_item
 
 def is_album_in_alt_album(db_row, track_metadata):
     """
@@ -360,8 +366,10 @@ def search_track_in_db(track_metadata=None, album_artist=None):
             if bypass_title or db_title == spotify_title or \
                     is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
 
+                track_matches_spot_album, path_index = is_item_in_db_column_with_index(row.ALBUM, track_metadata['ALBUM'])
+
                 # We cannot use fuzz as we want to ensure the album is exactly the same or prompt the user!
-                if is_item_in_db_column(row.ALBUM, track_metadata['ALBUM']) \
+                if track_matches_spot_album \
                         or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
                     """
                     TODO: If there are multiple paths, use the path index corresponding to the matching Album index.
@@ -369,10 +377,15 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     So return the path corresponding to the matched album.
                     Since they are the same track, it *probably* won't be queried again after its matched.
                     """
-
+                    if path_index is not None:
+                        # ~Why a list? User might say yes to a track with multiple paths manually~
+                        # TAG: cd213e2f
+                        track_path = [str_to_list(row.PATH)[path_index]]
+                    else:
+                        track_path = str_to_list(row.PATH)
                     result.append({
                         'ALBUMARTIST': album_artist.ALBUMARTIST,
-                        'PATH': str_to_list(row.PATH),
+                        'PATH': track_path,
                         'STREAMHASH': row.STREAMHASH
                     })
                 else:
