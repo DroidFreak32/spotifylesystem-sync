@@ -429,7 +429,11 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                               "\nDiscard all changes & (Q)uit to main menu: "
 
                     try:
-                        answer = input(message)[0].casefold()
+                        if not bypass_album:
+                            answer = input(message)[0].casefold()
+                        else:
+                            answer = 'y'
+
                     except IndexError:
                         answer = None
 
