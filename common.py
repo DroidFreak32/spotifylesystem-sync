@@ -192,6 +192,7 @@ def list2dictmerge(listobj=None):
         tmp.pop(all_keys[0])  # Remove redundant primary key before adding it to the dictionary.
         merged_dict[key].append(tmp)
 
+    merged_dict = dict(sorted(merged_dict.items()))
     return merged_dict
 
 
