@@ -322,22 +322,25 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 """
                 We don't have an exact match, so prompt user to verify and update alternate / blacklist tags in DB.
                 """
-                print(f"\nSpotify URL: {track_metadata['SPOTIFY']}"
-                      f"\nSpotify / DB Title:"
-                      f"\n{bcolors.OKGREEN}{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}"
-                      f"\n\nPATH {row.PATH}"
-                      f"\n\nAre these the same?")
-                message = "(Y)es, this is an alternate title." \
-                          "\n(A)dd album to whitelist as well." \
-                          "\n(N)o, blacklist this title from future matches." \
-                          "\n(O)pen the file to check" \
-                          "\n(S)ave current changes and return to main menu." \
-                          "\n(Q)uit to main menu & Discard all changes: "
+                message = \
+                    f"\nSpotify URL: {track_metadata['SPOTIFY']}" \
+                    f"\nSpotify / DB Title:" \
+                    f"\n{bcolors.OKGREEN}{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}" \
+                    f"\n\nPATH {row.PATH}" \
+                    f"\n\nAre these the same?" \
+                    f"\n(Y)es, this is an alternate title." \
+                    f"\n(A)dd album to whitelist as well." \
+                    f"\n(N)o, blacklist this title from future matches." \
+                    f"\n(O)pen the file to check" \
+                    f"\n(S)ave current changes and return to main menu." \
+                    f"\n(Q)uit to main menu & Discard all changes: "
+
                 answer = input(message)[0].casefold()
 
                 if answer == 'o':
-                    play_files_in_order(row.PATH)
-                    answer = input(message)[0].casefold()
+                    while answer == 'o':
+                        play_files_in_order(row.PATH)
+                        answer = input(message)[0].casefold()
 
                 if answer == 'a' or answer == 'y':
                     print(f"\n*** Ignoring Title ***")
@@ -350,9 +353,9 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                         answer = 'y'
 
                 elif answer.casefold() == 'q':
-                    return 9
-                elif answer.casefold() == 's':
                     return 99
+                elif answer.casefold() == 's':
+                    return 9
                 elif answer.casefold() == 'n':
                     add_to_black_title(
                         db_row=row, track_metadata=track_metadata)
@@ -394,18 +397,37 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                         # If subsequent iterations do not get this track then it will be a part of unmatched list.
                         continue
 
-                    print(f"\nSpotify URL: {track_metadata['SPOTIFY']}"
+                    message = \
+                        f"\nSpotify URL: {track_metadata['SPOTIFY']}" \
+                        f"\nSpotify / DB Album:" \
+                        f"\n{bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}" \
+                        f"\n\nPATH {row.PATH}" \
+                        f"\n\nAre these the same?" \
+                        f"\n(Y)es, this is an alternate album." \
+                        f"\n(A)llow all tracks from this album to match Spotify's Album." \
+                        f"\n(N)o, blacklist this Album from future matches." \
+                        f"\n(O)pen the file to check" \
+                        f"\n(S)ave current changes and return to main menu." \
+                        f"\n(Q)uit to main menu & Discard all changes: "       
+
+                    message2 = str(f"\nSpotify URL: {track_metadata['SPOTIFY']}"
                           f"\nSpotify / DB Album:"
                           f"\n{bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
                           f"\n\nPATH {row.PATH}"
                           f"\nAre these the same?")
 
-                    message = "(Y)es, this is an alternate Album." \
+                    message2 += "\n(Y)es, this is an alternate Album." \
                               "\n(A)llow all tracks from this album to match Spotify's Album." \
                               "\n(N)o, blacklist this Album from future matches." \
                               "\n(S)ave current changes and return to main menu." \
                               "\nDiscard all changes & (Q)uit to main menu: "
-                    answer = input(message).casefold()[0]
+
+                    answer = input(message)[0].casefold()
+
+                    if answer == 'o':
+                        while answer == 'o':
+                            play_files_in_order(row.PATH)
+                            answer = input(message)[0].casefold()
 
                     if answer == 'n' or answer == 'N':
                         add_to_black_album(row, track_metadata)
@@ -813,6 +835,7 @@ def cleanup_db():
 
 
 if __name__ == '__main__':
-    pass
+    import spotifylesystem_sync
+    spotifylesystem_sync.main()
 # else:
 #     input("\nPress enter to go back to the main menu")
