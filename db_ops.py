@@ -400,7 +400,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     message = \
                         f"\nSpotify URL: {track_metadata['SPOTIFY']}" \
                         f"\nSpotify / DB Album:" \
-                        f"\n{bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}" \
+                        f"\n{bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}" \
                         f"\n\nPATH {row.PATH}" \
                         f"\n\nAre these the same?" \
                         f"\n(Y)es, this is an alternate album." \
@@ -615,7 +615,7 @@ def generate_local_playlist(all_saved_tracks=False):
     else:
         # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
         # with open("allmytracks.json", "w") as jsonfile:
-        #     jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
+            # jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
         with open('allmytracks.json', 'r') as j:
             spotify_playlist_tracks = json.loads(j.read())
         spotify_playlist_name = 'RuMAN'
