@@ -18,7 +18,7 @@ from playhouse.sqlite_ext import CSqliteExtDatabase
 import spotify_ops
 from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata, get_last_flac_mtime, \
     list2dictmerge, music_root_dir, \
-    db_path, db_mtime_marker
+    db_path, db_mtime_marker, play_files_in_order
 from common import str_to_list, find_flacs
 
 db = CSqliteExtDatabase(":memory:")
@@ -329,7 +329,11 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                           "\n(Q)uit to main menu & Discard all changes: "
                 answer = input(message)[0].casefold()
 
-                if answer == 'Y' or answer == 'y':
+                if answer == 'o':
+                    play_files_in_order(row.PATH)
+                    answer = input(message)[0].casefold()
+
+                if answer == 'a' or answer == 'y':
                     print(f"\n*** Ignoring Title ***")
                     add_to_alt_title(db_row=row, track_metadata=track_metadata)
                     # Force skip next section
