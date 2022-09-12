@@ -735,7 +735,7 @@ def cleanup_db():
     for row in query:
         db_ALBUMARTIST = row.ALBUMARTIST
         db_ARTIST = str_to_list(row.ARTIST)
-        db_ALBUM = row.ALBUM
+        db_ALBUM = str_to_list(row.ALBUM)
         db_altALBUM = str_to_list(row.altALBUM)
         db_blackALBUM = str_to_list(row.blackALBUM)
         db_TITLE = row.TITLE
