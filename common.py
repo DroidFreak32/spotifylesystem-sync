@@ -3,6 +3,7 @@ import ast
 import glob
 import os
 import subprocess
+import platform
 import zlib
 from base64 import b64encode
 from configparser import ConfigParser
@@ -87,15 +88,50 @@ def cls():
 
 
 def openfile(filepath=None):
+    #TODO: Dont supress error
     # https://stackoverflow.com/a/435669/6437140
     if not os.path.exists(filepath):
+        print(f"{bcolors.FAIL}Invalid Path!{bcolors.ENDC}")
         return
+    print(f"Opening: {filepath}")
     if platform.system() == 'Linux':  # Linux
-        subprocess.call(('xdg-open', filepath))
+        subprocess.call(('xdg-open', filepath), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     elif platform.system() == 'Windows':  # Windows
         os.startfile(filepath)
     else:  # macOS
         subprocess.call(('open', filepath))
+
+
+def play_files_in_order(paths=None):
+    paths = str_to_list(paths)
+    if isinstance(paths, list):
+        if len(paths) > 1:
+            print(f"Multiple files found! Select the file number to play or enter Q to quit:")
+            while True:
+                index = 1
+                for file in paths:
+                    print(f"{index}) {file}")
+                    index += 1
+                id = input("> ")
+                if id[0].casefold() == 'q':
+                    print(f"Going back..")
+                    return
+                elif id.isdigit():
+                    id = int(id)
+                    if id <= len(paths):
+                        full_path=os.path.join(music_root_dir, paths[id-1])
+                        openfile(full_path)
+                    else:
+                        print(f"Invalid Input!")
+                else:
+                    print(f"Invalid Input!")
+        else:
+            full_path = os.path.join(music_root_dir, paths[0])
+            openfile(full_path)
+    else:
+        full_path = os.path.join(music_root_dir, paths)
+        openfile(full_path)
+    return
 
 
 def get_spotify_connection():
