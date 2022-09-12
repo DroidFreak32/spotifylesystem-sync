@@ -113,8 +113,8 @@
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": [
-            "Knights of Cydonia - Live from Wembley Stadium",
-            "Knights of Cydonia - Live at Rome Olympic Stadium"
+            "Knights of Cydonia - Live at Rome Olympic Stadium",
+            "Knights of Cydonia - Live from Wembley Stadium"
         ]
     },
     {
@@ -212,9 +212,9 @@
     {
         "STREAMHASH": "783f68e5214de3892c83e4ba60c28d56",
         "altALBUM": [
-            "The Dark Side / Something Human / Thought Contagion / Dig Down",
+            "Dig Down",
             "Simulation Theory (Super Deluxe)",
-            "Dig Down"
+            "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -225,8 +225,8 @@
     {
         "STREAMHASH": "175d95e690266619a3052704d2fc01e2",
         "altALBUM": [
-            "Simulation Theory (Super Deluxe)",
             "Thought Contagion",
+            "Simulation Theory (Super Deluxe)",
             "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
         "altTITLE": null,
@@ -285,7 +285,9 @@
             "Simulation Theory (Super Deluxe)",
             "The Dark Side / Something Human / Thought Contagion / Dig Down"
         ],
-        "altTITLE": null,
+        "altTITLE": [
+            "The Dark Side (Alternate Reality Version) [Instrumental] - Alternate Reality Version; Instrumental"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -524,8 +526,8 @@
         "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": [
-            "Starlight - Live from Wembley Stadium",
-            "Starlight - Live at Rome Olympic Stadium"
+            "Starlight - Live at Rome Olympic Stadium",
+            "Starlight - Live from Wembley Stadium"
         ]
     },
     {
@@ -1608,9 +1610,9 @@
     {
         "STREAMHASH": "4d0a30d9d70563e0a20a9a1f22b53eac",
         "altALBUM": [
+            "A Kind of Magic (Deluxe Remastered Version)",
             "A Kind Of Magic (2011 Remaster)",
-            "Bohemian Rhapsody (The Original Soundtrack)",
-            "A Kind of Magic (Deluxe Remastered Version)"
+            "Bohemian Rhapsody (The Original Soundtrack)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1763,8 +1765,8 @@
     {
         "STREAMHASH": "e944cdb3171f32bc43da78f8f89fdb20",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1773,8 +1775,8 @@
     {
         "STREAMHASH": "772c8f4b49126bacda63d32391f1cab5",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1783,8 +1785,8 @@
     {
         "STREAMHASH": "ed4dc821ff565f996d5f0605450676ba",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1793,8 +1795,8 @@
     {
         "STREAMHASH": "e427d6f82bd2ddfbd4cd67a913f06f63",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1803,8 +1805,8 @@
     {
         "STREAMHASH": "cce2bb935f1829ab47d77ab3ae07e403",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1813,8 +1815,8 @@
     {
         "STREAMHASH": "88d14aa11f1668613075bf2aa7409da0",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1823,8 +1825,8 @@
     {
         "STREAMHASH": "4a47c319c0159088cd5db5b9a4803003",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1833,8 +1835,8 @@
     {
         "STREAMHASH": "1910c7a3bf8c3592534b0d137eef6c5a",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1843,8 +1845,8 @@
     {
         "STREAMHASH": "8f4d20982019a1095507b42a11f0197b",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1853,8 +1855,8 @@
     {
         "STREAMHASH": "b98ab9ef1e13d6134979d0a2efc0d6da",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1863,8 +1865,8 @@
     {
         "STREAMHASH": "68dcd9f41ef6a9dcfbf58b19c40ebbe0",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1873,9 +1875,9 @@
     {
         "STREAMHASH": "e17cf4f6e6e178a66fa5473e98bf3859",
         "altALBUM": [
-            "Jazz (2011 Remaster)",
+            "Jazz (Deluxe Remastered Version)",
             "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (2011 Remaster)"
         ],
         "altTITLE": [
             "Don't Stop Me Now - Remastered 2011"
@@ -1886,8 +1888,8 @@
     {
         "STREAMHASH": "bd0dcbbd7a88e21a68801fe148c31a7d",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1896,8 +1898,8 @@
     {
         "STREAMHASH": "a48ad580c9f254074eee54de0efb4741",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1906,8 +1908,8 @@
     {
         "STREAMHASH": "6943b4de16bdd31aebfa1f16f3d3c34e",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": [
             "Bicycle Race - Remastered 2011"
@@ -1918,8 +1920,8 @@
     {
         "STREAMHASH": "9c0e3f26ca6e526fdeac1c8089b2b339",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": [
             "Fat Bottomed Girls - Single Version / Remastered 2011"
@@ -1930,8 +1932,8 @@
     {
         "STREAMHASH": "034e884e00dcb1c498d90024e9e4fe0f",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -1940,8 +1942,8 @@
     {
         "STREAMHASH": "807a53fe37573d4f4d3da3031d54ec63",
         "altALBUM": [
-            "Jazz (Deluxe Edition 2011 Remaster)",
-            "Jazz (Deluxe Remastered Version)"
+            "Jazz (Deluxe Remastered Version)",
+            "Jazz (Deluxe Edition 2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2138,8 +2140,8 @@
     {
         "STREAMHASH": "fe170ebaadd1c819c52326ab4adf9dc6",
         "altALBUM": [
-            "Bohemian Rhapsody (The Original Soundtrack)",
-            "The Game (2011 Remaster)"
+            "The Game (2011 Remaster)",
+            "Bohemian Rhapsody (The Original Soundtrack)"
         ],
         "altTITLE": [
             "Another One Bites The Dust - Remastered 2011"
@@ -2159,8 +2161,8 @@
     {
         "STREAMHASH": "59fac7fec1010f7b31752100f34d048e",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2169,8 +2171,8 @@
     {
         "STREAMHASH": "6f8435cfd27648ae253cb30bdeaaecfb",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2179,8 +2181,8 @@
     {
         "STREAMHASH": "dec4a826e9438f5347476f71a13be5a3",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2189,8 +2191,8 @@
     {
         "STREAMHASH": "0b0410153485fc4ba43606e0bdeed9b3",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2199,8 +2201,8 @@
     {
         "STREAMHASH": "75c1a49f8047981d731eef94bccf2d1b",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2209,8 +2211,8 @@
     {
         "STREAMHASH": "dfe10e52dc5966700ec62feb6f41680c",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": [
             "Spread Your Wings - Remastered 2011"
@@ -2221,8 +2223,8 @@
     {
         "STREAMHASH": "168687055c1804986ec8edecfc295bfc",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2231,8 +2233,8 @@
     {
         "STREAMHASH": "fa8edef3fe97f0a2cd03ae1a912ac96f",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": [
             "We Will Rock You - Remastered 2011"
@@ -2243,8 +2245,8 @@
     {
         "STREAMHASH": "0224d255368526a8dff58c7c8918b6d0",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2253,8 +2255,8 @@
     {
         "STREAMHASH": "acdd795040f8077cf5d63a36c039481d",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": [
             "We Are The Champions - Remastered 2011"
@@ -2265,8 +2267,8 @@
     {
         "STREAMHASH": "b677f5dc6281216a87e1b8c5349f3176",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2275,8 +2277,8 @@
     {
         "STREAMHASH": "6e79268ac39ac1d5c13c2d5392bbae16",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2285,8 +2287,8 @@
     {
         "STREAMHASH": "41d9533285d8d737ac059d15d399d932",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2295,8 +2297,8 @@
     {
         "STREAMHASH": "957acb63730767899a0373295b017fe6",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2305,8 +2307,8 @@
     {
         "STREAMHASH": "75fdfeee675f48857e71c712bfe3e863",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2315,8 +2317,8 @@
     {
         "STREAMHASH": "4b25a917734f6650e2d64855056881c3",
         "altALBUM": [
-            "News Of The World (2011 Remaster)",
-            "News Of The World (Deluxe Remastered Version)"
+            "News Of The World (Deluxe Remastered Version)",
+            "News Of The World (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2434,8 +2436,8 @@
             "A Night At The Opera (2011 Remaster)"
         ],
         "altTITLE": [
-            "Bohemian Rhapsody - 2011 Remaster",
-            "Bohemian Rhapsody - Remastered 2011"
+            "Bohemian Rhapsody - Remastered 2011",
+            "Bohemian Rhapsody - 2011 Remaster"
         ],
         "blackALBUM": [
             "Greatest Hits (2011 Remaster)"
@@ -2465,8 +2467,8 @@
     {
         "STREAMHASH": "a52c701c9bca40fa8df5759bbaaa75a0",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2475,8 +2477,8 @@
     {
         "STREAMHASH": "f8528400bc915805b79011cc79ea8fc1",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2485,8 +2487,8 @@
     {
         "STREAMHASH": "13d8ef8e4814657ee7df15b34ab7d17a",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2495,8 +2497,8 @@
     {
         "STREAMHASH": "60f98ef3c258ae564d25a4bf456572b9",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2505,8 +2507,8 @@
     {
         "STREAMHASH": "70805ff6f12fca1b2c587f1e033dc0f4",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "Hammer To Fall - Remastered 2011"
@@ -2517,9 +2519,9 @@
     {
         "STREAMHASH": "f832d430518b6424f14539f8f63035b1",
         "altALBUM": [
+            "The Platinum Collection (2011 Remaster)",
             "Greatest Hits II (2011 Remaster)",
-            "A Day At The Races (Deluxe Remastered Version)",
-            "The Platinum Collection (2011 Remaster)"
+            "A Day At The Races (Deluxe Remastered Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2530,8 +2532,8 @@
     {
         "STREAMHASH": "39d4759fb75dba71dfe0584b4bd6a818",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": [
@@ -2542,8 +2544,8 @@
     {
         "STREAMHASH": "872cbb5911fbbeaa5839fd56c0b74c1f",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2552,9 +2554,9 @@
     {
         "STREAMHASH": "fce23dbd7cc80722d891b2a429af542b",
         "altALBUM": [
+            "The Platinum Collection (2011 Remaster)",
             "Greatest Hits II (2011 Remaster)",
-            "Bohemian Rhapsody (The Original Soundtrack)",
-            "The Platinum Collection (2011 Remaster)"
+            "Bohemian Rhapsody (The Original Soundtrack)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2563,8 +2565,8 @@
     {
         "STREAMHASH": "0d0e4369dda0e6a403f38568377a495d",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "A Kind Of Magic - Remastered 2011"
@@ -2577,23 +2579,23 @@
     {
         "STREAMHASH": "9d1dd0cdb305adb5273ee8a220193c7a",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "Another One Bites The Dust - Remastered 2011"
         ],
         "blackALBUM": [
-            "Bohemian Rhapsody (The Original Soundtrack)",
-            "The Game (2011 Remaster)"
+            "The Game (2011 Remaster)",
+            "Bohemian Rhapsody (The Original Soundtrack)"
         ],
         "blackTITLE": null
     },
     {
         "STREAMHASH": "d165e21c45a6b481ad5e7de489cef6d6",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2604,8 +2606,8 @@
     {
         "STREAMHASH": "69cc1c786cfb77605e51cc0834ebf628",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2614,8 +2616,8 @@
     {
         "STREAMHASH": "a66cb0e62c99275fb8b6fb94fe687d01",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2624,8 +2626,8 @@
     {
         "STREAMHASH": "991f3a59b3f69585c4b8b77ecfa6af7d",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2634,8 +2636,8 @@
     {
         "STREAMHASH": "53a80a060bbbb523f00e1360fb11b2c1",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2644,8 +2646,8 @@
     {
         "STREAMHASH": "61c4253926df38d7a353462fbc0fed5e",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "We Will Rock You - Remastered 2011"
@@ -2658,8 +2660,8 @@
     {
         "STREAMHASH": "f36e57199812749d441a869e5b61c0d4",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2668,8 +2670,8 @@
     {
         "STREAMHASH": "b0f454523173b799c0858d36116f745c",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2678,8 +2680,8 @@
     {
         "STREAMHASH": "785d9bf597479895db79d0a727549461",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2690,8 +2692,8 @@
     {
         "STREAMHASH": "2cb8dae000a7baf7a23ce1a5b34cd1b6",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2700,8 +2702,8 @@
     {
         "STREAMHASH": "113b798a5b0d34b0085e482e80bbf930",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2710,8 +2712,8 @@
     {
         "STREAMHASH": "898fac1e55321307954207ab0829639e",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "These Are The Days Of Our Lives - 2011 Remaster"
@@ -2724,8 +2726,8 @@
     {
         "STREAMHASH": "aec071c4838cf3932e6f724262ff13ae",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2734,8 +2736,8 @@
     {
         "STREAMHASH": "750e1b89810c2f2397c3cd53ad8ca926",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2746,8 +2748,8 @@
     {
         "STREAMHASH": "9b572e6ccdb582ed493ec3d70df455e1",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2756,8 +2758,8 @@
     {
         "STREAMHASH": "cff44989963c56fccbe678c1681efe9e",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2766,8 +2768,8 @@
     {
         "STREAMHASH": "f585bfdb6d5caf54dfc0575f974e0258",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2776,8 +2778,8 @@
     {
         "STREAMHASH": "19350a15d41448abdcb3bb286bc07d8f",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2786,9 +2788,9 @@
     {
         "STREAMHASH": "ca750875207e1e490c387c2717840ceb",
         "altALBUM": [
-            "Greatest Hits III",
+            "The Platinum Collection (2011 Remaster)",
             "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "Greatest Hits III"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2797,8 +2799,8 @@
     {
         "STREAMHASH": "6015eab56386804d6128467ec3433c28",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "Bicycle Race - Remastered 2011"
@@ -2811,8 +2813,8 @@
     {
         "STREAMHASH": "5dacb06670c8876e8d6c61329e341533",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2821,8 +2823,8 @@
     {
         "STREAMHASH": "becd49c78383cfc43716917ab32bacb8",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": [
@@ -2833,8 +2835,8 @@
     {
         "STREAMHASH": "b44cc33c6688c15886d5d910446d6c65",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2843,8 +2845,8 @@
     {
         "STREAMHASH": "cbb84efb7d37147a219cd43b64850f96",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "Princes Of The Universe - Remastered 2011"
@@ -2857,8 +2859,8 @@
     {
         "STREAMHASH": "5317268afe2fe0c24046922cc55af229",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2867,8 +2869,8 @@
     {
         "STREAMHASH": "d4ca5b07bf31670d67466799dd1a06ed",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "Seven Seas Of Rhye - Remastered 2011"
@@ -2879,8 +2881,8 @@
     {
         "STREAMHASH": "ea94075a58b05ae9df16260c44cb8c32",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": [
@@ -2891,8 +2893,8 @@
     {
         "STREAMHASH": "3f664da5edc77053a42a5e1fdb2e47db",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "Breakthru - Remastered 2011"
@@ -2903,8 +2905,8 @@
     {
         "STREAMHASH": "5f331fc69b7770b32f33f8ecbbeffdc0",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": [
@@ -2915,12 +2917,12 @@
     {
         "STREAMHASH": "5421e22ee3af3114a2c9875f37a4e2af",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
-            "Bohemian Rhapsody - 2011 Remaster",
-            "Bohemian Rhapsody - Remastered 2011"
+            "Bohemian Rhapsody - Remastered 2011",
+            "Bohemian Rhapsody - 2011 Remaster"
         ],
         "blackALBUM": [
             "A Night At The Opera (Deluxe Remastered Version)",
@@ -2932,8 +2934,8 @@
     {
         "STREAMHASH": "f5c5e5e827d3de405365efc7f94c8587",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "It's A Hard Life - Remastered 2011"
@@ -2946,8 +2948,8 @@
     {
         "STREAMHASH": "6f8a7d183d336a42bb3a71281708038e",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": [
             "Too Much Love Will Kill You - Remastered 2011"
@@ -2960,8 +2962,8 @@
     {
         "STREAMHASH": "56ea78090f67041f9f37b7b77d29ac81",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2972,8 +2974,8 @@
     {
         "STREAMHASH": "d1988bd81723500af50a8ac510228cdd",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2982,8 +2984,8 @@
     {
         "STREAMHASH": "0beb2fc80b04c612846c498835caf3a6",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -2992,8 +2994,8 @@
     {
         "STREAMHASH": "ddc2b14443899b5aed368134b65b8a62",
         "altALBUM": [
-            "Greatest Hits II (2011 Remaster)",
-            "The Platinum Collection (2011 Remaster)"
+            "The Platinum Collection (2011 Remaster)",
+            "Greatest Hits II (2011 Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -3003,8 +3005,8 @@
         "STREAMHASH": "b1cb6330ec42274ce52993140b72d4cc",
         "altALBUM": null,
         "altTITLE": [
-            "Bohemian Rhapsody - 2011 Remaster",
-            "Bohemian Rhapsody - Remastered 2011"
+            "Bohemian Rhapsody - Remastered 2011",
+            "Bohemian Rhapsody - 2011 Remaster"
         ],
         "blackALBUM": [
             "A Night At The Opera (Deluxe Remastered Version)",
@@ -3081,8 +3083,8 @@
     {
         "STREAMHASH": "c1013be3b48aeb4fbc9e8be8453d3606",
         "altALBUM": [
-            "Bohemian Rhapsody (The Original Soundtrack)",
-            "Innuendo (2011 Remaster)"
+            "Innuendo (2011 Remaster)",
+            "Bohemian Rhapsody (The Original Soundtrack)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -3111,8 +3113,8 @@
     {
         "STREAMHASH": "ce43533712aa01954a28ab17039a41f1",
         "altALBUM": [
-            "Forever",
-            "Innuendo (2011 Remaster)"
+            "Innuendo (2011 Remaster)",
+            "Forever"
         ],
         "altTITLE": [
             "These Are The Days Of Our Lives - 2011 Remaster"
@@ -3326,6 +3328,17 @@
             "Hot Space (2011 Remaster)"
         ],
         "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1fd6959d8cec02489657aa32c28cb5c0",
+        "altALBUM": [
+            "A Day At The Races (Deluxe Remastered Version)"
+        ],
+        "altTITLE": [
+            "Good Old-Fashioned Lover Boy - Remastered 2011"
+        ],
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -4346,6 +4359,47 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "7df9cc44282b5829cdb69b668f853f2f",
+        "altALBUM": [
+            "What Would You Do?",
+            "What Would You Do?"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "669b06996f7a456fddc310666d79769c",
+        "altALBUM": [
+            "What Would You Do?"
+        ],
+        "altTITLE": [
+            "What Would You Do? [Feat. Gavin Rossdale]"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "73f264de288756851dc119ff96b28190",
+        "altALBUM": [
+            "What Would You Do?",
+            "What Would You Do?"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "206b10139062daae93c8828ba8fb1e12",
+        "altALBUM": [
+            "What Would You Do?",
+            "What Would You Do?"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "c550b7b1b3f2ebbf65f0edbe0fa80620",
         "altALBUM": null,
         "altTITLE": null,
@@ -4404,8 +4458,8 @@
     {
         "STREAMHASH": "cc2adbdafa48dfe60e062f44c0522809",
         "altALBUM": [
-            "Once More For The Ocean",
-            "Cranium"
+            "Cranium",
+            "Once More For The Ocean"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4441,8 +4495,8 @@
     {
         "STREAMHASH": "c74eb11207437019705b98dbb1463a9c",
         "altALBUM": [
-            "Strange Astrology",
-            "Cranium"
+            "Cranium",
+            "Strange Astrology"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4451,8 +4505,8 @@
     {
         "STREAMHASH": "039b547486dfbab8599f0b665aa35589",
         "altALBUM": [
-            "The Next Curse",
-            "Cranium"
+            "Cranium",
+            "The Next Curse"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4762,8 +4816,8 @@
     {
         "STREAMHASH": "2da5a28fdf5e5ae5d0526af59d1d3bd9",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4772,8 +4826,8 @@
     {
         "STREAMHASH": "fd8216235535f29aa4fc4927feaa2413",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4782,8 +4836,8 @@
     {
         "STREAMHASH": "452fe951c11e5749af0881fb3822f332",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4792,8 +4846,8 @@
     {
         "STREAMHASH": "858e77befd35711af7fa10756880ac88",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4802,8 +4856,8 @@
     {
         "STREAMHASH": "604c093ea4a14e3022dd2b60505c7b7f",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4812,8 +4866,8 @@
     {
         "STREAMHASH": "d8a3712c4955d1c707845084c2b9333c",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4822,8 +4876,8 @@
     {
         "STREAMHASH": "01a8acc628f80b6278c6a09dad36751c",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4832,8 +4886,8 @@
     {
         "STREAMHASH": "78df08cbb93029d414b7efb07dc335b8",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4842,8 +4896,8 @@
     {
         "STREAMHASH": "abb9db9a9eea0e8adfb0fa8d1138caf1",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": [
             "The Diary of Jane - Single Version"
@@ -4854,8 +4908,8 @@
     {
         "STREAMHASH": "a2e7c43fa5413df5d5b199889f6395ef",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4864,8 +4918,8 @@
     {
         "STREAMHASH": "c94a4f123a46e946d8aaa4ed503b83ae",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4874,8 +4928,8 @@
     {
         "STREAMHASH": "1b558762a792f196aff0e51466fee47d",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4884,8 +4938,8 @@
     {
         "STREAMHASH": "15c41d9ed7a4511d6912eb1f2d6e7afa",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4894,8 +4948,8 @@
     {
         "STREAMHASH": "524560480e25e8636940c1331efba2b8",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4904,8 +4958,8 @@
     {
         "STREAMHASH": "946b7ec2640c0d528dda5565c455f9e9",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4914,8 +4968,8 @@
     {
         "STREAMHASH": "90770c644c868277f72370a490083a9e",
         "altALBUM": [
-            "Phobia (Explicit Version)",
-            "Phobia (Clean Version)"
+            "Phobia (Clean Version)",
+            "Phobia (Explicit Version)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -4971,19 +5025,252 @@
         ]
     },
     {
-        "STREAMHASH": "c7b3167fd97521204ddebb70d4ffce0c",
-        "altALBUM": null,
+        "STREAMHASH": "082e128fcf5b163c106ca5dd0af77257",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
         "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9dbfb50550dd498f667ff8cb687e4e9a",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "20c1d5e38bf3975eb0a4907a99ff7885",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "305c481aae085db971d1ba2e24983b4e",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "026e053ab294d1d098fed84f9575b684",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "278a8fb9d5aa019edd3ccfe6d6b8758c",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2531cc22b50a844bb90e59713acd1bdf",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "70b99d11eed1a1d5f50ac5e8f2acd5f0",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bb77ee19d89c97ef9d362e65a9bf5930",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ae026a9953ad44f9e8521f4a6d4f0dbe",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f0257853fe57d0a465bc6e2bbaee1315",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "fac1208718af4a959f7dcdaf8e16a225",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "2dba3e23577b44134ad94298892992bb",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "de3a181b0b4b96aff90d44eff35aeee2",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7b908a0e49550bbfb8b29777082ae541",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d9c863556058b2202183c2758efa04cb",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "86929d2c8c913039853b3bad944e5da8",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "df2b9d9f33c02329c5e9fa6cda8f7347",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4f35cb242788f1203458f429ec193701",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8ad625cf0e348520f21d14b05e65b980",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "53a85527c6c6e26d0006216c0571c93f",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8f5a41e9670982fd6afaa8d37b678055",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c7b3167fd97521204ddebb70d4ffce0c",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": [
+            "Sgt. Pepper's Lonely Hearts Club Band - Remastered 2009"
+        ],
         "blackALBUM": null,
         "blackTITLE": [
             "Sgt. Pepper's Lonely Hearts Club Band - Remix"
         ]
     },
     {
-        "STREAMHASH": "091ab337a6982421b54443408c6bc83e",
-        "altALBUM": null,
+        "STREAMHASH": "67a20e65ad2a9d9a87e0080ceda0b225",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
         "altTITLE": null,
         "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c8d397928536f2609caf0cadf4ecf9f2",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b70c57bbb2d3c6177684373da17e1256",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "091ab337a6982421b54443408c6bc83e",
+        "altALBUM": null,
+        "altTITLE": [
+            "Sgt. Pepper's Lonely Hearts Club Band - Remastered 2009"
+        ],
+        "blackALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
         "blackTITLE": [
             "Sgt. Pepper's Lonely Hearts Club Band - Remix"
         ]
@@ -5029,6 +5316,15 @@
         "altTITLE": [
             "Yesterday - Remastered"
         ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "76a163f4a6ad0c85e242b7468eb2e1a0",
+        "altALBUM": [
+            "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
+        ],
+        "altTITLE": null,
         "blackALBUM": null,
         "blackTITLE": null
     },
@@ -5143,12 +5439,12 @@
     {
         "STREAMHASH": "1578c67ffc61331e6295d2d82de3e416",
         "altALBUM": [
-            "Curtain Call: The Hits (Deluxe Edition)",
-            "Lose Yourself"
+            "Lose Yourself",
+            "Curtain Call: The Hits (Deluxe Edition)"
         ],
         "altTITLE": [
-            "Lose Yourself - From \"8 Mile\" Soundtrack",
-            "Lose Yourself - Soundtrack Version"
+            "Lose Yourself - Soundtrack Version",
+            "Lose Yourself - From \"8 Mile\" Soundtrack"
         ],
         "blackALBUM": null,
         "blackTITLE": null
@@ -5988,6 +6284,17 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "33380730a286a980cfd152db80dde03b",
+        "altALBUM": [
+            "Kaleidoscope EP"
+        ],
+        "altTITLE": [
+            "Something Just Like This - Tokyo Remix"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "0dc29385e3a425e15957d5ae254cfb78",
         "altALBUM": [
             "Brothers (Deluxe Remastered Anniversary Edition)"
@@ -6299,6 +6606,15 @@
         "STREAMHASH": "5c284383dfd9138169e161eea224f43c",
         "altALBUM": [
             "Pokemon Theme"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ef8892f4b254afd593f66c7100a26f95",
+        "altALBUM": [
+            "Dr Feelgood"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -6868,6 +7184,15 @@
         "blackTITLE": [
             "Lost In The Moment"
         ]
+    },
+    {
+        "STREAMHASH": "a9e44598e6e06049ce0ad83d75190f9c",
+        "altALBUM": [
+            "Indestructible (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "c6936baf9610001eaa448f92fee7b7fe",
@@ -7552,8 +7877,8 @@
     {
         "STREAMHASH": "14b6e04135f1598efd1f32db3193c8e1",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7562,8 +7887,8 @@
     {
         "STREAMHASH": "b68fb6b59f3023c31fe2882660041e9b",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7572,8 +7897,8 @@
     {
         "STREAMHASH": "7056405790d8f8c93a9afea78931e27b",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7582,8 +7907,8 @@
     {
         "STREAMHASH": "50251b68f72362d924e34ca4e4bbe90b",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7592,8 +7917,8 @@
     {
         "STREAMHASH": "546866c6ab9a2cd453c5b5e97243c856",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7602,8 +7927,8 @@
     {
         "STREAMHASH": "c8dbcf29a4781e166a41edd79f5b4f4e",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7612,8 +7937,8 @@
     {
         "STREAMHASH": "eef937bcdc1399ef3d2c0ff0c5a2ae59",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7622,8 +7947,8 @@
     {
         "STREAMHASH": "cfa880ebadb95065f8740e6d225906c9",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7632,8 +7957,8 @@
     {
         "STREAMHASH": "6d95bcd2628f5c80e12a020c35c22824",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7642,8 +7967,8 @@
     {
         "STREAMHASH": "7a14e4487eb00908871f68b13310d6d6",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7652,8 +7977,8 @@
     {
         "STREAMHASH": "15de8e17bcad8607b42714e962b88cc8",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7662,8 +7987,8 @@
     {
         "STREAMHASH": "db9647bd92bd82b06346d9e000f24104",
         "altALBUM": [
-            "Keep The Faith (Remastered)",
-            "Cross Road"
+            "Cross Road",
+            "Keep The Faith (Remastered)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -7966,8 +8291,8 @@
         ],
         "altTITLE": null,
         "blackALBUM": [
-            "Cross Road (Sound & Vision) [International Version]",
-            "Cross Road"
+            "Cross Road",
+            "Cross Road (Sound & Vision) [International Version]"
         ],
         "blackTITLE": null
     },
@@ -8359,6 +8684,15 @@
         "blackALBUM": [
             "hot girl bummer"
         ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "5581470b5244e5a03bf5572316788e08",
+        "altALBUM": [
+            "cashmere noose (Deluxe)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -8812,6 +9146,33 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "f72b5c255db5360f551d15c8142bd8f6",
+        "altALBUM": [
+            "All Hope Is Gone (10th Anniversary)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ac598c141f7ccd7dcfb4297ef33f0740",
+        "altALBUM": [
+            "All Hope Is Gone (10th Anniversary)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0e48c9a377cac37920ac42ce63c97667",
+        "altALBUM": [
+            ".5: The Gray Chapter (Special Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "1dcfbfd9d02d9afd0a46ad70dc6705c6",
         "altALBUM": [
             "#3 Deluxe Version"
@@ -8979,6 +9340,15 @@
         "STREAMHASH": "37f81f511a400b7f463cea19c4be541f",
         "altALBUM": [
             "The Man Who Can't Be Moved"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "77c523d318187c4ddd357dbb8d89cf43",
+        "altALBUM": [
+            "Sunsets & Full Moons"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -9572,12 +9942,30 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "b3b00faec4e41fc4f650774c0ab60cc6",
+        "altALBUM": [
+            "May Death Never Stop You"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "1b89205551c9ad5eccec5c86f4383c9a",
         "altALBUM": null,
         "altTITLE": null,
         "blackALBUM": [
             "Three Cheers for Sweet Revenge"
         ],
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "821b5fa7f835a325c9149f2cb35cad20",
+        "altALBUM": null,
+        "altTITLE": [
+            "All the Angels - Live Demo"
+        ],
+        "blackALBUM": null,
         "blackTITLE": null
     },
     {
@@ -9624,6 +10012,15 @@
         "blackTITLE": [
             "Bed - Live In Studio"
         ]
+    },
+    {
+        "STREAMHASH": "8232eccc0f290ae2fb1eccd2c135a0fe",
+        "altALBUM": null,
+        "altTITLE": [
+            "Bed - Live In Studio"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "f8eeed28229138d7160b0e589e187bfd",
@@ -10130,6 +10527,24 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "b6d63930ef54e2ba492d6f3476fd9779",
+        "altALBUM": null,
+        "altTITLE": [
+            "I Think I'm OKAY (with YUNGBLUD & Travis Barker)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ac9a6f20403d06a8baaedd9a9526ce75",
+        "altALBUM": [
+            "maybe (feat. Bring Me The Horizon)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "5981f61af3abf2cdd64a37a839b08a9a",
         "altALBUM": [
             "wonderful life (feat. Dani Filth)"
@@ -10141,8 +10556,8 @@
     {
         "STREAMHASH": "699e734281e4daf2cb7bef63e1992bf1",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10151,8 +10566,8 @@
     {
         "STREAMHASH": "de9e20b6ebe9291d69b090db5d8dc513",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10161,8 +10576,8 @@
     {
         "STREAMHASH": "57e5365d35d49962e0d830a959fd1a1d",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10171,8 +10586,8 @@
     {
         "STREAMHASH": "cc887803f932b05aa9129254abe64e2d",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10181,8 +10596,8 @@
     {
         "STREAMHASH": "e310198b3db5e1004bb3fa37a42ff7c7",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10191,8 +10606,8 @@
     {
         "STREAMHASH": "25fd16f5760327d08fbeff7869fd065f",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10201,8 +10616,8 @@
     {
         "STREAMHASH": "53d0ea0b3256a9bacab8a54af4ea7117",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10211,8 +10626,8 @@
     {
         "STREAMHASH": "11c4e4b564ebc1efa093ebef548f5743",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10221,8 +10636,8 @@
     {
         "STREAMHASH": "1522a3deff032046267e8c8c0e6b0685",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10231,8 +10646,8 @@
     {
         "STREAMHASH": "d5185eed8c48a2482cc016041c328c38",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10241,8 +10656,8 @@
     {
         "STREAMHASH": "813e94b776976fd051d97b80b6fdd4b9",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10251,8 +10666,8 @@
     {
         "STREAMHASH": "67f5d0ae447eb2182a6808e3d20169be",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10261,8 +10676,8 @@
     {
         "STREAMHASH": "a10f0ba7bd9df650cc5659eb6987a6be",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10271,8 +10686,8 @@
     {
         "STREAMHASH": "ad992d4c4804bbf10507228fbfaa5f85",
         "altALBUM": [
-            "Sempiternal (Deluxe Edition)",
-            "Sempiternal (Expanded Edition)"
+            "Sempiternal (Expanded Edition)",
+            "Sempiternal (Deluxe Edition)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -10405,6 +10820,15 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "5fdee4913f987d0c04c38492d8d8af31",
+        "altALBUM": [
+            "Music to listen to~dance to~blaze to~pray to~feed to~sleep to~talk to~grind to~trip to~breathe to~help to~hurt to~scroll to~roll to~love to~hate to~learn Too~plot to~play to~be to~feel to~breed to~sweat to~dream to~hide to~live to~die to~GO TO"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "c23ebc0f295a615f9f9744af5c5f2e51",
         "altALBUM": [
             "Heat Waves"
@@ -10518,6 +10942,26 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "23bcbfbc1f3b3912a6236070251b5fc7",
+        "altALBUM": [
+            "Age Of Ignorance (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "bedc6a65bf5567955b7b3294088a689b",
+        "altALBUM": [
+            "Radioactive (Rock)"
+        ],
+        "altTITLE": [
+            "Radioactive - Rock"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "8adf6066777f6181017918adf5ba8b69",
         "altALBUM": [
             "Broken Boy (feat. Iggy Pop)"
@@ -10583,15 +11027,6 @@
         ],
         "blackALBUM": null,
         "blackTITLE": null
-    },
-    {
-        "STREAMHASH": "da4c8ec29e553d752c6db92b365e28a7",
-        "altALBUM": null,
-        "altTITLE": null,
-        "blackALBUM": null,
-        "blackTITLE": [
-            "I'm Not A Vampire - Revamped"
-        ]
     },
     {
         "STREAMHASH": "2e5ce3fb2f20a4b4b0fbd8288e293923",
@@ -10705,6 +11140,24 @@
         "STREAMHASH": "a2f830908dfbea182d131246c0682666",
         "altALBUM": [
             "Coming Home (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "da4c8ec29e553d752c6db92b365e28a7",
+        "altALBUM": null,
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": [
+            "I'm Not A Vampire - Revamped"
+        ]
+    },
+    {
+        "STREAMHASH": "346389b4fe0fea6325cbb06a31c99a92",
+        "altALBUM": [
+            "Voices In My Head"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -11081,6 +11534,150 @@
         "blackTITLE": [
             "She Looks Like Fun - Live"
         ]
+    },
+    {
+        "STREAMHASH": "c11c7fe1c4dce49a9b41d77840bc7648",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "c5a3abde723590b874b72a53aa905e1f",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a1031c385cf565fea37cb70fb16dccfc",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b38c01a7709784ed2a6ef4cc8c7f9041",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "478d82da8d354fbd72a5ba9e6a06af3f",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "783e3ed9ff2071905d5ec5b198e9d242",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "59bcd24db442823cdbfde04241b4cd24",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1df29d337b8698d366fbeccb6812492a",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1ee13cc16b96d453fd127044ac634ac7",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1765fca0eb54cff385034aa6f60a34e8",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f9046b186ea2899b9224767d906080e8",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0d417c0046f35990df982ec5ad626107",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4eebb36b306a46e096859c725f6ce1de",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "24424e97e767c44620ec7cfeebc28a74",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "15b5c9783176c830c06aa57618cfdb56",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7b37eb94346b9703f0734c3512f9eda7",
+        "altALBUM": [
+            "Evanescence (Deluxe Version)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
     },
     {
         "STREAMHASH": "c99d0b5c8e2bad8249c8f5f05bcc6b6d",
@@ -11683,8 +12280,8 @@
     {
         "STREAMHASH": "ca2398c61bead17029d027e8eb462019",
         "altALBUM": [
-            "Transformers: Revenge Of The Fallen The Album",
-            "New Divide (Int'l DMD Maxi)"
+            "New Divide (Int'l DMD Maxi)",
+            "Transformers: Revenge Of The Fallen The Album"
         ],
         "altTITLE": null,
         "blackALBUM": null,
@@ -12002,6 +12599,199 @@
         "blackTITLE": null
     },
     {
+        "STREAMHASH": "6c26cdfd30938954f2943cfbf97cf001",
+        "altALBUM": [
+            "Don't Panic: It's Longer Now!"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "dda81b4fc5ed0eba7c08d9cf8d2a1baf",
+        "altALBUM": [
+            "Goodbye Lullaby (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "4a69d40b566be09f898054cb5af204a4",
+        "altALBUM": [
+            "Plans"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b4007979509b34b3bba2d8f2b27e7e00",
+        "altALBUM": [
+            "Rumours (Super Deluxe)"
+        ],
+        "altTITLE": [
+            "Rhiannon - Live 1977"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "8a5dfc3330a2df1922f99be360cd2dbc",
+        "altALBUM": [
+            "Magma"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "176f0595d6c05d2c7a21c2af09650a3a",
+        "altALBUM": [
+            "Fortitude"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ce5fd4f3f59fe045aae2c3e6075dce3d",
+        "altALBUM": [
+            "The Boy Who Died Wolf"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d55def4990e26d2ad40a73620218dbb4",
+        "altALBUM": [
+            "The Boy Who Died Wolf"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "e118530870601cfa28ef6c7aae62e660",
+        "altALBUM": [
+            "Sob Rock"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "a78b6e24c40509d6ef30211908e40689",
+        "altALBUM": [
+            "Habits (Spotify)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0c5ba61d82372dbc8be471f095436a90",
+        "altALBUM": [
+            "Heathen Chemistry"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "0eb31edf3511b9ecaf92e8bcba3a0ac8",
+        "altALBUM": [
+            "Stop The Clocks",
+            "(What's The Story) Morning Glory? (Deluxe Edition) [Remastered]"
+        ],
+        "altTITLE": [
+            "Don't Look Back In Anger - Remastered"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "f534f6ee41ff44cb96a61845db8ad3b2",
+        "altALBUM": [
+            "Woodstock"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "34b98198f1b2f38d31c52f11d7079627",
+        "altALBUM": [
+            "Ramones (40th Anniversary Deluxe Edition; 2016 Remaster)"
+        ],
+        "altTITLE": [
+            "Blitzkrieg Bop - 2016 Remaster"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "b07d81a7eb1bed762513a30285298300",
+        "altALBUM": [
+            "Synchronicity (Remastered 2003)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "cce29374835f5f02a7b785ca95f5aa5d",
+        "altALBUM": [
+            "acting like that (feat. Machine Gun Kelly)"
+        ],
+        "altTITLE": [
+            "acting like that (feat. Machine Gun Kelly)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "9ca15cfd40a64a14ec86afb30b54d09e",
+        "altALBUM": null,
+        "altTITLE": [
+            "Life On Mars? - Live At A Bowie Celebration 2021"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "ead42505b1175099bb8d4be91de010e9",
+        "altALBUM": [
+            "Brothers In Arms (Remastered 1996)"
+        ],
+        "altTITLE": [
+            "Money For Nothing - Remastered 1996"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "7671986725523b5e792cd034666f22b8",
+        "altALBUM": [
+            "Rage Against The Machine - XX (20th Anniversary Special Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "fb9d8cdf7a548446cba6c56639a91a9b",
+        "altALBUM": [
+            "Loving Is Easy (feat. Benny Sings)"
+        ],
+        "altTITLE": [
+            "Loving Is Easy (feat. Benny Sings)"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
         "STREAMHASH": "db4cf9b2efe133426d1dd61dc279c0d0",
         "altALBUM": [
             "Smokin' Hearts & Broken Guns (Deluxe Edition)"
@@ -12023,6 +12813,35 @@
         "STREAMHASH": "c015b4b11e66347ea0bf0ef4348b1c61",
         "altALBUM": [
             "Smokin' Hearts & Broken Guns (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "1d41c3024b55c4c4d3a4da6b42a1e8aa",
+        "altALBUM": [
+            "Superunknown (Deluxe Edition)"
+        ],
+        "altTITLE": null,
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "27228357783a2149f5a366ac4b0b736f",
+        "altALBUM": [
+            "Siamese Dream (2011 - Remaster)"
+        ],
+        "altTITLE": [
+            "Cherub Rock - Remastered 2011"
+        ],
+        "blackALBUM": null,
+        "blackTITLE": null
+    },
+    {
+        "STREAMHASH": "d392bbffec4072c85430998cc1e2a235",
+        "altALBUM": [
+            "Siamese Dream (2011 - Remaster)"
         ],
         "altTITLE": null,
         "blackALBUM": null,
