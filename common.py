@@ -23,9 +23,27 @@ global spotify_client_secret
 global redirect_uri
 global multitag_files
 
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 multitag_files = []
 config = ConfigParser()
 config.read("config.ini")
+config_template = f"{bcolors.OKCYAN}[DEFAULT]" \
+    f"\nmusic-dir={bcolors.ENDC}<path/to/root/music/folder>" \
+    f"\n{bcolors.OKCYAN}db-name={bcolors.ENDC}<name_of_database_file>.sb" \
+    f"\n{bcolors.OKCYAN}SPOTIFY_CLIENT_ID={bcolors.ENDC}<From your spotify dev console>" \
+    f"\n{bcolors.OKCYAN}SPOTIFY_CLIENT_SECRET={bcolors.ENDC}<From your spotify dev console>" \
+    f"\n{bcolors.OKCYAN}redirect-uri={bcolors.ENDC}http://127.0.0.1:9090"
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--music-dir', type=str, help='Path to the music directory', required=False)
@@ -38,24 +56,32 @@ args, leftovers = parser.parse_known_args()
 if args.music_dir is not None:
     music_root_dir = os.path.expanduser(args.music_dir)
 else:
-    music_root_dir = os.path.expanduser(config['DEFAULT']['music-dir'])
+    try:
+        music_root_dir = os.path.expanduser(config['DEFAULT']['music-dir'])
+    except KeyError:
+        print(f"{bcolors.WARNING}config.ini file missing or incorrect!"
+              f"\nPlease create config.ini inside this projects root directory with the following template:{bcolors.ENDC}"
+              f"\n****************************"
+              f"\n{config_template}"
+              f"\n****************************\n")
+        exit()
 
 if args.db_name is not None:
     db_path = os.path.join(music_root_dir, args.db_name)
     db_mtime_marker = os.path.join(music_root_dir, '.' + args.db_name + '.marker')
 else:
-    db_path = os.path.join(music_root_dir, config['DEFAULT']['musicdb'])
-    db_mtime_marker = os.path.join(music_root_dir, '.' + config['DEFAULT']['musicdb'] + '.marker')
+    db_path = os.path.join(music_root_dir, config['DEFAULT']['db-name'])
+    db_mtime_marker = os.path.join(music_root_dir, '.' + config['DEFAULT']['db-name'] + '.marker')
 
 if args.spotify_client_id is not None:
     spotify_client_id = args.spotify_client_id
 else:
-    spotify_client_id = config['DEFAULT']['SPOTIPY_CLIENT_ID']
+    spotify_client_id = config['DEFAULT']['SPOTIFY_CLIENT_ID']
 
 if args.spotify_client_secret is not None:
     spotify_client_secret = args.spotify_client_secret
 else:
-    spotify_client_secret = config['DEFAULT']['SPOTIPY_CLIENT_SECRET']
+    spotify_client_secret = config['DEFAULT']['SPOTIFY_CLIENT_SECRET']
 
 if args.redirect_uri is not None:
     redirect_uri = args.redirect_uri
@@ -70,17 +96,6 @@ print(redirect_uri)
 
 print("I am inside common")
 
-
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
 
 
 def cls():
