@@ -24,21 +24,28 @@ def main():
     while True:
         choice = menu()
         if choice == '1':
+            cls()
             sync_fs_to_db()
         elif choice == '2':
+            cls()
             partial_sync()
         elif choice == '3':
+            cls()
             generate_local_playlist()
         elif choice == '4':
+            cls()
             generate_local_playlist(all_saved_tracks=True)
         elif choice == '5':
+            cls()
             export_altColumns()
         elif choice == '6':
+            cls()
             import_altColumns()
         elif choice == '7':
+            cls()
             cleanup_db()
         elif choice.casefold() == 'q':
-            break
+            exit()
         else:
             continue
         input("Press Enter key to continue")
