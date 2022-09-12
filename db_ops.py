@@ -335,12 +335,18 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     f"\n(S)ave current changes and return to main menu." \
                     f"\n(Q)uit to main menu & Discard all changes: "
 
-                answer = input(message)[0].casefold()
+                try:
+                    answer = input(message)[0].casefold()
+                except IndexError:
+                    answer = None
 
                 if answer == 'o':
                     while answer == 'o':
                         play_files_in_order(row.PATH)
-                        answer = input(message)[0].casefold()
+                        try:
+                            answer = input(message)[0].casefold()
+                        except IndexError:
+                            answer = None
 
                 if answer == 'a' or answer == 'y':
                     print(f"\n*** Ignoring Title ***")
@@ -422,12 +428,18 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                               "\n(S)ave current changes and return to main menu." \
                               "\nDiscard all changes & (Q)uit to main menu: "
 
-                    answer = input(message)[0].casefold()
+                    try:
+                        answer = input(message)[0].casefold()
+                    except IndexError:
+                        answer = None
 
                     if answer == 'o':
                         while answer == 'o':
                             play_files_in_order(row.PATH)
-                            answer = input(message)[0].casefold()
+                            try:
+                                answer = input(message)[0].casefold()
+                            except IndexError:
+                                answer = None
 
                     if answer == 'n' or answer == 'N':
                         add_to_black_album(row, track_metadata)
