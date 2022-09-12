@@ -158,8 +158,8 @@ def get_user_playlists(user_id=None, playlist_id=None):
 
         selected_playlist_id = input("Enter the playlist ID: ")
 
-        selected_playlist_name = playlist_ids[selected_playlist_id][0]
-        selected_playlist_tracktotal = playlist_ids[selected_playlist_id][1]
+        selected_playlist_name = playlist_list[selected_playlist_id][0]
+        selected_playlist_tracktotal = playlist_list[selected_playlist_id][1]
         selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
     else:
         playlist = sp.playlist(playlist_id)
