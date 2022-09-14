@@ -417,19 +417,19 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                         f"\n(N)o, blacklist this Album from future matches." \
                         f"\n(O)pen the file to check" \
                         f"\n(S)ave current changes and return to main menu." \
-                        f"\n(Q)uit to main menu & Discard all changes: "       
+                        f"\n(Q)uit to main menu & Discard all changes: "
 
                     message2 = str(f"\nSpotify URL: {track_metadata['SPOTIFY']}"
-                          f"\nSpotify / DB Album:"
-                          f"\n{bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
-                          f"\n\nPATH {row.PATH}"
-                          f"\nAre these the same?")
+                                   f"\nSpotify / DB Album:"
+                                   f"\n{bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
+                                   f"\n\nPATH {row.PATH}"
+                                   f"\nAre these the same?")
 
                     message2 += "\n(Y)es, this is an alternate Album." \
-                              "\n(A)llow all tracks from this album to match Spotify's Album." \
-                              "\n(N)o, blacklist this Album from future matches." \
-                              "\n(S)ave current changes and return to main menu." \
-                              "\nDiscard all changes & (Q)uit to main menu: "
+                                "\n(A)llow all tracks from this album to match Spotify's Album." \
+                                "\n(N)o, blacklist this Album from future matches." \
+                                "\n(S)ave current changes and return to main menu." \
+                                "\nDiscard all changes & (Q)uit to main menu: "
 
                     try:
                         if not bypass_album:
@@ -634,7 +634,7 @@ def generate_local_playlist(all_saved_tracks=False):
     else:
         # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
         # with open("allmytracks.json", "w") as jsonfile:
-            # jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
+        # jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
         with open('allmytracks.json', 'r') as j:
             spotify_playlist_tracks = json.loads(j.read())
         spotify_playlist_name = 'RuMAN'
