@@ -18,7 +18,7 @@ from playhouse.sqlite_ext import CSqliteExtDatabase
 import spotify_ops
 from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata, get_last_flac_mtime, \
     list2dictmerge, music_root_dir, \
-    db_path, db_mtime_marker, play_files_in_order
+    db_path, db_mtime_marker, play_files_in_order, get_current_datetime
 from common import str_to_list, find_flacs
 
 db = CSqliteExtDatabase(":memory:")
@@ -72,9 +72,11 @@ def is_item_in_db_column_with_index(db_tag=None, track_tag=None):
         return True, None
     return False, None
 
+
 def is_item_in_db_column(db_tag=None, track_tag=None):
     return_item, _ = is_item_in_db_column_with_index(db_tag, track_tag)
     return return_item
+
 
 def is_album_in_alt_album(db_row, track_metadata):
     """
@@ -375,7 +377,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
             if bypass_title or db_title == spotify_title or \
                     is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
 
-                track_matches_spot_album, path_index = is_item_in_db_column_with_index(row.ALBUM, track_metadata['ALBUM'])
+                track_matches_spot_album, path_index = is_item_in_db_column_with_index(db_album,
+                                                                                       track_metadata['ALBUM'])
 
                 # We cannot use fuzz as we want to ensure the album is exactly the same or prompt the user!
                 if track_matches_spot_album \
@@ -688,7 +691,6 @@ def generate_local_playlist(all_saved_tracks=False):
                 continue
             matched_list += result
             if isinstance(str_to_list(result[0]['PATH']), list):
-
                 # Use the 1st PATH. TODO: Make this more accurate by checking Album
                 # TAG: cd213e2f
                 result[0]['PATH'] = result[0]['PATH'][0]
@@ -852,6 +854,7 @@ def cleanup_db():
 
 if __name__ == '__main__':
     import spotifylesystem_sync
+
     spotifylesystem_sync.main()
 # else:
 #     input("\nPress enter to go back to the main menu")
