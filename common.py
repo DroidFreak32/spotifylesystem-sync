@@ -8,7 +8,7 @@ import zlib
 from base64 import b64encode
 from configparser import ConfigParser
 from itertools import repeat
-
+from datetime import datetime
 import pathos.multiprocessing as multiprocessing
 import spotipy
 import taglib
@@ -158,6 +158,9 @@ def get_spotify_connection():
                                                          "playlist-read-private playlist-read-collaborative"))
 
     return sp
+
+def get_current_datetime(format_string='%Y%m%d_%H%M'):
+    return datetime.today().strftime(format_string)
 
 
 def str_to_list(unsurestr=None):
