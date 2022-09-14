@@ -333,6 +333,10 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 # If subsequent iterations do not get this track then it will be a part of unmatched list.
                 continue
 
+            if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
+                # This track belongs to another existing album in the DB, or we do not have it.
+                # If subsequent iterations do not get this track then it will be a part of unmatched list.
+                continue
             if db_title != spotify_title and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
                 """
                 We don't have an exact match, so prompt user to verify and update alternate / blacklist tags in DB.
@@ -344,6 +348,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     f"\n\nPATH {row.PATH}" \
                     f"\n\nAre these the same?" \
                     f"\n(Y)es, this is an alternate title." \
+                    f"\n(B)lacklist {bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC}" \
+                    f"from matching with {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}." \
                     f"\n(A)dd album to whitelist as well." \
                     f"\n(N)o, blacklist this title from future matches." \
                     f"\n(O)pen the file to check" \
@@ -373,13 +379,19 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                         # Explicitly set answer = y to force add album to whitelist in the next _if_ section
                         answer = 'y'
 
-                elif answer.casefold() == 'q':
+                elif answer == 'q':
                     return 99
-                elif answer.casefold() == 's':
+                elif answer == 's':
                     return 9
-                elif answer.casefold() == 'n':
+                elif answer == 'n':
                     add_to_black_title(
                         db_row=row, track_metadata=track_metadata)
+                elif answer == 'b':
+                    query = Music.select().where(
+                        (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM))
+                    for row2 in query:
+                        add_to_black_album(row2, track_metadata)
+                    pass
                 else:
                     print("Invalid input, skipping track.")
                     continue
