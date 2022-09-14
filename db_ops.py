@@ -297,6 +297,14 @@ def search_track_in_db(track_metadata=None, album_artist=None):
             return True
         return False
 
+    def check_live_tracks_mismatch(_db_title='test', _spotify_title='test'):
+        if ('live' in _db_title) or ('live' in _spotify_title):
+            if ('live' in _db_title) and ('live' in _spotify_title):
+                return False
+            else:
+                return True
+        return False
+
     tempvar = []
     for row in album_artist.tracks:
         tempvar.append(row)
@@ -310,10 +318,15 @@ def search_track_in_db(track_metadata=None, album_artist=None):
 
         db_album = deepcopy(row.ALBUM.casefold())
 
-        if fuzz.ratio(db_title, spotify_title) >= 90 \
+        if fuzz.ratio(db_title, spotify_title) >= 85 \
                 or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) \
                 or spotify_title == db_title or safe_title_substring(db_title, spotify_title):
             # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
+
+            if check_live_tracks_mismatch(db_title, spotify_title):
+                # If the track is a live version but the DB doesn't contain that string, unmatch immediately.
+                # Skips unnecessary matches of live versions with studio versions
+                continue
 
             if is_item_in_db_column(row.blackTITLE, track_metadata['TITLE']):
                 # This track is probably another edition, i.e. Acoustic Version
