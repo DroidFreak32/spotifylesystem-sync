@@ -2,13 +2,14 @@ import argparse
 import ast
 import glob
 import os
-import subprocess
 import platform
+import subprocess
 import zlib
 from base64 import b64encode
 from configparser import ConfigParser
-from itertools import repeat
 from datetime import datetime
+from itertools import repeat
+
 import pathos.multiprocessing as multiprocessing
 import spotipy
 import taglib

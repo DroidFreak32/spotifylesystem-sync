@@ -1,9 +1,5 @@
-mutagen==1.45.1
-pathos==0.2.8
-peewee==3.14.8
-protobuf==3.19.4
-pytaglib==1.5.0
-spotipy==2.19.0
-tinytag==1.7.0
-tqdm==4.62.3
-fuzzywuzzy==0.18.0
+spotipy~=2.20.0
+pathos~=0.2.9
+tqdm~=4.64.1
+rapidfuzz~=2.8.0
+peewee~=3.15.2

@@ -1,8 +1,7 @@
-import spotipy
-import tqdm
-from spotipy.oauth2 import SpotifyOAuth
-from pprint import pprint
 from datetime import datetime
+
+import tqdm
+
 from common import get_spotify_connection, bcolors
 
 sp = get_spotify_connection()
@@ -230,7 +229,6 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
 
 
 if __name__ == '__main__':
-    # unmatched_track_ids = ['471eQ7hcJ7JdGY1NzMmUeg', '3NLrRZoMF0Lx6zTlYqeIo4', '08mG3Y1vljYA6bvDt4Wqkj', '2zYzyRzz6pRmhPzyfMEC8s', '0nsPuwB1QB3SVqpD09UP65', '3Gbyl3XZVeEcnFPiiPR09n', '2o4AknH1hXnleCRW2rH45w', '3UULkHdmLDqBDPmBYltoRE', '7fwycbhYngsgYoeQzidkvH', '75R95k0ICuZBFVEjBauOtt', '2iPTESocncak2Q45oXzKOG', '1Hy0m0aaG67ttQZoytmKd8', '0faXHILILebCGnJBPU6KJJ', '6XimI1O15wpfwUdrCnlrxo', '5pKCDm2fw4k6D6C5Rk646C', '25GC50HslaaruyrKjdu0lP', '7GGJ7uPEFfjhfx2UD3ZNYX', '6eK6eWG03zxQFW8P4OE4Cb', '4Cti8D5eFnO5WQ2DIev9ZI', '326CApbERCzytu8gmUC3Hb', '67OWW2AK0Q1FqBatxyt1s5', '40rvBMQizxkIqnjPdEWY1v', '0COqiPhxzoWICwFCS4eZcp', '3UygY7qW2cvG9Llkay6i1i', '0RF1gbstmvYLLM7Emjxezx', '48pyoRmHoUrSXvlBo1pDEV', '6ndmKwWqMozN2tcZqzCX4K', '6kLSBhzEinnul2SlZVrajD', '36nnDyLNwWGEzqAO8UnZVy', '48NOZRemjwadg6Dwc343hJ', '00ioFqMaPYKk3WbFkn1bvW', '1tBZnhDT8xbgJTs43FiqrD', '05c0LG7DakbvX0gYbBHjPP', '79CATxWpb9uezVeOIazKgs', '07BuyVse8pYAWd9DXD7B2D', '2r7Z355i8dUjhhLsHoH852', '3PbsDnKdrZY0ttX7VE9s5R', '13FYgwCmQy7WyDdLOZgK1y', '1eTdTVIxLlhHwwA50vEzZa', '2302lUwfZ4S4dVyPOCDFnQ', '3ZjnFYlal0fXN6t61wdxhl', '491FFHeud9a0KXZ66QunVn', '00nh13cwyWgGnBkW1aapBO', '5nekfiTN45vlxG0eNJQQye', '2kMjk14RmYyYhhSbipoa9U', '0Kt9sF46S7DFKrQOsXqidV', '4zXvB4MoQD8onk0NCZbeHG', '1EFddFVisHbqCHah6oBlhD', '27tX58NOpv1YKQ0abW7EPy', '1wp1aHirvZihTdrtdFuFv0', '3le4ECmJTUNXYLsGjQYSXi', '1tbjeelOKIjolYNUNnPMAD', '506YO37JuV40cnjeVuwlGD', '4s0O3I5ZpVYfbuZKvNVfRD', '0uctKVLlfFjhYRnJaDaYXM', '3kQxXX13AwkO8Q6qCq2Vv2', '2jGnX8siLIPgKwzqnRpSTD', '1GIofMbTz83fXqNrEuf4bA', '70bK6I56l6TLQmThRhAgfC', '5W8YXBz9MTIDyrpYaCg2Ky', '4oJ4XZwQA2cLMBnRtYSSIb', '4nrWU5PRlFJubLjahofpOU', '1UZvu6rqSIDDfPeJCN5mbz', '53PCsZ23I1bG1NSFFuUYuX', '6FlCPO7Z0QGgwtIL8ocZzY', '3asFGFY3uLjMDmML1p0tYm', '4iLRzDTNc3NbTyQ0w5cAOd', '7cITfGsdjGaTP0b5oiLL0z', '1aDLUzCyYpRXgrjwUWzV2X', '714Lw0m2SmCEhKSPw0Dn8J', '51SHHWOEjxJrEp07SNxow6', '5d9MTgwOIsiGObIv783pgu', '1xJzbzp1WnkVmCkkC5RxEE', '7JJ22vCP45tMhZnAH4Sp1e', '3RptaQ5Xb8WvtpItZ2f9Hi', '6UUhrj3mUGuwjOwg7iw0to', '6Y7vgyXBoedIKgvmZSYXMw', '1ecmyd0EYLAeY5IMPJjGde', '4kG8ckeo4wKsHx4Xk988GE', '4Cvscvb1bbHSsY8lwmSwIQ', '2O0CwwL8CtVH43lJwogt5u', '0vmMXqF1EeLAbgCHGjspdL', '16HleuQoAea2cHLBo2q6Wv', '2wf6TozoLQ1uS2FI7846PA', '2fiqSq32Cy0sEt8ifGenvf', '3J3hQQJ8whGI2zfZXLn7pP', '2cV8T94DdE418bRHMBiJZU', '0Nk2dSrlFJ7FNI0BcK2XAv', '0IbXmxZHkwATLzFG2XQF7r', '5pux00MCk0Qmx54GuLfMfS', '5K9r01YyCQxTOrDSLYwdhS', '6sxtXvoNeOnavXqlIceWch', '2aksJcRQTO5VKqQh1tr3fO', '1Eo7UubnwUOnFymYSc9UyT', '0xBgkHSAhbqxTevZBSPfu6', '6fI7m8uBO8g6m1aaZCayDm', '0AfIsqZ4gTUg9CwwW2jLeK', '68pN2UQYhwQgPy7VrCFKuV', '2DlHlPMa4M17kufBvI2lEN', '4e9eGQYsOiBcftrWXwsVco', '0snQkGI5qnAmohLE7jTsTn', '0GLyqTysS0DFoeKjURtB8s', '6DyywdbmTzlmXBzG9ym7Rt', '75LMfcxCiStv0HewTgCmlx', '6Po2A4lsnVu0GrQ8Dy1nme', '5YOLLCc8sO6PA1B7hlWxMO', '7yuWHdSLrknIYMgbkdmPOS', '4AQ4tIKGLXeBQQsybOKTmv', '6TfBA04WJ3X1d1wXhaCFVT', '4wzjNqjKAKDU82e8uMhzmr', '2Guz1b911CbpG8L92cnglI', '0s1PsjRpN9v3gveUOM6Iux', '0lP4HYLmvowOKdsQ7CVkuq', '5PRx9Px43HHZrzWVAfsGv0', '01v7kv0RTVaX4Vs8GcOGOP', '3HE50TVRquwXe9yv2HFoNL', '5PZ2cqh9Yem2g6cTSOLllz', '0M955bMOoilikPXwKLYpoi', '6OMO6WdRhSfjMPAiPT94wH', '5yDJpu0xh0d1w13gXaE3lS', '2xVuumAfdJpWCqqYZbTI1Q', '272gXQutAYxMC01grHHgET', '4BreyjJu4w5EUhTKPIQymq', '4YPhn26bIFm2KUkL1VLzQG', '3TEwbiC0GhIRStn3Eabtu7', '0gZp88SA5OcujHLDGkxtI3', '1rFAG22RkvaM6BlpWQoZ47']
     # generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids)
     # get_playlist()
     my_tracks = get_my_saved_tracks()

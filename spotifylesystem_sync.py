@@ -1,6 +1,7 @@
-from db_ops import cleanup_db, sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, generate_local_playlist
-
 from common import cls
+from db_ops import cleanup_db, sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, \
+    generate_local_playlist
+
 print("outside common")
 
 

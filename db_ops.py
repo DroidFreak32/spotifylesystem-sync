@@ -1,12 +1,13 @@
+import json
 import os
 import re
 import subprocess
 from copy import deepcopy
 from pathlib import Path
 from pprint import pprint
-import json
-from fuzzywuzzy import fuzz
-from peewee import BlobField, SQL
+
+from rapidfuzz import fuzz
+from peewee import BlobField
 from peewee import CharField
 from peewee import DoesNotExist
 from peewee import ForeignKeyField
@@ -42,7 +43,7 @@ class Music(BaseModel):
     ALBUM = TextField(index=True)
     # List of alternate album names, usually from spotify
     altALBUM = TextField(null=True)
-    # List of albums that is not present in the DB but the track exists in another Album
+    # List of albums that is not present in the DB but the track exists on another Album
     blackALBUM = TextField(null=True, unindexed=True)
 
     TITLE = TextField(index=True)
@@ -176,6 +177,7 @@ def search_track_in_db_nonfuzz(track_metadata=None, album_artist=None):
         - Match the title of track
         - Match the album if title matches to avoid duplicate matches!
             - TODO: Separate logging for such tracks
+    :param album_artist:
     :param track_metadata: A spotify track
     :return: Matched item's PATH & STREAMHASH from database.
     """
@@ -202,7 +204,9 @@ def search_track_in_db_nonfuzz(track_metadata=None, album_artist=None):
                 print(f"\nSpotify URL:"
                       f"\n{track_metadata['SPOTIFY']}"
                       f"\nSpotify / DB Title:"
-                      f"\n{bcolors.OKBLUE}{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}"
+                      f"\n{bcolors.OKBLUE}"
+                      f"{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}"
+                      f"{bcolors.ENDC}"
                       f"\n\nPATH {row.PATH}"
                       f"\n\nAre these the same?")
                 answer = input("Y/N/Q: ")
@@ -235,7 +239,9 @@ def search_track_in_db_nonfuzz(track_metadata=None, album_artist=None):
                     print(f"\nSpotify URL:"
                           f"\n{track_metadata['SPOTIFY']}"
                           f"\nSpotify / DB Album:"
-                          f"\n{bcolors.OKBLUE}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
+                          f"\n{bcolors.OKBLUE}"
+                          f"{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}"
+                          f"{bcolors.ENDC}"
                           f"\n\nPATH {row.PATH}"
                           f"\nAre these the same?")
                     answer = input("Y/N/A (All Album)/Q: ")
@@ -279,6 +285,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
         - Match the title of track
         - Match the album if title matches to avoid duplicate matches!
             - TODO: Separate logging for such tracks
+    :param album_artist:
     :param track_metadata: A spotify track
     :return: Matched item's PATH & STREAMHASH from database.
     """
@@ -344,7 +351,9 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 message = \
                     f"\nSpotify URL: {track_metadata['SPOTIFY']}" \
                     f"\nSpotify / DB Title:" \
-                    f"\n{bcolors.OKGREEN}{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}{bcolors.ENDC}" \
+                    f"\n{bcolors.OKGREEN}" \
+                    f"{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}" \
+                    f"{bcolors.ENDC}" \
                     f"\n\nPATH {row.PATH}" \
                     f"\n\nAre these the same?" \
                     f"\n(Y)es, this is an alternate title." \
@@ -375,9 +384,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     # Force skip next section
                     bypass_title = True
                     if answer == 'a':
+                        # Explicitly this to force add album to whitelist in the next _if_ section
                         bypass_album = True
-                        # Explicitly set answer = y to force add album to whitelist in the next _if_ section
-                        answer = 'y'
 
                 elif answer == 'q':
                     return 99
@@ -403,7 +411,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
 
                 track_matches_spot_album, path_index = is_item_in_db_column_with_index(db_album,
-                                                                                       track_metadata['ALBUM'])
+                                                                                       spotify_album)
 
                 # We cannot use fuzz as we want to ensure the album is exactly the same or prompt the user!
                 if track_matches_spot_album \
@@ -434,7 +442,9 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     message = \
                         f"\nSpotify URL: {track_metadata['SPOTIFY']}" \
                         f"\nSpotify / DB Album:" \
-                        f"\n{bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}" \
+                        f"\n{bcolors.OKGREEN}" \
+                        f"{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}" \
+                        f"{bcolors.ENDC}" \
                         f"\n\nPATH {row.PATH}" \
                         f"\n\nAre these the same?" \
                         f"\n(Y)es, this is an alternate album." \
@@ -446,7 +456,9 @@ def search_track_in_db(track_metadata=None, album_artist=None):
 
                     message2 = str(f"\nSpotify URL: {track_metadata['SPOTIFY']}"
                                    f"\nSpotify / DB Album:"
-                                   f"\n{bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}"
+                                   f"\n{bcolors.OKGREEN}"
+                                   f"{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}"
+                                   f"{bcolors.ENDC}"
                                    f"\n\nPATH {row.PATH}"
                                    f"\nAre these the same?")
 
@@ -530,7 +542,7 @@ def dump_to_db(metadata):
                                             STREAMHASH=track['STREAMHASH'],
                                             PATH=track['PATH'])
                 music_db_orm.save()
-            except IntegrityError as IE:
+            except IntegrityError:
                 """
                 Some music files may belong to multiple albums, for ex. "Self titled" and "Greatest hits"
                 So we can just query the existing file and convert the relevant columns to a list of values 
@@ -582,7 +594,7 @@ def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last
     master = CSqliteExtDatabase(db_path)
     try:
         """
-        TODO: Test this. Useing this for now to prevent crashes on a fresh setup without db created
+        TODO: Test this. Using this for now to prevent crashes on a fresh setup without db created
         """
         master.backup(db)
     except:
@@ -659,7 +671,7 @@ def generate_local_playlist(all_saved_tracks=False):
     else:
         # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
         # with open("allmytracks.json", "w") as jsonfile:
-        # jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
+        #     jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
         with open('allmytracks.json', 'r') as j:
             spotify_playlist_tracks = json.loads(j.read())
         spotify_playlist_name = 'RuMAN'
