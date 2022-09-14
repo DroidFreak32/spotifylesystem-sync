@@ -741,8 +741,10 @@ def export_altColumns():
             }
         )
 
-    with open("altColumns.json", "w") as jsonfile:
+    filename = f"altColumns_{get_current_datetime()}.json"
+    with open(filename, "w") as jsonfile:
         jsonfile.write(json.dumps(alt_columns, indent=4, sort_keys=True))
+    print(f"Whitelist & Blacklist exported to: {os.path.join(os.getcwd(), filename)}")
     db.backup(master)
     master.execute_sql('VACUUM;')
 
@@ -751,7 +753,11 @@ def import_altColumns():
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
 
-    json_file_path = "altColumns.json"
+    answer = input(f"Enter the name of alt_columns.json file: ")
+    if os.path.exists(os.path.join(os.getcwd(), answer)):
+        json_file_path = os.path.join(os.getcwd(), answer)
+    else:
+        json_file_path = 'altColumns.json'
     with open(json_file_path, 'r') as j:
         altColumn = json.loads(j.read())
 
