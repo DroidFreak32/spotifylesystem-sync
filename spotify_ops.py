@@ -63,6 +63,9 @@ def cleanup_playlist(playlist_raw=None):
 
     cleaned_playlist = []
     for item in playlist_raw:
+        # BUG: Local tracks crash this method, skip them.
+        if item['track']['is_local']:
+            continue
         track = dict()
         track['ALBUMARTIST'] = get_proper_albumartist(item['track']['album']['artists'])
         track['ALBUM'] = item['track']['album']['name']
@@ -75,7 +78,10 @@ def cleanup_playlist(playlist_raw=None):
     return cleaned_playlist
 
 
-def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal):
+def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal=None):
+    if selected_playlist_tracktotal is None:
+        selected_playlist_tracktotal = sp.playlist_items(selected_playlist_id, fields='total')['total']
+
     offset = 0
     loops = int(selected_playlist_tracktotal / 100) + 1
 
@@ -84,10 +90,12 @@ def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal):
 
     full_playlist_raw = []
     for i in range(loops):
+        # BUG: Local tracks crash this method, capture them.
         playlist_raw = sp.playlist_items(playlist_id=selected_playlist_id, offset=offset,
                                          fields='items.track.album.artists.name,'
                                                 'items.track.album.name,'
                                                 'items.track.artists,'
+                                                'items.track.is_local,'
                                                 'items.track.name,'
                                                 'items.track.external_urls.spotify',
                                          additional_types=['track'])['items']
