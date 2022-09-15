@@ -1,3 +1,4 @@
+import time
 from datetime import datetime
 
 import tqdm
@@ -110,7 +111,7 @@ def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal=None)
 # Externally callable functions start here #
 ############################################
 
-def get_playlist(playlist_id=None):
+def get_playlist(playlist_id=None, list_only=False):
     # results = sp.current_user_saved_tracks()
     # for idx, item in enumerate(results['items']):
     #     track = item['track']
@@ -142,7 +143,7 @@ def get_playlist(playlist_id=None):
     return selected_playlist_name, selected_playlist_tracks
 
 
-def get_user_playlists(user_id=None, playlist_id=None):
+def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
     if user_id is None:
         print("No user ID provided, using the current authenticated user's ID")
         user_id = sp.me()['id']
@@ -158,6 +159,12 @@ def get_user_playlists(user_id=None, playlist_id=None):
                 playlist_list[item['id']] = (item['name'], item['tracks']['total'])
             offset += 50
             playlist_limited_batch = sp.next(playlist_limited_batch)
+
+        if list_only:
+            playlist_list_only = []
+            for key in playlist_list.keys():
+                playlist_list_only.append(key)
+            return playlist_list_only
 
         print("Playlists found in your account:")
         for key, value in playlist_list.items():
@@ -236,8 +243,43 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
     return None
 
 
+def playlists_containing_track(track_id=None, playlist_list=None):
+    """
+    Returns a list of playlist that contains a particular track ID
+    @param track_id: ID of the track from spotify's URL.
+    Ex: URL: https://open.spotify.com/track/0lkQOB949M2gLyut86aJ1b?si=5b3b7ecd2ad44a2a
+        track_id: 0lkQOB949M2gLyut86aJ1b
+    @param playlist_list: A list of spotify Playlist IDs to search, defaults to all saved playlists.
+    @return: A list of user's saved spotify playlists' IDs that have the track.
+    """
+    matched_list = []
+    if track_id is None:
+        track_id = input("Enter Spotify track's ID")
+    if playlist_list is None:
+        playlist_list = get_user_playlists(list_only=True)
+    cooldown = 0
+    for playlist in playlist_list:
+        cooldown += 1
+        tracks = get_playlist_tracks(selected_playlist_id=playlist)
+
+        # Cooldown every 5 iterations to avoid TOO many API requests
+        if not (cooldown % 5):
+            # time.sleep(5)
+            pass
+        for track in tracks:
+            if track_id in track['SPOTIFY']:
+                matched_list.append(playlist)
+    if len(matched_list) > 0:
+        print("Track found in the following playlist(s):")
+        for item in matched_list:
+            name = sp.playlist(playlist_id=item, fields='name')['name']
+            print(f"{name}: https://open.spotify.com/playlist/{item}")
+    return matched_list
+
+
 if __name__ == '__main__':
     # generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids)
     # get_playlist()
-    my_tracks = get_my_saved_tracks()
+    # my_tracks = get_my_saved_tracks()
+    a = playlists_containing_track()
     print("K")
