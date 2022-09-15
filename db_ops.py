@@ -686,19 +686,23 @@ def generate_local_playlist(all_saved_tracks=False):
     offset = 0
     for spotify_album_artist in spotify_playlist_tracks_merged.keys():
         try:
-            # ** here is for case-insensitive matching
             album_artist = AlbumArtist.get(
-                AlbumArtist.ALBUMARTIST ** spotify_album_artist.casefold())
+                AlbumArtist.ALBUMARTIST == spotify_album_artist)
         except DoesNotExist:
-            # Add all tracks of this artist to unmatched tracks and increase offset accordingly
-            skipped_tracks = []
-            for track in spotify_playlist_tracks_merged[spotify_album_artist]:
-                skipped_tracks.append(
-                    {'ALBUMARTIST': spotify_album_artist} | track)
-                unmatched_track_ids.append(track['SPOTIFY'][-22:])
-            unmatched_list += skipped_tracks
-            offset += len(skipped_tracks)
-            continue
+            try:
+                # Maybe some casing is different
+                album_artist = AlbumArtist.get(
+                AlbumArtist.ALBUMARTIST == spotify_album_artist.casefold())
+            except DoesNotExist:
+                # Add all tracks of this artist to unmatched tracks and increase offset accordingly
+                skipped_tracks = []
+                for track in spotify_playlist_tracks_merged[spotify_album_artist]:
+                    skipped_tracks.append(
+                        {'ALBUMARTIST': spotify_album_artist} | track)
+                    unmatched_track_ids.append(track['SPOTIFY'][-22:])
+                unmatched_list += skipped_tracks
+                offset += len(skipped_tracks)
+                continue
 
         for playlist_track in spotify_playlist_tracks_merged[spotify_album_artist]:
             skip_generation_and_save = False
