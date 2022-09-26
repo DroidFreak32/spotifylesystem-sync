@@ -212,7 +212,7 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
     offset = 0
     loops = int(total_tracks / 10) + 1
 
-    if loops % 10 == 0:
+    if total_tracks % 10 == 0:
         loops -= 1
 
     user_id = sp.me()['id']
