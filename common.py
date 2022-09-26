@@ -213,6 +213,24 @@ def find_flacs(music_dir=None):
     return flac_files
 
 
+def missing_lrc(flacs=None):
+    if flacs is None:
+        flacs = find_flacs(music_root_dir)
+    missing_lrcs = []
+    for file in flacs:
+
+        if not os.path.exists(
+            os.path.join(
+                music_root_dir, os.path.splitext(file)[0] + '.lrc'
+            )
+        ):
+            missing_lrcs.append(file)
+    return missing_lrcs
+
+
+
+
+
 def get_last_flac_mtime(flac_files=[]):
     last_flac_mtime = os.path.getmtime(os.path.join(music_root_dir, flac_files[0]))
     for file_path in flac_files:
@@ -348,4 +366,7 @@ def generate_m3u(playlist_name='playlist', track_paths=[]):
 
 
 if __name__ == '__main__':
+    flacs = find_flacs(music_root_dir)
+    non_lrc_files = missing_lrc(flacs)
+    generate_m3u(playlist_name="LyricsMissing", track_paths=non_lrc_files)
     print("Main")
