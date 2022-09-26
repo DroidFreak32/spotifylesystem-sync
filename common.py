@@ -37,6 +37,9 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 multitag_files = []
+# TODO: Implement this regex to filter known title mismatch conditions
+common_regex = r' \([12][0-9]{3}.+[Rr]emas.*\)| \([Rr]emaster.*\)| - [Rr]emas.*| - [12][0-9]{3}.+[Rr]emas.*| [Rr]emast.*| [12][0-9]{3}.+[Rr]emas.*'
+
 config = ConfigParser()
 config.read("config.ini")
 config_template = f"{bcolors.OKCYAN}[DEFAULT]" \
