@@ -3,6 +3,7 @@ import ast
 import glob
 import os
 import platform
+import re
 import subprocess
 import zlib
 from base64 import b64encode
@@ -38,7 +39,7 @@ class bcolors:
 
 multitag_files = []
 # TODO: Implement this regex to filter known title mismatch conditions
-common_regex = r' \([12][0-9]{3}.+[Rr]emas.*\)| \([Rr]emaster.*\)| - [Rr]emas.*| - [12][0-9]{3}.+[Rr]emas.*| [Rr]emast.*| [12][0-9]{3}.+[Rr]emas.*'
+common_regex = r' \([12][0-9]{3}.+[Rr]emas.*\)| \([Rr]emaster.*\)| - [Rr]emas.*| - [12][0-9]{3}.+[Rr]emas.*| [Rr]emast.*| [12][0-9]{3}.+[Rr]emas.*| \(feat.*\)'
 
 config = ConfigParser()
 config.read("config.ini")
@@ -227,7 +228,10 @@ def missing_lrc(flacs=None):
             missing_lrcs.append(file)
     return missing_lrcs
 
-
+def is_title_a_known_mismatch(db_track=str(), spotify_track=str()):
+    if db_track == re.sub(common_regex, '', spotify_track) or spotify_track == re.sub(common_regex, '', db_track):
+        return True
+    return False
 
 
 

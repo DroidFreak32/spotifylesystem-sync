@@ -19,7 +19,7 @@ from playhouse.sqlite_ext import CSqliteExtDatabase
 import spotify_ops
 from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata, get_last_flac_mtime, \
     list2dictmerge, music_root_dir, \
-    db_path, db_mtime_marker, play_files_in_order, get_current_datetime
+    db_path, db_mtime_marker, play_files_in_order, get_current_datetime, is_title_a_known_mismatch
 from common import str_to_list, find_flacs
 
 db = CSqliteExtDatabase(":memory:")
@@ -327,7 +327,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
 
         if fuzz.ratio(db_title, spotify_title) >= 85 \
                 or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) \
-                or spotify_title == db_title or safe_title_substring(db_title, spotify_title):
+                or spotify_title == db_title or safe_title_substring(db_title, spotify_title) \
+                or is_title_a_known_mismatch(db_title, spotify_title):
             # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
 
             if check_live_tracks_mismatch(db_title, spotify_title):
