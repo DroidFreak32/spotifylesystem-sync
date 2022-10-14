@@ -38,8 +38,10 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 multitag_files = []
-# TODO: Implement this regex to filter known title mismatch conditions
+
 common_regex = r' \([12][0-9]{3}.+[Rr]emas.*\)| \([Rr]emaster.*\)| - [Rr]emas.*| - [12][0-9]{3}.+[Rr]emas.*| [Rr]emast.*| [12][0-9]{3}.+[Rr]emas.*| \(feat.*\)'
+
+instrumental_lyric = [b'eNrzzCsuKSrNTc0rScwBACBQBQc=']
 
 config = ConfigParser()
 config.read("config.ini")
@@ -225,6 +227,10 @@ def missing_lrc(flacs=None):
                 music_root_dir, os.path.splitext(file)[0] + '.lrc'
             )
         ):
+            tempvar = fetch_metadata_in_background(flac_file=file)
+            # Ignore Instrumentals!!
+            if tempvar['LYRICS'] in instrumental_lyric:
+                continue
             missing_lrcs.append(file)
     return missing_lrcs
 
@@ -244,7 +250,7 @@ def get_last_flac_mtime(flac_files=[]):
     return last_flac_mtime
 
 
-def fetch_metadata_in_background(music_dir, flac_file):
+def fetch_metadata_in_background(music_dir=music_root_dir, flac_file=None):
     """
     Gets & generates all the required metadata for a flac track.
     :param multitag_files:
@@ -360,7 +366,6 @@ def generate_metadata(music_dir, flac_files):
 
 
 def generate_m3u(playlist_name='playlist', track_paths=[]):
-    print(track_paths[0])
     location = os.path.join(music_root_dir, playlist_name + '.m3u')
     with open(location, 'w', encoding='utf-8') as p:
         print(f"#EXTM3U\n#PLAYLIST:{playlist_name}", file=p)
