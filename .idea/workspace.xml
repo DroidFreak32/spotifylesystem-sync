@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="common: Implement method to find tracks missing LRCs">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allmytracks.json" beforeDir="false" afterPath="$PROJECT_DIR$/allmytracks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/altColumns_20220914_1854.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_ops.py" afterDir="false" />
+    <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="misc: update local lists and pycharm stuff">
+      <change afterPath="$PROJECT_DIR$/altColumns_20221014_2140.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spotify_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/spotify_ops.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +165,35 @@
       <option name="project" value="LOCAL" />
       <updated>1664226852780</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="common: db_ops: Filter known mismatch titles">
+      <created>1665764149684</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665764149684</updated>
+    </task>
+    <task id="LOCAL-00007" summary="db_ops: Ensure live versions are not skipped if present in alternate titles">
+      <created>1665764295399</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665764295399</updated>
+    </task>
+    <task id="LOCAL-00008" summary="misc: update local lists and pycharm stuff">
+      <created>1665764341382</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665764341382</updated>
+    </task>
+    <task id="LOCAL-00009" summary="misc: update local lists and pycharm stuff">
+      <created>1665764352797</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665764352797</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,7 +213,10 @@
     <MESSAGE value="spotify_ops: FEATURE: Add boilerplate code to check existance of a track in playlists" />
     <MESSAGE value="common: Initial regex to filter known title mismatch conditions" />
     <MESSAGE value="common: Implement method to find tracks missing LRCs" />
-    <option name="LAST_COMMIT_MESSAGE" value="common: Implement method to find tracks missing LRCs" />
+    <MESSAGE value="common: db_ops: Filter known mismatch titles" />
+    <MESSAGE value="db_ops: Ensure live versions are not skipped if present in alternate titles" />
+    <MESSAGE value="misc: update local lists and pycharm stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc: update local lists and pycharm stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
