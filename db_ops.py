@@ -331,7 +331,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 or is_title_a_known_mismatch(db_title, spotify_title):
             # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
 
-            if check_live_tracks_mismatch(db_title, spotify_title):
+            if check_live_tracks_mismatch(db_title, spotify_title) and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
                 # If the track is a live version but the DB doesn't contain that string, unmatch immediately.
                 # Skips unnecessary matches of live versions with studio versions
                 continue
@@ -757,9 +757,11 @@ def generate_local_playlist(all_saved_tracks=False):
                                                         playlist_name=spotify_playlist_name)
 
     with open("unmatched.json", "w") as jsonfile:
-        jsonfile.write(json.dumps(unmatched_dict, indent=4, sort_keys=True))
+        encoded_json = json.dumps(unmatched_dict, indent=4, sort_keys=True, ensure_ascii=False)
+        jsonfile.write(encoded_json)
     with open("matched.json", "w") as jsonfile:
-        jsonfile.write(json.dumps(matched_dict, indent=4, sort_keys=True))
+        encoded_json = json.dumps(matched_dict, indent=4, sort_keys=True, ensure_ascii=False)
+        jsonfile.write(encoded_json)
 
     db.backup(master)
     master.execute_sql('VACUUM;')
