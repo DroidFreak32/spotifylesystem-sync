@@ -1,4 +1,4 @@
-from common import cls
+from common import cls, missing_lrc
 from db_ops import cleanup_db, sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, \
     generate_local_playlist
 
@@ -11,9 +11,10 @@ def menu():
                    "2) Update modified files in DB\n"
                    "3) Generate spotify playlists locally\n"
                    "4) Create a playlist of all saved spotify tracks\n"
-                   "5) Export whitelist & blacklist\n"
-                   "6) Import whitelist & blacklist\n"
-                   "7) Cleanup duplicates in db\n"
+                   "5) Create a playlist of tracks without lrc files\n"
+                   "6) Export whitelist & blacklist\n"
+                   "7) Import whitelist & blacklist\n"
+                   "8) Cleanup duplicates in db\n"
                    "Q - Quit\n"
                    "Enter your choice: ")
     choice = input(menu_output)
@@ -38,11 +39,14 @@ def main():
             generate_local_playlist(all_saved_tracks=True)
         elif choice == '5':
             cls()
-            export_altColumns()
+            missing_lrc()
         elif choice == '6':
             cls()
-            import_altColumns()
+            export_altColumns()
         elif choice == '7':
+            cls()
+            import_altColumns()
+        elif choice == '8':
             cls()
             cleanup_db()
         elif choice.casefold() == 'q':

@@ -232,6 +232,7 @@ def missing_lrc(flacs=None):
             if tempvar['LYRICS'] in instrumental_lyric:
                 continue
             missing_lrcs.append(file)
+    generate_m3u(playlist_name="LyricsMissing", track_paths=missing_lrcs)
     return missing_lrcs
 
 def is_title_a_known_mismatch(db_track=str(), spotify_track=str()):
@@ -366,7 +367,7 @@ def generate_metadata(music_dir, flac_files):
 
 
 def generate_m3u(playlist_name='playlist', track_paths=[]):
-    location = os.path.join(music_root_dir, playlist_name + '.m3u')
+    location = os.path.join(music_root_dir, playlist_name + '.m3u8')
     with open(location, 'w', encoding='utf-8') as p:
         print(f"#EXTM3U\n#PLAYLIST:{playlist_name}", file=p)
         for item in track_paths:
@@ -375,7 +376,4 @@ def generate_m3u(playlist_name='playlist', track_paths=[]):
 
 
 if __name__ == '__main__':
-    flacs = find_flacs(music_root_dir)
-    non_lrc_files = missing_lrc(flacs)
-    generate_m3u(playlist_name="LyricsMissing", track_paths=non_lrc_files)
     print("Main")
