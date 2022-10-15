@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="misc: update local lists and pycharm stuff">
-      <change afterPath="$PROJECT_DIR$/altColumns_20221014_2140.json" afterDir="false" />
+    <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="missing_lrc: Attempt to ignore instrumentals">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spotify_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/spotify_ops.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spotifylesystem_sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/spotifylesystem_sync.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,14 +46,11 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.common">
+  <component name="RunManager" selected="Python.spotifylesystem_sync">
     <configuration name="common" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="musicdb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -59,7 +58,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -115,8 +114,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.common" />
         <item itemvalue="Python.spotifylesystem_sync" />
+        <item itemvalue="Python.common" />
         <item itemvalue="Python.spotify_ops" />
       </list>
     </recent_temporary>
@@ -193,7 +192,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665764352797</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="misc: update local lists and pycharm stuff">
+      <created>1665764369299</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665764369299</updated>
+    </task>
+    <task id="LOCAL-00011" summary="misc: update local lists and pycharm stuff">
+      <created>1665764376618</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665764376618</updated>
+    </task>
+    <task id="LOCAL-00012" summary="missing_lrc: Attempt to ignore instrumentals">
+      <created>1665773910638</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665773910638</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,7 +236,8 @@
     <MESSAGE value="common: db_ops: Filter known mismatch titles" />
     <MESSAGE value="db_ops: Ensure live versions are not skipped if present in alternate titles" />
     <MESSAGE value="misc: update local lists and pycharm stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="misc: update local lists and pycharm stuff" />
+    <MESSAGE value="missing_lrc: Attempt to ignore instrumentals" />
+    <option name="LAST_COMMIT_MESSAGE" value="missing_lrc: Attempt to ignore instrumentals" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -239,13 +260,18 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/common.py</url>
-          <line>232</line>
+          <line>239</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/common.py</url>
-          <line>374</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/db_ops.py</url>
+          <line>622</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/db_ops.py</url>
+          <line>545</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

@@ -202,8 +202,9 @@ def list2dictmerge(listobj=None):
         tmp.pop(all_keys[0])  # Remove redundant primary key before adding it to the dictionary.
         merged_dict[key].append(tmp)
 
-    merged_dict = dict(sorted(merged_dict.items()))
-    return merged_dict
+    # Sorts the dictionary
+    merged_dict_sorted = dict(sorted(merged_dict.items()))
+    return merged_dict_sorted
 
 
 def find_flacs(music_dir=None):
@@ -317,10 +318,14 @@ def fetch_metadata_in_background(music_dir=music_root_dir, flac_file=None):
     audiofile_dict['STREAMHASH'] = md5sum
     audiofile_dict['PATH'] = flac_file
 
+    if 'ISRC' not in audiofile.tags.keys():
+        # print(f"No ISRC in {flac_file}")
+        pass
+
     return audiofile_dict
 
 
-def generate_metadata(music_dir, flac_files):
+def generate_metadata_with_warnings(music_dir, flac_files):
     """
     Accumulates all relevant metadata from a list of flac files
     :param music_dir: Root music directory

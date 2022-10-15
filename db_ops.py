@@ -17,7 +17,7 @@ from peewee import TextField
 from playhouse.sqlite_ext import CSqliteExtDatabase
 
 import spotify_ops
-from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata, get_last_flac_mtime, \
+from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata_with_warnings, get_last_flac_mtime, \
     list2dictmerge, music_root_dir, \
     db_path, db_mtime_marker, play_files_in_order, get_current_datetime, is_title_a_known_mismatch
 from common import str_to_list, find_flacs
@@ -609,7 +609,7 @@ def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last
         db.drop_tables([AlbumArtist, Music])
         db.create_tables([AlbumArtist, Music])
 
-    metadata, warning_flag = generate_metadata(music_root_dir, flac_files)
+    metadata, warning_flag = generate_metadata_with_warnings(music_root_dir, flac_files)
     if warning_flag:
         answer = input("\nIf there are warnings above, for example - Multiple Album Artist tag in a file " +
                        "\nstop this program and fix them. Else, type F to ignore the warnings and continue.")
@@ -647,6 +647,9 @@ def partial_sync():
     for flac_file in flac_files:
         if db_mtime < os.path.getmtime(os.path.join(music_root_dir, flac_file)):
             new_files.append(flac_file)
+    if len(new_files) == 0:
+        print(f"No new files exist.")
+        return
     print(f"New files:\n_________")
     pprint(new_files)
     input("Press enter to continue..")
