@@ -51,6 +51,7 @@ class Music(BaseModel):
     blackTITLE = TextField(null=True, unindexed=True)
 
     LYRICS = BlobField(unindexed=True, null=True)
+    ISRC = TextField(null=True)
     STREAMHASH = CharField(max_length=32, unique=True)
     PATH = TextField(unindexed=True)
 
@@ -540,6 +541,7 @@ def dump_to_db(metadata):
                                             altALBUM=None, blackALBUM=None,
                                             TITLE=track['TITLE'], altTITLE=None, blackTITLE=None,
                                             LYRICS=track['LYRICS'],
+                                            ISRC=track['ISRC'],
                                             STREAMHASH=track['STREAMHASH'],
                                             PATH=track['PATH'])
                 music_db_orm.save()
@@ -581,7 +583,7 @@ def dump_to_db(metadata):
                     query = Music.update(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=multi_album,
                                          altALBUM=row['altALBUM'], blackALBUM=row['blackALBUM'],
                                          TITLE=track['TITLE'], altTITLE=row['altTITLE'], blackTITLE=row['blackTITLE'],
-                                         LYRICS=track['LYRICS'],
+                                         LYRICS=track['LYRICS'], ISRC=track['ISRC'],
                                          PATH=multi_path).where(Music.STREAMHASH == track["STREAMHASH"])
                     query.execute()
                 print(
@@ -835,6 +837,7 @@ def cleanup_db():
         db_altTITLE = str_to_list(row.altTITLE)
         db_blackTITLE = str_to_list(row.blackTITLE)
         db_LYRICS = row.LYRICS
+        db_ISRC = row.ISRC
         db_STREAMHASH = row.STREAMHASH
         db_PATH = str_to_list(row.PATH)
 
