@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="missing_lrc: Attempt to ignore instrumentals">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allmytracks.json" beforeDir="false" afterPath="$PROJECT_DIR$/allmytracks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_ops.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spotify_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/spotify_ops.py" afterDir="false" />
     </list>
@@ -33,19 +33,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/horcrux/oss_stuff/musicdb",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/horcrux/oss_stuff/musicdb&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Python"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.spotifylesystem_sync">
     <configuration name="common" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="musicdb" />
@@ -258,7 +258,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/spotify_ops.py</url>
-          <line>284</line>
+          <line>296</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -268,13 +268,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/db_ops.py</url>
-          <line>622</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/db_ops.py</url>
-          <line>545</line>
-          <option name="timeStamp" value="25" />
+          <line>759</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

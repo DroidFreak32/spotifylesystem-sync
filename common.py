@@ -172,7 +172,7 @@ def get_current_datetime(format_string='%Y%m%d_%H%M'):
 
 def str_to_list(unsurestr=None):
     """
-    When retreiving a list from DB, it gets saved as a string '["somestring", "somestring2"]'
+    When retrieving a list from DB, it gets saved as a string '["somestring", "somestring2"]'
     This helper function will return such strings as a list or leave it untouched.
     TODO: Maybe another to just return a list and use 'is in' condition? Casefold may be an issue though
     """

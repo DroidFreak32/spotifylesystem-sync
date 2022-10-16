@@ -39,7 +39,7 @@ def get_proper_albumartist(artist_list=None):
     return artist_list[0]['name']
 
 
-def get_proper_artist(artist_list=None):
+def get_proper_artist_str_or_list(artist_list=None):
     """
     Helper to lookup all available artists
     :param artist_list:
@@ -53,7 +53,19 @@ def get_proper_artist(artist_list=None):
             alist.append(artist['name'])
     return alist
 
-
+def get_proper_artist(artist_list=None):
+    """
+    Helper to lookup all available artists
+    :param artist_list:
+    :return: Artist names in a list
+    """
+    if len(artist_list) == 1:
+        return [artist_list[0]['name']]
+    else:
+        alist = []
+        for artist in artist_list:
+            alist.append(artist['name'])
+    return alist
 def cleanup_playlist(playlist_raw=None):
     """
     Cleans up unnecessary cruft from spotify playlist objects like urls, thumbnails, added_at etc

@@ -433,6 +433,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     result.append({
                         'ALBUMARTIST': album_artist.ALBUMARTIST,
                         'PATH': track_path,
+                        'ARTIST': str_to_list(row.ARTIST),
                         'STREAMHASH': row.STREAMHASH
                     })
                 else:
@@ -502,6 +503,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                         result.append({
                             'ALBUMARTIST': album_artist.ALBUMARTIST,
                             'PATH': str_to_list(row.PATH),
+                            'ARTIST': str_to_list(row.ARTIST),
                             'STREAMHASH': row.STREAMHASH
                         })
                     elif answer == 's':
@@ -518,6 +520,35 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 #     'PATH': str_to_list(row.PATH),
                 #     'STREAMHASH': row.STREAMHASH
                 # })
+
+    """
+    If there's multiple matches, there is a chance that we are searching for a compilation album like
+    "The Metallica Blacklist" that contains tracks from various artists under the same Album Artist.
+    In these cases, try to see if the if the artists in the DB match spotify metadata.
+     - If there's a list of artists for a track in the DB, this list should be a subset of
+        Spotify track metadata as well. (And Vice Versa)
+     - If it's a single artist, it should match the first artist in Spotify track metadata.
+     TODO: There may be false positives!
+    """
+    if len(result) > 1:
+        trimmed_result = []
+        track_metadata_artist = [x.lower() for x in track_metadata['ARTIST']]
+        for item in result:
+            if isinstance(item['ARTIST'], list):
+
+                # First Make the DB artist list case-insensitive!
+                item['ARTIST'] = [x.lower() for x in item['ARTIST']]
+
+                if set(item['ARTIST']).issubset(track_metadata_artist) or \
+                        set(track_metadata_artist).issubset(item['ARTIST']):
+
+                    trimmed_result.append(item)
+
+            else:
+                if item['ARTIST'].lower() in track_metadata_artist:
+                    trimmed_result.append(item)
+        return trimmed_result
+
     return result
 
 
