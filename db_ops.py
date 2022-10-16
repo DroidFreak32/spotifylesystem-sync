@@ -673,13 +673,13 @@ def generate_local_playlist(all_saved_tracks=False):
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     if not all_saved_tracks:
-        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_playlist()
+        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_user_playlists()
     else:
-        # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
-        # with open("allmytracks.json", "w") as jsonfile:
-        #     jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
-        with open('allmytracks.json', 'r') as j:
-            spotify_playlist_tracks = json.loads(j.read())
+        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
+        with open("allmytracks.json", "w") as jsonfile:
+            jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
+        # with open('allmytracks.json', 'r') as j:
+        #     spotify_playlist_tracks = json.loads(j.read())
         spotify_playlist_name = 'RuMAN'
     spotify_playlist_track_total = len(spotify_playlist_tracks)
     matched_list = []
@@ -879,7 +879,8 @@ def cleanup_db():
                     music_dir=music_root_dir, flac_file=db_PATH)['ALBUM']
             db_ALBUM = album_list
 
-        # These are always List items
+        # These are always List items.
+        # https://stackoverflow.com/a/7961390/6437140
         if db_altALBUM is not None:
             db_altALBUM = list(set(db_altALBUM))
             if len(db_altALBUM) == 0:

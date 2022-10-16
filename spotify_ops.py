@@ -281,5 +281,5 @@ if __name__ == '__main__':
     # generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids)
     # get_playlist()
     # my_tracks = get_my_saved_tracks()
-    a = playlists_containing_track(track_id='77NNZQSqzLNqh2A9JhLRkg')
+    a = playlists_containing_track(track_id=input('Enter Spotify track ID: '))
     print("K")
