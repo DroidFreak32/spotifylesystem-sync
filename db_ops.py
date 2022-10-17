@@ -317,166 +317,71 @@ def search_track_in_db(track_metadata=None, album_artist=None):
     for row in album_artist.tracks:
         tempvar.append(row)
 
-    for row in album_artist.tracks:
-        # Reset these flags in each iteration
-        bypass_title = False
-        bypass_album = False
+    """
+    Update: Search in 2 stages - 1st attempt to match Album, else browse through all files.
+    """
+    stage = 0
+    while stage < 2:
+        if stage == 0:
+            # Stage 1 - Match only tracks with similar Album name
+            # TODO: https://stackoverflow.com/questions/74090945
+            album_artist_tracks = Music.select().where(
+                        (Music.ALBUMARTIST == album_artist) & (Music.ALBUM ** spotify_album))
+        else:
+            album_artist_tracks = album_artist.tracks
 
-        db_title = deepcopy(row.TITLE.casefold())
+        for row in album_artist_tracks:
+            # Reset these flags in each iteration
+            bypass_title = False
+            bypass_album = False
 
-        db_album = deepcopy(row.ALBUM.casefold())
+            db_title = deepcopy(row.TITLE.casefold())
 
-        if fuzz.ratio(db_title, spotify_title) >= 85 \
-                or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) \
-                or spotify_title == db_title or safe_title_substring(db_title, spotify_title) \
-                or is_title_a_known_mismatch(db_title, spotify_title):
-            # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
+            db_album = deepcopy(row.ALBUM.casefold())
 
-            if check_live_tracks_mismatch(db_title, spotify_title) and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
-                # If the track is a live version but the DB doesn't contain that string, unmatch immediately.
-                # Skips unnecessary matches of live versions with studio versions
-                continue
+            if fuzz.ratio(db_title, spotify_title) >= 85 \
+                    or is_title_in_alt_title(db_row=row, track_metadata=track_metadata) \
+                    or spotify_title == db_title or safe_title_substring(db_title, spotify_title) \
+                    or is_title_a_known_mismatch(db_title, spotify_title):
+                # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
 
-            if is_item_in_db_column(row.blackTITLE, track_metadata['TITLE']):
-                # This track is probably another edition, i.e. Acoustic Version
-                # If subsequent iterations do not get this track then it will be a part of unmatched list.
-                continue
-
-            if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
-                # This track belongs to another existing album in the DB, or we do not have it.
-                # If subsequent iterations do not get this track then it will be a part of unmatched list.
-                continue
-            if db_title != spotify_title and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
-                """
-                We don't have an exact match, so prompt user to verify and update alternate / blacklist tags in DB.
-                """
-                message = \
-                    f"\nSpotify URL: {track_metadata['SPOTIFY']}" \
-                    f"\nSpotify / DB Title:" \
-                    f"\n{bcolors.OKGREEN}" \
-                    f"{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}" \
-                    f"{bcolors.ENDC}" \
-                    f"\n\nPATH {row.PATH}" \
-                    f"\n\nAre these the same?" \
-                    f"\n(Y)es, this is an alternate title." \
-                    f"\n(B)lacklist {bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC}" \
-                    f"from matching with {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}." \
-                    f"\n(A)dd album to whitelist as well." \
-                    f"\n(N)o, blacklist this title from future matches." \
-                    f"\n(O)pen the file to check" \
-                    f"\n(S)ave current changes and return to main menu." \
-                    f"\n(Q)uit to main menu & Discard all changes: "
-
-                try:
-                    answer = input(message)[0].casefold()
-                except IndexError:
-                    answer = None
-
-                if answer == 'o':
-                    while answer == 'o':
-                        play_files_in_order(row.PATH)
-                        try:
-                            answer = input(message)[0].casefold()
-                        except IndexError:
-                            answer = None
-
-                if answer == 'a' or answer == 'y':
-                    print(f"\n*** Ignoring Title ***")
-                    add_to_alt_title(db_row=row, track_metadata=track_metadata)
-                    # Force skip next section
-                    bypass_title = True
-                    if answer == 'a':
-                        # Explicitly this to force add album to whitelist in the next _if_ section
-                        bypass_album = True
-
-                elif answer == 'q':
-                    return 99
-                elif answer == 's':
-                    return 9
-                elif answer == 'n':
-                    add_to_black_title(
-                        db_row=row, track_metadata=track_metadata)
-                elif answer == 'b':
-                    query = Music.select().where(
-                        (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM))
-                    for row2 in query:
-                        add_to_black_album(row2, track_metadata)
-                    pass
-                else:
-                    print("Invalid input, skipping track.")
+                if check_live_tracks_mismatch(db_title, spotify_title) and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+                    # If the track is a live version but the DB doesn't contain that string, unmatch immediately.
+                    # Skips unnecessary matches of live versions with studio versions
                     continue
 
-            ##########################
-            # Album Matching section #
-            ##########################
-            if bypass_title or db_title == spotify_title or \
-                    is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+                if is_item_in_db_column(row.blackTITLE, track_metadata['TITLE']):
+                    # This track is probably another edition, i.e. Acoustic Version
+                    # If subsequent iterations do not get this track then it will be a part of unmatched list.
+                    continue
 
-                track_matches_spot_album, path_index = is_item_in_db_column_with_index(db_album,
-                                                                                       spotify_album)
-
-                # We cannot use fuzz as we want to ensure the album is exactly the same or prompt the user!
-                if track_matches_spot_album \
-                        or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
+                if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
+                    # This track belongs to another existing album in the DB, or we do not have it.
+                    # If subsequent iterations do not get this track then it will be a part of unmatched list.
+                    continue
+                if db_title != spotify_title and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
                     """
-                    TODO: If there are multiple paths, use the path index corresponding to the matching Album index.
-                    For ex, spotify's "My Propeller" belongs to DB Albums [My Propeller, Humbug]
-                    So return the path corresponding to the matched album.
-                    Since they are the same track, it *probably* won't be queried again after its matched.
+                    We don't have an exact match, so prompt user to verify and update alternate / blacklist tags in DB.
                     """
-                    if path_index is not None:
-                        # ~Why a list? User might say yes to a track with multiple paths manually~
-                        # TAG: cd213e2f
-                        track_path = [str_to_list(row.PATH)[path_index]]
-                    else:
-                        track_path = str_to_list(row.PATH)
-                    result.append({
-                        'ALBUMARTIST': album_artist.ALBUMARTIST,
-                        'PATH': track_path,
-                        'ARTIST': str_to_list(row.ARTIST),
-                        'STREAMHASH': row.STREAMHASH
-                    })
-                else:
-                    if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
-                        # This track belongs to another existing album in the DB or we do not have it.
-                        # If subsequent iterations do not get this track then it will be a part of unmatched list.
-                        continue
-
                     message = \
                         f"\nSpotify URL: {track_metadata['SPOTIFY']}" \
-                        f"\nSpotify / DB Album:" \
+                        f"\nSpotify / DB Title:" \
                         f"\n{bcolors.OKGREEN}" \
-                        f"{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}" \
+                        f"{track_metadata['TITLE']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.TITLE}" \
                         f"{bcolors.ENDC}" \
                         f"\n\nPATH {row.PATH}" \
                         f"\n\nAre these the same?" \
-                        f"\n(Y)es, this is an alternate album." \
-                        f"\n(A)llow all tracks from this album to match Spotify's Album." \
-                        f"\n(N)o, blacklist this Album from future matches." \
+                        f"\n(Y)es, this is an alternate title." \
+                        f"\n(B)lacklist {bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC}" \
+                        f"from matching with {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}." \
+                        f"\n(A)dd album to whitelist as well." \
+                        f"\n(N)o, blacklist this title from future matches." \
                         f"\n(O)pen the file to check" \
                         f"\n(S)ave current changes and return to main menu." \
                         f"\n(Q)uit to main menu & Discard all changes: "
 
-                    message2 = str(f"\nSpotify URL: {track_metadata['SPOTIFY']}"
-                                   f"\nSpotify / DB Album:"
-                                   f"\n{bcolors.OKGREEN}"
-                                   f"{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}"
-                                   f"{bcolors.ENDC}"
-                                   f"\n\nPATH {row.PATH}"
-                                   f"\nAre these the same?")
-
-                    message2 += "\n(Y)es, this is an alternate Album." \
-                                "\n(A)llow all tracks from this album to match Spotify's Album." \
-                                "\n(N)o, blacklist this Album from future matches." \
-                                "\n(S)ave current changes and return to main menu." \
-                                "\nDiscard all changes & (Q)uit to main menu: "
-
                     try:
-                        if not bypass_album:
-                            answer = input(message)[0].casefold()
-                        else:
-                            answer = 'y'
-
+                        answer = input(message)[0].casefold()
                     except IndexError:
                         answer = None
 
@@ -488,66 +393,186 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                             except IndexError:
                                 answer = None
 
-                    if answer == 'n' or answer == 'N':
-                        add_to_black_album(row, track_metadata)
-                        continue
-
-                    if answer == 'y' or answer == 'a':
+                    if answer == 'a' or answer == 'y':
+                        print(f"\n*** Ignoring Title ***")
+                        add_to_alt_title(db_row=row, track_metadata=track_metadata)
+                        # Force skip next section
+                        bypass_title = True
                         if answer == 'a':
-                            query = Music.select().where(
-                                (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM))
-                            for row2 in query:
-                                add_to_alt_album(row2, track_metadata)
-                        else:
-                            add_to_alt_album(row, track_metadata)
-                        result.append({
-                            'ALBUMARTIST': album_artist.ALBUMARTIST,
-                            'PATH': str_to_list(row.PATH),
-                            'ARTIST': str_to_list(row.ARTIST),
-                            'STREAMHASH': row.STREAMHASH
-                        })
-                    elif answer == 's':
-                        return 9
+                            # Explicitly this to force add album to whitelist in the next _if_ section
+                            bypass_album = True
+
                     elif answer == 'q':
                         return 99
+                    elif answer == 's':
+                        return 9
+                    elif answer == 'n':
+                        add_to_black_title(
+                            db_row=row, track_metadata=track_metadata)
+                    elif answer == 'b':
+                        query = Music.select().where(
+                            (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM))
+                        for row2 in query:
+                            add_to_black_album(row2, track_metadata)
+                        pass
                     else:
                         print("Invalid input, skipping track.")
                         continue
-                # if spotify_album_artist not in result.keys():
-                #     result[spotify_album_artist] = []
-                #
-                # result[spotify_album_artist].append({
-                #     'PATH': str_to_list(row.PATH),
-                #     'STREAMHASH': row.STREAMHASH
-                # })
 
-    """
-    If there's multiple matches, there is a chance that we are searching for a compilation album like
-    "The Metallica Blacklist" that contains tracks from various artists under the same Album Artist.
-    In these cases, try to see if the if the artists in the DB match spotify metadata.
-     - If there's a list of artists for a track in the DB, this list should be a subset of
-        Spotify track metadata as well. (And Vice Versa)
-     - If it's a single artist, it should match the first artist in Spotify track metadata.
-     TODO: There may be false positives!
-    """
-    if len(result) > 1:
-        trimmed_result = []
-        track_metadata_artist = [x.lower() for x in track_metadata['ARTIST']]
-        for item in result:
-            if isinstance(item['ARTIST'], list):
+                ##########################
+                # Album Matching section #
+                ##########################
+                if bypass_title or db_title == spotify_title or \
+                        is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
 
-                # First Make the DB artist list case-insensitive!
-                item['ARTIST'] = [x.lower() for x in item['ARTIST']]
+                    track_matches_spot_album, path_index = is_item_in_db_column_with_index(db_album,
+                                                                                           spotify_album)
 
-                if set(item['ARTIST']).issubset(track_metadata_artist) or \
-                        set(track_metadata_artist).issubset(item['ARTIST']):
+                    # We cannot use fuzz as we want to ensure the album is exactly the same or prompt the user!
+                    if track_matches_spot_album \
+                            or is_album_in_alt_album(db_row=row, track_metadata=track_metadata):
+                        """
+                        TODO: If there are multiple paths, use the path index corresponding to the matching Album index.
+                        For ex, spotify's "My Propeller" belongs to DB Albums [My Propeller, Humbug]
+                        So return the path corresponding to the matched album.
+                        Since they are the same track, it *probably* won't be queried again after its matched.
+                        """
+                        if path_index is not None:
+                            # ~Why a list? User might say yes to a track with multiple paths manually~
+                            # TAG: cd213e2f
+                            track_path = [str_to_list(row.PATH)[path_index]]
+                        else:
+                            track_path = str_to_list(row.PATH)
+                        result.append({
+                            'ALBUMARTIST': album_artist.ALBUMARTIST,
+                            'PATH': track_path,
+                            'ARTIST': str_to_list(row.ARTIST),
+                            'STREAMHASH': row.STREAMHASH
+                        })
+                    else:
+                        if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
+                            # This track belongs to another existing album in the DB or we do not have it.
+                            # If subsequent iterations do not get this track then it will be a part of unmatched list.
+                            continue
 
-                    trimmed_result.append(item)
+                        message = \
+                            f"\nSpotify URL: {track_metadata['SPOTIFY']}" \
+                            f"\nSpotify / DB Album:" \
+                            f"\n{bcolors.OKGREEN}" \
+                            f"{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}" \
+                            f"{bcolors.ENDC}" \
+                            f"\n\nPATH {row.PATH}" \
+                            f"\n\nAre these the same?" \
+                            f"\n(Y)es, this is an alternate album." \
+                            f"\n(A)llow all tracks from this album to match Spotify's Album." \
+                            f"\n(B)lacklist {bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC}" \
+                            f" from matching with {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC} ever again." \
+                            f"\n(N)o, blacklist this Album from future matches." \
+                            f"\n(O)pen the file to check" \
+                            f"\n(S)ave current changes and return to main menu." \
+                            f"\n(Q)uit to main menu & Discard all changes: "
 
-            else:
-                if item['ARTIST'].lower() in track_metadata_artist:
-                    trimmed_result.append(item)
-        return trimmed_result
+                        message2 = str(f"\nSpotify URL: {track_metadata['SPOTIFY']}"
+                                       f"\nSpotify / DB Album:"
+                                       f"\n{bcolors.OKGREEN}"
+                                       f"{track_metadata['ALBUM']}{bcolors.ENDC} / {bcolors.OKCYAN}{row.ALBUM}"
+                                       f"{bcolors.ENDC}"
+                                       f"\n\nPATH {row.PATH}"
+                                       f"\nAre these the same?")
+
+                        message2 += "\n(Y)es, this is an alternate Album." \
+                                    "\n(A)llow all tracks from this album to match Spotify's Album." \
+                                    "\n(N)o, blacklist this Album from future matches." \
+                                    "\n(S)ave current changes and return to main menu." \
+                                    "\nDiscard all changes & (Q)uit to main menu: "
+
+                        try:
+                            if not bypass_album:
+                                answer = input(message)[0].casefold()
+                            else:
+                                answer = 'y'
+
+                        except IndexError:
+                            answer = None
+
+                        if answer == 'o':
+                            while answer == 'o':
+                                play_files_in_order(row.PATH)
+                                try:
+                                    answer = input(message)[0].casefold()
+                                except IndexError:
+                                    answer = None
+
+                        if answer == 'n' or answer == 'N':
+                            add_to_black_album(row, track_metadata)
+                            continue
+                        elif answer == 'b':
+                            query = Music.select().where(
+                                (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM))
+                            for row2 in query:
+                                add_to_black_album(row2, track_metadata)
+                            pass
+                        if answer == 'y' or answer == 'a':
+                            if answer == 'a':
+                                query = Music.select().where(
+                                    (Music.ALBUMARTIST == row.ALBUMARTIST) & (Music.ALBUM == row.ALBUM))
+                                for row2 in query:
+                                    add_to_alt_album(row2, track_metadata)
+                            else:
+                                add_to_alt_album(row, track_metadata)
+                            result.append({
+                                'ALBUMARTIST': album_artist.ALBUMARTIST,
+                                'PATH': str_to_list(row.PATH),
+                                'ARTIST': str_to_list(row.ARTIST),
+                                'STREAMHASH': row.STREAMHASH
+                            })
+                        elif answer == 's':
+                            return 9
+                        elif answer == 'q':
+                            return 99
+                        else:
+                            print("Invalid input, skipping track.")
+                            continue
+                    # if spotify_album_artist not in result.keys():
+                    #     result[spotify_album_artist] = []
+                    #
+                    # result[spotify_album_artist].append({
+                    #     'PATH': str_to_list(row.PATH),
+                    #     'STREAMHASH': row.STREAMHASH
+                    # })
+
+        """
+        If there's multiple matches, there is a chance that we are searching for a compilation album like
+        "The Metallica Blacklist" that contains tracks from various artists under the same Album Artist.
+        In these cases, try to see if the if the artists in the DB match spotify metadata.
+         - If there's a list of artists for a track in the DB, this list should be a subset of
+            Spotify track metadata as well. (And Vice Versa)
+         - If it's a single artist, it should match the first artist in Spotify track metadata.
+         TODO: There may be false positives!
+        """
+        if len(result) > 1:
+            trimmed_result = []
+            track_metadata_artist = [x.lower() for x in track_metadata['ARTIST']]
+            for item in result:
+                if isinstance(item['ARTIST'], list):
+
+                    # First Make the DB artist list case-insensitive!
+                    item['ARTIST'] = [x.lower() for x in item['ARTIST']]
+
+                    if set(item['ARTIST']).issubset(track_metadata_artist) or \
+                            set(track_metadata_artist).issubset(item['ARTIST']):
+
+                        trimmed_result.append(item)
+
+                else:
+                    if item['ARTIST'].lower() in track_metadata_artist:
+                        trimmed_result.append(item)
+            return trimmed_result
+
+        elif len(result) == 0:
+            stage += 1
+        else:
+            return result
 
     return result
 
@@ -729,7 +754,7 @@ def generate_local_playlist(all_saved_tracks=False):
             try:
                 # Maybe some casing is different
                 album_artist = AlbumArtist.get(
-                AlbumArtist.ALBUMARTIST == spotify_album_artist.casefold())
+                    AlbumArtist.ALBUMARTIST == spotify_album_artist.casefold())
             except DoesNotExist:
                 # Add all tracks of this artist to unmatched tracks and increase offset accordingly
                 skipped_tracks = []

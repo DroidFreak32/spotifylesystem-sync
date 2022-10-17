@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="missing_lrc: Attempt to ignore instrumentals">
-      <change afterPath="$PROJECT_DIR$/altColumns_20221017_0535.json" afterDir="false" />
+    <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="db_ops: Optimize DB search using 2 stages.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allmytracks.json" beforeDir="false" afterPath="$PROJECT_DIR$/allmytracks.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_ops.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/old_stuff/_06_01_search_playlist_in_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/old_stuff/_06_01_search_playlist_in_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spotify_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/spotify_ops.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spotifylesystem_sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/spotifylesystem_sync.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,9 +97,6 @@
       <module name="musicdb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -110,8 +104,8 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spotifylesystem_sync.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -223,7 +217,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665773910638</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="spotify_ops: Prompt for Owner's playlist only &amp; store Artist as list always&#10;&#10;* Other misc formatting">
+      <created>1666027451915</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666027451915</updated>
+    </task>
+    <task id="LOCAL-00014" summary="spotify_ops: Prompt for Owner's playlist only &amp; store Artist as list always&#10;&#10;* Other misc formatting">
+      <created>1666027461694</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666027461694</updated>
+    </task>
+    <task id="LOCAL-00015" summary="db_ops: Optimize DB search using 2 stages.">
+      <created>1666027672948</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1666027672948</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +262,9 @@
     <MESSAGE value="db_ops: Ensure live versions are not skipped if present in alternate titles" />
     <MESSAGE value="misc: update local lists and pycharm stuff" />
     <MESSAGE value="missing_lrc: Attempt to ignore instrumentals" />
-    <option name="LAST_COMMIT_MESSAGE" value="missing_lrc: Attempt to ignore instrumentals" />
+    <MESSAGE value="spotify_ops: Prompt for Owner's playlist only &amp; store Artist as list always&#10;&#10;* Other misc formatting" />
+    <MESSAGE value="db_ops: Optimize DB search using 2 stages." />
+    <option name="LAST_COMMIT_MESSAGE" value="db_ops: Optimize DB search using 2 stages." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
