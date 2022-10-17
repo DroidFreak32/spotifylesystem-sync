@@ -46,12 +46,13 @@ def get_proper_artist_str_or_list(artist_list=None):
     :return: Either a string or a list of artists
     """
     if len(artist_list) == 1:
-        alist = artist_list[0]['name']
+        alist = [artist_list[0]['name']]
     else:
         alist = []
         for artist in artist_list:
             alist.append(artist['name'])
     return alist
+
 
 def get_proper_artist(artist_list=None):
     """
@@ -66,6 +67,8 @@ def get_proper_artist(artist_list=None):
         for artist in artist_list:
             alist.append(artist['name'])
     return alist
+
+
 def cleanup_playlist(playlist_raw=None):
     """
     Cleans up unnecessary cruft from spotify playlist objects like urls, thumbnails, added_at etc
@@ -142,7 +145,7 @@ def get_playlist(playlist_id=None, list_only=False):
             print("ID: {:<10} Name: {:<40} Total Tracks: {:<15}".format(key, value[0], value[1]))
 
         selected_playlist_id = input("Enter the playlist ID: ")
-
+        # playlist = sp.playlist(selected_playlist_id, fields='id, name, tracks.total, owner.id')
         selected_playlist_name = playlist_ids[selected_playlist_id][0]
         selected_playlist_tracktotal = playlist_ids[selected_playlist_id][1]
         selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
@@ -168,7 +171,7 @@ def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
             for item in playlist_limited_batch['items']:
                 # Every playlist has a unique ID which we can use as the key without worrying about appending logic
                 # to a list
-                playlist_list[item['id']] = (item['name'], item['tracks']['total'])
+                playlist_list[item['id']] = (item['name'], item['tracks']['total'], item['owner']['display_name'])
             offset += 50
             playlist_limited_batch = sp.next(playlist_limited_batch)
 
@@ -178,21 +181,30 @@ def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
                 playlist_list_only.append(key)
             return playlist_list_only
 
+        my_playlists_only = None
+        if 'm' == str(input('Enter "M" to only view playlists created by you: \n')).casefold():
+            my_playlists_only = True
         print("Playlists found in your account:")
         for key, value in playlist_list.items():
-            print("ID: {:<10} Name: {:<40} Total Tracks: {:<15}".format(key, value[0], value[1]))
+            if my_playlists_only and value[2] != user_id:
+                continue
+            print("ID: {:<22} Tracks:{:<5} By:{:<15} Name: {:<22}"
+                  .format(key, value[1], value[2][:15], value[0][:22] + '..'))
 
-        selected_playlist_id = input("Enter the playlist ID: ")
+        playlist_id = input("Enter the playlist ID: ")
 
-        selected_playlist_name = playlist_list[selected_playlist_id][0]
-        selected_playlist_tracktotal = playlist_list[selected_playlist_id][1]
-        selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
-    else:
-        playlist = sp.playlist(playlist_id)
-        selected_playlist_id = playlist_id
-        selected_playlist_name = playlist['name']
-        selected_playlist_tracktotal = playlist['tracks']['total']
-        selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
+        if playlist_id.casefold() == 'q':
+            exit(1)
+
+        # selected_playlist_name = playlist_list[selected_playlist_id][0]
+        # selected_playlist_tracktotal = playlist_list[selected_playlist_id][1]
+        # selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
+    # else:
+    playlist = sp.playlist(playlist_id)
+    selected_playlist_id = playlist_id
+    selected_playlist_name = playlist['name']
+    selected_playlist_tracktotal = playlist['tracks']['total']
+    selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
 
     return selected_playlist_name, selected_playlist_tracks
 

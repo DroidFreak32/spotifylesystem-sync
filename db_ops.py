@@ -747,8 +747,10 @@ def generate_local_playlist(all_saved_tracks=False):
             offset += 1
             print(
                 f"Querying DB for tracks: {offset} / {spotify_playlist_track_total}", end="\r")
-            result = search_track_in_db(
-                track_metadata=playlist_track, album_artist=album_artist)
+
+            result = \
+                search_track_in_db(track_metadata=playlist_track, album_artist=album_artist)
+
             if result == 9:
                 skip_generation_and_save = True
                 break

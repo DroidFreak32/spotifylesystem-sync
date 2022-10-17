@@ -2,6 +2,8 @@ from common import cls, missing_lrc
 from db_ops import cleanup_db, sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, \
     generate_local_playlist
 
+import time
+
 print("outside common")
 
 
@@ -33,7 +35,7 @@ def main():
             partial_sync()
         elif choice == '3':
             cls()
-            generate_local_playlist()
+            generate_local_playlist(all_saved_tracks=False)
         elif choice == '4':
             cls()
             generate_local_playlist(all_saved_tracks=True)
