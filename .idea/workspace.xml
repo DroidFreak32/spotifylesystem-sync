@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="db_ops: Optimize DB search using 2 stages.">
+    <list default="true" id="d44f31e0-51dd-4ef4-9bee-67e06226ddef" name="Changes" comment="db_ops: Optimize DB search by ~21% using 2 stages.&#10;&#10;* In stage 1, we try to match the album of the spotify track in the DB, reducing the number of tracks to query.&#10;* In stage 2, we query all the tracks of the artist&#10;* About 21% improvement in performance was observed querying 2.2k tracks 4 times:&#10;&#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;&#10;Time taken: 22.87901634&#10;&#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;&#10;Time taken: 17.952965134">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_ops.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_stuff/_06_01_search_playlist_in_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/old_stuff/_06_01_search_playlist_in_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spotify_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/spotify_ops.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spotifylesystem_sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/spotifylesystem_sync.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +97,9 @@
       <module name="musicdb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -104,8 +107,8 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spotifylesystem_sync.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -238,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666027672948</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="db_ops: Optimize DB search by ~21% using 2 stages.&#10;&#10;* In stage 1, we try to match the album of the spotify track in the DB, reducing the number of tracks to query.&#10;* In stage 2, we query all the tracks of the artist&#10;* About 21% improvement in performance was observed querying 2.2k tracks 4 times:&#10;&#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;&#10;Time taken: 22.87901634&#10;&#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;&#10;Time taken: 17.952965134">
+      <created>1666030252013</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666030252013</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,15 +274,31 @@
     <MESSAGE value="missing_lrc: Attempt to ignore instrumentals" />
     <MESSAGE value="spotify_ops: Prompt for Owner's playlist only &amp; store Artist as list always&#10;&#10;* Other misc formatting" />
     <MESSAGE value="db_ops: Optimize DB search using 2 stages." />
-    <option name="LAST_COMMIT_MESSAGE" value="db_ops: Optimize DB search using 2 stages." />
+    <MESSAGE value="db_ops: Optimize DB search by ~21% using 2 stages.&#10;&#10;* In stage 1, we try to match the album of the spotify track in the DB, reducing the number of tracks to query.&#10;* In stage 2, we query all the tracks of the artist&#10;* About 21% improvement in performance was observed querying 2.2k tracks 4 times:&#10;&#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;&#10;Time taken: 22.87901634&#10;&#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;&#10;Time taken: 17.952965134" />
+    <option name="LAST_COMMIT_MESSAGE" value="db_ops: Optimize DB search by ~21% using 2 stages.&#10;&#10;* In stage 1, we try to match the album of the spotify track in the DB, reducing the number of tracks to query.&#10;* In stage 2, we query all the tracks of the artist&#10;* About 21% improvement in performance was observed querying 2.2k tracks 4 times:&#10;&#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;&#10;Time taken: 22.87901634&#10;&#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;Querying DB for tracks: 2286 / 2286&#10;2277/2286 tracks Matched. &#10;&#10;Time taken: 17.952965134" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/spotify_ops.py</url>
-          <line>189</line>
+          <line>191</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/db_ops.py</url>
+          <line>338</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/db_ops.py</url>
+          <line>498</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/db_ops.py</url>
+          <line>473</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

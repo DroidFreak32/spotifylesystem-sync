@@ -9,3 +9,4 @@ config.ini
 *.m3u
 .idea/musicdb.iml
 .idea/misc.xml
+.idea/

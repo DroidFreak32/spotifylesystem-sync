@@ -171,7 +171,9 @@ def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
             for item in playlist_limited_batch['items']:
                 # Every playlist has a unique ID which we can use as the key without worrying about appending logic
                 # to a list
-                playlist_list[item['id']] = (item['name'], item['tracks']['total'], item['owner']['display_name'])
+                playlist_list[item['id']] = \
+                    (item['name'], item['tracks']['total'], item['owner']['display_name'], item['owner']['id'])
+
             offset += 50
             playlist_limited_batch = sp.next(playlist_limited_batch)
 
@@ -186,7 +188,7 @@ def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
             my_playlists_only = True
         print("Playlists found in your account:")
         for key, value in playlist_list.items():
-            if my_playlists_only and value[2] != user_id:
+            if my_playlists_only and value[3] != user_id:
                 continue
             print("ID: {:<22} Tracks:{:<5} By:{:<15} Name: {:<22}"
                   .format(key, value[1], value[2][:15], value[0][:22] + '..'))
