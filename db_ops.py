@@ -7,7 +7,7 @@ from pathlib import Path
 from pprint import pprint
 
 from rapidfuzz import fuzz
-from peewee import BlobField
+from peewee import BlobField, Value
 from peewee import CharField
 from peewee import DoesNotExist
 from peewee import ForeignKeyField
@@ -324,11 +324,27 @@ def search_track_in_db(track_metadata=None, album_artist=None):
     while stage < 2:
         if stage == 0:
             # Stage 1 - Match only tracks with similar Album name
-            # TODO: https://stackoverflow.com/questions/74090945
+            # https://stackoverflow.com/questions/74090945
+            # Either spotify_album matches db_album or is dbAlbum is a substring OR spotify_album is in altALBUM
+            # Stage 2: All the rest of the tracks
+            #  Note to self: Do not think of first filtering blacklists in PeeWee Queries as blacklists are stored as
+            #  lists. If spotify_album is a substring of blackALBUM but matches ALBUM, the filter will remove this
+            #  row!
+            # album_artist_tracks = Music.select().where( (Music.ALBUMARTIST == album_artist) & (Music.ALBUM ** spotify_album))
+
             album_artist_tracks = Music.select().where(
-                        (Music.ALBUMARTIST == album_artist) & (Music.ALBUM ** spotify_album))
+                (Music.ALBUMARTIST == album_artist) &
+                ((Music.ALBUM ** track_metadata['ALBUM']) | Music.altALBUM.contains(track_metadata['ALBUM']))
+            )
+            if album_artist_tracks.__len__() == 0:
+                album_artist_tracks = (Music.select().where(
+                    (Music.ALBUMARTIST == album_artist) & (Value(track_metadata['ALBUM']).contains(Music.ALBUM))
+                ))
+
         else:
-            album_artist_tracks = album_artist.tracks
+            # Skips tracks from stage 1
+            album_artist_tracks = album_artist.tracks.select(Music).where(Music.id.not_in(album_artist_tracks))
+            # album_artist_tracks = album_artist.tracks
 
         for row in album_artist_tracks:
             # Reset these flags in each iteration
