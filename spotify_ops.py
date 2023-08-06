@@ -13,7 +13,7 @@ def get_missing_playlist_items_from_trackids(playlist_id=None, track_ids=None):
     For some unknown reason not all tracks gets added in the playlist.
     In such cases return the missing track IDs back to the calling function
     """
-    _, playlist_tracks = get_playlist(playlist_id=playlist_id)
+    _, playlist_tracks = get_user_playlists(playlist_id=playlist_id)
     if len(playlist_tracks) == len(track_ids):
         return None
     missing_playlist_items = []
@@ -126,6 +126,7 @@ def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal=None)
 # Externally callable functions start here #
 ############################################
 
+@DeprecationWarning
 def get_playlist(playlist_id=None, list_only=False):
     # results = sp.current_user_saved_tracks()
     # for idx, item in enumerate(results['items']):
