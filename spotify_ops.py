@@ -212,6 +212,76 @@ def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
     return selected_playlist_name, selected_playlist_tracks
 
 
+def fetch_user_playlists(user_id=None, owner_only=False, ids_only=False):
+    if user_id is None:
+        print("No user ID provided, using the current authenticated user's ID")
+        user_id = sp.me()['id']
+
+    playlist_limited_batch = sp.user_playlists(user=user_id, limit=50)
+    total_playlists = playlist_limited_batch['total']
+    offset = 0
+    playlist_list = dict()
+    while offset < total_playlists:
+        for item in playlist_limited_batch['items']:
+            # Every playlist has a unique ID which we can use as the key without worrying about appending logic
+            # to a list
+            playlist_list[item['id']] = \
+                (item['name'], item['tracks']['total'], item['owner']['display_name'], item['owner']['id'])
+
+        offset += 50
+        playlist_limited_batch = sp.next(playlist_limited_batch)
+
+    for key, value in list(playlist_list.items()):
+        if owner_only and value[3] != user_id:
+            playlist_list.pop(key)
+
+    if ids_only:
+        playlist_ids_only = []
+        for key in playlist_list.keys():
+            playlist_ids_only.append(key)
+        # return playlist_ids_only
+        return playlist_list.keys()
+
+    return playlist_list
+
+
+def select_user_playlist(user_id=None, owner_only=None):
+    if user_id is None:
+        user_id = sp.me()['id']
+    if owner_only is None:
+        if 'y' == str(input('Enter "Y" to only view playlists created by user: \n')).casefold():
+            owner_only = True
+    playlists = fetch_user_playlists(user_id, owner_only, ids_only=False)
+    print("Playlists found:")
+    print("****************")
+    index = 1
+    for key, value in playlists.items():
+        print("{:<3}) ID: {:<22} Tracks:{:<5} By:{:<15} Name: {:<22}"
+              .format(index, key, value[1], value[2][:15], value[0][:22] + '..'))
+        index += 1
+
+    answer = input("Enter the playlist ID: ")
+    if answer.isnumeric():
+        playlist_id = list(playlists.keys())[int(answer) - 1]
+    else:
+        playlist_id = answer
+    return playlist_id
+
+
+def fetch_playlist_tracks(user_id=None, playlist_id=None, owner_only=False):
+    if user_id is None:
+        user_id = sp.me()['id']
+    if playlist_id is None:
+        playlist_id = select_user_playlist(user_id=user_id, owner_only=owner_only)
+
+    playlist = sp.playlist(playlist_id=playlist_id)
+    playlist_name = playlist['name']
+    playlist_tracktotal = playlist['tracks']['total']
+    playlist_tracks = get_playlist_tracks(playlist_id, playlist_tracktotal)
+
+    return playlist_name, playlist_tracks
+
+
 def get_my_saved_tracks():
     results = sp.current_user_saved_tracks()
     total_tracks = results['total']
@@ -308,5 +378,6 @@ if __name__ == '__main__':
     # generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids)
     # get_playlist()
     # my_tracks = get_my_saved_tracks()
+    tmp = fetch_playlist_tracks()
     a = playlists_containing_track(track_id=input('Enter Spotify track ID: '))
     print("K")

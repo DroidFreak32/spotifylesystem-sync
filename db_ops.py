@@ -748,7 +748,7 @@ def generate_local_playlist(all_saved_tracks=False):
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     if not all_saved_tracks:
-        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_user_playlists()
+        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.fetch_playlist_tracks(owner_only=True)
     else:
         spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
         with open("allmytracks.json", "w") as jsonfile:
