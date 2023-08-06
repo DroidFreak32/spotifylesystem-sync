@@ -10,3 +10,4 @@ config.ini
 .idea/musicdb.iml
 .idea/misc.xml
 .idea/
+.vscode/
