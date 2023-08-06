@@ -1,5 +1,5 @@
-spotipy~=2.20.0
-pathos~=0.2.9
-tqdm~=4.64.1
-rapidfuzz~=2.8.0
-peewee~=3.15.2
+spotipy==2.23.0
+pathos==0.3.0
+tqdm==4.65.0
+rapidfuzz==3.1.1
+peewee==3.16.2
