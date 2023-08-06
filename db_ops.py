@@ -725,7 +725,10 @@ def partial_sync():
         print(f"No new files exist.")
         return
     print(f"New files:\n_________")
-    pprint(new_files)
+    new_files.sort()
+    # pprint(new_files)
+    for i in range(len(new_files)):
+        print(f"{i+1}. {new_files[i]}")
     input("Press enter to continue..")
     if len(new_files) > 0:
         sync_fs_to_db(force_resync=False, flac_files=new_files,
@@ -881,6 +884,7 @@ def import_altColumns():
         json_file_path = os.path.join(os.getcwd(), answer)
     else:
         json_file_path = 'altColumns.json'
+    print(f"Reading {json_file_path}")
     with open(json_file_path, 'r') as j:
         altColumn = json.loads(j.read())
 
