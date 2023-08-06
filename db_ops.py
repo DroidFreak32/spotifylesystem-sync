@@ -389,7 +389,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                         f"\n\nAre these the same?" \
                         f"\n(Y)es, this is an alternate title." \
                         f"\n(B)lacklist {bcolors.OKGREEN}{track_metadata['ALBUM']}{bcolors.ENDC}" \
-                        f"from matching with {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}." \
+                        f" from matching with {bcolors.OKCYAN}{row.ALBUM}{bcolors.ENDC}." \
                         f"\n(A)dd album to whitelist as well." \
                         f"\n(N)o, blacklist this title from future matches." \
                         f"\n(O)pen the file to check" \
@@ -620,7 +620,7 @@ def dump_to_db(metadata):
             except IntegrityError:
                 """
                 Some music files may belong to multiple albums, for ex. "Self titled" and "Greatest hits"
-                So we can just query the existing file and convert the relevant columns to a list of values 
+                So we can just query the existing file and convert the relevant columns to a list of values
                 """
                 if music_db_orm is not None:
                     music_db_orm.save()
