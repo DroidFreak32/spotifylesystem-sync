@@ -128,39 +128,6 @@ def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal=None)
 # Externally callable functions start here #
 ############################################
 
-@DeprecationWarning
-def get_playlist(playlist_id=None, list_only=False):
-    # results = sp.current_user_saved_tracks()
-    # for idx, item in enumerate(results['items']):
-    #     track = item['track']
-    #     print(idx, track['artists'][0]['name'], " – ", track['name'])
-
-    if playlist_id is None:
-        playlist_list = sp.current_user_playlists(limit=50)
-        items = playlist_list['items']
-        playlist_ids = dict()
-        for item in items:
-            # Create a dictionary of format { 'ID': (name, total tracks), ... }
-            playlist_ids[item['id']] = (item['name'], item['tracks']['total'])
-
-        print("Playlists found in your account:")
-        for key, value in playlist_ids.items():
-            print("ID: {:<10} Name: {:<40} Total Tracks: {:<15}".format(key, value[0], value[1]))
-
-        selected_playlist_id = input("Enter the playlist ID: ")
-        # playlist = sp.playlist(selected_playlist_id, fields='id, name, tracks.total, owner.id')
-        selected_playlist_name = playlist_ids[selected_playlist_id][0]
-        selected_playlist_tracktotal = playlist_ids[selected_playlist_id][1]
-        selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
-    else:
-        playlist = sp.playlist(playlist_id)
-        selected_playlist_id = playlist_id
-        selected_playlist_name = playlist['name']
-        selected_playlist_tracktotal = playlist['tracks']['total']
-        selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
-    return selected_playlist_name, selected_playlist_tracks
-
-
 def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
     if user_id is None:
         print("No user ID provided, using the current authenticated user's ID")
