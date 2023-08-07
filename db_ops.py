@@ -20,7 +20,7 @@ import spotify_ops
 from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata_with_warnings, get_last_flac_mtime, \
     list2dictmerge, music_root_dir, \
     db_path, db_mtime_marker, play_files_in_order, get_current_datetime, is_title_a_known_mismatch
-from common import str_to_list, find_flacs
+from common import liststr_to_list, find_flacs
 
 db = CSqliteExtDatabase(":memory:")
 
@@ -63,8 +63,8 @@ def is_item_in_db_column_with_index(db_tag=None, track_tag=None):
     """
     if db_tag is None:
         return False, None
-    if isinstance(str_to_list(db_tag), list):
-        db_tag = deepcopy(str_to_list(db_tag))
+    if isinstance(liststr_to_list(db_tag), list):
+        db_tag = deepcopy(liststr_to_list(db_tag))
         index = 0
         for tag in db_tag:
             if tag.casefold() == track_tag.casefold():
@@ -85,7 +85,7 @@ def is_album_in_alt_album(db_row, track_metadata):
     Separate this as it is always a list
     """
     if db_row.altALBUM is not None:
-        for item in str_to_list(db_row.altALBUM):
+        for item in liststr_to_list(db_row.altALBUM):
             if item.casefold() == track_metadata['ALBUM'].casefold():
                 return True
 
@@ -97,7 +97,7 @@ def is_title_in_alt_title(db_row, track_metadata):
     Separate this as it is always a list
     """
     if db_row.altTITLE is not None:
-        for item in str_to_list(db_row.altTITLE):
+        for item in liststr_to_list(db_row.altTITLE):
             if item.casefold() == track_metadata['TITLE'].casefold():
                 return True
 
@@ -108,7 +108,7 @@ def add_to_alt_album(db_row, track_metadata):
     """
     Function to add to a whitelist column.
     """
-    altALBUM_to_add = str_to_list(db_row.altALBUM)
+    altALBUM_to_add = liststr_to_list(db_row.altALBUM)
     # TODO: This is just a POC. add more functions to get existing values/lists before adding
     if isinstance(altALBUM_to_add, list):
         altALBUM_to_add.append(track_metadata['ALBUM'])
@@ -127,7 +127,7 @@ def add_to_alt_title(db_row, track_metadata):
     """
     Function to add to a whitelist column.
     """
-    altTITLE_to_add = str_to_list(db_row.altTITLE)
+    altTITLE_to_add = liststr_to_list(db_row.altTITLE)
     # TODO: This is just a POC. add more functions to get existing values/lists before adding
     if isinstance(altTITLE_to_add, list):
         altTITLE_to_add.append(track_metadata['TITLE'])
@@ -141,7 +141,7 @@ def add_to_alt_title(db_row, track_metadata):
 
 
 def add_to_black_album(db_row, track_metadata):
-    blackALBUM_to_add = str_to_list(db_row.blackALBUM)
+    blackALBUM_to_add = liststr_to_list(db_row.blackALBUM)
     # TODO: This is just a POC. add more functions to get existing values/lists before adding
     if isinstance(blackALBUM_to_add, list):
         blackALBUM_to_add.append(track_metadata['ALBUM'])
@@ -156,7 +156,7 @@ def add_to_black_album(db_row, track_metadata):
 
 
 def add_to_black_title(db_row, track_metadata):
-    blackTITLE_to_add = str_to_list(db_row.blackTITLE)
+    blackTITLE_to_add = liststr_to_list(db_row.blackTITLE)
     # TODO: This is just a POC. add more functions to get existing values/lists before adding
     if isinstance(blackTITLE_to_add, list):
         blackTITLE_to_add.append(track_metadata['TITLE'])
@@ -456,14 +456,14 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                         if path_index is not None:
                             # ~Why a list? User might say yes to a track with multiple paths manually~
                             # TAG: cd213e2f
-                            track_path = [str_to_list(row.PATH)[path_index]]
+                            track_path = [liststr_to_list(row.PATH)[path_index]]
                         else:
-                            track_path = str_to_list(row.PATH)
+                            track_path = liststr_to_list(row.PATH)
                         result.append({
                             'ALBUMARTIST': album_artist.ALBUMARTIST,
                             'PATH': track_path,
-                            'ARTIST': str_to_list(row.ARTIST),
-                            'STREAMHASH': row.STREAMHASH
+                            'ARTIST': liststr_to_list(row.ARTIST),
+                            'STREAMHASH': row.STREAMHASH,
                         })
                     else:
                         if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
@@ -538,9 +538,9 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                                 add_to_alt_album(row, track_metadata)
                             result.append({
                                 'ALBUMARTIST': album_artist.ALBUMARTIST,
-                                'PATH': str_to_list(row.PATH),
-                                'ARTIST': str_to_list(row.ARTIST),
-                                'STREAMHASH': row.STREAMHASH
+                                'PATH': liststr_to_list(row.PATH),
+                                'ARTIST': liststr_to_list(row.ARTIST),
+                                'STREAMHASH': row.STREAMHASH,
                             })
                         elif answer == 's':
                             return 9
@@ -635,14 +635,14 @@ def dump_to_db(metadata):
                     Also handle *-copy.flac files which ONLY have a different PATH
                     """
 
-                    if isinstance(str_to_list(row['PATH']), list):
-                        multi_path = str_to_list(row['PATH'])
+                    if isinstance(liststr_to_list(row['PATH']), list):
+                        multi_path = liststr_to_list(row['PATH'])
                         multi_path.append(track['PATH'])
                     else:
                         multi_path.append(row['PATH'])
                         multi_path.append(track['PATH'])
-                    if isinstance(str_to_list(row['ALBUM']), list):
-                        multi_album = str_to_list(row['ALBUM'])
+                    if isinstance(liststr_to_list(row['ALBUM']), list):
+                        multi_album = liststr_to_list(row['ALBUM'])
                         multi_album.append(track['ALBUM'])
                     elif track['ALBUM'] == row['ALBUM']:
                         print(
@@ -814,7 +814,7 @@ def generate_local_playlist(all_saved_tracks=False):
                 # print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
                 continue
             matched_list += result
-            if isinstance(str_to_list(result[0]['PATH']), list):
+            if isinstance(liststr_to_list(result[0]['PATH']), list):
                 # Use the 1st PATH. TODO: Make this more accurate by checking Album
                 # TAG: cd213e2f
                 result[0]['PATH'] = result[0]['PATH'][0]
@@ -860,10 +860,10 @@ def export_altColumns():
         alt_columns.append(
             {
                 'STREAMHASH': row.STREAMHASH,
-                'altALBUM': str_to_list(row.altALBUM),
-                'blackALBUM': str_to_list(row.blackALBUM),
-                'altTITLE': str_to_list(row.altTITLE),
-                'blackTITLE': str_to_list(row.blackTITLE)
+                'altALBUM': liststr_to_list(row.altALBUM),
+                'blackALBUM': liststr_to_list(row.blackALBUM),
+                'altTITLE': liststr_to_list(row.altTITLE),
+                'blackTITLE': liststr_to_list(row.blackTITLE)
             }
         )
 
@@ -907,17 +907,17 @@ def cleanup_db():
     count = 0
     for row in query:
         db_ALBUMARTIST = row.ALBUMARTIST
-        db_ARTIST = str_to_list(row.ARTIST)
-        db_ALBUM = str_to_list(row.ALBUM)
-        db_altALBUM = str_to_list(row.altALBUM)
-        db_blackALBUM = str_to_list(row.blackALBUM)
+        db_ARTIST = liststr_to_list(row.ARTIST)
+        db_ALBUM = liststr_to_list(row.ALBUM)
+        db_altALBUM = liststr_to_list(row.altALBUM)
+        db_blackALBUM = liststr_to_list(row.blackALBUM)
         db_TITLE = row.TITLE
-        db_altTITLE = str_to_list(row.altTITLE)
-        db_blackTITLE = str_to_list(row.blackTITLE)
+        db_altTITLE = liststr_to_list(row.altTITLE)
+        db_blackTITLE = liststr_to_list(row.blackTITLE)
         db_LYRICS = row.LYRICS
         db_ISRC = row.ISRC
         db_STREAMHASH = row.STREAMHASH
-        db_PATH = str_to_list(row.PATH)
+        db_PATH = liststr_to_list(row.PATH)
 
         # Remove duplicate / non-existent paths
         if isinstance(db_PATH, list):

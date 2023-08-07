@@ -125,7 +125,7 @@ def openfile(filepath=None):
 
 
 def play_files_in_order(paths=None):
-    paths = str_to_list(paths)
+    paths = liststr_to_list(paths)
     if isinstance(paths, list):
         if len(paths) > 1:
             print(f"Multiple files found!")
@@ -170,7 +170,7 @@ def get_current_datetime(format_string='%Y%m%d_%H%M'):
     return datetime.today().strftime(format_string)
 
 
-def str_to_list(unsurestr=None):
+def liststr_to_list(unsurestr=None):
     """
     When retrieving a list from DB, it gets saved as a string '["somestring", "somestring2"]'
     This helper function will return such strings as a list or leave it untouched.
