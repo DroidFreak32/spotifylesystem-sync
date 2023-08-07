@@ -88,6 +88,7 @@ def cleanup_playlist(playlist_raw=None):
         track['TITLE'] = item['track']['name']
         track['ARTIST'] = get_proper_artist(item['track']['artists'])
         track['SPOTIFY'] = item['track']['external_urls']['spotify']
+        track['SPOTIFY_TID'] = item['track']['id']
         if track['ALBUMARTIST'] == 'Various Artists':
             track['ALBUMARTIST'] = get_proper_albumartist(item['track']['artists'])
         cleaned_playlist.append(track)
@@ -111,6 +112,7 @@ def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal=None)
                                          fields='items.track.album.artists.name,'
                                                 'items.track.album.name,'
                                                 'items.track.artists,'
+                                                'items.track.id,'
                                                 'items.track.is_local,'
                                                 'items.track.name,'
                                                 'items.track.external_urls.spotify',

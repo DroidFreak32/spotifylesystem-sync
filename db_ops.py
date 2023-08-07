@@ -54,6 +54,8 @@ class Music(BaseModel):
     ISRC = TextField(null=True)
     STREAMHASH = CharField(max_length=32, unique=True)
     PATH = TextField(unindexed=True)
+    # Track Spotify TRACK ID
+    SPOTIFY_TID = TextField(null=True)
 
 
 def is_item_in_db_column_with_index(db_tag=None, track_tag=None):
@@ -293,6 +295,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
     result = []
     spotify_title = deepcopy(track_metadata['TITLE'].casefold())
     spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
+    spotify_tid = deepcopy(track_metadata['SPOTIFY_TID'])
 
     def safe_title_substring(_db_title='test', _spotify_title='test'):
         """
@@ -463,6 +466,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                             'ALBUMARTIST': album_artist.ALBUMARTIST,
                             'PATH': track_path,
                             'ARTIST': liststr_to_list(row.ARTIST),
+                            'SPOTIFY_TID': liststr_to_list(spotify_tid),
                             'STREAMHASH': row.STREAMHASH,
                         })
                     else:
@@ -540,6 +544,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                                 'ALBUMARTIST': album_artist.ALBUMARTIST,
                                 'PATH': liststr_to_list(row.PATH),
                                 'ARTIST': liststr_to_list(row.ARTIST),
+                                'SPOTIFY_TID': liststr_to_list(spotify_tid),
                                 'STREAMHASH': row.STREAMHASH,
                             })
                         elif answer == 's':
@@ -614,7 +619,7 @@ def dump_to_db(metadata):
                                             TITLE=track['TITLE'], altTITLE=None, blackTITLE=None,
                                             LYRICS=track['LYRICS'],
                                             ISRC=track['ISRC'],
-                                            STREAMHASH=track['STREAMHASH'],
+                                            STREAMHASH=track['STREAMHASH'], SPOTIFY_TID=None,
                                             PATH=track['PATH'])
                 music_db_orm.save()
             except IntegrityError:
@@ -655,7 +660,7 @@ def dump_to_db(metadata):
                     query = Music.update(ALBUMARTIST=album_artist, ARTIST=track['ARTIST'], ALBUM=multi_album,
                                          altALBUM=row['altALBUM'], blackALBUM=row['blackALBUM'],
                                          TITLE=track['TITLE'], altTITLE=row['altTITLE'], blackTITLE=row['blackTITLE'],
-                                         LYRICS=track['LYRICS'], ISRC=track['ISRC'],
+                                         LYRICS=track['LYRICS'], ISRC=track['ISRC'], SPOTIFY_TID=row['SPOTIFY_TID'],
                                          PATH=multi_path).where(Music.STREAMHASH == track["STREAMHASH"])
                     query.execute()
                 print(
@@ -734,6 +739,28 @@ def partial_sync():
         sync_fs_to_db(force_resync=False, flac_files=new_files,
                       last_flac_mtime=last_flac_mtime)
     cleanup_db()
+
+
+def update_trackid_in_db(spotify_tid=None, streamhash=None):
+    # TODO: This can be fetched when searching the DB itself
+    # But at the moment we don't know if multiple TIDs are added per Track
+    query = Music.select().where(Music.STREAMHASH == streamhash)
+    for row in query:
+
+        if row.SPOTIFY_TID is None:
+            tid_to_add = [spotify_tid]
+        else:
+            if spotify_tid in row.SPOTIFY_TID:
+                continue
+            tid_to_add = liststr_to_list(row.SPOTIFY_TID)
+            if isinstance(tid_to_add, list):
+                tid_to_add.append(spotify_tid)
+            else:
+                tid_to_add = [spotify_tid]
+        # else:
+        # All checks passed so update the DB
+        query = Music.update(SPOTIFY_TID=tid_to_add).where(Music.STREAMHASH == streamhash)
+        query.execute()
 
 
 def generate_local_playlist(all_saved_tracks=False):
@@ -824,6 +851,9 @@ def generate_local_playlist(all_saved_tracks=False):
             return
         elif skip_generation_and_save:
             break
+
+    for item in matched_list:
+        update_trackid_in_db(spotify_tid=item['SPOTIFY_TID'], streamhash=item['STREAMHASH'])
 
     unmatched_dict = list2dictmerge(deepcopy(unmatched_list))
     matched_dict = list2dictmerge(deepcopy(matched_list))
@@ -916,6 +946,7 @@ def cleanup_db():
         db_blackTITLE = liststr_to_list(row.blackTITLE)
         db_LYRICS = row.LYRICS
         db_ISRC = row.ISRC
+        db_SPOTIFY_TID = liststr_to_list(row.SPOTIFY_TID)
         db_STREAMHASH = row.STREAMHASH
         db_PATH = liststr_to_list(row.PATH)
 
@@ -975,10 +1006,15 @@ def cleanup_db():
             db_blackTITLE = list(set(db_blackTITLE))
             if len(db_blackTITLE) == 0:
                 db_blackTITLE = None
+        if db_SPOTIFY_TID is not None:
+            db_SPOTIFY_TID = list(set(db_SPOTIFY_TID))
+            if len(db_SPOTIFY_TID) == 0:
+                db_SPOTIFY_TID = None
 
         update_query = Music.update(ALBUM=db_ALBUM, altALBUM=db_altALBUM, blackALBUM=db_blackALBUM,
                                     altTITLE=db_altTITLE,
-                                    blackTITLE=db_blackTITLE, PATH=db_PATH).where(Music.STREAMHASH == db_STREAMHASH)
+                                    blackTITLE=db_blackTITLE,
+                                    SPOTIFY_TID=db_SPOTIFY_TID, PATH=db_PATH).where(Music.STREAMHASH == db_STREAMHASH)
         update_query.execute()
         count += 1
         print(f"Cleaned {count}/{total_tracks} rows", end="\r")
