@@ -215,6 +215,12 @@ def fetch_user_playlists(user_id=None, owner_only=False, ids_only=False):
 
 
 def select_user_playlist(user_id=None, owner_only=None):
+    """
+Prompts user to select a specific playlist from their saved playlists
+    @param user_id: User whose playlists should be listed, set to the current authenticated API user if None
+    @param owner_only: If True, only playlists created by user_id will be selected
+    @return: The ID of selected Playlist
+    """
     if user_id is None:
         user_id = sp.me()['id']
     if owner_only is None:
@@ -225,11 +231,14 @@ def select_user_playlist(user_id=None, owner_only=None):
     print("****************")
     index = 1
     for key, value in playlists.items():
+        # Ensures each column does not take more than the number of characters specified below
         print("{:<3}) ID: {:<22} Tracks:{:<5} By:{:<15} Name: {:<22}"
               .format(index, key, value[1], value[2][:15], value[0][:22] + '..'))
         index += 1
 
     answer = input("Enter the playlist ID: ")
+
+    # If user chooses the enter the number, translate it to the list's index
     if answer.isnumeric():
         playlist_id = list(playlists.keys())[int(answer) - 1]
     else:
@@ -238,6 +247,14 @@ def select_user_playlist(user_id=None, owner_only=None):
 
 
 def fetch_playlist_tracks(user_id=None, playlist_id=None, owner_only=False):
+    """
+Finds all tracks from a given playlist ID
+
+    @param user_id: User whose playlists should be listed
+    @param playlist_id: If not specified, call select_user_playlist to prompt user for a specific ID
+    @param owner_only: If True, only playlists created by user_id will be selected
+    @return: Touple of the playlist's Name and track list
+    """
     if user_id is None:
         user_id = sp.me()['id']
     if playlist_id is None:
