@@ -95,91 +95,9 @@ def cleanup_playlist(playlist_raw=None):
     return cleaned_playlist
 
 
-def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal=None):
-    if selected_playlist_tracktotal is None:
-        selected_playlist_tracktotal = sp.playlist_items(selected_playlist_id, fields='total')['total']
-
-    offset = 0
-    loops = int(selected_playlist_tracktotal / 100) + 1
-
-    if loops % 100 == 0:
-        loops -= 1
-
-    full_playlist_raw = []
-    for i in range(loops):
-        # BUG: Local tracks crash this method, capture them.
-        playlist_raw = sp.playlist_items(playlist_id=selected_playlist_id, offset=offset,
-                                         fields='items.track.album.artists.name,'
-                                                'items.track.album.name,'
-                                                'items.track.artists,'
-                                                'items.track.id,'
-                                                'items.track.is_local,'
-                                                'items.track.name,'
-                                                'items.track.external_urls.spotify',
-                                         additional_types=['track'])['items']
-        full_playlist_raw += playlist_raw
-        offset += 100
-        print(f"Retrieved {offset} / {selected_playlist_tracktotal} tracks from playlist.", end="\r", flush=True)
-
-    return cleanup_playlist(full_playlist_raw)
-
-
 ############################################
 # Externally callable functions start here #
 ############################################
-
-def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
-    if user_id is None:
-        print("No user ID provided, using the current authenticated user's ID")
-        user_id = sp.me()['id']
-    if playlist_id is None:
-        playlist_limited_batch = sp.user_playlists(user=user_id, limit=50)
-        total_playlists = playlist_limited_batch['total']
-        offset = 0
-        playlist_list = dict()
-        while offset < total_playlists:
-            for item in playlist_limited_batch['items']:
-                # Every playlist has a unique ID which we can use as the key without worrying about appending logic
-                # to a list
-                playlist_list[item['id']] = \
-                    (item['name'], item['tracks']['total'], item['owner']['display_name'], item['owner']['id'])
-
-            offset += 50
-            playlist_limited_batch = sp.next(playlist_limited_batch)
-
-        if list_only:
-            playlist_list_only = []
-            for key in playlist_list.keys():
-                playlist_list_only.append(key)
-            return playlist_list_only
-
-        my_playlists_only = None
-        if 'm' == str(input('Enter "M" to only view playlists created by you: \n')).casefold():
-            my_playlists_only = True
-        print("Playlists found in your account:")
-        for key, value in playlist_list.items():
-            if my_playlists_only and value[3] != user_id:
-                continue
-            print("ID: {:<22} Tracks:{:<5} By:{:<15} Name: {:<22}"
-                  .format(key, value[1], value[2][:15], value[0][:22] + '..'))
-
-        playlist_id = input("Enter the playlist ID: ")
-
-        if playlist_id.casefold() == 'q':
-            exit(1)
-
-        # selected_playlist_name = playlist_list[selected_playlist_id][0]
-        # selected_playlist_tracktotal = playlist_list[selected_playlist_id][1]
-        # selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
-    # else:
-    playlist = sp.playlist(playlist_id)
-    selected_playlist_id = playlist_id
-    selected_playlist_name = playlist['name']
-    selected_playlist_tracktotal = playlist['tracks']['total']
-    selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
-
-    return selected_playlist_name, selected_playlist_tracks
-
 
 def fetch_user_playlists(user_id=None, owner_only=False, ids_only=False):
     if user_id is None:
@@ -263,7 +181,30 @@ Finds all tracks from a given playlist ID
     playlist = sp.playlist(playlist_id=playlist_id)
     playlist_name = playlist['name']
     playlist_tracktotal = playlist['tracks']['total']
-    playlist_tracks = get_playlist_tracks(playlist_id, playlist_tracktotal)
+
+    offset = 0
+    loops = int(playlist_tracktotal / 100) + 1
+
+    if loops % 100 == 0:
+        loops -= 1
+
+    full_playlist_raw = []
+    for i in range(loops):
+        # BUG: Local tracks crash this method, capture them.
+        playlist_raw = sp.playlist_items(playlist_id=playlist_id, offset=offset,
+                                         fields='items.track.album.artists.name,'
+                                                'items.track.album.name,'
+                                                'items.track.artists,'
+                                                'items.track.id,'
+                                                'items.track.is_local,'
+                                                'items.track.name,'
+                                                'items.track.external_urls.spotify',
+                                         additional_types=['track'])['items']
+        full_playlist_raw += playlist_raw
+        offset += 100
+        # print(f"Retrieved {offset} / {playlist_tracktotal} tracks from playlist.", end="\r", flush=True)
+
+    playlist_tracks = cleanup_playlist(full_playlist_raw)
 
     return playlist_name, playlist_tracks
 
@@ -326,37 +267,55 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
     return None
 
 
-def playlists_containing_track(track_id=None, playlist_list=None):
+def playlists_containing_tracks(track_ids=None, playlist_list=None, owner_only=True):
     """
     Returns a list of playlist that contains a particular track ID
-    @param track_id: ID of the track from spotify's URL.
+    @param owner_only: Only search playlists where current user is the owner
+    @param track_ids: List of IDs of the tracks from spotify's URL.
     Ex: URL: https://open.spotify.com/track/0lkQOB949M2gLyut86aJ1b?si=5b3b7ecd2ad44a2a
-        track_id: 0lkQOB949M2gLyut86aJ1b
+        track_id: ['0lkQOB949M2gLyut86aJ1b']
     @param playlist_list: A list of spotify Playlist IDs to search, defaults to all saved playlists.
     @return: A list of user's saved spotify playlists' IDs that have the track.
     """
-    matched_list = []
-    if track_id is None:
-        track_id = input("Enter Spotify track's ID")
+    matched_list = {}
+    if track_ids is None:
+        track_ids = [input("Enter Spotify track's ID")]
     if playlist_list is None:
-        playlist_list = get_user_playlists(list_only=True)
+        playlist_list = fetch_user_playlists(owner_only=owner_only, ids_only=True)
     cooldown = 0
+
+    # Initialize matched list
+    for track_id in track_ids:
+        matched_list[track_id] = []
+
     for playlist in playlist_list:
         cooldown += 1
-        tracks = get_playlist_tracks(selected_playlist_id=playlist)
+        playlist_name, tracks = fetch_playlist_tracks(playlist_id=playlist)
 
         # Cooldown every 5 iterations to avoid TOO many API requests
         if not (cooldown % 5):
-            # time.sleep(5)
+            time.sleep(5)
             pass
-        for track in tracks:
-            if track_id in track['SPOTIFY']:
-                matched_list.append(playlist)
-    if len(matched_list) > 0:
-        print("Track found in the following playlist(s):")
-        for item in matched_list:
-            name = sp.playlist(playlist_id=item, fields='name')['name']
-            print(f"{name}: https://open.spotify.com/playlist/{item}")
+        for track_id in track_ids:
+            for track in tracks:
+                if track_id in track['SPOTIFY']:
+                    matched_list[track_id].append(playlist)
+            # if len(matched_list[track_id]) == 0:
+            #     del matched_list[track_id]
+            #     print(f"Track with ID {track_id} not found in any saved playlist")
+
+    for requested_track, playlists_containing_track in matched_list.items():
+        track_name = sp.track(requested_track)["name"]
+        print(f"Track {track_name} with ID {requested_track} found in the following playlist(s):")
+        for item in playlists_containing_track:
+            playlist_name = sp.playlist(playlist_id=item, fields='name')['name']
+            print(f"{playlist_name}: https://open.spotify.com/playlist/{item}")
+
+    # if len(matched_list) > 0:
+    #     print("Track found in the following playlist(s):")
+    #     for item in matched_list:
+    #         name = sp.playlist(playlist_id=item, fields='name')['name']
+    #         print(f"{name}: https://open.spotify.com/playlist/{item}")
     return matched_list
 
 

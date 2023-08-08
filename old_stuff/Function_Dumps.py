@@ -139,3 +139,84 @@ def get_playlist(playlist_id=None, list_only=False):
         selected_playlist_tracktotal = playlist['tracks']['total']
         selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
     return selected_playlist_name, selected_playlist_tracks
+
+def get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal=None):
+    if selected_playlist_tracktotal is None:
+        selected_playlist_tracktotal = sp.playlist_items(selected_playlist_id, fields='total')['total']
+
+    offset = 0
+    loops = int(selected_playlist_tracktotal / 100) + 1
+
+    if loops % 100 == 0:
+        loops -= 1
+
+    full_playlist_raw = []
+    for i in range(loops):
+        # BUG: Local tracks crash this method, capture them.
+        playlist_raw = sp.playlist_items(playlist_id=selected_playlist_id, offset=offset,
+                                         fields='items.track.album.artists.name,'
+                                                'items.track.album.name,'
+                                                'items.track.artists,'
+                                                'items.track.id,'
+                                                'items.track.is_local,'
+                                                'items.track.name,'
+                                                'items.track.external_urls.spotify',
+                                         additional_types=['track'])['items']
+        full_playlist_raw += playlist_raw
+        offset += 100
+        print(f"Retrieved {offset} / {selected_playlist_tracktotal} tracks from playlist.", end="\r", flush=True)
+
+    return cleanup_playlist(full_playlist_raw)
+
+
+def get_user_playlists(user_id=None, playlist_id=None, list_only=False):
+    if user_id is None:
+        print("No user ID provided, using the current authenticated user's ID")
+        user_id = sp.me()['id']
+    if playlist_id is None:
+        playlist_limited_batch = sp.user_playlists(user=user_id, limit=50)
+        total_playlists = playlist_limited_batch['total']
+        offset = 0
+        playlist_list = dict()
+        while offset < total_playlists:
+            for item in playlist_limited_batch['items']:
+                # Every playlist has a unique ID which we can use as the key without worrying about appending logic
+                # to a list
+                playlist_list[item['id']] = \
+                    (item['name'], item['tracks']['total'], item['owner']['display_name'], item['owner']['id'])
+
+            offset += 50
+            playlist_limited_batch = sp.next(playlist_limited_batch)
+
+        if list_only:
+            playlist_list_only = []
+            for key in playlist_list.keys():
+                playlist_list_only.append(key)
+            return playlist_list_only
+
+        my_playlists_only = None
+        if 'm' == str(input('Enter "M" to only view playlists created by you: \n')).casefold():
+            my_playlists_only = True
+        print("Playlists found in your account:")
+        for key, value in playlist_list.items():
+            if my_playlists_only and value[3] != user_id:
+                continue
+            print("ID: {:<22} Tracks:{:<5} By:{:<15} Name: {:<22}"
+                  .format(key, value[1], value[2][:15], value[0][:22] + '..'))
+
+        playlist_id = input("Enter the playlist ID: ")
+
+        if playlist_id.casefold() == 'q':
+            exit(1)
+
+        # selected_playlist_name = playlist_list[selected_playlist_id][0]
+        # selected_playlist_tracktotal = playlist_list[selected_playlist_id][1]
+        # selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
+    # else:
+    playlist = sp.playlist(playlist_id)
+    selected_playlist_id = playlist_id
+    selected_playlist_name = playlist['name']
+    selected_playlist_tracktotal = playlist['tracks']['total']
+    selected_playlist_tracks = get_playlist_tracks(selected_playlist_id, selected_playlist_tracktotal)
+
+    return selected_playlist_name, selected_playlist_tracks
