@@ -319,10 +319,24 @@ def playlists_containing_tracks(track_ids=None, playlist_list=None, owner_only=T
     return matched_list
 
 
+def find_playlists_containing_tracks():
+
+    print('Enter Spotify track IDs to search, hit enter twice to Finish:')
+
+    tracks = []
+    prompt = "-> "
+    line = input(prompt)
+    while line:
+        tracks.append(line)
+        line = input(prompt)
+
+    a = playlists_containing_tracks(track_ids=tracks)
+
+
 if __name__ == '__main__':
     # generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids)
     # get_playlist()
     # my_tracks = get_my_saved_tracks()
-    tmp = fetch_playlist_tracks()
-    a = playlists_containing_track(track_id=input('Enter Spotify track ID: '))
+    # tmp = fetch_playlist_tracks()
+
     print("K")

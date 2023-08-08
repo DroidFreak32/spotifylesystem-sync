@@ -4,6 +4,8 @@ from db_ops import cleanup_db, sync_fs_to_db, export_altColumns, import_altColum
 
 import time
 
+from spotify_ops import find_playlists_containing_tracks
+
 print("outside common")
 
 
@@ -17,6 +19,7 @@ def menu():
                    "6) Export whitelist & blacklist\n"
                    "7) Import whitelist & blacklist\n"
                    "8) Cleanup duplicates in db\n"
+                   "9) Find your playlists containing a track via IDs\n"
                    "Q - Quit\n"
                    "Enter your choice: ")
     choice = input(menu_output)
@@ -54,6 +57,9 @@ def main():
         elif choice == '8':
             cls()
             cleanup_db()
+        elif choice == '9':
+            cls()
+            find_playlists_containing_tracks()
         elif choice.casefold() == 'q':
             exit()
         else:
