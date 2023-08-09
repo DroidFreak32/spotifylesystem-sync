@@ -1,5 +1,45 @@
 [
     {
+        "ALBUMARTIST": "Olivia Rodrigo",
+        "ALBUM": "SOUR",
+        "TITLE": "brutal",
+        "ARTIST": [
+            "Olivia Rodrigo"
+        ],
+        "SPOTIFY": "https://open.spotify.com/track/6SRsiMl7w1USE4mFqrOhHC",
+        "SPOTIFY_TID": "6SRsiMl7w1USE4mFqrOhHC"
+    },
+    {
+        "ALBUMARTIST": "Slothrust",
+        "ALBUM": "The Pact",
+        "TITLE": "Double Down",
+        "ARTIST": [
+            "Slothrust"
+        ],
+        "SPOTIFY": "https://open.spotify.com/track/6Y7vgyXBoedIKgvmZSYXMw",
+        "SPOTIFY_TID": "6Y7vgyXBoedIKgvmZSYXMw"
+    },
+    {
+        "ALBUMARTIST": "Bon Jovi",
+        "ALBUM": "Keep The Faith",
+        "TITLE": "Keep The Faith",
+        "ARTIST": [
+            "Bon Jovi"
+        ],
+        "SPOTIFY": "https://open.spotify.com/track/5EWtBjCLy21d1hY9zdaEe8",
+        "SPOTIFY_TID": "5EWtBjCLy21d1hY9zdaEe8"
+    },
+    {
+        "ALBUMARTIST": "AC/DC",
+        "ALBUM": "Back In Black",
+        "TITLE": "You Shook Me All Night Long",
+        "ARTIST": [
+            "AC/DC"
+        ],
+        "SPOTIFY": "https://open.spotify.com/track/2SiXAy7TuUkycRVbbWDEpo",
+        "SPOTIFY_TID": "2SiXAy7TuUkycRVbbWDEpo"
+    },
+    {
         "ALBUMARTIST": "The Backseat Lovers",
         "ALBUM": "Growing/Dying",
         "TITLE": "Growing/Dying",
@@ -90,16 +130,6 @@
         "SPOTIFY_TID": "4rcHWl68ai6KvpXlc8vbnE"
     },
     {
-        "ALBUMARTIST": "Air Supply",
-        "ALBUM": "Lost in Love",
-        "TITLE": "All Out of Love",
-        "ARTIST": [
-            "Air Supply"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/7dQC53NiYOY9gKg3Qsu2Bs",
-        "SPOTIFY_TID": "7dQC53NiYOY9gKg3Qsu2Bs"
-    },
-    {
         "ALBUMARTIST": "Queen",
         "ALBUM": "The Game (2011 Remaster)",
         "TITLE": "Crazy Little Thing Called Love - Remastered 2011",
@@ -128,16 +158,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/7Efj41liKKTAbXHcsbhIwP",
         "SPOTIFY_TID": "7Efj41liKKTAbXHcsbhIwP"
-    },
-    {
-        "ALBUMARTIST": "Lynyrd Skynyrd",
-        "ALBUM": "Pronounced' Leh-'Nerd 'Skin-'Nerd",
-        "TITLE": "Gimme Three Steps",
-        "ARTIST": [
-            "Lynyrd Skynyrd"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/0x2wtJbtJrox3SDmnMj97x",
-        "SPOTIFY_TID": "0x2wtJbtJrox3SDmnMj97x"
     },
     {
         "ALBUMARTIST": "Wallows",
@@ -281,16 +301,6 @@
         "SPOTIFY_TID": "3t4p9vIhemAhCMr6hfL2pa"
     },
     {
-        "ALBUMARTIST": "alt-J",
-        "ALBUM": "RELAXER",
-        "TITLE": "House of the Rising Sun",
-        "ARTIST": [
-            "alt-J"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/3vX5ocERV2VjlgxFnPIZbn",
-        "SPOTIFY_TID": "3vX5ocERV2VjlgxFnPIZbn"
-    },
-    {
         "ALBUMARTIST": "Arrows to Athens",
         "ALBUM": "Kings & Thieves",
         "TITLE": "Used to Be",
@@ -311,16 +321,6 @@
         "SPOTIFY_TID": "2KH16WveTQWT6KOG9Rg6e2"
     },
     {
-        "ALBUMARTIST": "Linkin Park",
-        "ALBUM": "Meteora (Bonus Edition)",
-        "TITLE": "Numb",
-        "ARTIST": [
-            "Linkin Park"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/1y1sChqjzdNWzwdHQADMrR",
-        "SPOTIFY_TID": "1y1sChqjzdNWzwdHQADMrR"
-    },
-    {
         "ALBUMARTIST": "Breaking Benjamin",
         "ALBUM": "Phobia (Explicit Version)",
         "TITLE": "You",
@@ -329,26 +329,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/5MNxNuo0XSHx7MPXbsR57W",
         "SPOTIFY_TID": "5MNxNuo0XSHx7MPXbsR57W"
-    },
-    {
-        "ALBUMARTIST": "The Script",
-        "ALBUM": "The Script",
-        "TITLE": "Breakeven",
-        "ARTIST": [
-            "The Script"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/285hMzLhJwHVLe9QT9qilk",
-        "SPOTIFY_TID": "285hMzLhJwHVLe9QT9qilk"
-    },
-    {
-        "ALBUMARTIST": "The Script",
-        "ALBUM": "The Script",
-        "TITLE": "The Man Who Can't Be Moved",
-        "ARTIST": [
-            "The Script"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/3nqqDo8CcCLke3ZoTgiOKf",
-        "SPOTIFY_TID": "3nqqDo8CcCLke3ZoTgiOKf"
     },
     {
         "ALBUMARTIST": "M83",
@@ -455,16 +435,6 @@
         "SPOTIFY_TID": "1Td7TGT1XtK2ojUjz1mGUV"
     },
     {
-        "ALBUMARTIST": "Hozier",
-        "ALBUM": "Hozier",
-        "TITLE": "Work Song",
-        "ARTIST": [
-            "Hozier"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/35PKfoynRpVFoAUE3D5Kc6",
-        "SPOTIFY_TID": "35PKfoynRpVFoAUE3D5Kc6"
-    },
-    {
         "ALBUMARTIST": "System Of A Down",
         "ALBUM": "Protect The Land / Genocidal Humanoidz",
         "TITLE": "Protect The Land",
@@ -473,26 +443,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/11ajcVj3qSyyMPUpTJUP3y",
         "SPOTIFY_TID": "11ajcVj3qSyyMPUpTJUP3y"
-    },
-    {
-        "ALBUMARTIST": "Seether",
-        "ALBUM": "Si Vis Pacem, Para Bellum",
-        "TITLE": "Beg",
-        "ARTIST": [
-            "Seether"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/6XJnsMx6WrLWz9lRx024Pz",
-        "SPOTIFY_TID": "6XJnsMx6WrLWz9lRx024Pz"
-    },
-    {
-        "ALBUMARTIST": "Seether",
-        "ALBUM": "Si Vis Pacem, Para Bellum",
-        "TITLE": "Dangerous",
-        "ARTIST": [
-            "Seether"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/0y1t3QzZAjfFd5IxQZCS1V",
-        "SPOTIFY_TID": "0y1t3QzZAjfFd5IxQZCS1V"
     },
     {
         "ALBUMARTIST": "Mud Flow",
@@ -543,16 +493,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/3RgDvs9Jpvn3kUuaTek1R5",
         "SPOTIFY_TID": "3RgDvs9Jpvn3kUuaTek1R5"
-    },
-    {
-        "ALBUMARTIST": "System Of A Down",
-        "ALBUM": "System Of A Down/Steal This Album",
-        "TITLE": "Spiders",
-        "ARTIST": [
-            "System Of A Down"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/6gFJWZInDLVtf8b2fzStnQ",
-        "SPOTIFY_TID": "6gFJWZInDLVtf8b2fzStnQ"
     },
     {
         "ALBUMARTIST": "James Brown",
@@ -777,16 +717,6 @@
         "SPOTIFY_TID": "6Y7Md7FWqDvWxu4jK6pM9K"
     },
     {
-        "ALBUMARTIST": "Aerosmith",
-        "ALBUM": "Aerosmith",
-        "TITLE": "Dream On",
-        "ARTIST": [
-            "Aerosmith"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/1xsYj84j7hUDDnTTerGWlH",
-        "SPOTIFY_TID": "1xsYj84j7hUDDnTTerGWlH"
-    },
-    {
         "ALBUMARTIST": "The Black Keys",
         "ALBUM": "\"Let's Rock\"",
         "TITLE": "Shine A Little Light",
@@ -805,16 +735,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/0HSqXHUdHUbDjWxYIClohv",
         "SPOTIFY_TID": "0HSqXHUdHUbDjWxYIClohv"
-    },
-    {
-        "ALBUMARTIST": "Porcupine Tree",
-        "ALBUM": "Deadwing",
-        "TITLE": "Lazarus",
-        "ARTIST": [
-            "Porcupine Tree"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/0OtXJQBLb7wPXL2XyN2cFW",
-        "SPOTIFY_TID": "0OtXJQBLb7wPXL2XyN2cFW"
     },
     {
         "ALBUMARTIST": "Guns N' Roses",
@@ -947,16 +867,6 @@
         "SPOTIFY_TID": "5LuYzNT80u6BrRFtwEPet7"
     },
     {
-        "ALBUMARTIST": "jxdn",
-        "ALBUM": "Comatose",
-        "TITLE": "Comatose",
-        "ARTIST": [
-            "jxdn"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/5dVKYrPpo8d5AgUGRKMBLp",
-        "SPOTIFY_TID": "5dVKYrPpo8d5AgUGRKMBLp"
-    },
-    {
         "ALBUMARTIST": "Unto Others",
         "ALBUM": "Don't Waste Your Time II",
         "TITLE": "It Doesn't Really Matter",
@@ -965,16 +875,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/5uMml4h2o7eGfkqmXo2n7a",
         "SPOTIFY_TID": "5uMml4h2o7eGfkqmXo2n7a"
-    },
-    {
-        "ALBUMARTIST": "The Cab",
-        "ALBUM": "Symphony Soldier",
-        "TITLE": "Angel With a Shotgun",
-        "ARTIST": [
-            "The Cab"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/5A8jUZatix87xG0Zj6HSKG",
-        "SPOTIFY_TID": "5A8jUZatix87xG0Zj6HSKG"
     },
     {
         "ALBUMARTIST": "We The Kings",
@@ -1035,16 +935,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/3Rtv6zRNKpeSygXoaF9kCm",
         "SPOTIFY_TID": "3Rtv6zRNKpeSygXoaF9kCm"
-    },
-    {
-        "ALBUMARTIST": "Audioslave",
-        "ALBUM": "Audioslave",
-        "TITLE": "Shadow on the Sun",
-        "ARTIST": [
-            "Audioslave"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/2o22GHXR1z4Q0dojvRUkk7",
-        "SPOTIFY_TID": "2o22GHXR1z4Q0dojvRUkk7"
     },
     {
         "ALBUMARTIST": "Metallica",
@@ -1590,16 +1480,6 @@
         "SPOTIFY_TID": "6nNuWzPSGPZxgvQSNj9PfQ"
     },
     {
-        "ALBUMARTIST": "The Backseat Lovers",
-        "ALBUM": "Waiting to Spill",
-        "TITLE": "Growing/Dying",
-        "ARTIST": [
-            "The Backseat Lovers"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/5zMxLq47V3Gr0LlFvxiFXS",
-        "SPOTIFY_TID": "5zMxLq47V3Gr0LlFvxiFXS"
-    },
-    {
         "ALBUMARTIST": "Loving",
         "ALBUM": "Loving",
         "TITLE": "The Not Real Lake",
@@ -1639,16 +1519,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/2kkvB3RNRzwjFdGhaUA0tz",
         "SPOTIFY_TID": "2kkvB3RNRzwjFdGhaUA0tz"
-    },
-    {
-        "ALBUMARTIST": "U2",
-        "ALBUM": "War (Remastered)",
-        "TITLE": "Sunday Bloody Sunday - Remastered 2008",
-        "ARTIST": [
-            "U2"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/6C4LXC9UFH1IKiHYOp0BiJ",
-        "SPOTIFY_TID": "6C4LXC9UFH1IKiHYOp0BiJ"
     },
     {
         "ALBUMARTIST": "Meat Loaf",
@@ -2384,16 +2254,6 @@
         "SPOTIFY_TID": "7jley98gCQFueQ5MCaFWIb"
     },
     {
-        "ALBUMARTIST": "Baby Bugs",
-        "ALBUM": "Genesis",
-        "TITLE": "Autotheist",
-        "ARTIST": [
-            "Baby Bugs"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/67glriijLh7JsXpkLkiwAa",
-        "SPOTIFY_TID": "67glriijLh7JsXpkLkiwAa"
-    },
-    {
         "ALBUMARTIST": "Falling In Reverse",
         "ALBUM": "ZOMBIFIED",
         "TITLE": "ZOMBIFIED",
@@ -2584,16 +2444,6 @@
         "SPOTIFY_TID": "1ibeKVCiXORhvUpMmtsQWq"
     },
     {
-        "ALBUMARTIST": "Snow Patrol",
-        "ALBUM": "Eyes Open",
-        "TITLE": "Chasing Cars",
-        "ARTIST": [
-            "Snow Patrol"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/5hnyJvgoWiQUYZttV4wXy6",
-        "SPOTIFY_TID": "5hnyJvgoWiQUYZttV4wXy6"
-    },
-    {
         "ALBUMARTIST": "Samuel Kim",
         "ALBUM": "Attack on Titan: Epic Collection, Vol. 3",
         "TITLE": "Eren vs Jaw Titan Theme",
@@ -2718,26 +2568,6 @@
         "SPOTIFY_TID": "0F845nujLVqCb0XMZCh5Pc"
     },
     {
-        "ALBUMARTIST": "Breaking Benjamin",
-        "ALBUM": "Phobia (Explicit Version)",
-        "TITLE": "Dance With The Devil",
-        "ARTIST": [
-            "Breaking Benjamin"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/10ASBwZsp7oUUDsJEYz3uS",
-        "SPOTIFY_TID": "10ASBwZsp7oUUDsJEYz3uS"
-    },
-    {
-        "ALBUMARTIST": "Mike Shinoda",
-        "ALBUM": "Post Traumatic (Deluxe Version)",
-        "TITLE": "Over Again",
-        "ARTIST": [
-            "Mike Shinoda"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/6LkimGaq63NPvSokpdOoPU",
-        "SPOTIFY_TID": "6LkimGaq63NPvSokpdOoPU"
-    },
-    {
         "ALBUMARTIST": "Queens of the Stone Age",
         "ALBUM": "Era Vulgaris",
         "TITLE": "Make It Wit Chu",
@@ -2787,16 +2617,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/4s6LhHAV5SEsOV0lC2tjvJ",
         "SPOTIFY_TID": "4s6LhHAV5SEsOV0lC2tjvJ"
-    },
-    {
-        "ALBUMARTIST": "Avenged Sevenfold",
-        "ALBUM": "Waking The Fallen",
-        "TITLE": "I Won't See You Tonight Part 1",
-        "ARTIST": [
-            "Avenged Sevenfold"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/67w1cb9ESAnCGJkC9hW2nO",
-        "SPOTIFY_TID": "67w1cb9ESAnCGJkC9hW2nO"
     },
     {
         "ALBUMARTIST": "Pixies",
@@ -2909,16 +2729,6 @@
         "SPOTIFY_TID": "6xjSOVQzouSB9BRgV6S1AN"
     },
     {
-        "ALBUMARTIST": "Brand New",
-        "ALBUM": "Deja Entendu",
-        "TITLE": "The Boy Who Blocked His Own Shot",
-        "ARTIST": [
-            "Brand New"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/3vucm39uVyuvpUWW8EFXD8",
-        "SPOTIFY_TID": "3vucm39uVyuvpUWW8EFXD8"
-    },
-    {
         "ALBUMARTIST": "12 Stones",
         "ALBUM": "Anthem For The Underdog (Bonus Track Version)",
         "TITLE": "Hey Love",
@@ -3009,16 +2819,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/4i6Iocj734X3bKayOKJsxp",
         "SPOTIFY_TID": "4i6Iocj734X3bKayOKJsxp"
-    },
-    {
-        "ALBUMARTIST": "Linkin Park",
-        "ALBUM": "Meteora (Bonus Edition)",
-        "TITLE": "Breaking the Habit",
-        "ARTIST": [
-            "Linkin Park"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/3dxiWIBVJRlqh9xk144rf4",
-        "SPOTIFY_TID": "3dxiWIBVJRlqh9xk144rf4"
     },
     {
         "ALBUMARTIST": "Slothrust",
@@ -3120,66 +2920,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/3IV4swNduIRunHREK80owz",
         "SPOTIFY_TID": "3IV4swNduIRunHREK80owz"
-    },
-    {
-        "ALBUMARTIST": "Bon Jovi",
-        "ALBUM": "Cross Road",
-        "TITLE": "You Give Love A Bad Name",
-        "ARTIST": [
-            "Bon Jovi"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/7LBJui5MdjfCd8YZr4xaqA",
-        "SPOTIFY_TID": "7LBJui5MdjfCd8YZr4xaqA"
-    },
-    {
-        "ALBUMARTIST": "Bon Jovi",
-        "ALBUM": "Cross Road",
-        "TITLE": "Wanted Dead Or Alive",
-        "ARTIST": [
-            "Bon Jovi"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/218oi5VJPnwU3VIYKavkDS",
-        "SPOTIFY_TID": "218oi5VJPnwU3VIYKavkDS"
-    },
-    {
-        "ALBUMARTIST": "Bon Jovi",
-        "ALBUM": "Cross Road",
-        "TITLE": "Keep The Faith",
-        "ARTIST": [
-            "Bon Jovi"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/7vvhgBY4D5ukcePte0Lq3F",
-        "SPOTIFY_TID": "7vvhgBY4D5ukcePte0Lq3F"
-    },
-    {
-        "ALBUMARTIST": "Bon Jovi",
-        "ALBUM": "Slippery When Wet",
-        "TITLE": "Wanted Dead Or Alive",
-        "ARTIST": [
-            "Bon Jovi"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/0oerlffJSzhRVvtDfLcp3N",
-        "SPOTIFY_TID": "0oerlffJSzhRVvtDfLcp3N"
-    },
-    {
-        "ALBUMARTIST": "Bon Jovi",
-        "ALBUM": "Slippery When Wet",
-        "TITLE": "You Give Love A Bad Name",
-        "ARTIST": [
-            "Bon Jovi"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/0rmGAIH9LNJewFw7nKzZnc",
-        "SPOTIFY_TID": "0rmGAIH9LNJewFw7nKzZnc"
-    },
-    {
-        "ALBUMARTIST": "Bon Jovi",
-        "ALBUM": "Keep The Faith",
-        "TITLE": "Keep The Faith",
-        "ARTIST": [
-            "Bon Jovi"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/5EWtBjCLy21d1hY9zdaEe8",
-        "SPOTIFY_TID": "5EWtBjCLy21d1hY9zdaEe8"
     },
     {
         "ALBUMARTIST": "Bon Jovi",
@@ -3326,43 +3066,12 @@
     {
         "ALBUMARTIST": "Falling In Reverse",
         "ALBUM": "Voices In My Head",
-        "TITLE": "ZOMBIFIED",
-        "ARTIST": [
-            "Falling In Reverse"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/32ayX93B4SCTdiPRncfPox",
-        "SPOTIFY_TID": "32ayX93B4SCTdiPRncfPox"
-    },
-    {
-        "ALBUMARTIST": "Falling In Reverse",
-        "ALBUM": "Voices In My Head",
         "TITLE": "Voices In My Head",
         "ARTIST": [
             "Falling In Reverse"
         ],
         "SPOTIFY": "https://open.spotify.com/track/5XUuldRjPXcP5QxyEN4IXT",
         "SPOTIFY_TID": "5XUuldRjPXcP5QxyEN4IXT"
-    },
-    {
-        "ALBUMARTIST": "Machine Gun Kelly",
-        "ALBUM": "mainstream sellout",
-        "TITLE": "maybe (feat. Bring Me The Horizon)",
-        "ARTIST": [
-            "Machine Gun Kelly",
-            "Bring Me The Horizon"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/25wdC7CJmCJPgnKw9rYquJ",
-        "SPOTIFY_TID": "25wdC7CJmCJPgnKw9rYquJ"
-    },
-    {
-        "ALBUMARTIST": "Brand New",
-        "ALBUM": "Deja Entendu",
-        "TITLE": "The Quiet Things That No One Ever Knows",
-        "ARTIST": [
-            "Brand New"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/3IlY76VbP31zwPY0S2EMjh",
-        "SPOTIFY_TID": "3IlY76VbP31zwPY0S2EMjh"
     },
     {
         "ALBUMARTIST": "Arcade Fire",
@@ -4288,17 +3997,6 @@
         "SPOTIFY_TID": "1H3bR7kQ1VBOb5pEJMiPdM"
     },
     {
-        "ALBUMARTIST": "Machine Gun Kelly",
-        "ALBUM": "Tickets To My Downfall (SOLD OUT Deluxe)",
-        "TITLE": "bloody valentine - Acoustic",
-        "ARTIST": [
-            "Machine Gun Kelly",
-            "Travis Barker"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/0JX0AJ8kncF5iv8C42J1OU",
-        "SPOTIFY_TID": "0JX0AJ8kncF5iv8C42J1OU"
-    },
-    {
         "ALBUMARTIST": "Rex Orange County",
         "ALBUM": "Best Friend",
         "TITLE": "Best Friend",
@@ -4698,16 +4396,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/1ecmyd0EYLAeY5IMPJjGde",
         "SPOTIFY_TID": "1ecmyd0EYLAeY5IMPJjGde"
-    },
-    {
-        "ALBUMARTIST": "Slothrust",
-        "ALBUM": "The Pact",
-        "TITLE": "Double Down",
-        "ARTIST": [
-            "Slothrust"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/6Y7vgyXBoedIKgvmZSYXMw",
-        "SPOTIFY_TID": "6Y7vgyXBoedIKgvmZSYXMw"
     },
     {
         "ALBUMARTIST": "Slothrust",
@@ -9321,16 +9009,6 @@
     {
         "ALBUMARTIST": "Bring Me The Horizon",
         "ALBUM": "POST HUMAN: SURVIVAL HORROR",
-        "TITLE": "Parasite Eve",
-        "ARTIST": [
-            "Bring Me The Horizon"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/36xBFaVGjqm7le8CTHytUj",
-        "SPOTIFY_TID": "36xBFaVGjqm7le8CTHytUj"
-    },
-    {
-        "ALBUMARTIST": "Bring Me The Horizon",
-        "ALBUM": "POST HUMAN: SURVIVAL HORROR",
         "TITLE": "Dear Diary,",
         "ARTIST": [
             "Bring Me The Horizon"
@@ -11836,16 +11514,6 @@
         ],
         "SPOTIFY": "https://open.spotify.com/track/7Dtukb9NLJs1i0lohMlIC5",
         "SPOTIFY_TID": "7Dtukb9NLJs1i0lohMlIC5"
-    },
-    {
-        "ALBUMARTIST": "Lynyrd Skynyrd",
-        "ALBUM": "Lynyrd Skynyrd",
-        "TITLE": "Free Bird",
-        "ARTIST": [
-            "Lynyrd Skynyrd"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/0wMMEOhwQcbhYNL4KykK9R",
-        "SPOTIFY_TID": "0wMMEOhwQcbhYNL4KykK9R"
     },
     {
         "ALBUMARTIST": "Apparat",
@@ -16494,16 +16162,6 @@
     },
     {
         "ALBUMARTIST": "Queen",
-        "ALBUM": "Bohemian Rhapsody (The Original Soundtrack)",
-        "TITLE": "Crazy Little Thing Called Love",
-        "ARTIST": [
-            "Queen"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/1F9NVicWfNQA5ki8WmEtk8",
-        "SPOTIFY_TID": "1F9NVicWfNQA5ki8WmEtk8"
-    },
-    {
-        "ALBUMARTIST": "Queen",
         "ALBUM": "News Of The World (2011 Remaster)",
         "TITLE": "We Are The Champions - Remastered 2011",
         "ARTIST": [
@@ -19914,7 +19572,7 @@
             "Sergei Rachmaninoff",
             "Khatia Buniatishvili",
             "Paavo J\u00e4rvi",
-            "Czech Philharmonic Orchestra"
+            "Czech Philharmonic"
         ],
         "SPOTIFY": "https://open.spotify.com/track/7fcDQg8prLdJwim6Ey7neB",
         "SPOTIFY_TID": "7fcDQg8prLdJwim6Ey7neB"

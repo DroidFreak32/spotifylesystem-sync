@@ -359,6 +359,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                             'SPOTIFY_TID': liststr_to_list(spotify_tid),
                             'STREAMHASH': row.STREAMHASH,
                         })
+
                     else:
                         if is_item_in_db_column(row.blackALBUM, track_metadata['ALBUM']):
                             # This track belongs to another existing album in the DB or we do not have it.
@@ -484,7 +485,6 @@ def search_track_in_db(track_metadata=None, album_artist=None):
             stage += 1
         else:
             return result
-
     return result
 
 
@@ -667,11 +667,11 @@ def generate_local_playlist(all_saved_tracks=False):
     if not all_saved_tracks:
         spotify_playlist_name, spotify_playlist_tracks = spotify_ops.fetch_playlist_tracks(owner_only=True)
     else:
-        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
-        with open("allmytracks.json", "w") as jsonfile:
-            jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
-        # with open('allmytracks.json', 'r') as j:
-        #     spotify_playlist_tracks = json.loads(j.read())
+        # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
+        # with open("allmytracks.json", "w") as jsonfile:
+        #     jsonfile.write(json.dumps(deepcopy(spotify_playlist_tracks), indent=4, sort_keys=False))
+        with open('allmytracks.json', 'r') as j:
+            spotify_playlist_tracks = json.loads(j.read())
         spotify_playlist_name = 'RuMAN'
     spotify_playlist_track_total = len(spotify_playlist_tracks)
     matched_list = []
@@ -711,7 +711,6 @@ def generate_local_playlist(all_saved_tracks=False):
 
             result = \
                 search_track_in_db(track_metadata=playlist_track, album_artist=album_artist)
-
             if result == 9:
                 skip_generation_and_save = True
                 break
@@ -741,13 +740,10 @@ def generate_local_playlist(all_saved_tracks=False):
             return
         elif skip_generation_and_save:
             break
-
     for item in matched_list:
         update_trackid_in_db(spotify_tid=item['SPOTIFY_TID'], streamhash=item['STREAMHASH'])
-
     unmatched_dict = list2dictmerge(deepcopy(unmatched_list))
     matched_dict = list2dictmerge(deepcopy(matched_list))
-
     print(f"\n{len(matched_list)}/{spotify_playlist_track_total} tracks Matched. ")
 
     if input("Do you want to generate an m3u file for the matched songs?\nY/N: ")[0].casefold() == 'y':
