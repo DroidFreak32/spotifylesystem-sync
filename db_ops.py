@@ -225,14 +225,24 @@ def search_track_in_db(track_metadata=None, album_artist=None):
             #  row!
             # album_artist_tracks = Music.select().where( (Music.ALBUMARTIST == album_artist) & (Music.ALBUM ** spotify_album))
 
-            album_artist_tracks = Music.select().where(
-                (Music.ALBUMARTIST == album_artist) &
-                ((Music.ALBUM ** track_metadata['ALBUM']) | Music.altALBUM.contains(track_metadata['ALBUM']))
-            )
-            if album_artist_tracks.__len__() == 0:
-                album_artist_tracks = (Music.select().where(
-                    (Music.ALBUMARTIST == album_artist) & (Value(track_metadata['ALBUM']).contains(Music.ALBUM))
-                ))
+            # Try to match existing Spotify TIDs first to reduce future prompts.
+            # album_artist_tracks = Music.select().where(
+            #     (Music.ALBUMARTIST == album_artist) & (Music.SPOTIFY_TID.contains(spotify_tid))
+            # )
+            album_artist_tracks = Music.select().where(Music.SPOTIFY_TID.contains(spotify_tid))
+
+            if len(album_artist_tracks) == 1:
+                pass
+            else:
+
+                album_artist_tracks = Music.select().where(
+                    (Music.ALBUMARTIST == album_artist) &
+                    ((Music.ALBUM ** track_metadata['ALBUM']) | Music.altALBUM.contains(track_metadata['ALBUM']))
+                )
+                if len(album_artist_tracks) == 0:
+                    album_artist_tracks = Music.select().where(
+                        (Music.ALBUMARTIST == album_artist) & (Value(track_metadata['ALBUM']).contains(Music.ALBUM))
+                    )
 
         else:
             # Skips tracks from stage 1
