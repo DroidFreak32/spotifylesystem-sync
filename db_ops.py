@@ -653,7 +653,7 @@ def update_trackid_in_db(spotify_tid=None, streamhash=None):
         query.execute()
 
 
-def generate_local_playlist(all_saved_tracks=False):
+def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=False):
     """
     TODO: Instead of scanning each track, merge th AlbumArtist and just have 1 lookup per AA in DB
     """
@@ -746,13 +746,14 @@ def generate_local_playlist(all_saved_tracks=False):
     matched_dict = list2dictmerge(deepcopy(matched_list))
     print(f"\n{len(matched_list)}/{spotify_playlist_track_total} tracks Matched. ")
 
-    if input("Do you want to generate an m3u file for the matched songs?\nY/N: ")[0].casefold() == 'y':
-        generate_m3u(playlist_name=spotify_playlist_name,
-                     track_paths=matched_paths)
-    if len(unmatched_track_ids) > 0:
-        if input("Do you want to generate a new spotify playlist for the UNMATCHED songs?\nY/N: ")[0].casefold() == 'y':
-            spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
-                                                        playlist_name=spotify_playlist_name)
+    if not skip_playlist_generation:
+        if input("Do you want to generate an m3u file for the matched songs?\nY/N: ")[0].casefold() == 'y':
+            generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
+        if len(unmatched_track_ids) > 0:
+            if input("Do you want to generate a new spotify playlist "
+                     "for the UNMATCHED songs?\nY/N: ")[0].casefold() == 'y':
+                spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
+                                                            playlist_name=spotify_playlist_name)
 
     with open("unmatched.json", "w") as jsonfile:
         encoded_json = json.dumps(unmatched_dict, indent=4, sort_keys=True, ensure_ascii=False)

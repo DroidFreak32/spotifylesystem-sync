@@ -43,8 +43,9 @@ def main():
             cls()
             # start = time.process_time()
             # for i in range(5):
-            generate_local_playlist(all_saved_tracks=True)
+            #     generate_local_playlist(all_saved_tracks=True, skip_playlist_generation=True)
             # print(f"\nTime: {time.process_time() - start}")
+            generate_local_playlist(all_saved_tracks=True)
         elif choice == '5':
             cls()
             missing_lrc()
