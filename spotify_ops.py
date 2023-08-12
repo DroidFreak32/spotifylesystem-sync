@@ -417,6 +417,39 @@ def generate_unsaved_track_playlists(owner_only=True, all_playlists=False):
         generate_playlist_from_tracks(track_ids=unsaved_tracks, playlist_name=playlist_name)
 
 
+def delete_tracks_from_playlist(owner_only=True):
+    max_tracks = 50
+    unsaved_tracks = []
+    unsaved_indices = []
+
+    if input(f"Enter Y to delete from playlists not owned by you:").casefold() == 'y':
+        owner_only = False
+    print(f"Select the \"Eraser\" playlist that contains tracks to be deleted")
+    src_playlist_id = select_user_playlist(owner_only=True)
+
+    print(f"Select the \"Target\" playlist whose tracks will be deleted")
+    dst_playlist_id = select_user_playlist(owner_only=owner_only)
+
+    src_playlist_name, src_playlist_tracks = fetch_playlist_tracks(playlist_id=src_playlist_id)
+
+    tracklist = []
+    for track in src_playlist_tracks:
+        tracklist += sorted({track['SPOTIFY_TID'], track['SPOTIFY_LINKED_TID']})
+
+    offset = 0
+    quotient = int(len(tracklist) / max_tracks)
+    if len(tracklist) % max_tracks == 0:
+        loops = quotient
+    else:
+        loops = quotient + 1
+
+    for i in range(loops):
+        sp.playlist_remove_all_occurrences_of_items(
+            playlist_id=dst_playlist_id, items=tracklist[offset:offset+max_tracks]
+        )
+        offset += max_tracks
+
+
 def return_saved_tid(tids=None):
 
     if tids is None:
