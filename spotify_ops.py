@@ -82,6 +82,7 @@ def cleanup_playlist(playlist_raw=None):
         # BUG: Local tracks crash this method, skip them.
         if item['track']['is_local']:
             continue
+        # Initialize
         track = dict()
         track['ALBUMARTIST'] = get_proper_albumartist(item['track']['album']['artists'])
         track['ALBUM'] = item['track']['album']['name']
@@ -89,6 +90,13 @@ def cleanup_playlist(playlist_raw=None):
         track['ARTIST'] = get_proper_artist(item['track']['artists'])
         track['SPOTIFY'] = item['track']['external_urls']['spotify']
         track['SPOTIFY_TID'] = item['track']['id']
+        if 'linked_from' in item['track']:
+            track['SPOTIFY_LINKED_TID'] = item['track']['linked_from']['id']
+        else:
+            # This is to prevent Null exceptions while performing DB Query on this key
+            track['SPOTIFY_LINKED_TID'] = item['track']['id']
+
+        # track['SPOTIFY_TID'] = item['track']['id']
         if track['ALBUMARTIST'] == 'Various Artists':
             track['ALBUMARTIST'] = get_proper_albumartist(item['track']['artists'])
         cleaned_playlist.append(track)
@@ -191,11 +199,14 @@ Finds all tracks from a given playlist ID
     full_playlist_raw = []
     for i in range(loops):
         # BUG: Local tracks crash this method, capture them.
-        playlist_raw = sp.playlist_items(playlist_id=playlist_id, offset=offset,
+        # Use Market parameter to retrieve linked track IDs
+        # https://developer.spotify.com/documentation/web-api/concepts/track-relinking
+        playlist_raw = sp.playlist_items(playlist_id=playlist_id, offset=offset, market="IN",
                                          fields='items.track.album.artists.name,'
                                                 'items.track.album.name,'
                                                 'items.track.artists,'
                                                 'items.track.id,'
+                                                'items.track.linked_from.id,'
                                                 'items.track.is_local,'
                                                 'items.track.name,'
                                                 'items.track.external_urls.spotify',
@@ -334,6 +345,14 @@ def find_playlists_containing_tracks():
         line = input(prompt)
 
     a = playlists_containing_tracks(track_ids=tracks)
+
+
+def return_saved_tid(tids=None):
+
+    if tids is None:
+        tids = []
+    results = sp.current_user_saved_tracks_contains(tids)
+    return tids[0] if results[0] else tids[1]
 
 
 if __name__ == '__main__':
