@@ -847,7 +847,8 @@ def export_altColumns():
                 'altALBUM': liststr_to_list(row.altALBUM),
                 'blackALBUM': liststr_to_list(row.blackALBUM),
                 'altTITLE': liststr_to_list(row.altTITLE),
-                'blackTITLE': liststr_to_list(row.blackTITLE)
+                'blackTITLE': liststr_to_list(row.blackTITLE),
+                'SPOTIFY_TID': liststr_to_list(row.SPOTIFY_TID)
             }
         )
 
@@ -873,8 +874,10 @@ def import_altColumns():
         altColumn = json.loads(j.read())
 
     for item in altColumn:
-        query = Music.update(altALBUM=item['altALBUM'], blackALBUM=item['blackALBUM'], altTITLE=item['altTITLE'],
-                             blackTITLE=item['blackTITLE']).where(Music.STREAMHASH == item['STREAMHASH'])
+        query = Music.update(
+            altALBUM=item['altALBUM'], blackALBUM=item['blackALBUM'],
+            altTITLE=item['altTITLE'], blackTITLE=item['blackTITLE'], SPOTIFY_TID=item['SPOTIFY_TID']
+        ).where(Music.STREAMHASH == item['STREAMHASH'])
         query.execute()
 
     db.backup(master)
