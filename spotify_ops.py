@@ -13,7 +13,7 @@ def get_missing_playlist_items_from_trackids(playlist_id=None, track_ids=None):
     For some unknown reason not all tracks gets added in the playlist.
     In such cases return the missing track IDs back to the calling function
     """
-    _, playlist_tracks = get_user_playlists(playlist_id=playlist_id)
+    _, playlist_tracks = fetch_playlist_tracks(playlist_id=playlist_id)
     if len(playlist_tracks) == len(track_ids):
         return None
     missing_playlist_items = []
@@ -229,10 +229,13 @@ def get_my_saved_tracks():
     return missing_tracks_playlist_name, all_my_tracks
 
 
-def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None, playlist_id=None):
-    if unmatched_track_ids is None:
-        unmatched_track_ids = []
-    total_tracks = len(unmatched_track_ids)
+def generate_playlist_from_tracks(track_ids=None, playlist_name=None, playlist_id=None):
+    if track_ids is None:
+        track_ids = []
+    total_tracks = len(track_ids)
+    if total_tracks < 1:
+        return
+
     offset = 0
     loops = int(total_tracks / 10) + 1
 
@@ -251,17 +254,17 @@ def generate_missing_track_playlist(unmatched_track_ids=None, playlist_name=None
 
     for i in range(loops):
         print(f"Creating playlist {playlist_name}: {offset}/{total_tracks} tracks", end="\r")
-        current_batch_of_tracks = unmatched_track_ids[offset:offset + 10]
+        current_batch_of_tracks = track_ids[offset:offset + 10]
         sp.playlist_add_items(playlist_id=playlist_id, items=current_batch_of_tracks)
         offset += 10
 
     missing_playlist_items = get_missing_playlist_items_from_trackids(
-        playlist_id=playlist_id, track_ids=unmatched_track_ids)
+        playlist_id=playlist_id, track_ids=track_ids)
 
     if missing_playlist_items is not None:
         print(f"Few Tracks Missing")
-        generate_missing_track_playlist(
-            unmatched_track_ids=missing_playlist_items, playlist_name=playlist_name, playlist_id=playlist_id)
+        generate_playlist_from_tracks(
+            track_ids=missing_playlist_items, playlist_name=playlist_name, playlist_id=playlist_id)
     print(f"Playlist: {playlist_name} created!")
 
     return None

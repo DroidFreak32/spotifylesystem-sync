@@ -762,8 +762,8 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
         if len(unmatched_track_ids) > 0:
             if input("Do you want to generate a new spotify playlist "
                      "for the UNMATCHED songs?\nY/N: ")[0].casefold() == 'y':
-                spotify_ops.generate_missing_track_playlist(unmatched_track_ids=unmatched_track_ids,
-                                                            playlist_name=spotify_playlist_name)
+                spotify_ops.generate_playlist_from_tracks(track_ids=unmatched_track_ids,
+                                                          playlist_name=spotify_playlist_name)
 
     with open("unmatched.json", "w") as jsonfile:
         encoded_json = json.dumps(unmatched_dict, indent=4, sort_keys=True, ensure_ascii=False)
