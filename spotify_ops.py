@@ -347,23 +347,33 @@ def find_playlists_containing_tracks():
     a = playlists_containing_tracks(track_ids=tracks)
 
 
-def generate_unsaved_track_playlists(owner_only=True, all_playlists=False):
+def generate_unsaved_track_playlists(owner_only=True, all_playlists=False, merged=False):
 
-    if input(f"Enter Y to search through playlists not owned by you:").casefold() == 'y':
-        owner_only = False
+    playlist_counter = 0
+    playlists_count = 0
+    unsaved_tracks = []
+    unsaved_indices = []
 
     if all_playlists:
         playlist_ids = fetch_user_playlists(owner_only=owner_only, ids_only=True)
+        playlists_count = len(playlist_ids)
     else:
         print(f"Select the playlist to search")
         playlist_ids = [select_user_playlist(owner_only=owner_only)]
 
     for playlist_id in playlist_ids:
         max_tracks = 50
-        unsaved_tracks = []
-        unsaved_indices = []
+
+        # Skip resetting unsaved_tracks if we want to merge all unsaved tracks from all playlist at once
+        if not merged:
+            unsaved_tracks = []
+            unsaved_indices = []
 
         playlist_name, playlist_tracks = fetch_playlist_tracks(playlist_id=playlist_id)
+
+        if all_playlists:
+            playlist_counter += 1
+            print(f"Scanning playlist {playlist_counter}/{playlists_count}: {playlist_name} ..", end="\r")
 
         tracklist = []
         for track in playlist_tracks:
@@ -412,9 +422,16 @@ def generate_unsaved_track_playlists(owner_only=True, all_playlists=False):
         # https://stackoverflow.com/questions/21448225/getting-indices-of-true-values-in-a-boolean-list
         unsaved_indices = [i for i, s in enumerate(tracklist_saved_status) if not s]
         for i in unsaved_indices:
-            unsaved_tracks.append(tracklist[i][0])
+            unsaved_tracks += sorted(
+                {tracklist[i][0], tracklist[i][1]}
+            )
+        pass
 
-        generate_playlist_from_tracks(track_ids=unsaved_tracks, playlist_name=playlist_name)
+        if not merged:
+            generate_playlist_from_tracks(track_ids=unsaved_tracks, playlist_name=playlist_name)
+
+    if merged:
+        generate_playlist_from_tracks(track_ids=unsaved_tracks, playlist_name="MEGA_UNSAVED")
 
 
 def delete_tracks_from_playlist(owner_only=True):

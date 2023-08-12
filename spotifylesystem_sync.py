@@ -64,7 +64,19 @@ def main():
             find_playlists_containing_tracks()
         elif choice == '10':
             cls()
-            generate_unsaved_track_playlists()
+            owner_only = True
+            all_playlists = False
+            merged = False
+
+            if input(f"Enter Y to also search through playlists not owned by you:").casefold() == 'y':
+                owner_only = False
+
+            if input(f"Enter Y to scan ALL your playlists:").casefold() == 'y':
+                all_playlists = True
+                if input(f"Enter Y to merge ALL unsaved tracks to a single playlist:").casefold() == 'y':
+                    merged = True
+
+            generate_unsaved_track_playlists(owner_only=owner_only, all_playlists=all_playlists, merged=merged)
         elif choice.casefold() == 'q':
             exit()
         else:
