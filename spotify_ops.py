@@ -26,13 +26,13 @@ def get_missing_playlist_items_from_trackids(playlist_id=None, track_ids=None):
     return missing_playlist_items
 
 
-def get_proper_albumartist(artist_list=None):
+def get_proper_albumartist(artist_list=None, warning=False):
     """
     Multiple Album artists should not exist. Artist tag should be used for featured artists.
     :param artist_list:
     :return: 1st name in AlbumArtists
     """
-    if len(artist_list) > 1:
+    if len(artist_list) > 1 and warning:
         print(f"\n{bcolors.FAIL}Multiple Album Artists in track.\n"
               f"Only storing the first one: {artist_list[0]['name']}{bcolors.ENDC}")
 
