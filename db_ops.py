@@ -854,7 +854,7 @@ def export_altColumns():
 
     filename = f"altColumns_{get_current_datetime()}.json"
     with open(filename, "w") as jsonfile:
-        jsonfile.write(json.dumps(alt_columns, indent=4, sort_keys=True))
+        jsonfile.write(json.dumps(alt_columns, indent=2, sort_keys=False))
     print(f"Whitelist & Blacklist exported to: {os.path.join(os.getcwd(), filename)}")
     db.backup(master)
     master.execute_sql('VACUUM;')
