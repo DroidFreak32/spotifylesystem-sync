@@ -347,6 +347,76 @@ def find_playlists_containing_tracks():
     a = playlists_containing_tracks(track_ids=tracks)
 
 
+def generate_unsaved_track_playlists(owner_only=True, all_playlists=False):
+
+    if input(f"Enter Y to search through playlists not owned by you:").casefold() == 'y':
+        owner_only = False
+
+    if all_playlists:
+        playlist_ids = fetch_user_playlists(owner_only=owner_only, ids_only=True)
+    else:
+        print(f"Select the playlist to search")
+        playlist_ids = [select_user_playlist(owner_only=owner_only)]
+
+    for playlist_id in playlist_ids:
+        max_tracks = 50
+        unsaved_tracks = []
+        unsaved_indices = []
+
+        playlist_name, playlist_tracks = fetch_playlist_tracks(playlist_id=playlist_id)
+
+        tracklist = []
+        for track in playlist_tracks:
+            # Some tracks are Linked https://developer.spotify.com/documentation/web-api/concepts/track-relinking
+            # So include both to prevent false negatives where a track is added in the unsaved tracks playlist
+            # when in fact an alternate ID of the same track is actually present in Liked Songs.
+            # Later we will check both IDs in 2 stages to get a final list of Saved/Unsaved tracks
+            tracklist.append((track['SPOTIFY_TID'], track['SPOTIFY_LINKED_TID']))
+
+        offset = 0
+        tracklist_saved_status = []
+
+        quotient = int(len(tracklist) / max_tracks)
+        if len(tracklist) % max_tracks == 0:
+            loops = quotient
+        else:
+            loops = quotient + 1
+
+        for i in range(loops):
+            tracklist_tids = []
+            tracklist_linked_tids = []
+
+            # Using offset to avoid API limit
+            for j in tracklist[offset:offset+max_tracks]:
+                # Stage 1, TID
+                tracklist_tids.append(j[0])
+                # Stage 2, Linked TID
+                tracklist_linked_tids.append(j[1])
+
+            if tracklist_tids == tracklist_linked_tids:
+                # Both TIDs are the same so skip redundant API requests
+                stage_1 = stage_2 = sp.current_user_saved_tracks_contains(tracklist_tids)
+            else:
+                # Different TIDs detected so get 2 lists checking both IDs
+                stage_1 = sp.current_user_saved_tracks_contains(tracklist_tids)
+                stage_2 = sp.current_user_saved_tracks_contains(tracklist_linked_tids)
+
+            # Perform bitwise OR on both stages to get the true list of unsaved Tracks
+            # https://stackoverflow.com/a/47419515
+            tracklist_saved_status += [x or y for (x, y) in zip(stage_1, stage_2)]
+            offset += max_tracks
+            # To avoid API limits
+            time.sleep(0.5)
+
+        # Identify the index of tracks that are genuinely not saved by getting the position of !True items
+        # https://stackoverflow.com/questions/21448225/getting-indices-of-true-values-in-a-boolean-list
+        unsaved_indices = [i for i, s in enumerate(tracklist_saved_status) if not s]
+        for i in unsaved_indices:
+            unsaved_tracks.append(tracklist[i][0])
+
+        generate_playlist_from_tracks(track_ids=unsaved_tracks, playlist_name=playlist_name)
+
+
 def return_saved_tid(tids=None):
 
     if tids is None:
