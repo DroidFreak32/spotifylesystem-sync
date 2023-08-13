@@ -87,3 +87,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # start = time.process_time()
+    # for i in range(4):
+    #     generate_local_playlist(all_saved_tracks=True, skip_playlist_generation=True)
+    # print(f"\nTime: {time.process_time() - start}")

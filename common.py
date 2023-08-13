@@ -15,6 +15,7 @@ import pathos.multiprocessing as multiprocessing
 import spotipy
 import taglib
 import tqdm
+
 from spotipy import SpotifyOAuth
 
 global music_root_dir
@@ -340,7 +341,7 @@ def generate_metadata_with_warnings(music_dir, flac_files):
     inputs = zip(repeat(music_dir), flac_files)
 
     # fancy progress bar
-    result = a_pool.starmap(fetch_metadata_in_background, tqdm.tqdm(inputs, total=len(flac_files)), chunksize=1)
+    result = a_pool.starmap(fetch_metadata_in_background, tqdm.tqdm(inputs, total=len(flac_files)), chunksize=4)
     print(f"\nMetadata fetched!\n")
 
     for item in result:
