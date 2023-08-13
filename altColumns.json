@@ -1,29 +1,5 @@
 [
   {
-    "STREAMHASH": "64ccb5364ea12ffc32fdc099a50ebc5d",
-    "altALBUM": [
-      "Anthem For The Underdog (Bonus Track Version)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "471eQ7hcJ7JdGY1NzMmUeg"
-    ]
-  },
-  {
-    "STREAMHASH": "1909754b7c36d91692053de757827320",
-    "altALBUM": [
-      "Anthem For The Underdog (Bonus Track Version)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "3LFzNhpnt4mqw8PtK67h1T"
-    ]
-  },
-  {
     "STREAMHASH": "e877411d461b37334a9d4454d0a1da0b",
     "altALBUM": [
       "Seventeen Days"
@@ -47,6 +23,30 @@
     ],
     "SPOTIFY_TID": [
       "3NLrRZoMF0Lx6zTlYqeIo4"
+    ]
+  },
+  {
+    "STREAMHASH": "64ccb5364ea12ffc32fdc099a50ebc5d",
+    "altALBUM": [
+      "Anthem For The Underdog (Bonus Track Version)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "471eQ7hcJ7JdGY1NzMmUeg"
+    ]
+  },
+  {
+    "STREAMHASH": "1909754b7c36d91692053de757827320",
+    "altALBUM": [
+      "Anthem For The Underdog (Bonus Track Version)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "3LFzNhpnt4mqw8PtK67h1T"
     ]
   },
   {
@@ -143,6 +143,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "3sVAq83i04vSLVRNXWKfMO"
+    ]
+  },
+  {
+    "STREAMHASH": "5e9a392900164fca50470b5d8b38162e",
+    "altALBUM": [
+      "Lost in Love"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "6MfVSA5iKBPHzo6RGARjL0"
     ]
   },
   {
@@ -1487,15 +1499,15 @@
     ]
   },
   {
-    "STREAMHASH": "c790ab063f0b74a971b73eec84aeac48",
+    "STREAMHASH": "245322999e91a944a599a2bcd8a45a04",
     "altALBUM": [
-      "Foiled For The Last Time"
+      "Genesis"
     ],
     "blackALBUM": null,
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "5rlTdsvAZUylyWypFQFc5i"
+      "7Efj41liKKTAbXHcsbhIwP"
     ]
   },
   {
@@ -2624,17 +2636,15 @@
     ]
   },
   {
-    "STREAMHASH": "4581bf14dbc992cdbecc13d2944dc02b",
+    "STREAMHASH": "0505ab35f13725f705d0fe4c94eae670",
     "altALBUM": [
-      "Serotonin Dreams"
+      "Feels Like We\u2019ve Been Here Before"
     ],
     "blackALBUM": null,
-    "altTITLE": [
-      "IDGAF (with blackbear)"
-    ],
+    "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "4ZUpTMKPYFTfJqamWFU9Zv"
+      "2b0G006xcIUoqvRDDaCT8E"
     ]
   },
   {
@@ -3408,6 +3418,158 @@
     ]
   },
   {
+    "STREAMHASH": "b877cf58cdab5fab5f92f9d1b70828a6",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "61ae2ab90f8403d0cf9727cb05d7fc91",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "9c38009dc1e9ea3e626aa8a58a5c6ee6",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "840ac5cef22e0f006ed62c9e6a7e47f6",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "dc810d1759fb979956413ce48f202d1f",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "c75767e4208f90ae946012def6935ff2",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "75e1d7bd108c49d1a43cdc9c9adfeff4",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "a118351c6a201c516698c0857b6296c5",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "2hFAUhpBME5tWs5coiLxFL"
+    ]
+  },
+  {
+    "STREAMHASH": "1ff56ca73aa6c82cbc74e3382d92a52b",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "97c578104eeb88cda52206b582562461",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "6ac7b4e9755968dfd020289d44b90a07",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "4fc5a124f5673e8e227925512bf5c44e",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "0cdde474a84d2cdff393d2f98898ff95",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "e0fa2693bb4fb94ef282e63d69f472c4",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "d494e6b2571493b6799f694b7209dc9b",
+    "altALBUM": [
+      "Venom (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "637e9f9837085c6fcfe6111319505aea",
     "altALBUM": [
       "The Bones Of What You Believe (Special Edition)"
@@ -3530,30 +3692,6 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "1MHYAqWWdDRePmnqORynrq"
-    ]
-  },
-  {
-    "STREAMHASH": "7a072f9ba56451ce7697cc1e141fb197",
-    "altALBUM": [
-      "Cigarettes After Sex"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "0yc6Gst2xkRu0eMLeRMGCX"
-    ]
-  },
-  {
-    "STREAMHASH": "ae84a1e65743a3b506e1b908b593b62f",
-    "altALBUM": [
-      "Cry"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "70YTBH8vOGJNMhy6186yFm"
     ]
   },
   {
@@ -3801,6 +3939,20 @@
     ]
   },
   {
+    "STREAMHASH": "d6361357e59d1a8b99935cb992d65d65",
+    "altALBUM": [
+      "The Man Who Sold the World (2015 Remaster)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "The Man Who Sold the World - 2015 Remaster"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "4mWahKerLaVddUjb8d1Q4Q"
+    ]
+  },
+  {
     "STREAMHASH": "f27f4ac1ed1b18efedcc9bf52d208507",
     "altALBUM": [
       "Blackstar"
@@ -3810,6 +3962,34 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "3Vn9oCZbdI1EMO7jxdz2Rc"
+    ]
+  },
+  {
+    "STREAMHASH": "9348d6972b7956943ed7812f01c6bd34",
+    "altALBUM": [
+      "David Bowie (aka Space Oddity) [2015 Remaster]"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "Space Oddity - 2015 Remaster"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "72Z17vmmeQKAg8bptWvpVG"
+    ]
+  },
+  {
+    "STREAMHASH": "ab5caed20e5bcb5d2d06e5d659f9df25",
+    "altALBUM": [
+      "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "Moonage Daydream - 2012 Remaster"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "6mib3N4E8PZHAGQ3xy7bho"
     ]
   },
   {
@@ -3879,17 +4059,15 @@
     ]
   },
   {
-    "STREAMHASH": "ead42505b1175099bb8d4be91de010e9",
+    "STREAMHASH": "c790ab063f0b74a971b73eec84aeac48",
     "altALBUM": [
-      "Brothers In Arms (Remastered 1996)"
+      "Foiled For The Last Time"
     ],
     "blackALBUM": null,
-    "altTITLE": [
-      "Money For Nothing - Remastered 1996"
-    ],
+    "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "4nFNJmjfgBF7jwv2oBC45b"
+      "5rlTdsvAZUylyWypFQFc5i"
     ]
   },
   {
@@ -3981,6 +4159,20 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "4cCQ0wBIc9YHhvOWvWNj7S"
+    ]
+  },
+  {
+    "STREAMHASH": "4f4708610a18b5d8afdc7e15cbe93ed9",
+    "altALBUM": [
+      "One of These Nights (2013 Remaster)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "One of These Nights - 2013 Remaster"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "608xszaAxVh4m7NcKJiAbF"
     ]
   },
   {
@@ -4334,6 +4526,257 @@
     "SPOTIFY_TID": [
       "4xkOaSrkexMciUUogZKVTS"
     ]
+  },
+  {
+    "STREAMHASH": "cd1f02e957326e5702affc095231cf13",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "070454532305d74426bf2da361e4dc73",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "5484bcb2d30bc967ebc79dc98f95ca23",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "1e7d6c61868ea2b38c902ea71015a43f",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "30e4eae17e7439fed97d01a8af19b9c8",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "d52bb0d531da7c308f123d9801dc580f",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "1578c67ffc61331e6295d2d82de3e416",
+    "altALBUM": [
+      "Lose Yourself",
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "Lose Yourself - From \"8 Mile\" Soundtrack",
+      "Lose Yourself - Soundtrack Version"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "5Z01UMMf7V1o0MzF86s6WJ",
+      "6atDVsk39X4LS1C3hdgX5l"
+    ]
+  },
+  {
+    "STREAMHASH": "ca3a049eac59194f039f237b5b95d0c2",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1dVuiJnZwKhCw3xy0SL0lo"
+    ]
+  },
+  {
+    "STREAMHASH": "674395e2e127596010aaa941c6d855f2",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "fa412a22f4037b46c39b6cdea99c6fb3",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "3fe05844956b9bfa4215b4c0e9acb10b",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "e1709e1b186a3b6c5b7eb9e8e1f3b98a",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "2df9a6ee692b803c3c03fc3a85f09bf7",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "4529aa35345cd4c918227f2621d1b23f",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "8059c6180c222caedf2701fe063c86da",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "bb860e4ba7f7c480586cf6f90981063a",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "42YNobZ4HN3tRVEA47wLT6"
+    ]
+  },
+  {
+    "STREAMHASH": "24580513f4025a9fe34657d860d57b02",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "5f6ba1941889be7248c09b4d8f0d1681",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "c27d42a9ba5ab06986d17400170511ed",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "f2bb5e67ae2e3d11b712881cae6477ea",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "cd0afd1a8a481917eb6d37baa11d01e8",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "5be655cea9796207d407524cfd8f750e",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "6359b361b6324c85d48cb62f0bc0d058",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "9a8b830a7fcd3ef79819a04712bf9bcb",
+    "altALBUM": [
+      "Curtain Call: The Hits (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "a27c11f72d13e957962c33261a4dc97b",
@@ -5528,43 +5971,17 @@
     ]
   },
   {
-    "STREAMHASH": "43e5d09d5d26b36e7d0c23ac1801e272",
+    "STREAMHASH": "4581bf14dbc992cdbecc13d2944dc02b",
     "altALBUM": [
-      "Rumours (Super Deluxe)"
+      "Serotonin Dreams"
     ],
     "blackALBUM": null,
     "altTITLE": [
-      "The Chain - 2004 Remaster"
+      "IDGAF (with blackbear)"
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "5e9TFTbltYBg2xThimr0rU"
-    ]
-  },
-  {
-    "STREAMHASH": "b4007979509b34b3bba2d8f2b27e7e00",
-    "altALBUM": [
-      "Rumours (Super Deluxe)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": [
-      "Rhiannon - Live 1977"
-    ],
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "1nWyUagJmVzvBGTMDeY73L"
-    ]
-  },
-  {
-    "STREAMHASH": "6e7347382b9848976e272ee3ef7b13bb",
-    "altALBUM": [
-      "Fleetwood Mac's Greatest Hits"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "6J1NKcC7xlbz5yrATZZ1X0"
+      "4ZUpTMKPYFTfJqamWFU9Zv"
     ]
   },
   {
@@ -6242,14 +6659,16 @@
     ]
   },
   {
-    "STREAMHASH": "3b3de18d484356185d9c84bfd8eaeb31",
+    "STREAMHASH": "6e1fc56698422daf5b5a6314f3be51e5",
     "altALBUM": [
-      "American Tragedy (Deluxe Edition)"
+      "Chet Baker Sings"
     ],
     "blackALBUM": null,
     "altTITLE": null,
     "blackTITLE": null,
-    "SPOTIFY_TID": null
+    "SPOTIFY_TID": [
+      "0F845nujLVqCb0XMZCh5Pc"
+    ]
   },
   {
     "STREAMHASH": "e9c05ff403fe9a29967d2d466d1b6b63",
@@ -7563,6 +7982,18 @@
     ]
   },
   {
+    "STREAMHASH": "10b8bc9fda1881d704a8ede0158bd69e",
+    "altALBUM": [
+      "Pronounced' Leh-'Nerd 'Skin-'Nerd"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1ju7EsSGvRybSNEsRvc7qY"
+    ]
+  },
+  {
     "STREAMHASH": "2aef9ff74f5aa4b2b5f274c74ad689c6",
     "altALBUM": [
       "Second Helping (Expanded Edition)"
@@ -7969,62 +8400,44 @@
     ]
   },
   {
-    "STREAMHASH": "4fa8a1bdb550f787e7ee2555607f85da",
+    "STREAMHASH": "43e5d09d5d26b36e7d0c23ac1801e272",
     "altALBUM": [
-      "Ride The Lightning (Deluxe / Remastered)"
+      "Rumours (Super Deluxe)"
     ],
     "blackALBUM": null,
     "altTITLE": [
-      "Fade To Black - Remastered"
+      "The Chain - 2004 Remaster"
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "5nekfiTN45vlxG0eNJQQye"
+      "5e9TFTbltYBg2xThimr0rU"
     ]
   },
   {
-    "STREAMHASH": "8c00ffaa1242d37878a117038fc90a17",
+    "STREAMHASH": "b4007979509b34b3bba2d8f2b27e7e00",
     "altALBUM": [
-      "Ride The Lightning (Deluxe / Remastered)"
+      "Rumours (Super Deluxe)"
     ],
     "blackALBUM": null,
     "altTITLE": [
-      "Ride The Lightning - Remastered"
+      "Rhiannon - Live 1977"
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "2O7UGwJPVlix15Wn4sa5vw"
+      "1nWyUagJmVzvBGTMDeY73L"
     ]
   },
   {
-    "STREAMHASH": "467e96a1fc4d628c560cc11832128cd5",
-    "altALBUM": null,
+    "STREAMHASH": "6e7347382b9848976e272ee3ef7b13bb",
+    "altALBUM": [
+      "Fleetwood Mac's Greatest Hits"
+    ],
     "blackALBUM": null,
     "altTITLE": null,
-    "blackTITLE": [
-      "The Unforgiven"
-    ],
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "42b0d5b5197f53a3b48a4bca32ceceb2",
-    "altALBUM": null,
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": [
-      "The Unforgiven"
-    ],
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "ceea841c5a41664b7b82e65878c0a91d",
-    "altALBUM": null,
-    "blackALBUM": null,
-    "altTITLE": [
-      "Sad But True - Live"
-    ],
     "blackTITLE": null,
-    "SPOTIFY_TID": null
+    "SPOTIFY_TID": [
+      "6J1NKcC7xlbz5yrATZZ1X0"
+    ]
   },
   {
     "STREAMHASH": "6a3eb8ecdc385273dda42b28e3630983",
@@ -11313,6 +11726,18 @@
     ]
   },
   {
+    "STREAMHASH": "7f5c5b4591ec82d2fcbd65114c751ca3",
+    "altALBUM": [
+      "Hurry up, We're Dreaming"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "6GyFP1nfCDB8lbD2bG0Hq9"
+    ]
+  },
+  {
     "STREAMHASH": "dbd43926c6d7c8516cd13f0f0c05fe08",
     "altALBUM": [
       "Buds"
@@ -11349,15 +11774,27 @@
     ]
   },
   {
-    "STREAMHASH": "79bf80eded2cd2ea34670ed4656176a7",
+    "STREAMHASH": "7a072f9ba56451ce7697cc1e141fb197",
     "altALBUM": [
-      "Louder Now (Deluxe Edition)"
+      "Cigarettes After Sex"
     ],
     "blackALBUM": null,
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "6fx1fKIs5e0pBL5FpdC7RB"
+      "0yc6Gst2xkRu0eMLeRMGCX"
+    ]
+  },
+  {
+    "STREAMHASH": "ae84a1e65743a3b506e1b908b593b62f",
+    "altALBUM": [
+      "Cry"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "70YTBH8vOGJNMhy6186yFm"
     ]
   },
   {
@@ -12035,18 +12472,6 @@
     ]
   },
   {
-    "STREAMHASH": "45ad930a186ee52f8e42465f6ce618d4",
-    "altALBUM": [
-      "#3 Deluxe Version"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "7kOSY3PuyY0tuSKQJGyS45"
-    ]
-  },
-  {
     "STREAMHASH": "a4052ea73dcff4050c7ca6a9299a58e8",
     "altALBUM": [
       "#3 Deluxe Version"
@@ -12059,17 +12484,15 @@
     ]
   },
   {
-    "STREAMHASH": "ffcd282fb0f0d8b8adbc420b3f0ce944",
+    "STREAMHASH": "45ad930a186ee52f8e42465f6ce618d4",
     "altALBUM": [
       "#3 Deluxe Version"
     ],
     "blackALBUM": null,
     "altTITLE": null,
-    "blackTITLE": [
-      "Hall of Fame"
-    ],
+    "blackTITLE": null,
     "SPOTIFY_TID": [
-      "1X1DWw2pcNZ8zSub3uhlNz"
+      "7kOSY3PuyY0tuSKQJGyS45"
     ]
   },
   {
@@ -12094,6 +12517,20 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "1gxHYlzU60Wz5NnFm1Yv33"
+    ]
+  },
+  {
+    "STREAMHASH": "ffcd282fb0f0d8b8adbc420b3f0ce944",
+    "altALBUM": [
+      "#3 Deluxe Version"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": [
+      "Hall of Fame"
+    ],
+    "SPOTIFY_TID": [
+      "1X1DWw2pcNZ8zSub3uhlNz"
     ]
   },
   {
@@ -12157,6 +12594,16 @@
     ]
   },
   {
+    "STREAMHASH": "45a19c78410910381404ec1fd80ae402",
+    "altALBUM": [
+      "#3 Deluxe Version"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "7a78796d1339fa857ed6977f7ee976e4",
     "altALBUM": [
       "#3 Deluxe Version"
@@ -12167,14 +12614,16 @@
     "SPOTIFY_TID": null
   },
   {
-    "STREAMHASH": "45a19c78410910381404ec1fd80ae402",
+    "STREAMHASH": "37c8eef88576482987dabdd745f044d0",
     "altALBUM": [
       "#3 Deluxe Version"
     ],
     "blackALBUM": null,
     "altTITLE": null,
     "blackTITLE": null,
-    "SPOTIFY_TID": null
+    "SPOTIFY_TID": [
+      "46N5bUS88qYcDXYvCRCPPm"
+    ]
   },
   {
     "STREAMHASH": "a62c696e57b1e78bbd614419b09d479f",
@@ -12191,18 +12640,6 @@
     ]
   },
   {
-    "STREAMHASH": "37c8eef88576482987dabdd745f044d0",
-    "altALBUM": [
-      "#3 Deluxe Version"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "46N5bUS88qYcDXYvCRCPPm"
-    ]
-  },
-  {
     "STREAMHASH": "2a167117ac29bd8376143bb4b069eccf",
     "altALBUM": [
       "#3 Deluxe Version"
@@ -12215,7 +12652,7 @@
     ]
   },
   {
-    "STREAMHASH": "1dcfbfd9d02d9afd0a46ad70dc6705c6",
+    "STREAMHASH": "09aea99df181c7f3f611f44c86755e9b",
     "altALBUM": [
       "#3 Deluxe Version"
     ],
@@ -12225,7 +12662,7 @@
     "SPOTIFY_TID": null
   },
   {
-    "STREAMHASH": "09aea99df181c7f3f611f44c86755e9b",
+    "STREAMHASH": "1dcfbfd9d02d9afd0a46ad70dc6705c6",
     "altALBUM": [
       "#3 Deluxe Version"
     ],
@@ -12297,6 +12734,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "6Qg7cgN1oZ5mG5nZe9UG0X"
+    ]
+  },
+  {
+    "STREAMHASH": "a9697b4a72786ac1c412efe1359b02ec",
+    "altALBUM": [
+      "Tommy"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "6LbbHFEajG9e4m0G3L47c4"
     ]
   },
   {
@@ -12646,6 +13095,16 @@
     ]
   },
   {
+    "STREAMHASH": "3b3de18d484356185d9c84bfd8eaeb31",
+    "altALBUM": [
+      "American Tragedy (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "ee15b6ba4fc438eb6d766ae19d58fca9",
     "altALBUM": null,
     "blackALBUM": null,
@@ -12729,28 +13188,86 @@
     ]
   },
   {
-    "STREAMHASH": "0505ab35f13725f705d0fe4c94eae670",
+    "STREAMHASH": "7e4639833baa348dcfbf6b30bdaf0a82",
     "altALBUM": [
-      "Feels Like We\u2019ve Been Here Before"
+      "An Awesome Wave"
     ],
     "blackALBUM": null,
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "2b0G006xcIUoqvRDDaCT8E"
+      "7v9VgPcjy7gPRsHZjKPUhU"
     ]
   },
   {
-    "STREAMHASH": "7f5c5b4591ec82d2fcbd65114c751ca3",
+    "STREAMHASH": "4fa8a1bdb550f787e7ee2555607f85da",
     "altALBUM": [
-      "Hurry up, We're Dreaming"
+      "Ride The Lightning (Deluxe / Remastered)"
     ],
     "blackALBUM": null,
+    "altTITLE": [
+      "Fade To Black - Remastered"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "5nekfiTN45vlxG0eNJQQye"
+    ]
+  },
+  {
+    "STREAMHASH": "8c00ffaa1242d37878a117038fc90a17",
+    "altALBUM": [
+      "Ride The Lightning (Deluxe / Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "Ride The Lightning - Remastered"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "2O7UGwJPVlix15Wn4sa5vw"
+    ]
+  },
+  {
+    "STREAMHASH": "1ba23cb6cdee679854e105b310017964",
+    "altALBUM": null,
+    "blackALBUM": [
+      "The Metallica Blacklist"
+    ],
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "6GyFP1nfCDB8lbD2bG0Hq9"
+      "4aYLAF6ckQ5ooGGGM7sWAa"
     ]
+  },
+  {
+    "STREAMHASH": "467e96a1fc4d628c560cc11832128cd5",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": [
+      "The Unforgiven"
+    ],
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "42b0d5b5197f53a3b48a4bca32ceceb2",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": [
+      "The Unforgiven"
+    ],
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "ceea841c5a41664b7b82e65878c0a91d",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Sad But True - Live"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "1c9b6c7b276fffcec8b83e1d5e69db02",
@@ -12767,15 +13284,15 @@
     ]
   },
   {
-    "STREAMHASH": "7213c18a7bc39597da1771dcb5daeb20",
-    "altALBUM": null,
-    "blackALBUM": null,
-    "altTITLE": [
-      "California Dreamin' - Single Version"
+    "STREAMHASH": "79bf80eded2cd2ea34670ed4656176a7",
+    "altALBUM": [
+      "Louder Now (Deluxe Edition)"
     ],
+    "blackALBUM": null,
+    "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "4s6LhHAV5SEsOV0lC2tjvJ"
+      "6fx1fKIs5e0pBL5FpdC7RB"
     ]
   },
   {
@@ -12788,6 +13305,106 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "2j0a5RPLitwYRnDyYJC0kQ"
+    ]
+  },
+  {
+    "STREAMHASH": "7213c18a7bc39597da1771dcb5daeb20",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "California Dreamin' - Single Version"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "4s6LhHAV5SEsOV0lC2tjvJ"
+    ]
+  },
+  {
+    "STREAMHASH": "8e270c55f66f48af15c27f3027c0f459",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Feel like Makin' Love - 2015 Remaster"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "3KPwt1LBpt1jVSHz8GXERo"
+    ]
+  },
+  {
+    "STREAMHASH": "8612a734414968b52ba9038e6d8be983",
+    "altALBUM": [
+      "Don't Say No (Remastered 2010)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "The Stroke - Remastered 2010"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "52KvuGmgcgRdrLMXOtda0E"
+    ]
+  },
+  {
+    "STREAMHASH": "28f8e3f6e750f4977090d7e1f4dd958d",
+    "altALBUM": [
+      "Pendulum (Expanded Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "2LawezPeJhN4AWuSB0GtAU"
+    ]
+  },
+  {
+    "STREAMHASH": "6cf1f08f9dda63d91bd3de2366001630",
+    "altALBUM": [
+      "Layla And Other Assorted Love Songs (Remastered 2010)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "2kkvB3RNRzwjFdGhaUA0tz"
+    ]
+  },
+  {
+    "STREAMHASH": "f68b22e2d1c01fb098fd3fb5eb4b4ff7",
+    "altALBUM": [
+      "Permanent Vacation"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "3DCU0R5FFaB9GKxZERb5wr"
+    ]
+  },
+  {
+    "STREAMHASH": "9dbf524a5aa474864918ebdc195c94d2",
+    "altALBUM": [
+      "Exile on Mainstream (International)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "Long Day - 2007 Remaster"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0xoqetd8TVQlO1QnyZOX09"
+    ]
+  },
+  {
+    "STREAMHASH": "b9d92df894df6fd0d7502cb6af21386e",
+    "altALBUM": [
+      "90125 (Deluxe Version)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0GTK6TesV108Jj5D3MHsYb"
     ]
   },
   {
@@ -12884,6 +13501,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "6zeE5tKyr8Nu882DQhhSQI"
+    ]
+  },
+  {
+    "STREAMHASH": "216ffd3bf63d02016a4f4fa4e724734d",
+    "altALBUM": [
+      "For Crying Out Loud (Deluxe)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "2nZ7Cvk7RIdnG3KvihJd5F"
     ]
   },
   {
@@ -15567,6 +16196,18 @@
     ]
   },
   {
+    "STREAMHASH": "30c94054636700d134442734573b5317",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Muscle Museum - Live Acoustic Version KCRW 8/3/99"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "4hfO5Y0VTgzGyyv8EpsNYj"
+    ]
+  },
+  {
     "STREAMHASH": "ef8892f4b254afd593f66c7100a26f95",
     "altALBUM": [
       "Dr Feelgood"
@@ -15577,414 +16218,6 @@
     "SPOTIFY_TID": [
       "1RQwcsdHIW5p86cx8zuf1I"
     ]
-  },
-  {
-    "STREAMHASH": "f8eeed28229138d7160b0e589e187bfd",
-    "altALBUM": [
-      "All the Right Reasons (Walmart Exclusive Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "1EFddFVisHbqCHah6oBlhD"
-    ]
-  },
-  {
-    "STREAMHASH": "7f7685bd9b74f29cabcfd78a7c40f21c",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "0c2296bb3a3be075e568224523fd2ab4",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "1f65e92a03e0821f1f6976ffedb684b8",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "a34e85c3f7dd812da99819ca58b8f9cf",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "0MKGH8UMfCnq5w7nG06oM5",
-      "2RsAajgo0g7bMCHxwH3Sk0"
-    ]
-  },
-  {
-    "STREAMHASH": "490653adc8a97d511b26ef7f0c7e19ad",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "6127309dd39cb40c2556aec877eee5b1",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "35af2c6ddd9ca0a717d123929f59a5c6",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "65d1fa9fa334f2b6e9db49927657fb3a",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "bd132c4e4934a1f9732b1de61b3d287a",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "e4b72b20da17247593fae32f7307ac84",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "136d8a6ca46c3b1cc24aacdc1822b8be",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "0eeEzvw5Etwv6tyz2PyE6L"
-    ]
-  },
-  {
-    "STREAMHASH": "97bc8c09b36fe276fa556f467d620fe8",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "a01f393cbc8453949170c6a175759a77",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "26D1PRJjD9Jj1JGRk88KVc",
-      "5vHLwhxxlGzmClMcxRRFPr"
-    ]
-  },
-  {
-    "STREAMHASH": "d9af69810d5773b38fb9456124a2d5ef",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "5f30bc43ef6d00d8e2805b6e7dc627c0",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "0dbc44229db4caed83f0295791c67133",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "48dc3376fc89b01f41d360378a4cbf5b",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "877dd050dcad0817350d19f32f035357",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "cc554060a10a23d270d125361f288652",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "5ghIJDpPoe3CfHMGu71E6T"
-    ]
-  },
-  {
-    "STREAMHASH": "87afeb0e9f94c4b628000f7ba2c5271c",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "09fc4039a5239b6968f8b68c6045f4b8",
-    "altALBUM": [
-      "Nevermind (Deluxe Edition)",
-      "Nevermind (Remastered)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "8f55e33ff170ece30b3f2bd2f4cf3adc",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "18a671eaa3c471ae9b8e10160dbc491e",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "d0cc96f61d786eec6547a1ac5464a817",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "333de41471a45ffa68ccfb2372978e9a",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "11LmqTE2naFULdEP94AUBa"
-    ]
-  },
-  {
-    "STREAMHASH": "9ffee11110f7e1f036b51a1e051d8c4f",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "b9773e6ddfb978cff6e1c1bae7c39633",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "ce477c190c9425ffc7d5f3ca4c6c58f2",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "a291d48f447bea5647230fa4380c6eef",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "ab1bb8015703dd514dd714ea617b2843",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "32044d3421e4486433c541410034659c",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "4f1c8072c3660cb4661fceca2d5f0c29",
-    "altALBUM": [
-      "Nirvana",
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "4SCzhsw9HHBaLsr2KhmmKG"
-    ]
-  },
-  {
-    "STREAMHASH": "4b1366f13c93e193fb0845ac5eb9ca1a",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "30ed8c1d0419efb2a921a90f7385a863",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "c6936baf9610001eaa448f92fee7b7fe",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "e4fb2fac17b5eedffa26347313ecad3e",
-    "altALBUM": [
-      "In Utero - 20th Anniversary - Deluxe Edition"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "1fc5e7344dd125e9895a869dd8dad0bd",
@@ -16368,6 +16601,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "7eN3lGwu6SSmwYGH9PlpYa"
+    ]
+  },
+  {
+    "STREAMHASH": "9d913dfd61357ca6fe2eb6ab2e894128",
+    "altALBUM": [
+      "Boom Boom Room (Side A)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "3DFYVPtuYAM8Tf7sXvdbR2"
     ]
   },
   {
@@ -18353,6 +18598,18 @@
     ]
   },
   {
+    "STREAMHASH": "489a28d1a29e6813c19d44ee30cd7d5d",
+    "altALBUM": [
+      "Perdida"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1fzw0qGcB6xs4IBXhdfAkj"
+    ]
+  },
+  {
     "STREAMHASH": "fd17a4e9a81e15898876d4f2da75e584",
     "altALBUM": [
       "Toxicity"
@@ -18362,6 +18619,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "2DlHlPMa4M17kufBvI2lEN"
+    ]
+  },
+  {
+    "STREAMHASH": "e4e3b6577141086750ebc757d515ab10",
+    "altALBUM": [
+      "System Of A Down/Steal This Album"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "4vAHXnJ5YWLq5hbIVzZS1h"
     ]
   },
   {
@@ -18387,6 +18656,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "4qgSTpJskMqxPZOinlGWmi"
+    ]
+  },
+  {
+    "STREAMHASH": "0683a1b20c8aa356d1db030ce69fc19f",
+    "altALBUM": [
+      "Waiting to Spill"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "4JAFlkYkNy1MM6zOqRbiGp"
     ]
   },
   {
@@ -18626,15 +18907,17 @@
     ]
   },
   {
-    "STREAMHASH": "12b2e49708019ec3a94c4ca6ec7af073",
+    "STREAMHASH": "ead42505b1175099bb8d4be91de010e9",
     "altALBUM": [
-      "Let The Bad Times Roll (Deluxe Edition)"
+      "Brothers In Arms (Remastered 1996)"
     ],
     "blackALBUM": null,
-    "altTITLE": null,
+    "altTITLE": [
+      "Money For Nothing - Remastered 1996"
+    ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "0O2UONKvVfdwDyefKh5Yo1"
+      "4nFNJmjfgBF7jwv2oBC45b"
     ]
   },
   {
@@ -19366,30 +19649,6 @@
     "SPOTIFY_TID": null
   },
   {
-    "STREAMHASH": "245322999e91a944a599a2bcd8a45a04",
-    "altALBUM": [
-      "Genesis"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "7Efj41liKKTAbXHcsbhIwP"
-    ]
-  },
-  {
-    "STREAMHASH": "6e1fc56698422daf5b5a6314f3be51e5",
-    "altALBUM": [
-      "Chet Baker Sings"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "0F845nujLVqCb0XMZCh5Pc"
-    ]
-  },
-  {
     "STREAMHASH": "dc07bc5f04796d3b9c3c29eccd03fc56",
     "altALBUM": [
       "Come Around Sundown (Expanded Edition)"
@@ -19400,6 +19659,414 @@
     "SPOTIFY_TID": [
       "0umDVf77ygI5RiVp9OvNDj"
     ]
+  },
+  {
+    "STREAMHASH": "f8eeed28229138d7160b0e589e187bfd",
+    "altALBUM": [
+      "All the Right Reasons (Walmart Exclusive Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1EFddFVisHbqCHah6oBlhD"
+    ]
+  },
+  {
+    "STREAMHASH": "7f7685bd9b74f29cabcfd78a7c40f21c",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "0c2296bb3a3be075e568224523fd2ab4",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "1f65e92a03e0821f1f6976ffedb684b8",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "a34e85c3f7dd812da99819ca58b8f9cf",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0MKGH8UMfCnq5w7nG06oM5",
+      "2RsAajgo0g7bMCHxwH3Sk0"
+    ]
+  },
+  {
+    "STREAMHASH": "490653adc8a97d511b26ef7f0c7e19ad",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "6127309dd39cb40c2556aec877eee5b1",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "35af2c6ddd9ca0a717d123929f59a5c6",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "65d1fa9fa334f2b6e9db49927657fb3a",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "bd132c4e4934a1f9732b1de61b3d287a",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "e4b72b20da17247593fae32f7307ac84",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "136d8a6ca46c3b1cc24aacdc1822b8be",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0eeEzvw5Etwv6tyz2PyE6L"
+    ]
+  },
+  {
+    "STREAMHASH": "97bc8c09b36fe276fa556f467d620fe8",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "a01f393cbc8453949170c6a175759a77",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "26D1PRJjD9Jj1JGRk88KVc",
+      "5vHLwhxxlGzmClMcxRRFPr"
+    ]
+  },
+  {
+    "STREAMHASH": "d9af69810d5773b38fb9456124a2d5ef",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "5f30bc43ef6d00d8e2805b6e7dc627c0",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "0dbc44229db4caed83f0295791c67133",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "48dc3376fc89b01f41d360378a4cbf5b",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "877dd050dcad0817350d19f32f035357",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "cc554060a10a23d270d125361f288652",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "5ghIJDpPoe3CfHMGu71E6T"
+    ]
+  },
+  {
+    "STREAMHASH": "87afeb0e9f94c4b628000f7ba2c5271c",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "09fc4039a5239b6968f8b68c6045f4b8",
+    "altALBUM": [
+      "Nevermind (Deluxe Edition)",
+      "Nevermind (Remastered)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "8f55e33ff170ece30b3f2bd2f4cf3adc",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "18a671eaa3c471ae9b8e10160dbc491e",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "d0cc96f61d786eec6547a1ac5464a817",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "333de41471a45ffa68ccfb2372978e9a",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "11LmqTE2naFULdEP94AUBa"
+    ]
+  },
+  {
+    "STREAMHASH": "9ffee11110f7e1f036b51a1e051d8c4f",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "b9773e6ddfb978cff6e1c1bae7c39633",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "ce477c190c9425ffc7d5f3ca4c6c58f2",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "a291d48f447bea5647230fa4380c6eef",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "ab1bb8015703dd514dd714ea617b2843",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "32044d3421e4486433c541410034659c",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "4f1c8072c3660cb4661fceca2d5f0c29",
+    "altALBUM": [
+      "Nirvana",
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "4SCzhsw9HHBaLsr2KhmmKG"
+    ]
+  },
+  {
+    "STREAMHASH": "4b1366f13c93e193fb0845ac5eb9ca1a",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "30ed8c1d0419efb2a921a90f7385a863",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "c6936baf9610001eaa448f92fee7b7fe",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "e4fb2fac17b5eedffa26347313ecad3e",
+    "altALBUM": [
+      "In Utero - 20th Anniversary - Deluxe Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "b052bdff36e68e349993f56a0897636a",
@@ -19426,6 +20093,18 @@
     ]
   },
   {
+    "STREAMHASH": "12b2e49708019ec3a94c4ca6ec7af073",
+    "altALBUM": [
+      "Let The Bad Times Roll (Deluxe Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0O2UONKvVfdwDyefKh5Yo1"
+    ]
+  },
+  {
     "STREAMHASH": "d63c1b74e0a60826af477fc81692af21",
     "altALBUM": null,
     "blackALBUM": null,
@@ -19435,248 +20114,6 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "0sjOX1TrYGzbieHCizRiN2"
-    ]
-  },
-  {
-    "STREAMHASH": "5e9a392900164fca50470b5d8b38162e",
-    "altALBUM": [
-      "Lost in Love"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "6MfVSA5iKBPHzo6RGARjL0"
-    ]
-  },
-  {
-    "STREAMHASH": "8e270c55f66f48af15c27f3027c0f459",
-    "altALBUM": null,
-    "blackALBUM": null,
-    "altTITLE": [
-      "Feel like Makin' Love - 2015 Remaster"
-    ],
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "3KPwt1LBpt1jVSHz8GXERo"
-    ]
-  },
-  {
-    "STREAMHASH": "8612a734414968b52ba9038e6d8be983",
-    "altALBUM": [
-      "Don't Say No (Remastered 2010)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": [
-      "The Stroke - Remastered 2010"
-    ],
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "52KvuGmgcgRdrLMXOtda0E"
-    ]
-  },
-  {
-    "STREAMHASH": "4fc5a124f5673e8e227925512bf5c44e",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "97c578104eeb88cda52206b582562461",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "0cdde474a84d2cdff393d2f98898ff95",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "e0fa2693bb4fb94ef282e63d69f472c4",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "9c38009dc1e9ea3e626aa8a58a5c6ee6",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "840ac5cef22e0f006ed62c9e6a7e47f6",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "dc810d1759fb979956413ce48f202d1f",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "61ae2ab90f8403d0cf9727cb05d7fc91",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "b877cf58cdab5fab5f92f9d1b70828a6",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "a118351c6a201c516698c0857b6296c5",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "2hFAUhpBME5tWs5coiLxFL"
-    ]
-  },
-  {
-    "STREAMHASH": "d494e6b2571493b6799f694b7209dc9b",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "c75767e4208f90ae946012def6935ff2",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "1ff56ca73aa6c82cbc74e3382d92a52b",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "75e1d7bd108c49d1a43cdc9c9adfeff4",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "6ac7b4e9755968dfd020289d44b90a07",
-    "altALBUM": [
-      "Venom (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "28f8e3f6e750f4977090d7e1f4dd958d",
-    "altALBUM": [
-      "Pendulum (Expanded Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "2LawezPeJhN4AWuSB0GtAU"
-    ]
-  },
-  {
-    "STREAMHASH": "ab5caed20e5bcb5d2d06e5d659f9df25",
-    "altALBUM": [
-      "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": [
-      "Moonage Daydream - 2012 Remaster"
-    ],
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "6mib3N4E8PZHAGQ3xy7bho"
-    ]
-  },
-  {
-    "STREAMHASH": "6cf1f08f9dda63d91bd3de2366001630",
-    "altALBUM": [
-      "Layla And Other Assorted Love Songs (Remastered 2010)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "2kkvB3RNRzwjFdGhaUA0tz"
-    ]
-  },
-  {
-    "STREAMHASH": "4f4708610a18b5d8afdc7e15cbe93ed9",
-    "altALBUM": [
-      "One of These Nights (2013 Remaster)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": [
-      "One of These Nights - 2013 Remaster"
-    ],
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "608xszaAxVh4m7NcKJiAbF"
     ]
   },
   {
@@ -19704,68 +20141,6 @@
     ]
   },
   {
-    "STREAMHASH": "216ffd3bf63d02016a4f4fa4e724734d",
-    "altALBUM": [
-      "For Crying Out Loud (Deluxe)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "2nZ7Cvk7RIdnG3KvihJd5F"
-    ]
-  },
-  {
-    "STREAMHASH": "f68b22e2d1c01fb098fd3fb5eb4b4ff7",
-    "altALBUM": [
-      "Permanent Vacation"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "3DCU0R5FFaB9GKxZERb5wr"
-    ]
-  },
-  {
-    "STREAMHASH": "10b8bc9fda1881d704a8ede0158bd69e",
-    "altALBUM": [
-      "Pronounced' Leh-'Nerd 'Skin-'Nerd"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "1ju7EsSGvRybSNEsRvc7qY"
-    ]
-  },
-  {
-    "STREAMHASH": "9dbf524a5aa474864918ebdc195c94d2",
-    "altALBUM": [
-      "Exile on Mainstream (International)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": [
-      "Long Day - 2007 Remaster"
-    ],
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "0xoqetd8TVQlO1QnyZOX09"
-    ]
-  },
-  {
-    "STREAMHASH": "30c94054636700d134442734573b5317",
-    "altALBUM": null,
-    "blackALBUM": null,
-    "altTITLE": [
-      "Muscle Museum - Live Acoustic Version KCRW 8/3/99"
-    ],
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "4hfO5Y0VTgzGyyv8EpsNYj"
-    ]
-  },
-  {
     "STREAMHASH": "84dfaed8be67d67fe030eba9e77ead5a",
     "altALBUM": [
       "Endless Forms Most Beautiful (Deluxe Version)"
@@ -19787,18 +20162,6 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "7ACxUo21jtTHzy7ZEV56vU"
-    ]
-  },
-  {
-    "STREAMHASH": "9d913dfd61357ca6fe2eb6ab2e894128",
-    "altALBUM": [
-      "Boom Boom Room (Side A)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "3DFYVPtuYAM8Tf7sXvdbR2"
     ]
   },
   {
@@ -19826,30 +20189,6 @@
     ]
   },
   {
-    "STREAMHASH": "489a28d1a29e6813c19d44ee30cd7d5d",
-    "altALBUM": [
-      "Perdida"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "1fzw0qGcB6xs4IBXhdfAkj"
-    ]
-  },
-  {
-    "STREAMHASH": "e4e3b6577141086750ebc757d515ab10",
-    "altALBUM": [
-      "System Of A Down/Steal This Album"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "4vAHXnJ5YWLq5hbIVzZS1h"
-    ]
-  },
-  {
     "STREAMHASH": "abc9ec1e601d5e8b4f9150dc3c2a70e2",
     "altALBUM": [
       "Terra Firma"
@@ -19859,18 +20198,6 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "3tAOplaww87D0vglxZKb85"
-    ]
-  },
-  {
-    "STREAMHASH": "0683a1b20c8aa356d1db030ce69fc19f",
-    "altALBUM": [
-      "Waiting to Spill"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "4JAFlkYkNy1MM6zOqRbiGp"
     ]
   },
   {
@@ -19886,18 +20213,6 @@
     ]
   },
   {
-    "STREAMHASH": "a9697b4a72786ac1c412efe1359b02ec",
-    "altALBUM": [
-      "Tommy"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "6LbbHFEajG9e4m0G3L47c4"
-    ]
-  },
-  {
     "STREAMHASH": "1da9144feb765041f371875065339c09",
     "altALBUM": [
       "Nation of Two"
@@ -19908,268 +20223,5 @@
     "SPOTIFY_TID": [
       "0tp63L82d21GTlvZuKSHGY"
     ]
-  },
-  {
-    "STREAMHASH": "b9d92df894df6fd0d7502cb6af21386e",
-    "altALBUM": [
-      "90125 (Deluxe Version)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "0GTK6TesV108Jj5D3MHsYb"
-    ]
-  },
-  {
-    "STREAMHASH": "cd1f02e957326e5702affc095231cf13",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "5f6ba1941889be7248c09b4d8f0d1681",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "c27d42a9ba5ab06986d17400170511ed",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "070454532305d74426bf2da361e4dc73",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "5484bcb2d30bc967ebc79dc98f95ca23",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "1e7d6c61868ea2b38c902ea71015a43f",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "f2bb5e67ae2e3d11b712881cae6477ea",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "30e4eae17e7439fed97d01a8af19b9c8",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "cd0afd1a8a481917eb6d37baa11d01e8",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "d52bb0d531da7c308f123d9801dc580f",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "1578c67ffc61331e6295d2d82de3e416",
-    "altALBUM": [
-      "Lose Yourself",
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": [
-      "Lose Yourself - From \"8 Mile\" Soundtrack",
-      "Lose Yourself - Soundtrack Version"
-    ],
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "5Z01UMMf7V1o0MzF86s6WJ",
-      "6atDVsk39X4LS1C3hdgX5l"
-    ]
-  },
-  {
-    "STREAMHASH": "ca3a049eac59194f039f237b5b95d0c2",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "1dVuiJnZwKhCw3xy0SL0lo"
-    ]
-  },
-  {
-    "STREAMHASH": "674395e2e127596010aaa941c6d855f2",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "5be655cea9796207d407524cfd8f750e",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "6359b361b6324c85d48cb62f0bc0d058",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "fa412a22f4037b46c39b6cdea99c6fb3",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "9a8b830a7fcd3ef79819a04712bf9bcb",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "3fe05844956b9bfa4215b4c0e9acb10b",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "e1709e1b186a3b6c5b7eb9e8e1f3b98a",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "2df9a6ee692b803c3c03fc3a85f09bf7",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "4529aa35345cd4c918227f2621d1b23f",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "8059c6180c222caedf2701fe063c86da",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
-  },
-  {
-    "STREAMHASH": "bb860e4ba7f7c480586cf6f90981063a",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "42YNobZ4HN3tRVEA47wLT6"
-    ]
-  },
-  {
-    "STREAMHASH": "24580513f4025a9fe34657d860d57b02",
-    "altALBUM": [
-      "Curtain Call: The Hits (Deluxe Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": null
   }
 ]

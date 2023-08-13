@@ -480,5 +480,6 @@ if __name__ == '__main__':
     # get_playlist()
     # my_tracks = get_my_saved_tracks()
     # tmp = fetch_playlist_tracks()
-
+    # delete_tracks_from_playlist()
+    # generate_unsaved_track_playlists(all_playlists=True, merged=True)
     print("K")
