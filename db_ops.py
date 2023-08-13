@@ -210,9 +210,6 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                 return True
         return False
 
-    tempvar = []
-    for row in album_artist.tracks:
-        tempvar.append(row)
 
     """
     Update: Search in 2 stages - 1st attempt to match Album, else browse through all files.
@@ -233,14 +230,26 @@ def search_track_in_db(track_metadata=None, album_artist=None):
             # album_artist_tracks = Music.select().where(
             #     (Music.ALBUMARTIST == album_artist) & (Music.SPOTIFY_TID.contains(spotify_tid))
             # )
+
             album_artist_tracks = Music.select().where(
                 (Music.SPOTIFY_TID.contains(spotify_tid)) | (Music.SPOTIFY_TID.contains(spotify_linked_tid))
             )
 
-            if len(album_artist_tracks) == 1:
+            if len(album_artist_tracks) >= 1:
                 db_track_contains_tid = True
-                pass
+
             else:
+                # THIS DOES NOT WORK:
+                # peewee.OperationalError: sub-select returns 14 columns - expected 1
+                #
+                # album_artist_tracks = album_artist.tracks.select(Music).where(
+                #     ((Music.ALBUM ** track_metadata['ALBUM']) | Music.altALBUM.contains(track_metadata['ALBUM']))
+                # )
+                # if len(album_artist_tracks) == 0:
+                #     album_artist_tracks = album_artist.tracks.select(Music).where(
+                #         (Value(track_metadata['ALBUM']).contains(Music.ALBUM))
+                #     )
+
                 album_artist_tracks = Music.select().where(
                     (Music.ALBUMARTIST == album_artist) &
                     ((Music.ALBUM ** track_metadata['ALBUM']) | Music.altALBUM.contains(track_metadata['ALBUM']))
@@ -251,6 +260,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     )
 
         else:
+            # continue
             # Skips tracks from stage 1
             album_artist_tracks = album_artist.tracks.select(Music).where(Music.id.not_in(album_artist_tracks))
             # album_artist_tracks = album_artist.tracks
@@ -381,12 +391,14 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                                 if db_tids != unique_tids:
                                     pass
                             else:
-                                update_trackid_in_db(spotify_tid=unique_tids, streamhash=row.STREAMHASH)
+                                update_trackid_in_db(spotify_tid=unique_tids, streamhash=row.STREAMHASH,
+                                                     existing_tid=row.SPOTIFY_TID)
                         else:
                             unique_tids = sorted(
                                 {spotify_tid, spotify_linked_tid}
                             )
-                            update_trackid_in_db(spotify_tid=unique_tids, streamhash=row.STREAMHASH)
+                            update_trackid_in_db(spotify_tid=unique_tids, streamhash=row.STREAMHASH,
+                                                 existing_tid=row.SPOTIFY_TID)
 
                         result.append({
                             'ALBUMARTIST': album_artist.ALBUMARTIST,
@@ -480,12 +492,14 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                                     if db_tids != unique_tids:
                                         pass
                                 else:
-                                    update_trackid_in_db(spotify_tid=unique_tids, streamhash=row.STREAMHASH)
+                                    update_trackid_in_db(spotify_tid=unique_tids, streamhash=row.STREAMHASH,
+                                                         existing_tid=row.SPOTIFY_TID)
                             else:
                                 unique_tids = sorted(
                                     {spotify_tid, spotify_linked_tid}
                                 )
-                                update_trackid_in_db(spotify_tid=unique_tids, streamhash=row.STREAMHASH)
+                                update_trackid_in_db(spotify_tid=unique_tids, streamhash=row.STREAMHASH,
+                                                     existing_tid=row.SPOTIFY_TID)
 
                             result.append({
                                 'ALBUMARTIST': album_artist.ALBUMARTIST,
@@ -687,28 +701,27 @@ def partial_sync():
     cleanup_db()
 
 
-def update_trackid_in_db(spotify_tid=None, streamhash=None):
-    # TODO: This can be fetched when searching the DB itself
-    # But at the moment we don't know if multiple TIDs are added per Track
-    query = Music.select().where(Music.STREAMHASH == streamhash)
-    for row in query:
-
-        if row.SPOTIFY_TID is None:
-            tid_to_add = spotify_tid
-        else:
-            tid_to_add = sorted(set(
-                spotify_tid + liststr_to_list(row.SPOTIFY_TID)
-            ))
-        # else:
-        # All checks passed so update the DB
-        query = Music.update(SPOTIFY_TID=tid_to_add).where(Music.STREAMHASH == streamhash)
-        query.execute()
+def update_trackid_in_db(spotify_tid=None, streamhash=None, existing_tid=None):
+    if existing_tid is None:
+        tid_to_add = spotify_tid
+    else:
+        tid_to_add = sorted(set(
+            spotify_tid + liststr_to_list(existing_tid)
+        ))
+    # else:
+    # All checks passed so update the DB
+    query = Music.update(SPOTIFY_TID=tid_to_add).where(Music.STREAMHASH == streamhash)
+    query.execute()
 
 
 def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=False):
 
     """
-    TODO: Instead of scanning each track, merge th AlbumArtist and just have 1 lookup per AA in DB
+    TODO: Parallelize DB searching by adding a flag to bypass any user prompts and just store all the SUCCESS results
+            then strip these tracks and redo the classic brute-force searching which then asks for prompts.
+            For large number of songs of the artist, this method could be used:
+    album_artist = AlbumArtist.get(...)
+    fast_result = a_pool.starmap(search_track_in_db, zip(spotify_playlist_tracks_merged['Arctic Monkeys'], repeat(album_artist)))
     """
     # Flags to quit generating playlists.
     skip_generation_and_save = False
@@ -731,6 +744,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     matched_paths = []
     unmatched_track_ids = []
     unmatched_list = []
+
     spotify_playlist_tracks_merged = list2dictmerge(
         deepcopy(spotify_playlist_tracks))
 
@@ -784,8 +798,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
                 # TODO: Ask user for correct match by checking playlist_track['SPOTIFY']
                 continue
             elif len(result) == 0:
-                unmatched_track = {
-                                      'ALBUMARTIST': spotify_album_artist} | playlist_track
+                unmatched_track = {'ALBUMARTIST': spotify_album_artist} | playlist_track
                 unmatched_list.append(unmatched_track)
                 if unmatched_track['SPOTIFY_TID'] != unmatched_track['SPOTIFY_LINKED_TID']:
                     unmatched_track_ids.append(spotify_ops.return_saved_tid(
