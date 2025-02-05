@@ -238,6 +238,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
             if len(album_artist_tracks) >= 1:
                 db_track_contains_tid = True
 
+
             else:
                 # THIS DOES NOT WORK:
                 # peewee.OperationalError: sub-select returns 14 columns - expected 1
@@ -263,6 +264,7 @@ def search_track_in_db(track_metadata=None, album_artist=None):
             # continue
             # Skips tracks from stage 1
             album_artist_tracks = album_artist.tracks.select(Music).where(Music.id.not_in(album_artist_tracks))
+            db_track_contains_tid = False
             # album_artist_tracks = album_artist.tracks
 
         for row in album_artist_tracks:
@@ -280,7 +282,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                     or is_title_a_known_mismatch(db_title, spotify_title):
                 # For ex "The Diary of Jane" is in "The Diary of Jane - Single Version" so match such cases too.
 
-                if check_live_tracks_mismatch(db_title, spotify_title) and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
+                if check_live_tracks_mismatch(db_title, spotify_title) \
+                        and not is_title_in_alt_title(db_row=row, track_metadata=track_metadata):
                     # If the track is a live version but the DB doesn't contain that string, unmatch immediately.
                     # Skips unnecessary matches of live versions with studio versions
                     continue
@@ -381,7 +384,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
 
                         if db_track_contains_tid:
                             db_tids = liststr_to_list(row.SPOTIFY_TID)
-                            db_tids.sort()
+                            if db_tids is not None:
+                                db_tids.sort()
                             unique_tids = sorted(
                                 set([spotify_tid, spotify_linked_tid] + db_tids)
                             )
