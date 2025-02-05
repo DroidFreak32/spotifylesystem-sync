@@ -39,7 +39,11 @@ def main():
             partial_sync()
         elif choice == '3':
             cls()
-            generate_local_playlist(all_saved_tracks=False)
+            skip_playlist_generation = True
+            if input(f"Enter Y to generate local and spotify playlists:").casefold() == 'y':
+                skip_playlist_generation=False
+            generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=skip_playlist_generation)
+
         elif choice == '4':
             cls()
             # start = time.process_time()
