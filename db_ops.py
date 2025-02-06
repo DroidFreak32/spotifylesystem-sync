@@ -856,7 +856,7 @@ def export_altColumns():
     alt_columns = []
     tracks = Music.select().where(
         Music.altALBUM.is_null(False) | Music.altTITLE.is_null(False) | Music.blackALBUM.is_null(
-            False) | Music.blackTITLE.is_null(False))
+            False) | Music.blackTITLE.is_null(False)).order_by(Music.STREAMHASH)
     for row in tracks:
         alt_columns.append(
             {
