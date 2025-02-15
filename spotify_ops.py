@@ -3,10 +3,11 @@ from datetime import datetime
 
 import tqdm
 
-from common import get_spotify_connection, bcolors
+from common import get_spotify_connection, bcolors, logging
 
 sp = get_spotify_connection()
 
+logger = logging.getLogger(__name__)
 
 def get_missing_playlist_items_from_trackids(playlist_id=None, track_ids=None):
     """
@@ -216,6 +217,9 @@ Finds all tracks from a given playlist ID
         # print(f"Retrieved {offset} / {playlist_tracktotal} tracks from playlist.", end="\r", flush=True)
 
     playlist_tracks = cleanup_playlist(full_playlist_raw)
+    logger.info(f"Full PLaylist: {full_playlist_raw}")
+    logger.info(f"====================================")
+    logger.info(f"Cleaned Playlist: {playlist_tracks}")
 
     return playlist_name, playlist_tracks
 

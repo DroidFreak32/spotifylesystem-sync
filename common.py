@@ -15,6 +15,7 @@ import pathos.multiprocessing as multiprocessing
 import spotipy
 import taglib
 import tqdm
+import logging
 
 from spotipy import SpotifyOAuth
 
@@ -59,6 +60,9 @@ parser.add_argument('--db-name', type=str, help='Name of the music db file', req
 parser.add_argument('--spotify-client-id', type=str, help='Your spotify client ID', required=False)
 parser.add_argument('--spotify-client-secret', type=str, help='Your spotify client secret', required=False)
 parser.add_argument('--redirect-uri', type=str, help='Spotify redirect-uri', required=False)
+parser.add_argument("-v", "--verbose", action="count", default=None,
+                    help="Increase verbosity (-v for INFO, -vv for DEBUG; if not set, uses VERBOSE env variable or defaults to 0)")
+
 args, leftovers = parser.parse_known_args()
 
 if args.music_dir is not None:
@@ -104,6 +108,15 @@ print(redirect_uri)
 
 print("I am inside common")
 
+verbosity = 1
+
+# Configure logging based on verbosity level
+if verbosity > 1:
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s', filename='/tmp/spot.log', filemode='w')
+elif verbosity == 1:
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='/tmp/spot.log', filemode='w')
+else:
+    logging.basicConfig(level=logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s', filename='/tmp/spot.log', filemode='w')
 
 
 def cls():

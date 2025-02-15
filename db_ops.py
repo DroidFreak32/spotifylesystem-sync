@@ -753,7 +753,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
         deepcopy(spotify_playlist_tracks))
 
     offset = 0
-    for spotify_album_artist in spotify_playlist_tracks_merged.keys():
+    for spotify_album_artist, _ in spotify_playlist_tracks_merged.items():
         try:
             album_artist = AlbumArtist.get(
                 AlbumArtist.ALBUMARTIST == spotify_album_artist)
@@ -763,6 +763,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
                 album_artist = AlbumArtist.get(
                     AlbumArtist.ALBUMARTIST == spotify_album_artist.casefold())
             except DoesNotExist:
+                print(f"Artist: {spotify_album_artist} does not exist")
                 # Add all tracks of this artist to unmatched tracks and increase offset accordingly
                 skipped_tracks = []
                 for track in spotify_playlist_tracks_merged[spotify_album_artist]:
