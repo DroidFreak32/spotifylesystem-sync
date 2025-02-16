@@ -170,6 +170,41 @@ def add_to_black_title(db_row, track_metadata):
         Music.STREAMHASH == db_row.STREAMHASH)
     query.execute()
 
+def get_album_artist_from_merged_data(spotify_album_artist, spotify_playlist_tracks_merged):
+    """
+    Retrieves the AlbumArtist object from the database based on provided data,
+    handling potential alternative album artists.
+    Example: SOAD - Steal this Album!
+
+    Args:
+        spotify_album_artist: The primary album artist from Spotify.
+        spotify_playlist_tracks_merged: Dictionary containing track data, including potential 'alt_ALBUMARTISTS'.
+
+    Returns:
+        The matching AlbumArtist object from the database.
+
+    Raises:
+        DoesNotExist: If no matching album artist is found in the database.
+    """
+
+    try:
+        return AlbumArtist.get(AlbumArtist.ALBUMARTIST == spotify_album_artist)
+    except DoesNotExist:
+        try:
+            return AlbumArtist.get(AlbumArtist.ALBUMARTIST == spotify_album_artist.casefold())
+        except DoesNotExist:
+            if spotify_playlist_tracks_merged[spotify_album_artist][0].get('alt_ALBUMARTISTS'):
+                for alt_artist in spotify_playlist_tracks_merged[spotify_album_artist][0].get('alt_ALBUMARTISTS'):
+                    try:
+                        return AlbumArtist.get(AlbumArtist.ALBUMARTIST == alt_artist)
+                    except DoesNotExist:
+                        try:
+                           return AlbumArtist.get(AlbumArtist.ALBUMARTIST == alt_artist.casefold())
+                        except DoesNotExist:
+                            pass  # Continue to the next alt_artist if not found
+
+            # If none of the above attempts succeed, raise DoesNotExist
+            raise DoesNotExist("No matching AlbumArtist found.")
 
 def search_track_in_db(track_metadata=None, album_artist=None):
     """
@@ -755,14 +790,13 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     offset = 0
     for spotify_album_artist, _ in spotify_playlist_tracks_merged.items():
         try:
-            album_artist = AlbumArtist.get(
-                AlbumArtist.ALBUMARTIST == spotify_album_artist)
+            album_artist = get_album_artist_from_merged_data(spotify_album_artist, spotify_playlist_tracks_merged)
         except DoesNotExist:
-            try:
-                # Maybe some casing is different
-                album_artist = AlbumArtist.get(
-                    AlbumArtist.ALBUMARTIST == spotify_album_artist.casefold())
-            except DoesNotExist:
+            # try:
+            #     # Maybe some casing is different
+            #     album_artist = AlbumArtist.get(
+            #         AlbumArtist.ALBUMARTIST == spotify_album_artist.casefold())
+            # except DoesNotExist:
                 print(f"Artist: {spotify_album_artist} does not exist")
                 # Add all tracks of this artist to unmatched tracks and increase offset accordingly
                 skipped_tracks = []

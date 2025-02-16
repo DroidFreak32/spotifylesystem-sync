@@ -80,7 +80,7 @@ def main():
                 if input(f"Enter Y to merge ALL unsaved tracks to a single playlist:").casefold() == 'y':
                     merged = True
 
-            generate_unsaved_track_playlists(owner_only=owner_only, all_playlists=all_playlists, merged=merged)
+            generate_unsaved_track_playlists(owner_only=owner_only, all_playlists=all_playlists, merge_all_unsaved_tracks=merged)
         elif choice.casefold() == 'q':
             exit()
         else:

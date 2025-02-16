@@ -33,11 +33,15 @@ def get_proper_albumartist(artist_list=None, warning=False):
     :param artist_list:
     :return: 1st name in AlbumArtists
     """
-    if len(artist_list) > 1 and warning:
-        print(f"\n{bcolors.FAIL}Multiple Album Artists in track.\n"
-              f"Only storing the first one: {artist_list[0]['name']}{bcolors.ENDC}")
+    primary_artist = artist_list[0]['name']
+    alternate_artists = None
+    if len(artist_list) > 1:
+        alternate_artists = [ item['name'] for item in artist_list[1:] ]
+        if warning:
+            print(f"\n{bcolors.FAIL}Multiple Album Artists in track.\n"
+                f"Only storing the first one: {artist_list[0]['name']}{bcolors.ENDC}")
 
-    return artist_list[0]['name']
+    return primary_artist, alternate_artists
 
 
 def get_proper_artist_str_or_list(artist_list=None):
@@ -85,7 +89,10 @@ def cleanup_playlist(playlist_raw=None):
             continue
         # Initialize
         track = dict()
-        track['ALBUMARTIST'] = get_proper_albumartist(item['track']['album']['artists'])
+        track['ALBUMARTIST'], track['alt_ALBUMARTISTS'] = get_proper_albumartist(item['track']['album']['artists'])
+
+        # else:
+            # track['ALBUMARTIST'] = item['track']['album']['artists']
         track['ALBUM'] = item['track']['album']['name']
         track['TITLE'] = item['track']['name']
         track['ARTIST'] = get_proper_artist(item['track']['artists'])
@@ -99,7 +106,10 @@ def cleanup_playlist(playlist_raw=None):
 
         # track['SPOTIFY_TID'] = item['track']['id']
         if track['ALBUMARTIST'] == 'Various Artists':
-            track['ALBUMARTIST'] = get_proper_albumartist(item['track']['artists'])
+            track['ALBUMARTIST'], track['alt_ALBUMARTISTS'] = get_proper_albumartist(item['track']['artists'])
+
+        if track['alt_ALBUMARTISTS'] is None:
+            track.pop('alt_ALBUMARTISTS', None)
         cleaned_playlist.append(track)
     return cleaned_playlist
 
@@ -216,7 +226,7 @@ Finds all tracks from a given playlist ID
         offset += 100
         # print(f"Retrieved {offset} / {playlist_tracktotal} tracks from playlist.", end="\r", flush=True)
 
-    playlist_tracks = cleanup_playlist(full_playlist_raw)
+    playlist_tracks = cleanup_playlist(playlist_raw=full_playlist_raw)
     logger.info(f"Full PLaylist: {full_playlist_raw}")
     logger.info(f"====================================")
     logger.info(f"Cleaned Playlist: {playlist_tracks}")
@@ -351,7 +361,7 @@ def find_playlists_containing_tracks():
     a = playlists_containing_tracks(track_ids=tracks)
 
 
-def generate_unsaved_track_playlists(owner_only=True, all_playlists=False, merged=False):
+def generate_unsaved_track_playlists(owner_only=True, all_playlists=False, merge_all_unsaved_tracks=False):
 
     playlist_counter = 0
     playlists_count = 0
@@ -369,7 +379,7 @@ def generate_unsaved_track_playlists(owner_only=True, all_playlists=False, merge
         max_tracks = 50
 
         # Skip resetting unsaved_tracks if we want to merge all unsaved tracks from all playlist at once
-        if not merged:
+        if not merge_all_unsaved_tracks:
             unsaved_tracks = []
             unsaved_indices = []
 
@@ -431,10 +441,10 @@ def generate_unsaved_track_playlists(owner_only=True, all_playlists=False, merge
             )
         pass
 
-        if not merged:
+        if not merge_all_unsaved_tracks:
             generate_playlist_from_tracks(track_ids=unsaved_tracks, playlist_name=playlist_name)
 
-    if merged:
+    if merge_all_unsaved_tracks:
         generate_playlist_from_tracks(track_ids=unsaved_tracks, playlist_name="MEGA_UNSAVED")
 
 
@@ -485,5 +495,5 @@ if __name__ == '__main__':
     # my_tracks = get_my_saved_tracks()
     # tmp = fetch_playlist_tracks()
     # delete_tracks_from_playlist()
-    # generate_unsaved_track_playlists(all_playlists=True, merged=True)
+    # generate_unsaved_track_playlists(all_playlists=True, merge_all_unsaved_tracks=True)
     print("K")
