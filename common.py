@@ -118,6 +118,11 @@ elif verbosity == 1:
 else:
     logging.basicConfig(level=logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s', filename='/tmp/spot.log', filemode='w')
 
+"""
+TODO: Error out when metaflac don't exist
+Exception has occurred: FileNotFoundError
+[Errno 2] No such file or directory: 'metaflac'
+"""
 
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
