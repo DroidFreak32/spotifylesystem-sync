@@ -468,8 +468,8 @@ def search_track_in_db(track_metadata=None, album_artist=None):
                             f"\n(N)o, blacklist this Album from future matches." \
                             f"\n(O)pen the file to check" \
                             f"\n(S)ave current changes and return to main menu." \
-                            f"\n(Q)uit to main menu & Discard all changes: "
-
+                            f"\n(Q)uit to main menu & Discard all changes." \
+                            f"\nOr skip this track by pressing enter: "
                         message2 = str(f"\nSpotify URL: {track_metadata['SPOTIFY']}"
                                        f"\nSpotify / DB Album:"
                                        f"\n{bcolors.OKGREEN}"
