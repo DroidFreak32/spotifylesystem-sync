@@ -669,8 +669,12 @@ def dump_to_db(metadata):
         music_db_orm.save()
 
 
-def sync_fs_to_db(force_resync=True, flac_files=find_flacs(music_root_dir), last_flac_mtime=1):
+def sync_fs_to_db(force_resync=True, flac_files=None, last_flac_mtime=1):
     master = CSqliteExtDatabase(db_path)
+
+    # Prevent scanning for flac files on startup
+    if flac_files is None:
+        flac_files = find_flacs(music_root_dir)
     try:
         """
         TODO: Test this. Using this for now to prevent crashes on a fresh setup without db created
