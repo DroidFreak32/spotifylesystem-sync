@@ -196,9 +196,12 @@ def liststr_to_list(unsurestr=None):
     TODO: Maybe another to just return a list and use 'is in' condition? Casefold may be an issue though
     """
     if isinstance(unsurestr, list):
+        unsurestr.sort()
         return unsurestr
     try:
         str2list = ast.literal_eval(unsurestr)
+        if isinstance(str2list, list):
+            str2list.sort()
         return str2list
     except:
         return unsurestr
