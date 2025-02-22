@@ -531,6 +531,7 @@
     "STREAMHASH": "0785d5dd93e643a3f94ba60c1dd6db7c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -547,6 +548,7 @@
     "STREAMHASH": "07c3b59e7e38a33f0b287ba727e124cc",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -2310,6 +2312,19 @@
     ]
   },
   {
+    "STREAMHASH": "19d55b005e7d78d07d7b6c6c0e347f71",
+    "altALBUM": [
+      "Hits"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1eoHjFYPjG7cBJi6Obb7oV",
+      "316haK20RCKR5rVlAslpnL"
+    ]
+  },
+  {
     "STREAMHASH": "1a080a06f2cead27b69d88f3693852d4",
     "altALBUM": [
       "Halestorm (Deluxe)"
@@ -2576,9 +2591,14 @@
       "Brand New Eyes (Deluxe Edition)"
     ],
     "blackALBUM": null,
-    "altTITLE": null,
+    "altTITLE": [
+      "Decode - Twilight Soundtrack Version"
+    ],
     "blackTITLE": null,
-    "SPOTIFY_TID": null
+    "SPOTIFY_TID": [
+      "4IDfVjI1TlB1UwlC01T4Bm",
+      "59GgbFYUQBDwJ6DB2ljPZe"
+    ]
   },
   {
     "STREAMHASH": "1d8aa5d38ed94f9ec50cf9366c6844e2",
@@ -3428,6 +3448,18 @@
     ]
   },
   {
+    "STREAMHASH": "252c98595c32ae56babb9940112b4f56",
+    "altALBUM": [
+      "The Essential Roy Orbison"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "52HAHV1j93s5B8GoTNI7DJ"
+    ]
+  },
+  {
     "STREAMHASH": "2531cc22b50a844bb90e59713acd1bdf",
     "altALBUM": [
       "Sgt. Pepper's Lonely Hearts Club Band (Remastered)"
@@ -3998,6 +4030,18 @@
     ]
   },
   {
+    "STREAMHASH": "2c61756c4d26043cb5a1ffc16bff838d",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Emotional Attyachaar (Rock Version)"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "789ypzLVZugyrUn57A6CWp"
+    ]
+  },
+  {
     "STREAMHASH": "2c74b6673ce8dcbffe5d7cdac163e430",
     "altALBUM": [
       "Finding Beauty In Negative Spaces (Bonus Track Version)"
@@ -4196,6 +4240,7 @@
     "STREAMHASH": "2e4f19e3093278612155ab840d65530b",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -4262,6 +4307,7 @@
     "STREAMHASH": "2ec980015932df517ad62078e6c02cab",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -4809,6 +4855,18 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "36ad36b1073e1b00ec2fbbbada4b31f8",
+    "altALBUM": [
+      "The 50th Anniversary Collection"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1JjAOzb3iR6DU3yN5AGhYq"
+    ]
   },
   {
     "STREAMHASH": "36bb67c3513ad5c263577d1b11cca15e",
@@ -6366,6 +6424,7 @@
     "STREAMHASH": "48ae1ae1cfb8f9b8fad968b06153741b",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -6572,6 +6631,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "0aYQsp1vZZcX0JBEJvKF7N"
+    ]
+  },
+  {
+    "STREAMHASH": "4b8c467205b6e073566f49edd9545537",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Apple Seed - Instrumental"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "51TypiC8UM1nHEgulb5DQV"
     ]
   },
   {
@@ -6906,6 +6977,7 @@
     "STREAMHASH": "4f7235f2b81ef54f715cfd7285de298c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -8629,6 +8701,18 @@
     ]
   },
   {
+    "STREAMHASH": "64f3f23b2e6bf9b8ab25400fdc18380a",
+    "altALBUM": [
+      "The John Denver Collection, Vol 1: Take Me Home Country Roads"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1QbOvACeYanja5pbnJbAmk"
+    ]
+  },
+  {
     "STREAMHASH": "65014eba298b6617458e0783f635df46",
     "altALBUM": [
       "Hybrid Theory (Bonus Edition)"
@@ -8984,6 +9068,7 @@
     "STREAMHASH": "68d0999c9b99e0490aaabba2fe05e273",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -9353,6 +9438,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "6de6aa94eedfcf82def22c6b14e4f042",
+    "altALBUM": [
+      "Enema Of The State"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "3Q0yxw9mdycjnuORDvY5E6"
+    ]
+  },
+  {
     "STREAMHASH": "6e052effd23e0ef70f9bb0d3cebbd13f",
     "altALBUM": [
       "Hybrid Theory (Bonus Edition)"
@@ -9508,6 +9605,18 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "6efaa2ca4e2f02b9e6d05fa43fb5ed8f",
+    "altALBUM": [
+      "Meteora 20th Anniversary Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "50jyxHSIHAz7N5jIzODvs4"
+    ]
   },
   {
     "STREAMHASH": "6f216ae6d73d025fbd244cbc6ddafa74",
@@ -9779,6 +9888,19 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "5kqxZRnvfqfMI1w40HhIfA"
+    ]
+  },
+  {
+    "STREAMHASH": "70718f8456ee592fe72ad1bfe49a433f",
+    "altALBUM": [
+      "Enema Of The State"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "2m1hi0nfMR9vdGC8UcrnwU",
+      "7yCPwWs66K8Ba5lFuU2bcx"
     ]
   },
   {
@@ -11336,6 +11458,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "853e253cb8fd00671812bc2f887bfb3e",
+    "altALBUM": [
+      "Pure Heroine"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "2dLLR6qlu5UJ5gk0dKz0h3"
+    ]
+  },
+  {
     "STREAMHASH": "85452b918af0ddcc25d5fca121acbb33",
     "altALBUM": null,
     "blackALBUM": null,
@@ -11662,6 +11796,18 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "8961b2bfdf3d7a7b47186a92d45b7859",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Attack on Titan (Wmid) - Instrumental"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "3ktrQLjcchBTq7KLOUF1Xf"
+    ]
   },
   {
     "STREAMHASH": "898fac1e55321307954207ab0829639e",
@@ -12324,6 +12470,7 @@
     "STREAMHASH": "912a2bf1702cd6fd16768f866243f2bf",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -12420,6 +12567,7 @@
     "STREAMHASH": "9255405edcb32be7c0a7e69898deb4cd",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -15732,6 +15880,7 @@
     "STREAMHASH": "b7518d3da19cde6d19a7f4fa7eda2240",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -16067,19 +16216,6 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "0q99swv2f9L5m8JHkF3sDC"
-    ]
-  },
-  {
-    "STREAMHASH": "ba01f0db4ba81c255210244de3d58f59",
-    "altALBUM": [
-      "Rocky IV"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "2HHtWyy5CgaQbC7XSoOb0e",
-      "2KH16WveTQWT6KOG9Rg6e2"
     ]
   },
   {
@@ -16439,6 +16575,7 @@
     "STREAMHASH": "be8dd425cb2142e179df78dab0aabb23",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -17485,6 +17622,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "7o2qghEbpzCUm4IiKjTtVG"
+    ]
+  },
+  {
+    "STREAMHASH": "ca8f053298599fecd5fccd65b8e95fa7",
+    "altALBUM": [
+      "Spotless (feat. The Lumineers)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "5W1qIFkzQWFv9p1isrnpe9"
     ]
   },
   {
@@ -18690,6 +18839,7 @@
     "STREAMHASH": "d7db4f988aa0a11cc855cadf4a1c7371",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -19758,6 +19908,7 @@
     "STREAMHASH": "e3be43db9759de6b922b15a12eb5ffe6",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -19960,6 +20111,7 @@
     "STREAMHASH": "e66b6cbb49c3efd46718ef932fb1473c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -20163,6 +20315,18 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "e982f8f92d7b02a2d2c2be1810c02c66",
+    "altALBUM": [
+      "Pineapple Sunrise"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "7MlDNspYwfqnHxORufupwq"
+    ]
   },
   {
     "STREAMHASH": "e9a1ad93730b6adc588fc3d4c6598a02",
@@ -20443,6 +20607,7 @@
     "STREAMHASH": "ed0e3931f1ee6fb3da082f7934408d57",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -20647,18 +20812,6 @@
     ]
   },
   {
-    "STREAMHASH": "efcec442bd251447fe6e801a535968fd",
-    "altALBUM": [
-      "As Daylight Dies (Special Edition)"
-    ],
-    "blackALBUM": null,
-    "altTITLE": null,
-    "blackTITLE": null,
-    "SPOTIFY_TID": [
-      "6zKF4293k44ItKWJJgrhXv"
-    ]
-  },
-  {
     "STREAMHASH": "eff880a571d828f531fc371e951096b7",
     "altALBUM": [
       "FLOW the Best Anime Sibari",
@@ -20685,6 +20838,7 @@
     "STREAMHASH": "f05eeeeb1b5a4e2268c44fbf44d6d259",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -20699,9 +20853,13 @@
       "Youthanasia (Expanded Edition)"
     ],
     "blackALBUM": null,
-    "altTITLE": null,
+    "altTITLE": [
+      "A Tout Le Monde - Remastered 2004"
+    ],
     "blackTITLE": null,
-    "SPOTIFY_TID": null
+    "SPOTIFY_TID": [
+      "6olS0TmHmsGr0hXtcBsiVM"
+    ]
   },
   {
     "STREAMHASH": "f0885acdb521b05caa2df4e047d10a4f",
