@@ -531,6 +531,7 @@
     "STREAMHASH": "0785d5dd93e643a3f94ba60c1dd6db7c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -547,6 +548,7 @@
     "STREAMHASH": "07c3b59e7e38a33f0b287ba727e124cc",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -2063,6 +2065,18 @@
     ]
   },
   {
+    "STREAMHASH": "16f0beb9ec315a599856e19ed4ad2af5",
+    "altALBUM": [
+      "iTunes Festival - London, 2011"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "5QmKaHxSpJD9HjlSOpDDAW"
+    ]
+  },
+  {
     "STREAMHASH": "17035be51416075d0df0e11b94a65515",
     "altALBUM": [
       "Post Traumatic (Deluxe Version)",
@@ -2560,6 +2574,16 @@
     "SPOTIFY_TID": [
       "47Bf8yRO9vojEdixfiXdfG"
     ]
+  },
+  {
+    "STREAMHASH": "1cea0346bd1ebb7627071307db304161",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "1d109258918d27327bc0253be2d2b134",
@@ -3223,6 +3247,16 @@
     "STREAMHASH": "22e5e6c1b942f720d318fd6513d41506",
     "altALBUM": [
       "This House Is Not For Sale (Deluxe)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "23481b611d627131f29d6f5eafd84f68",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
     ],
     "blackALBUM": null,
     "altTITLE": null,
@@ -4238,6 +4272,7 @@
     "STREAMHASH": "2e4f19e3093278612155ab840d65530b",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -4304,6 +4339,7 @@
     "STREAMHASH": "2ec980015932df517ad62078e6c02cab",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -6075,6 +6111,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "4486b91738476d7a9703fa703f823692",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "When Things Explode (featuring Ian Astbury)"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0lLst3L94nW91zaqkBEcv2"
+    ]
+  },
+  {
     "STREAMHASH": "44904e3e68c9935909ad076cebd7692e",
     "altALBUM": [
       "Made in Heaven (Deluxe Remastered Version)"
@@ -6432,6 +6480,7 @@
     "STREAMHASH": "48ae1ae1cfb8f9b8fad968b06153741b",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -6440,6 +6489,18 @@
     "SPOTIFY_TID": [
       "3dxiWIBVJRlqh9xk144rf4",
       "6n8TMVyFKoUmDc4apxceRD"
+    ]
+  },
+  {
+    "STREAMHASH": "48d7c976c578895159b82d272b2002fa",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "3JMy4HCSvdwY6FMtvkdKfF"
     ]
   },
   {
@@ -6984,6 +7045,7 @@
     "STREAMHASH": "4f7235f2b81ef54f715cfd7285de298c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -7131,6 +7193,16 @@
     "SPOTIFY_TID": [
       "5gys5nzVQIYhgHIfiOJYva"
     ]
+  },
+  {
+    "STREAMHASH": "50924cef65617a966d69416971aa7280",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": [
+      "Terrible"
+    ],
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "50930aa4084a32b9873e3c26c20cca34",
@@ -7730,6 +7802,16 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "58fbcd66c9bb4495c2ea3f0ea206ba15",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "596b8bac7c5707c7d021f1414941f26b",
     "altALBUM": [
       "Led Zeppelin IV (Deluxe Edition)"
@@ -8251,6 +8333,16 @@
     ]
   },
   {
+    "STREAMHASH": "5fbdf25a6c2b918cb3e7c3f9a45e3596",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "5fc7a481cc390e36d9d084256236a083",
     "altALBUM": [
       "Big Whiskey and the GrooGrux King (Deluxe Edition)"
@@ -8487,6 +8579,28 @@
     "SPOTIFY_TID": [
       "2iVsPIS2yjS4xhs5Rdy65O"
     ]
+  },
+  {
+    "STREAMHASH": "61f5114a682040138330cc75d97a39f1",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "The Hammer"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1GgAEHddk7C6labd6CmGyd"
+    ]
+  },
+  {
+    "STREAMHASH": "6209cfd80b7233a7602d491c5da255bd",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "622e8ac0416416414d38736f1cbc27a3",
@@ -9076,6 +9190,7 @@
     "STREAMHASH": "68d0999c9b99e0490aaabba2fe05e273",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -9616,6 +9731,7 @@
   {
     "STREAMHASH": "6efaa2ca4e2f02b9e6d05fa43fb5ed8f",
     "altALBUM": [
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -10153,6 +10269,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "73ee5593c0c2425cde4014882415b2d2",
+    "altALBUM": [
+      "Meteora 20th Anniversary Edition"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "6lXhmc2P7lGOBZDasmS9Uv"
+    ]
+  },
+  {
     "STREAMHASH": "73f1c9da096346df4e7caa75d2294865",
     "altALBUM": null,
     "blackALBUM": null,
@@ -10422,6 +10550,16 @@
     "SPOTIFY_TID": [
       "7LVHVU3tWfcxj5aiPFEW4Q"
     ]
+  },
+  {
+    "STREAMHASH": "76505853837c1f32cc9db464efa33891",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "765d469efbdf6ac65966299e1c98bf6b",
@@ -10811,6 +10949,16 @@
     ]
   },
   {
+    "STREAMHASH": "7a1ef49ee76ccb564b03b417f1a0c1d3",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "7a78796d1339fa857ed6977f7ee976e4",
     "altALBUM": [
       "#3 Deluxe Version"
@@ -10949,6 +11097,16 @@
     "STREAMHASH": "7d053bffda86ce8eb196ee42646df101",
     "altALBUM": [
       "BADLANDS (Deluxe)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "7d72447d6ef6b09bcebb945961bb1053",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
     ],
     "blackALBUM": null,
     "altTITLE": null,
@@ -11830,6 +11988,16 @@
     ]
   },
   {
+    "STREAMHASH": "89775656d5bc87dd7c48e695e192715b",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "898fac1e55321307954207ab0829639e",
     "altALBUM": [
       "Greatest Hits II (2011 Remaster)",
@@ -12490,6 +12658,7 @@
     "STREAMHASH": "912a2bf1702cd6fd16768f866243f2bf",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -12586,6 +12755,7 @@
     "STREAMHASH": "9255405edcb32be7c0a7e69898deb4cd",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -14152,6 +14322,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "a31a8564706460a5d174f7455e9e052f",
+    "altALBUM": [
+      "When The Pawn..."
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0w7XPnFp1jA7w7C8t89zJi"
+    ]
+  },
+  {
     "STREAMHASH": "a33f56056f6896928a6e51cd07bb9c8c",
     "altALBUM": [
       "Finding Beauty In Negative Spaces (Bonus Track Version)"
@@ -14188,6 +14370,16 @@
       "0MKGH8UMfCnq5w7nG06oM5",
       "2RsAajgo0g7bMCHxwH3Sk0"
     ]
+  },
+  {
+    "STREAMHASH": "a360f7f34ed909ff807f0cbc5bb40a0a",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "a4052ea73dcff4050c7ca6a9299a58e8",
@@ -15897,6 +16089,18 @@
     ]
   },
   {
+    "STREAMHASH": "b72d384c10dfabfb13c4e9fe1fba5704",
+    "altALBUM": [
+      "Paper Hearts"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1wUUOYLLDZjCvxoNQTBize"
+    ]
+  },
+  {
     "STREAMHASH": "b73820381b6d2934a2a1582aa0db4f22",
     "altALBUM": [
       "Blood Sugar Sex Magik (Deluxe Edition)"
@@ -15910,6 +16114,7 @@
     "STREAMHASH": "b7518d3da19cde6d19a7f4fa7eda2240",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -16475,6 +16680,20 @@
     ]
   },
   {
+    "STREAMHASH": "bd2c8c812bef15f4482aa2c25b66661c",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "1985 (Original Version)"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "3goXG2iW7gu5tsHeS8pBIR"
+    ]
+  },
+  {
     "STREAMHASH": "bd31a32fc4a9da66631f80345cda7643",
     "altALBUM": [
       "Coming Home (Deluxe Edition)"
@@ -16604,6 +16823,7 @@
     "STREAMHASH": "be8dd425cb2142e179df78dab0aabb23",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -18671,6 +18891,16 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "d5a4e4a1b782aa53f5bd70f42130605b",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "d5a845f3f9b0786a301ccc768804e7c6",
     "altALBUM": null,
     "blackALBUM": null,
@@ -18867,6 +19097,7 @@
     "STREAMHASH": "d7db4f988aa0a11cc855cadf4a1c7371",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -19017,6 +19248,18 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "d9d9b4a3e3153c1187aa66bc7cc210c5",
+    "altALBUM": [
+      "\u540d\u63a2\u5075\u30b3\u30ca\u30f3 \u77b3\u306e\u4e2d\u306e\u6697\u6bba\u8005 (\u30aa\u30ea\u30b8\u30ca\u30eb\u30fb\u30b5\u30a6\u30f3\u30c9\u30c8\u30e9\u30c3\u30af)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "4ELXBKQHnfWiNt6OUcSo15"
+    ]
   },
   {
     "STREAMHASH": "d9e4253f72c79a3c0ddbe38984bf7406",
@@ -19935,6 +20178,7 @@
     "STREAMHASH": "e3be43db9759de6b922b15a12eb5ffe6",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -20137,6 +20381,7 @@
     "STREAMHASH": "e66b6cbb49c3efd46718ef932fb1473c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -20632,6 +20877,7 @@
     "STREAMHASH": "ed0e3931f1ee6fb3da082f7934408d57",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -20682,6 +20928,16 @@
     "STREAMHASH": "ed5242638a96ae7f5bc2aaafb5f347fe",
     "altALBUM": [
       "Innuendo (2011 Remaster)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "edccca63d2e06b2b24d06b257059c138",
+    "altALBUM": [
+      "Here We Go Again (US Edition)"
     ],
     "blackALBUM": null,
     "altTITLE": null,
@@ -20836,6 +21092,18 @@
     ]
   },
   {
+    "STREAMHASH": "efcec442bd251447fe6e801a535968fd",
+    "altALBUM": [
+      "As Daylight Dies (Special Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "6zKF4293k44ItKWJJgrhXv"
+    ]
+  },
+  {
     "STREAMHASH": "eff880a571d828f531fc371e951096b7",
     "altALBUM": [
       "FLOW the Best Anime Sibari",
@@ -20862,6 +21130,7 @@
     "STREAMHASH": "f05eeeeb1b5a4e2268c44fbf44d6d259",
     "altALBUM": [
       "Meteora (Bonus Edition)",
+      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
