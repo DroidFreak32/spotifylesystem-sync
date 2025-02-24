@@ -250,7 +250,10 @@ def search_track_in_db(track_metadata=None, album_artists=None):
         10 characters matching should be a good sweet spot to avoid false positives like
         Ex: "AbcArtist - SHORT.flac" should not match "AbcArtist - This is not a SHORTER title.flac"
         """
-        if len(_db_title) > 10 and _db_title.casefold() in _spotify_title.casefold():
+        slice_len = len(_db_title)
+        is_substr = slice_len > 10 and _db_title.casefold() in _spotify_title.casefold()
+        is_spliced_str = (_spotify_title[:slice_len] == _db_title.casefold())
+        if (is_substr or is_spliced_str):
             return True
         return False
 
