@@ -191,6 +191,7 @@ Finds all tracks from a given playlist ID
     @param playlist_id: If not specified, call select_user_playlist to prompt user for a specific ID
     @param owner_only: If True, only playlists created by user_id will be selected
     @return: Touple of the playlist's Name and track list
+    TODO: Handle requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.spotify.com', port=443): Read timed out. (read timeout=5)
     """
     if user_id is None:
         user_id = sp.me()['id']

@@ -351,6 +351,7 @@ def fetch_metadata_in_background(music_dir=music_root_dir, flac_file=None):
 def generate_metadata_with_warnings(music_dir, flac_files):
     """
     Accumulates all relevant metadata from a list of flac files
+    TODO: Add check for KeyError when ALBUMARTIST don't exst
     :param music_dir: Root music directory
     :param flac_files: List of flac files
     :return: A dictionary with key=AlbumArtist and Value=[metadata of all their tracks]
