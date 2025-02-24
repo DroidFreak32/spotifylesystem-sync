@@ -39,9 +39,9 @@ def main():
             partial_sync()
         elif choice == '3':
             cls()
-            skip_playlist_generation = True
-            if input(f"Enter Y to generate local and spotify playlists:").casefold() == 'y':
-                skip_playlist_generation=False
+            skip_playlist_generation = False
+            # if input(f"Enter Y to generate local and spotify playlists:").casefold() == 'y':
+            #     skip_playlist_generation=False
             generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=skip_playlist_generation)
 
         elif choice == '4':
@@ -85,7 +85,7 @@ def main():
             exit()
         else:
             continue
-        input("Press Enter key to continue")
+        # input("Press Enter key to continue")
     print("Received config")
 
 
