@@ -425,6 +425,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "066ea4141af232438fc1da0bbacb48be",
+    "altALBUM": [
+      "Out Loud"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "6Yx5Cw2mVmx6LiVP2VXWEO"
+    ]
+  },
+  {
     "STREAMHASH": "0673ce9938ebcc8c001ed975ea242f20",
     "altALBUM": [
       "Thriller 25 Super Deluxe Edition"
@@ -511,6 +523,7 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "1nInOsHbtotAmEOQhtvnzP",
       "6D60klaHqbCl9ySc8VcRss"
     ]
   },
@@ -531,7 +544,6 @@
     "STREAMHASH": "0785d5dd93e643a3f94ba60c1dd6db7c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -548,7 +560,6 @@
     "STREAMHASH": "07c3b59e7e38a33f0b287ba727e124cc",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -770,6 +781,18 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "0b07094ed9f910c55c8b98f00045b666",
+    "altALBUM": [
+      "Green River (Expanded Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "20OFwXhEXf12DzwXmaV7fj"
+    ]
   },
   {
     "STREAMHASH": "0b455b55fe6d3c9fcfea94957cde042f",
@@ -2404,7 +2427,8 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "1TQ4mYHM62h6HvYa9AZRMT"
+      "1TQ4mYHM62h6HvYa9AZRMT",
+      "6M6lsQB4OhqL41eld29PeC"
     ]
   },
   {
@@ -2579,6 +2603,16 @@
     "STREAMHASH": "1cea0346bd1ebb7627071307db304161",
     "altALBUM": [
       "Here We Go Again (US Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "1cf14f11060a4f4e628d93d261efd61d",
+    "altALBUM": [
+      "American Idiot (Deluxe)"
     ],
     "blackALBUM": null,
     "altTITLE": null,
@@ -2836,7 +2870,9 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "2SJdfWjD5ssoOnRSIQYOGD"
+      "0GSs0GV34KX7KCpLw9tWjk",
+      "2SJdfWjD5ssoOnRSIQYOGD",
+      "30WNOfFRiqgebO4eRkCii8"
     ]
   },
   {
@@ -3161,6 +3197,20 @@
     "SPOTIFY_TID": [
       "0aym2LBJBk9DAYuHHutrIl",
       "3H7sv3Krffn15BufUuXzf3"
+    ]
+  },
+  {
+    "STREAMHASH": "21fcc0d9adb9a6c0766a78fdf6b88598",
+    "altALBUM": [
+      "JAPAN ANIMESONG COLLECTION VOL.5 [\u30a2\u30cb\u30bd\u30f3\u30fb\u30b8\u30e3\u30d1\u30f3]"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "Driver's High (GTO Great Teacher Onizuka)"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "2FIzsIB33yTeos7EKanHNw"
     ]
   },
   {
@@ -3832,6 +3882,18 @@
     ]
   },
   {
+    "STREAMHASH": "299961bb9fe885980d18afd69de1dbad",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Happy Song - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0ChMOU9Q1J0kQVCiFYIBQR"
+    ]
+  },
+  {
     "STREAMHASH": "29b3cb1523b90f7c8f68592e4335f6c9",
     "altALBUM": null,
     "blackALBUM": null,
@@ -4036,6 +4098,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "4oahdfEm6mzD2NxQ3NR96z",
       "5uVTvL2iGw42HhdM2R8Nhk"
     ]
   },
@@ -4083,6 +4146,21 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "4eAwB5pnKFTmsgc3zWoYO0"
+    ]
+  },
+  {
+    "STREAMHASH": "2c842d39c442500015ed5a548d54d5e3",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Throne - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": [
+      "Drown - Live at the Royal Albert Hall",
+      "Oh No - Live at the Royal Albert Hall"
+    ],
+    "SPOTIFY_TID": [
+      "1Hxe4J8HuTxDTOR0wwu0co"
     ]
   },
   {
@@ -4272,7 +4350,6 @@
     "STREAMHASH": "2e4f19e3093278612155ab840d65530b",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -4332,6 +4409,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "2Db5llnoCmnufalm4WUNhG",
       "2Ylzn6qkN5YgCCNbMLwnXM"
     ]
   },
@@ -4339,7 +4417,6 @@
     "STREAMHASH": "2ec980015932df517ad62078e6c02cab",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -4407,6 +4484,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "3TO7bbrUKrOSPGRTB5MeCz"
+    ]
+  },
+  {
+    "STREAMHASH": "2f96a61a181c0f9877759ac1c6b641c8",
+    "altALBUM": [
+      "American Idiot (Deluxe)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "58KPPL1AdLHMvR2O2PZejr"
     ]
   },
   {
@@ -4515,6 +4604,7 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "69wXbIKtG6hzE4ID0wJTry",
       "7FLVnDMOZXKRFgRM3C4aUG"
     ]
   },
@@ -4585,6 +4675,18 @@
     ],
     "SPOTIFY_TID": [
       "6OiRh4kttAs1YWglvTcYkB"
+    ]
+  },
+  {
+    "STREAMHASH": "31f54ad11b73cb20a9183d674d809e29",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Empire - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0gXL5tTUHw8BC7NGG4I7v9"
     ]
   },
   {
@@ -5200,7 +5302,9 @@
   },
   {
     "STREAMHASH": "394b62b2e92a4c65b6e89045cd9acb25",
-    "altALBUM": null,
+    "altALBUM": [
+      "American Idiot (Deluxe)"
+    ],
     "blackALBUM": null,
     "altTITLE": [
       "Are We the Waiting / St. Jimmy"
@@ -5314,7 +5418,8 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "1EotcFbWTbMCXeKFVEtX6Y"
+      "1EotcFbWTbMCXeKFVEtX6Y",
+      "2elN12zz0lo1GXjRCGhAmC"
     ]
   },
   {
@@ -5681,7 +5786,9 @@
   },
   {
     "STREAMHASH": "3e897c9568eebbb9dc1287513f94cb09",
-    "altALBUM": null,
+    "altALBUM": [
+      "American Idiot (Deluxe)"
+    ],
     "blackALBUM": null,
     "altTITLE": [
       "Holiday / Boulevard of Broken Dreams"
@@ -5893,6 +6000,7 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "2DyCLtTrd9f2DRRDq1ngJx",
+      "3IgUCMkHS4RgHdngIlporF",
       "44n97yHySt0Z9rqPaXgjCK"
     ]
   },
@@ -5976,6 +6084,16 @@
     "STREAMHASH": "42eae884f59bd843546648888feb1885",
     "altALBUM": [
       "Hozier (Special Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "4322ebadcd634409f5934d1d8317d498",
+    "altALBUM": [
+      "American Idiot (Deluxe)"
     ],
     "blackALBUM": null,
     "altTITLE": null,
@@ -6201,6 +6319,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "0qBW7FOWvTmLfBKn4rfRYV"
+    ]
+  },
+  {
+    "STREAMHASH": "457f00205f97c1a7f1eb1e76f4bf35f1",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "It Never Ends - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0dEFiIxRfXiisPp00kAQrE"
     ]
   },
   {
@@ -6480,7 +6610,6 @@
     "STREAMHASH": "48ae1ae1cfb8f9b8fad968b06153741b",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -7045,7 +7174,6 @@
     "STREAMHASH": "4f7235f2b81ef54f715cfd7285de298c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -7228,6 +7356,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "0FoCiMRS1QaLyepPNpXlUp",
       "5fRIOfme92GNCYQ7A9nhBh"
     ]
   },
@@ -7928,6 +8057,7 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "6Qyc6fS4DsZjB2mRW9DsQs",
       "6vrUTGn5p8IrfTZ0J6sIVM"
     ]
   },
@@ -9026,6 +9156,7 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "0kn9QwZW8Ow9eTuZgxVEz8",
       "3iqL6Sev7Usw9OFg9dhbVS",
       "5q6Muul5yClmY6Aw0QjGhj"
     ]
@@ -9190,7 +9321,6 @@
     "STREAMHASH": "68d0999c9b99e0490aaabba2fe05e273",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -9374,6 +9504,23 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "6b875c2c4b2d5d2442d150e437b4d434",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Doomed - Live at the Royal Albert Hall",
+      "Overture - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": [
+      "Drown - Live at the Royal Albert Hall",
+      "Oh No - Live at the Royal Albert Hall"
+    ],
+    "SPOTIFY_TID": [
+      "5IBDi9cISbefMMtAB8syp3",
+      "5cJEr5SppnuMYcUmXhpY99"
+    ]
+  },
+  {
     "STREAMHASH": "6bab1fe73a28bc89be249255e5708392",
     "altALBUM": [
       "Motion"
@@ -9475,8 +9622,19 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "4wru9Edj14iTAh3jLEiHix",
       "7aZDLCAqie3RYzCrBFXOJL"
     ]
+  },
+  {
+    "STREAMHASH": "6cb825ca3fc364b3bda5bca2825fc3e5",
+    "altALBUM": [
+      "American Idiot (Deluxe)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
   },
   {
     "STREAMHASH": "6cbdba38e5bd38345069b82840ffba30",
@@ -9731,7 +9889,6 @@
   {
     "STREAMHASH": "6efaa2ca4e2f02b9e6d05fa43fb5ed8f",
     "altALBUM": [
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -9990,14 +10147,17 @@
   },
   {
     "STREAMHASH": "7050256a0fa1fca2a4b93906c58d6577",
-    "altALBUM": null,
+    "altALBUM": [
+      "American Idiot (Deluxe)"
+    ],
     "blackALBUM": null,
     "altTITLE": [
       "Give Me Novacaine / She's a Rebel"
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "11I3KKHv7g2pXiuqRDabRA"
+      "11I3KKHv7g2pXiuqRDabRA",
+      "1TvWynhpfL81aLBd84OSBF"
     ]
   },
   {
@@ -10347,6 +10507,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "25gHrw6el4iQPajnQsLq61",
       "3JSXEqNcevrfklqzPsqbsy"
     ]
   },
@@ -11136,6 +11297,7 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "0M3HkE321xpCbCYqVKzr1q",
       "0RUGuh2uSNFJpGMSsD1F5C"
     ]
   },
@@ -11283,7 +11445,8 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "0jXK4Xy4LAEKFgRiTr3M7w"
+      "0jXK4Xy4LAEKFgRiTr3M7w",
+      "2wSBd0G5t1suEUn4xWM8Vh"
     ]
   },
   {
@@ -11918,6 +12081,22 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "88d1bb8a5d87cbca87e652dc938775c5",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Drown - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": [
+      "Doomed - Live at the Royal Albert Hall",
+      "Oh No - Live at the Royal Albert Hall",
+      "Throne - Live at the Royal Albert Hall"
+    ],
+    "SPOTIFY_TID": [
+      "4XnSAIxLmqmJXX8uTEcatS"
+    ]
+  },
+  {
     "STREAMHASH": "88dd9e9dcefc4b7825fca1c9df4330af",
     "altALBUM": [
       "Night Visions (Deluxe)"
@@ -12307,7 +12486,9 @@
   },
   {
     "STREAMHASH": "8da46652d73810b684a6a92534cdbe82",
-    "altALBUM": null,
+    "altALBUM": [
+      "Chris Cornell (Deluxe Edition)"
+    ],
     "blackALBUM": null,
     "altTITLE": [
       "Nothing Compares 2 U - Live At SiriusXM/2015"
@@ -12623,6 +12804,7 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "40Gxnw5Vc8hnhGFknXHe3R",
       "6tsojOQ5wHaIjKqIryLZK6"
     ]
   },
@@ -12658,7 +12840,6 @@
     "STREAMHASH": "912a2bf1702cd6fd16768f866243f2bf",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -12755,7 +12936,6 @@
     "STREAMHASH": "9255405edcb32be7c0a7e69898deb4cd",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -12994,6 +13174,7 @@
       "Piano Concerto No. 4 in G Minor, Op. 40: III. Allegro vivace"
     ],
     "SPOTIFY_TID": [
+      "0SFRUDW4565vdCX1dg5i2k",
       "179bTBUuM0ODWSZURo4MeU"
     ]
   },
@@ -13496,6 +13677,20 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "9aa8dee4578fe37bfbdc6bc4a4c4e425",
+    "altALBUM": [
+      "The Sickness (10th Anniversary Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "40rvBMQizxkIqnjPdEWY1v",
+      "4ImIJRZNJhNQLLdUFSYJoS",
+      "5Bk1ArPcnMgeQzSqLjqaSW"
+    ]
+  },
+  {
     "STREAMHASH": "9ab59e662614dcf096d7d6aa69edc09e",
     "altALBUM": [
       "A Night At The Opera (2011 Remaster)",
@@ -13875,6 +14070,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "0RirdImiuyi8gcOrJXbh5B",
       "50YW5s4ZsaZrzN12E6CUAj",
       "7fcDQg8prLdJwim6Ey7neB"
     ]
@@ -14049,6 +14245,18 @@
     "SPOTIFY_TID": [
       "26D1PRJjD9Jj1JGRk88KVc",
       "5vHLwhxxlGzmClMcxRRFPr"
+    ]
+  },
+  {
+    "STREAMHASH": "a055683ea4d56cc660273b69c78b503d",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "True Friends - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "7fbrcKKwjbnmjoqAo2Qq48"
     ]
   },
   {
@@ -14762,7 +14970,8 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "2kqEcaCdcvaU4896uo8q6X"
+      "2kqEcaCdcvaU4896uo8q6X",
+      "427YcLJ3nbSOErsAkAI64b"
     ]
   },
   {
@@ -14775,6 +14984,7 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "6fikmt900PAd90VM0BdKRp",
       "7IvazUOzjYb53oSF4EuJEy"
     ]
   },
@@ -15388,6 +15598,22 @@
     ]
   },
   {
+    "STREAMHASH": "aeb88d7f68aaf57cecb9fb2b7d3357fd",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Oh No - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": [
+      "Doomed - Live at the Royal Albert Hall",
+      "Drown - Live at the Royal Albert Hall",
+      "Throne - Live at the Royal Albert Hall"
+    ],
+    "SPOTIFY_TID": [
+      "5Xtm0UubJiUYGEXVHtNiWv"
+    ]
+  },
+  {
     "STREAMHASH": "aec071c4838cf3932e6f724262ff13ae",
     "altALBUM": [
       "Greatest Hits II (2011 Remaster)",
@@ -15798,6 +16024,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "0kI3LTMJ8IKTXbwQfE6QJX",
       "5ORPYXJKlpHWIdceavSGrL",
       "7gehOKSGfZgjIJSxiyE8oD"
     ]
@@ -15949,6 +16176,7 @@
     "SPOTIFY_TID": [
       "07rz54LA3Y2lagmY0DnChZ",
       "23qSynK9TNOWrThLUtUAx4",
+      "3NBT6Ixgs0D8jOJCx4U1Nn",
       "5x2Sk2NUsatM0kIh7boKwP",
       "6SoUUr6i1X0GReHinApeKI"
     ]
@@ -16114,7 +16342,6 @@
     "STREAMHASH": "b7518d3da19cde6d19a7f4fa7eda2240",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -16823,7 +17050,6 @@
     "STREAMHASH": "be8dd425cb2142e179df78dab0aabb23",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -17055,6 +17281,21 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "c1279147799698e48c3f4a41ad0e535e",
+    "altALBUM": [
+      "Sinatra/Basie: The Complete Reprise Studio Recordings"
+    ],
+    "blackALBUM": null,
+    "altTITLE": [
+      "Fly Me To The Moon (In Other Words)"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1PVTvvxpSkyJWemW1CwVVk",
+      "5b7OgznPJJr1vHNYGyvxau"
+    ]
+  },
+  {
     "STREAMHASH": "c15030e528bc366f325e6ad7462006e2",
     "altALBUM": [
       "Encore (Deluxe Version)"
@@ -17088,7 +17329,8 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "3VzxXEBBfTbnISqmfXbvSN"
+      "3VzxXEBBfTbnISqmfXbvSN",
+      "4kPdBey30GM7MeBpHJyHBX"
     ]
   },
   {
@@ -17212,7 +17454,8 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "3nfRAF41rfz4aiTfi9s8oq"
+      "3nfRAF41rfz4aiTfi9s8oq",
+      "5hyuqT3PwqSKtH1EUSST20"
     ]
   },
   {
@@ -17817,6 +18060,7 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "5Yg45DuQgNc1dRw11pixQi",
+      "5wmkQbOUTLjnDsdLeNgtO3",
       "6PPu2SJkd5XmHU7q4QifbQ"
     ]
   },
@@ -17966,7 +18210,8 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "4bHsxqR3GMrXTxEPLuK5ue"
+      "4bHsxqR3GMrXTxEPLuK5ue",
+      "5RKQ5NdjSh2QzD4MaunT91"
     ]
   },
   {
@@ -18566,7 +18811,8 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "3IX7Bv6JMJaxxl2UNVhKON"
+      "3IX7Bv6JMJaxxl2UNVhKON",
+      "6uRWJoR1kKwqNMSSIo3Xmd"
     ]
   },
   {
@@ -18952,6 +19198,18 @@
     ]
   },
   {
+    "STREAMHASH": "d675289aed24e878f766b46d8c2fc00b",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Go to Hell, for Heaven's Sake - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "69ovKtfOrt7zRkiOSSzGBO"
+    ]
+  },
+  {
     "STREAMHASH": "d6db1cbf477544707195dfc97fa38e97",
     "altALBUM": [
       "Rachmaninoff: Piano Concerto No. 2 in C Minor, Op. 18 & Piano Concerto No. 3 in D Minor, Op. 30",
@@ -18964,6 +19222,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "2eZUuzaFSciccH6LZ9AeHj",
       "5nVtJowCXd7Ayk0sEcduGS"
     ]
   },
@@ -19097,7 +19356,6 @@
     "STREAMHASH": "d7db4f988aa0a11cc855cadf4a1c7371",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -19132,6 +19390,18 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "d81f13020477512f65aa2529c8b4abc4",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Antivist - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "63VdGAHgsNW0uDrXzo7spb"
+    ]
   },
   {
     "STREAMHASH": "d83d99a6cbd6caf143578a0b2b9f911c",
@@ -19402,13 +19672,15 @@
   {
     "STREAMHASH": "db48b512168576d6292f5ca58945720c",
     "altALBUM": [
-      "Finding Beauty In Negative Spaces (Bonus Track Version)"
+      "Finding Beauty In Negative Spaces (Bonus Track Version)",
+      "Seether: 2002-2013"
     ],
     "blackALBUM": null,
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "4dZ4iHhsqQAQ4em4abLB6C"
+      "4dZ4iHhsqQAQ4em4abLB6C",
+      "6nallRvLIcqax2AZTbc48y"
     ]
   },
   {
@@ -20078,6 +20350,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "e2081328ba9e5442b109160e2d43dad7",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Can You Feel My Heart - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "28DcCxLamMqusGsWxXpwDf"
+    ]
+  },
+  {
     "STREAMHASH": "e242180376149ec240d23225c75c8caf",
     "altALBUM": [
       "Love In The Future (Expanded Edition)"
@@ -20178,7 +20462,6 @@
     "STREAMHASH": "e3be43db9759de6b922b15a12eb5ffe6",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -20306,6 +20589,16 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "e5964650f4d8a5afe45dfb2e179cdf23",
+    "altALBUM": [
+      "American Idiot (Deluxe)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "e5b488eb4eba9305d5ea731d21adabab",
     "altALBUM": [
       "Don't Kill the Magic"
@@ -20381,7 +20674,6 @@
     "STREAMHASH": "e66b6cbb49c3efd46718ef932fb1473c",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -20556,6 +20848,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "e93d8d7a7f84ef63674797ad10c1e27e",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Shadow Moses - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "6FZFdnkWL4y3ALbU2gsOa7"
+    ]
+  },
+  {
     "STREAMHASH": "e944cdb3171f32bc43da78f8f89fdb20",
     "altALBUM": [
       "Jazz (Deluxe Edition 2011 Remaster)",
@@ -20682,6 +20986,16 @@
     ]
   },
   {
+    "STREAMHASH": "ea62a4011c4d044e0456b520b59f293f",
+    "altALBUM": [
+      "American Idiot (Deluxe)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "ea7b701e9d25bbb4714730934bfec0ff",
     "altALBUM": [
       "Encore (Deluxe Version)"
@@ -20740,6 +21054,18 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "3F8OmCcFxVdFsgo68JlBLu"
+    ]
+  },
+  {
+    "STREAMHASH": "ead42505b1175099bb8d4be91de010e9",
+    "altALBUM": [
+      "The Best Of Dire Straits & Mark Knopfler - Private Investigations"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "01Txvu3dNthhldq8oR0Pae"
     ]
   },
   {
@@ -20838,6 +21164,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "1U05523UU3EWnxyI6x5ACj",
       "49ow4D5a5BuIn5bZ2tggip"
     ]
   },
@@ -20877,7 +21204,6 @@
     "STREAMHASH": "ed0e3931f1ee6fb3da082f7934408d57",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -21113,6 +21439,8 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "0xmWQKzc5m9rLv2ucDWxwD",
+      "1hi0P1Y2he1p09xnUccuAN",
       "2DUYJaj4gv8CuSQPpO54cw"
     ]
   },
@@ -21130,7 +21458,6 @@
     "STREAMHASH": "f05eeeeb1b5a4e2268c44fbf44d6d259",
     "altALBUM": [
       "Meteora (Bonus Edition)",
-      "Meteora 20th Anniversary Edition",
       "Meteora 20th Anniversary Edition"
     ],
     "blackALBUM": null,
@@ -21186,6 +21513,16 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "f11bf8cf2dcb2897eba293c5037034b5",
+    "altALBUM": [
+      "American Idiot (Deluxe)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "f1422a9ab61323ac720c6f9aa1a636f3",
     "altALBUM": [
       "Clapton Chronicles: The Best of Eric Clapton",
@@ -21197,6 +21534,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "0zxj7dVhYZq5ACyaDx5XIo",
       "3BEZCNZSmVv30vsMNSOCri"
     ]
   },
@@ -21237,6 +21575,7 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "1SHxNhaFWnQt6nItD6C21S",
       "3mm9PR1SnWqTehk8hNAUaB"
     ]
   },
@@ -21358,6 +21697,18 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "f4041f8d890447a3de66d57c06673cfa",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Sleepwalking - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "5OomSPKKwQqazfzzDZ7pa4"
+    ]
   },
   {
     "STREAMHASH": "f409aac7275581290d1bdf523b9a5c15",
@@ -21513,6 +21864,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "f6225c9959a5c5a862863bc66fe73906",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Avalanche - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "21e5M6dfmPOmFLLPrkjUZ6"
+    ]
+  },
+  {
     "STREAMHASH": "f6705a43b7d37b1a7f7736c0d485f52f",
     "altALBUM": [
       "Handwritten (Deluxe)"
@@ -21613,7 +21976,8 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "4d0m6f46k1bX6ZQtfmg1Uj"
+      "4d0m6f46k1bX6ZQtfmg1Uj",
+      "5Ttcj0dFKpTWbPbA8afWhS"
     ]
   },
   {
@@ -21726,7 +22090,9 @@
   },
   {
     "STREAMHASH": "f886d2bacd403e0b35a52a9e6e5ebcad",
-    "altALBUM": null,
+    "altALBUM": [
+      "Rumours (Super Deluxe)"
+    ],
     "blackALBUM": null,
     "altTITLE": [
       "Dreams - 2004 Remaster"
@@ -21739,12 +22105,15 @@
   {
     "STREAMHASH": "f8eeed28229138d7160b0e589e187bfd",
     "altALBUM": [
+      "All the Right Reasons (Special Edition)",
       "All the Right Reasons (Walmart Exclusive Edition)"
     ],
     "blackALBUM": null,
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
+      "05rWggLwQ2weA4D2cRAt55",
+      "0G53JYumT2vVxRGOtROlXk",
       "1EFddFVisHbqCHah6oBlhD"
     ]
   },
@@ -21992,7 +22361,8 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "5EYi2rH4LYs6M21ZLOyQTx"
+      "5EYi2rH4LYs6M21ZLOyQTx",
+      "7ASFZh1D0DPZro7UXUKGmd"
     ]
   },
   {
@@ -22115,7 +22485,8 @@
     "altTITLE": null,
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "5NeIONQWJ25uPylJBJiO4c"
+      "5NeIONQWJ25uPylJBJiO4c",
+      "76aadnUFFANRNDs6L3aqxw"
     ]
   },
   {
@@ -22295,6 +22666,18 @@
     ]
   },
   {
+    "STREAMHASH": "ff709609f6bdb507cceb9030ed55176b",
+    "altALBUM": null,
+    "blackALBUM": null,
+    "altTITLE": [
+      "Follow You - Live at the Royal Albert Hall"
+    ],
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "1nlN3WIoV8GuIU1V1DdaFb"
+    ]
+  },
+  {
     "STREAMHASH": "ff91f153efee763643eb1194e23833a4",
     "altALBUM": [
       "A Night At The Opera (2011 Remaster)",
@@ -22317,7 +22700,8 @@
     ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "1ayVfSGKLGZxhW8UBew52g"
+      "1ayVfSGKLGZxhW8UBew52g",
+      "2rO9QKFbykchqjYti4UCyT"
     ]
   },
   {
