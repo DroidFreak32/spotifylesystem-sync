@@ -2384,6 +2384,18 @@
     ]
   },
   {
+    "STREAMHASH": "1a398dbc2f047c6a9f7a638cec23ef4c",
+    "altALBUM": [
+      "No Need To Argue (The Complete Sessions 1994-1995)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "7EZC6E7UjZe63f1jRmkWxt"
+    ]
+  },
+  {
     "STREAMHASH": "1a92d074f0e17d4108c1042559fa0143",
     "altALBUM": [
       "Tickets To My Downfall (SOLD OUT Deluxe)"
@@ -17228,6 +17240,18 @@
     ]
   },
   {
+    "STREAMHASH": "c07f69b16731639dd85913a10ee90529",
+    "altALBUM": [
+      "Hi Infidelity (30th Anniversary Edition)"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "4rcHWl68ai6KvpXlc8vbnE"
+    ]
+  },
+  {
     "STREAMHASH": "c081881af6b2cde399ad2c2fd1673ffb",
     "altALBUM": [
       "Cross Road"
@@ -21059,13 +21083,17 @@
   {
     "STREAMHASH": "ead42505b1175099bb8d4be91de010e9",
     "altALBUM": [
+      "Brothers In Arms (Remastered 1996)",
       "The Best Of Dire Straits & Mark Knopfler - Private Investigations"
     ],
     "blackALBUM": null,
-    "altTITLE": null,
+    "altTITLE": [
+      "Money For Nothing - Remastered 1996"
+    ],
     "blackTITLE": null,
     "SPOTIFY_TID": [
-      "01Txvu3dNthhldq8oR0Pae"
+      "01Txvu3dNthhldq8oR0Pae",
+      "4nFNJmjfgBF7jwv2oBC45b"
     ]
   },
   {

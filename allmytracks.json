@@ -1,5 +1,39 @@
 [
     {
+        "ALBUMARTIST": "Knocked Loose",
+        "ALBUM": "You Won't Go Before You're Supposed To",
+        "TITLE": "Suffocate (feat. Poppy)",
+        "ARTIST": [
+            "Knocked Loose",
+            "Poppy"
+        ],
+        "SPOTIFY": "https://open.spotify.com/track/6PXYOVPBzO3xojFhQAvmde",
+        "SPOTIFY_TID": "6PXYOVPBzO3xojFhQAvmde",
+        "SPOTIFY_LINKED_TID": "6PXYOVPBzO3xojFhQAvmde"
+    },
+    {
+        "ALBUMARTIST": "Marilyn Manson",
+        "ALBUM": "The Golden Age Of Grotesque",
+        "TITLE": "This Is The New Shit",
+        "ARTIST": [
+            "Marilyn Manson"
+        ],
+        "SPOTIFY": "https://open.spotify.com/track/5P13mfqn9o3ToFPTxowEgO",
+        "SPOTIFY_TID": "5P13mfqn9o3ToFPTxowEgO",
+        "SPOTIFY_LINKED_TID": "5P13mfqn9o3ToFPTxowEgO"
+    },
+    {
+        "ALBUMARTIST": "Llynks",
+        "ALBUM": "Keystone",
+        "TITLE": "Keystone",
+        "ARTIST": [
+            "Llynks"
+        ],
+        "SPOTIFY": "https://open.spotify.com/track/5shVrUohNocnXVPSwULXvb",
+        "SPOTIFY_TID": "5shVrUohNocnXVPSwULXvb",
+        "SPOTIFY_LINKED_TID": "5shVrUohNocnXVPSwULXvb"
+    },
+    {
         "ALBUMARTIST": "Trans Megetti",
         "ALBUM": "Fading Left To Completely On",
         "TITLE": "Gina",
@@ -573,17 +607,6 @@
         "SPOTIFY": "https://open.spotify.com/track/7G83ZwD2msTtFaBQExc8QB",
         "SPOTIFY_TID": "7G83ZwD2msTtFaBQExc8QB",
         "SPOTIFY_LINKED_TID": "7G83ZwD2msTtFaBQExc8QB"
-    },
-    {
-        "ALBUMARTIST": "Nanku",
-        "ALBUM": "Nanku Sharma",
-        "TITLE": "Kaafizyada",
-        "ARTIST": [
-            "Nanku"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/3LAs811NWNGUK2YBhLJd8k",
-        "SPOTIFY_TID": "3LAs811NWNGUK2YBhLJd8k",
-        "SPOTIFY_LINKED_TID": "3LAs811NWNGUK2YBhLJd8k"
     },
     {
         "ALBUMARTIST": "Cocteau Twins",
@@ -1729,17 +1752,6 @@
         "SPOTIFY_LINKED_TID": "7HKez549fwJQDzx3zLjHKC"
     },
     {
-        "ALBUMARTIST": "Ashnikko",
-        "ALBUM": "Worms",
-        "TITLE": "Worms",
-        "ARTIST": [
-            "Ashnikko"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/5PlGxNgE62io6OBc1BsIaq",
-        "SPOTIFY_TID": "5PlGxNgE62io6OBc1BsIaq",
-        "SPOTIFY_LINKED_TID": "5PlGxNgE62io6OBc1BsIaq"
-    },
-    {
         "ALBUMARTIST": "Wheatus",
         "ALBUM": "Wheatus",
         "TITLE": "A Little Respect",
@@ -1955,17 +1967,6 @@
         "SPOTIFY": "https://open.spotify.com/track/4ELXBKQHnfWiNt6OUcSo15",
         "SPOTIFY_TID": "4ELXBKQHnfWiNt6OUcSo15",
         "SPOTIFY_LINKED_TID": "4ELXBKQHnfWiNt6OUcSo15"
-    },
-    {
-        "ALBUMARTIST": "James Brown",
-        "ALBUM": "The 50th Anniversary Collection",
-        "TITLE": "I Got You (I Feel Good)",
-        "ARTIST": [
-            "James Brown"
-        ],
-        "SPOTIFY": "https://open.spotify.com/track/2LZdFnXIXuky0S0Jhdl4Qz",
-        "SPOTIFY_TID": "2LZdFnXIXuky0S0Jhdl4Qz",
-        "SPOTIFY_LINKED_TID": "2LZdFnXIXuky0S0Jhdl4Qz"
     },
     {
         "ALBUMARTIST": "The Turtles",
@@ -4808,17 +4809,10 @@
         "SPOTIFY_LINKED_TID": "6gCVA6ja6g0foIsWv0RuSZ"
     },
     {
-        "ALBUMARTIST": "Daron Malakian",
-        "alt_ALBUMARTISTS": [
-            "System Of A Down"
-        ],
+        "ALBUMARTIST": "System Of A Down",
         "ALBUM": "Steal This Album!",
         "TITLE": "I-E-A-I-A-I-O",
         "ARTIST": [
-            "Daron Malakian",
-            "Shavo Odadjian",
-            "Stu Phillips",
-            "Glen Larson",
             "System Of A Down"
         ],
         "SPOTIFY": "https://open.spotify.com/track/3RgDvs9Jpvn3kUuaTek1R5",
