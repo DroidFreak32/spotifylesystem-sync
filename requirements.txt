@@ -1,4 +1,4 @@
-spotipy==2.23.0
+spotipy==2.25.1
 pathos==0.3.1
 tqdm==4.66.3
 rapidfuzz==3.2.0
