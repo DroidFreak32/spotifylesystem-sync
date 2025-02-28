@@ -241,6 +241,7 @@ def search_track_in_db(track_metadata=None, album_artists=None):
     spotify_album = deepcopy(track_metadata['ALBUM'].casefold())
     spotify_tid = deepcopy(track_metadata['SPOTIFY_TID'])
     spotify_linked_tid = deepcopy(track_metadata['SPOTIFY_LINKED_TID'])
+    track_order = track_metadata['PLAYLIST_ORDER']
     db_track_contains_tid = False
 
     def safe_title_substring(_db_title='test', _spotify_title='test'):
@@ -467,6 +468,7 @@ def search_track_in_db(track_metadata=None, album_artists=None):
                                 'ARTIST': liststr_to_list(row.ARTIST),
                                 'SPOTIFY_TID': unique_tids,
                                 'STREAMHASH': row.STREAMHASH,
+                                'PLAYLIST_ORDER': track_order
                             })
 
                         else:
@@ -568,6 +570,7 @@ def search_track_in_db(track_metadata=None, album_artists=None):
                                     'ARTIST': liststr_to_list(row.ARTIST),
                                     'SPOTIFY_TID': unique_tids,
                                     'STREAMHASH': row.STREAMHASH,
+                                    'PLAYLIST_ORDER': track_order
                                 })
                             elif answer == 's':
                                 return 9
@@ -874,11 +877,6 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
                 # print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
                 continue
             matched_list += result
-            if isinstance(liststr_to_list(result[0]['PATH']), list):
-                # Use the 1st PATH. TODO: Make this more accurate by checking Album
-                # TAG: cd213e2f
-                result[0]['PATH'] = result[0]['PATH'][0]
-            matched_paths.append(result[0]['PATH'])
         if abort_abort:
             print(f"{bcolors.WARNING}Aborting!{bcolors.ENDC}")
             return
@@ -887,6 +885,17 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
 
     # for item in matched_list:
     #     update_trackid_in_db(spotify_tid=item['SPOTIFY_TID'], streamhash=item['STREAMHASH'])
+
+    # Sorting based on PLAYLIST_ORDER, thanks https://stackoverflow.com/a/73050/6437140
+    matched_list_sorted = sorted(matched_list, key=lambda d: d['PLAYLIST_ORDER'])
+
+    for item in matched_list_sorted:
+        if isinstance(liststr_to_list(item['PATH']), list):
+            # Use the 1st PATH. TODO: Make this more accurate by checking Album
+            # TAG: cd213e2f
+            item['PATH'] = item['PATH'][0]
+        matched_paths.append(item['PATH'])
+
     unmatched_dict = list2dictmerge(deepcopy(unmatched_list))
     matched_dict = list2dictmerge(deepcopy(matched_list))
     print(f"\n{len(matched_list)}/{spotify_playlist_track_total} tracks Matched. ")

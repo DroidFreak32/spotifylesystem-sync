@@ -83,6 +83,7 @@ def cleanup_playlist(playlist_raw=None):
     """
 
     cleaned_playlist = []
+    order = 1
     for item in playlist_raw:
         # BUG: Local tracks crash this method, skip them.
         if item['track']['is_local']:
@@ -110,6 +111,8 @@ def cleanup_playlist(playlist_raw=None):
 
         if track['alt_ALBUMARTISTS'] is None:
             track.pop('alt_ALBUMARTISTS', None)
+        track['PLAYLIST_ORDER'] = order
+        order += 1
         cleaned_playlist.append(track)
     return cleaned_playlist
 
