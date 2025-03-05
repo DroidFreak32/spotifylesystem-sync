@@ -782,7 +782,7 @@ def update_trackid_in_db(spotify_tid=None, streamhash=None, existing_tid=None):
     query.execute()
 
 
-def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=False):
+def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=False, owner_only=True):
 
     """
     TODO: Parallelize DB searching by adding a flag to bypass any user prompts and just store all the SUCCESS results
@@ -799,7 +799,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     if not all_saved_tracks:
-        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.fetch_playlist_tracks(owner_only=True)
+        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.fetch_playlist_tracks(owner_only=owner_only)
     else:
         # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
         # with open("allmytracks.json", "w") as jsonfile:
