@@ -492,7 +492,18 @@ def return_saved_tid(tids=None):
     results = sp.current_user_saved_tracks_contains(tids)
     return tids[0] if results[0] else tids[1]
 
+def dump_all_my_playlists():
+    with open("playlists.json", "r") as json_file:
+        pls=json.load(json_file)
+    playlists=pls.keys()
+    complete_spotify_playlist_dump={}
+    for playlist_id in playlists:
+        print(f"==============")
+        spotify_playlist_name, spotify_playlist_tracks = fetch_playlist_tracks(playlist_id=playlist_id)
+        complete_spotify_playlist_dump[spotify_playlist_name] = spotify_playlist_tracks
+        print(f"Done: {spotify_playlist_name}")
 
+    dump_to_json(complete_spotify_playlist_dump, "complete_spotify_playlist_dump.json")
 
 
 if __name__ == '__main__':
