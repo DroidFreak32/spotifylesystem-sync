@@ -228,6 +228,19 @@ def list2dictmerge(listobj=None):
     merged_dict_sorted = dict(sorted(merged_dict.items()))
     return merged_dict_sorted
 
+from listobs import listobj
+
+def convert_spotify_list_to_dict_by_track_id(listobj=None, keys=['SPOTIFY_TID', 'SPOTIFY_LINKED_TID']):
+    merged_dict = {}
+    merged_dict2 = {}
+    for tmp in listobj:
+        all_keys = list(tmp.keys())
+        for key in keys:
+            newkey = tmp[key]
+            tmp.pop(key)
+            merged_dict2[newkey] = tmp
+    merged_dict_sorted = dict(sorted(merged_dict2.items()))
+    return merged_dict_sorted
 
 def find_flacs(music_dir=None):
     print("Scanning directory tree for flac files. Please wait...")
@@ -406,4 +419,5 @@ def generate_m3u(playlist_name='playlist', track_paths=[]):
 
 
 if __name__ == '__main__':
+    tmp=convert_spotify_list_to_dict_by_track_id(deepcopy(listobj[0:10]), keys=['SPOTIFY_TID', 'SPOTIFY_LINKED_TID'])
     print("Main")

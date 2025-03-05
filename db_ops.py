@@ -17,7 +17,7 @@ from playhouse.sqlite_ext import CSqliteExtDatabase
 
 import spotify_ops
 from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata_with_warnings, get_last_flac_mtime, \
-    list2dictmerge, music_root_dir, \
+    list2dictmerge, convert_spotify_list_to_dict_by_track_id, music_root_dir, \
     db_path, db_mtime_marker, play_files_in_order, get_current_datetime, is_title_a_known_mismatch
 from common import liststr_to_list, find_flacs
 
@@ -56,6 +56,9 @@ class Music(BaseModel):
     # Track Spotify TRACK ID
     SPOTIFY_TID = TextField(null=True)
 
+class MusicSpotifyTID(BaseModel):
+    music = ForeignKeyField(Music, field="STREAMHASH",  backref="spotify_tids")
+    spotify_tid = CharField(index=True)  # Index for faster lookups
 
 def is_item_in_db_column_with_index(db_tag=None, track_tag=None):
     """
@@ -706,15 +709,16 @@ def sync_fs_to_db(force_resync=True, flac_files=None, last_flac_mtime=1):
         """
         master.backup(db)
     except:
-        master.create_tables([AlbumArtist, Music])
+        master.create_tables([AlbumArtist, Music, MusicSpotifyTID])
         master.commit()
         master.backup(db)
     if force_resync:
         # Rescan again to avoid crash when file is deleted while running this program
-        flac_files = find_flacs(music_root_dir)
+        if flac_files is None:
+            flac_files = find_flacs(music_root_dir)
         last_flac_mtime = get_last_flac_mtime(flac_files)
-        db.drop_tables([AlbumArtist, Music])
-        db.create_tables([AlbumArtist, Music])
+        db.drop_tables([AlbumArtist, Music, MusicSpotifyTID])
+        db.create_tables([AlbumArtist, Music, MusicSpotifyTID])
 
     metadata, warning_flag = generate_metadata_with_warnings(music_root_dir, flac_files)
     if warning_flag:
@@ -780,6 +784,10 @@ def update_trackid_in_db(spotify_tid=None, streamhash=None, existing_tid=None):
     # All checks passed so update the DB
     query = Music.update(SPOTIFY_TID=tid_to_add).where(Music.STREAMHASH == streamhash)
     query.execute()
+    with db.atomic():  # Use transactions for efficiency
+        MusicSpotifyTID.insert_many(
+            [{"music": streamhash, "spotify_tid": tid} for tid in tid_to_add]
+        ).execute()
 
 
 def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=False, owner_only=True):
@@ -813,8 +821,52 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     unmatched_track_ids = []
     unmatched_list = []
 
+    stid=set()
+    for t in spotify_playlist_tracks:
+        stid.add(t['SPOTIFY_TID'])
+        stid.add(t['SPOTIFY_LINKED_TID'])
+    tid_list=sorted(stid)
+    query = (Music
+         .select()
+         .join(MusicSpotifyTID)
+         .where(MusicSpotifyTID.spotify_tid.in_(tid_list)))  # tid_list is your list of TIDs
+
+    temp = convert_spotify_list_to_dict_by_track_id(deepcopy(spotify_playlist_tracks), keys=['SPOTIFY_TID', 'SPOTIFY_LINKED_TID'] )
+    db_music_tracks=[]
+    pre_matched=[]
+    removed=[]
+    db_music_tracks_matched={}
+    for music_track in query:
+        db_music_tracks.append(music_track)
+
+        for tid in music_track.spotify_tids.select():
+            if tid.spotify_tid in temp.keys():
+                unique_tid=tid.spotify_tid
+                db_music_tracks_matched[unique_tid] = temp[unique_tid]
+                temp.pop(unique_tid, None)
+
+        pre_matched.append({
+            'ALBUMARTIST': music_track.ALBUMARTIST.ALBUMARTIST,
+            'PATH': liststr_to_list(music_track.PATH),
+            'ARTIST': liststr_to_list(music_track.ARTIST),
+            'SPOTIFY_TID': unique_tid,
+            'STREAMHASH': music_track.STREAMHASH,
+            'PLAYLIST_ORDER': db_music_tracks_matched[unique_tid]['PLAYLIST_ORDER']
+        })
+    spotify_playlist_tracks_reduced = deepcopy(temp)
+
+    for item in spotify_playlist_tracks:
+        if item['SPOTIFY_TID'] in spotify_playlist_tracks_reduced.keys() or item['SPOTIFY_LINKED_TID'] in spotify_playlist_tracks_reduced.keys():
+            removed.append(item)
+            spotify_playlist_tracks.remove(item)
+
+
+
+
+
     spotify_playlist_tracks_merged = list2dictmerge(
         deepcopy(spotify_playlist_tracks))
+
 
     offset = 0
     for spotify_album_artist, _ in spotify_playlist_tracks_merged.items():
@@ -886,6 +938,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     # for item in matched_list:
     #     update_trackid_in_db(spotify_tid=item['SPOTIFY_TID'], streamhash=item['STREAMHASH'])
 
+    matched_list += pre_matched
     # Sorting based on PLAYLIST_ORDER, thanks https://stackoverflow.com/a/73050/6437140
     matched_list_sorted = sorted(matched_list, key=lambda d: d['PLAYLIST_ORDER'])
 
@@ -965,6 +1018,10 @@ def import_altColumns():
             altTITLE=item['altTITLE'], blackTITLE=item['blackTITLE'], SPOTIFY_TID=item['SPOTIFY_TID']
         ).where(Music.STREAMHASH == item['STREAMHASH'])
         query.execute()
+        if item['SPOTIFY_TID'] is not None:
+            for tid in item['SPOTIFY_TID']:
+                with db.atomic():  # Use transactions for efficiency
+                    MusicSpotifyTID.replace(music=item['STREAMHASH'], spotify_tid=tid).execute()
 
     db.backup(master)
     master.execute_sql('VACUUM;')
