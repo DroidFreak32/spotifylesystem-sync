@@ -16,7 +16,7 @@ import spotipy
 import taglib
 import tqdm
 import logging
-
+import json
 from spotipy import SpotifyOAuth
 
 global music_root_dir
@@ -230,15 +230,15 @@ def list2dictmerge(listobj=None):
 
 from listobs import listobj
 
-def convert_spotify_list_to_dict_by_track_id(listobj=None, keys=['SPOTIFY_TID', 'SPOTIFY_LINKED_TID']):
+def convert_spotify_list_to_dict_by_track_id(listobj=None, key='SPOTIFY_TID'):
     merged_dict = {}
     merged_dict2 = {}
     for tmp in listobj:
         all_keys = list(tmp.keys())
-        for key in keys:
-            newkey = tmp[key]
-            tmp.pop(key)
-            merged_dict2[newkey] = tmp
+        # for key in keys:
+        newkey = tmp[key]
+        tmp.pop(key)
+        merged_dict2[newkey] = tmp
     merged_dict_sorted = dict(sorted(merged_dict2.items()))
     return merged_dict_sorted
 
@@ -417,6 +417,9 @@ def generate_m3u(playlist_name='playlist', track_paths=[]):
             print(item, file=p)
     print("\nPlaylist generated at: " + location)
 
+def dump_to_json(obj=None, file_name="tmp.json"):
+    with open(file_name, 'w') as json_file:
+        json.dump(obj, json_file, indent=4)
 
 if __name__ == '__main__':
     tmp=convert_spotify_list_to_dict_by_track_id(deepcopy(listobj[0:10]), keys=['SPOTIFY_TID', 'SPOTIFY_LINKED_TID'])

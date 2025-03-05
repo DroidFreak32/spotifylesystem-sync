@@ -3,7 +3,7 @@ from datetime import datetime
 
 import tqdm
 
-from common import get_spotify_connection, bcolors, logging
+from common import get_spotify_connection, bcolors, logging, dump_to_json
 
 sp = get_spotify_connection()
 
@@ -491,6 +491,8 @@ def return_saved_tid(tids=None):
         tids = []
     results = sp.current_user_saved_tracks_contains(tids)
     return tids[0] if results[0] else tids[1]
+
+
 
 
 if __name__ == '__main__':

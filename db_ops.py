@@ -19,7 +19,7 @@ import spotify_ops
 from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata_with_warnings, get_last_flac_mtime, \
     list2dictmerge, convert_spotify_list_to_dict_by_track_id, music_root_dir, \
     db_path, db_mtime_marker, play_files_in_order, get_current_datetime, is_title_a_known_mismatch
-from common import liststr_to_list, find_flacs
+from common import liststr_to_list, find_flacs, dump_to_json
 
 db = CSqliteExtDatabase(":memory:")
 
@@ -831,38 +831,51 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
          .join(MusicSpotifyTID)
          .where(MusicSpotifyTID.spotify_tid.in_(tid_list)))  # tid_list is your list of TIDs
 
-    temp = convert_spotify_list_to_dict_by_track_id(deepcopy(spotify_playlist_tracks), keys=['SPOTIFY_TID', 'SPOTIFY_LINKED_TID'] )
+    temp = convert_spotify_list_to_dict_by_track_id(deepcopy(spotify_playlist_tracks), key='SPOTIFY_TID')
+    db_music_tracks_set=set()
     db_music_tracks=[]
-    pre_matched=[]
+    pre_matched_tracks_by_spot_tid=[]
+    pre_matched_tids=[]
     removed=[]
     db_music_tracks_matched={}
     for music_track in query:
         db_music_tracks.append(music_track)
+        db_music_tracks_set.add(music_track)
 
+    for music_track in db_music_tracks_set:
+        found=False
+        track_spotify_tids=[]
         for tid in music_track.spotify_tids.select():
+            track_spotify_tids.append(tid.spotify_tid)
             if tid.spotify_tid in temp.keys():
                 unique_tid=tid.spotify_tid
                 db_music_tracks_matched[unique_tid] = temp[unique_tid]
                 temp.pop(unique_tid, None)
+                found=True
+            else:
+                pass
+            if found:
+                break
 
-        pre_matched.append({
-            'ALBUMARTIST': music_track.ALBUMARTIST.ALBUMARTIST,
-            'PATH': liststr_to_list(music_track.PATH),
-            'ARTIST': liststr_to_list(music_track.ARTIST),
-            'SPOTIFY_TID': unique_tid,
-            'STREAMHASH': music_track.STREAMHASH,
-            'PLAYLIST_ORDER': db_music_tracks_matched[unique_tid]['PLAYLIST_ORDER']
-        })
+        if found:
+            pre_matched_tracks_by_spot_tid.append({
+                'ALBUMARTIST': music_track.ALBUMARTIST.ALBUMARTIST,
+                'PATH': liststr_to_list(music_track.PATH),
+                'ARTIST': liststr_to_list(music_track.ARTIST),
+                'SPOTIFY_TID': track_spotify_tids,
+                'STREAMHASH': music_track.STREAMHASH,
+                'PLAYLIST_ORDER': db_music_tracks_matched[unique_tid]['PLAYLIST_ORDER']
+            })
+            pre_matched_tids += track_spotify_tids
     spotify_playlist_tracks_reduced = deepcopy(temp)
 
-    for item in spotify_playlist_tracks:
-        if item['SPOTIFY_TID'] in spotify_playlist_tracks_reduced.keys() or item['SPOTIFY_LINKED_TID'] in spotify_playlist_tracks_reduced.keys():
+    init_len = len(spotify_playlist_tracks)
+    count=0
+
+    for item in spotify_playlist_tracks[:]:
+        if item['SPOTIFY_TID'] in pre_matched_tids or item['SPOTIFY_LINKED_TID'] in pre_matched_tids:
             removed.append(item)
             spotify_playlist_tracks.remove(item)
-
-
-
-
 
     spotify_playlist_tracks_merged = list2dictmerge(
         deepcopy(spotify_playlist_tracks))
@@ -938,7 +951,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     # for item in matched_list:
     #     update_trackid_in_db(spotify_tid=item['SPOTIFY_TID'], streamhash=item['STREAMHASH'])
 
-    matched_list += pre_matched
+    matched_list += pre_matched_tracks_by_spot_tid
     # Sorting based on PLAYLIST_ORDER, thanks https://stackoverflow.com/a/73050/6437140
     matched_list_sorted = sorted(matched_list, key=lambda d: d['PLAYLIST_ORDER'])
 

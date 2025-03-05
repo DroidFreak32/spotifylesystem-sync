@@ -4198,7 +4198,8 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "0oerlffJSzhRVvtDfLcp3N",
-      "2fY6tqgrlrg1ky9fgs0t5u"
+      "2fY6tqgrlrg1ky9fgs0t5u",
+      "52m7IQitPjIy1PrULHhS9F"
     ]
   },
   {
@@ -5183,7 +5184,9 @@
   },
   {
     "STREAMHASH": "36457e815a113e7986b921ff0f6bba56",
-    "altALBUM": null,
+    "altALBUM": [
+      "Greatest Hits: God's Favorite Band"
+    ],
     "blackALBUM": [
       "21st Century Breakdown"
     ],
@@ -12985,6 +12988,16 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "8f0ac5d987cdd76060b676c1729ffdbd",
+    "altALBUM": [
+      "Greatest Hits: God's Favorite Band"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
     "STREAMHASH": "8f3c5b786647d5ba6a8d77bf895165ba",
     "altALBUM": [
       "The Marshall Mathers LP2 (Deluxe)"
@@ -13082,7 +13095,9 @@
   },
   {
     "STREAMHASH": "8fdb7d37e779b1825de197621daf4d42",
-    "altALBUM": null,
+    "altALBUM": [
+      "Greatest Hits: God's Favorite Band"
+    ],
     "blackALBUM": [
       "American Idiot"
     ],
@@ -17643,6 +17658,18 @@
     "SPOTIFY_TID": null
   },
   {
+    "STREAMHASH": "bfb923a59270502400f90ccfa4f97f78",
+    "altALBUM": [
+      "Comeblack"
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": [
+      "0RdUX4WE0fO30VnlUbDVL6"
+    ]
+  },
+  {
     "STREAMHASH": "bfedd81fcff92c66913ae89f15736c72",
     "altALBUM": [
       "Rap God"
@@ -20556,6 +20583,7 @@
     "blackTITLE": null,
     "SPOTIFY_TID": [
       "0rmGAIH9LNJewFw7nKzZnc",
+      "2TofEeQobQ9YoK7EFds698",
       "3KYiA4vq6RPO1dE2XROXd8"
     ]
   },
@@ -20831,7 +20859,9 @@
   },
   {
     "STREAMHASH": "e112e8adc3880db5c26f4c217b795115",
-    "altALBUM": null,
+    "altALBUM": [
+      "Greatest Hits: God's Favorite Band"
+    ],
     "blackALBUM": [
       "American Idiot"
     ],
@@ -21530,6 +21560,16 @@
     "STREAMHASH": "e9c6cb12db603666de0bfc0599755d79",
     "altALBUM": [
       "\"Let's Rock\""
+    ],
+    "blackALBUM": null,
+    "altTITLE": null,
+    "blackTITLE": null,
+    "SPOTIFY_TID": null
+  },
+  {
+    "STREAMHASH": "e9d44bdb127bee3dd71c31231ca0931d",
+    "altALBUM": [
+      "Greatest Hits: God's Favorite Band"
     ],
     "blackALBUM": null,
     "altTITLE": null,
