@@ -10,6 +10,7 @@ from peewee import BlobField, Value
 from peewee import CharField
 from peewee import DoesNotExist
 from peewee import ForeignKeyField
+from peewee import prefetch
 from peewee import IntegrityError
 from peewee import Model
 from peewee import TextField
@@ -17,9 +18,9 @@ from playhouse.sqlite_ext import CSqliteExtDatabase
 
 import spotify_ops
 from common import bcolors, fetch_metadata_in_background, generate_m3u, generate_metadata_with_warnings, get_last_flac_mtime, \
-    list2dictmerge, music_root_dir, \
+    list2dictmerge, convert_spotify_list_to_dict_by_track_id, music_root_dir, \
     db_path, db_mtime_marker, play_files_in_order, get_current_datetime, is_title_a_known_mismatch
-from common import liststr_to_list, find_flacs
+from common import liststr_to_list, find_flacs, dump_to_json
 
 db = CSqliteExtDatabase(":memory:")
 
@@ -789,6 +790,60 @@ def update_trackid_in_db(spotify_tid=None, streamhash=None, existing_tid=None):
             [{"music": streamhash, "spotify_tid": tid} for tid in tid_to_add]
         ).execute()
 
+def match_existing_spotify_tids(spotify_playlist_tracks):
+    """
+    Matches Spotify tracks against the local database using Spotify TIDs.
+    Returns a tuple: (matched_tracks_list, remaining_spotify_tracks_list)
+    """
+    stid = set()
+    for t in spotify_playlist_tracks:
+        stid.add(t['SPOTIFY_TID'])
+        stid.add(t['SPOTIFY_LINKED_TID'])
+    tid_list = sorted(stid)
+
+    if not tid_list:
+        return [], spotify_playlist_tracks
+
+    query = (Music
+             .select()
+             .join(MusicSpotifyTID)
+             .where(MusicSpotifyTID.spotify_tid.in_(tid_list)))
+    query = prefetch(query, MusicSpotifyTID)
+
+    temp = convert_spotify_list_to_dict_by_track_id(deepcopy(spotify_playlist_tracks), key='SPOTIFY_TID')
+
+    pre_matched_tracks_by_spot_tid = []
+    pre_matched_tids = set()
+    db_music_tracks_matched = {}
+
+    for music_track in query:
+        found = False
+        track_spotify_tids = []
+        for tid in music_track.spotify_tids:
+            track_spotify_tids.append(tid.spotify_tid)
+            if not found and tid.spotify_tid in temp:
+                unique_tid = tid.spotify_tid
+                db_music_tracks_matched[unique_tid] = temp[unique_tid]
+                temp.pop(unique_tid, None)
+                found = True
+
+        if found:
+            pre_matched_tracks_by_spot_tid.append({
+                'ALBUMARTIST': music_track.ALBUMARTIST.ALBUMARTIST,
+                'PATH': liststr_to_list(music_track.PATH),
+                'ARTIST': liststr_to_list(music_track.ARTIST),
+                'SPOTIFY_TID': track_spotify_tids,
+                'STREAMHASH': music_track.STREAMHASH,
+                'PLAYLIST_ORDER': db_music_tracks_matched[unique_tid]['PLAYLIST_ORDER']
+            })
+            pre_matched_tids.update(track_spotify_tids)
+
+    remaining_tracks = [
+        item for item in spotify_playlist_tracks
+        if item['SPOTIFY_TID'] not in pre_matched_tids and item['SPOTIFY_LINKED_TID'] not in pre_matched_tids
+    ]
+
+    return pre_matched_tracks_by_spot_tid, remaining_tracks
 
 def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=False, owner_only=True):
 
@@ -820,6 +875,8 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     matched_paths = []
     unmatched_track_ids = []
     unmatched_list = []
+
+    pre_matched_tracks_by_spot_tid, spotify_playlist_tracks = match_existing_spotify_tids(spotify_playlist_tracks)
 
     spotify_playlist_tracks_merged = list2dictmerge(
         deepcopy(spotify_playlist_tracks))
@@ -894,6 +951,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     # for item in matched_list:
     #     update_trackid_in_db(spotify_tid=item['SPOTIFY_TID'], streamhash=item['STREAMHASH'])
 
+    matched_list += pre_matched_tracks_by_spot_tid
     # Sorting based on PLAYLIST_ORDER, thanks https://stackoverflow.com/a/73050/6437140
     matched_list_sorted = sorted(matched_list, key=lambda d: d['PLAYLIST_ORDER'])
 

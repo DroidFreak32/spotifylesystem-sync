@@ -228,6 +228,17 @@ def list2dictmerge(listobj=None):
     merged_dict_sorted = dict(sorted(merged_dict.items()))
     return merged_dict_sorted
 
+def convert_spotify_list_to_dict_by_track_id(listobj=None, key='SPOTIFY_TID'):
+    merged_dict = {}
+    merged_dict2 = {}
+    for tmp in listobj:
+        all_keys = list(tmp.keys())
+        # for key in keys:
+        newkey = tmp[key]
+        tmp.pop(key)
+        merged_dict2[newkey] = tmp
+    merged_dict_sorted = dict(sorted(merged_dict2.items()))
+    return merged_dict_sorted
 
 def find_flacs(music_dir=None):
     print("Scanning directory tree for flac files. Please wait...")
