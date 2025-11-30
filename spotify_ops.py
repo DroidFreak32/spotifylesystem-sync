@@ -1,9 +1,10 @@
 import time
 from datetime import datetime
 
+import json
 import tqdm
 
-from common import get_spotify_connection, bcolors, logging
+from common import get_spotify_connection, bcolors, logging, dump_to_json
 
 sp = get_spotify_connection()
 
@@ -491,6 +492,33 @@ def return_saved_tid(tids=None):
         tids = []
     results = sp.current_user_saved_tracks_contains(tids)
     return tids[0] if results[0] else tids[1]
+
+def dump_all_my_playlists(owner_only=True):
+    """
+    Fetches all playlists for the current authenticated user and dumps them to a JSON file.
+
+    The file is named based on the user's display name: <username>_spotify_playlist_dump.json.
+    """
+    user_info = sp.me()
+    user_id = user_info['id']
+    user_name = user_info['display_name'].replace(' ', '_')
+    current_date = datetime.now().strftime('%Y%m%d')
+
+    dump_filename = f"{user_name}_spotify_playlist_dump_{current_date}.json"
+
+    playlists_map = fetch_user_playlists(user_id=user_id, ids_only=False, owner_only=owner_only)
+    complete_dump = {}
+    total_playlists = len(playlists_map)
+
+    print(f"Starting dump of {total_playlists} playlists for user: {user_name}")
+
+    for index, playlist_id in enumerate(playlists_map.keys(), 1):
+        playlist_name, playlist_tracks = fetch_playlist_tracks(playlist_id=playlist_id)
+        complete_dump[playlist_name] = playlist_tracks
+        print(f"[{index}/{total_playlists}] Processed: {playlist_name}")
+
+    dump_to_json(complete_dump, dump_filename)
+    input(f"Dumped all playlists to file: {dump_filename}\n")
 
 
 if __name__ == '__main__':

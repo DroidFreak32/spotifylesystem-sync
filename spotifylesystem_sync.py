@@ -4,7 +4,7 @@ from db_ops import cleanup_db, sync_fs_to_db, export_altColumns, import_altColum
 
 import time
 
-from spotify_ops import find_playlists_containing_tracks, generate_unsaved_track_playlists
+from spotify_ops import find_playlists_containing_tracks, generate_unsaved_track_playlists, dump_all_my_playlists
 
 def action_generate_local_playlists():
     """
@@ -54,18 +54,21 @@ def action_generate_unsaved_playlist():
 
 # MENU_OPTIONS is a list of tuples, where each tuple contains:
 # 1. A string representing the menu option's description.
-# 2. The function to be called when this option is selected.
+# 2. The function (or callable/lambda) to be executed when this option is selected.
 MENU_OPTIONS = [
     ("Complete Sync filesystem to Local DB", sync_fs_to_db),
     ("Update modified files in DB", partial_sync),
     ("Generate spotify playlists locally", action_generate_local_playlists),
     ("Create a playlist of all saved spotify tracks", action_create_saved_tracks_playlist),
     ("Create a playlist of tracks without lrc files", missing_lrc),
+    ("Generate playlist of tracks not saved to your library", action_generate_unsaved_playlist),
+    # Use lambda to pass arguments to the function without executing it immediately
+    ("Export all saved playlists in your profile", lambda: dump_all_my_playlists(owner_only=False)),
+    ("Export owned playlists in your profile", lambda: dump_all_my_playlists(owner_only=True)),
     ("Export whitelist & blacklist", export_altColumns),
     ("Import whitelist & blacklist", import_altColumns),
     ("Cleanup duplicates in db", cleanup_db),
     ("Find your playlists containing a track via IDs", find_playlists_containing_tracks),
-    ("Generate unsaved track playlist", action_generate_unsaved_playlist),
 ]
 
 
