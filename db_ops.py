@@ -56,6 +56,9 @@ class Music(BaseModel):
     # Track Spotify TRACK ID
     SPOTIFY_TID = TextField(null=True)
 
+class MusicSpotifyTID(BaseModel):
+    music = ForeignKeyField(Music, field="STREAMHASH",  backref="spotify_tids")
+    spotify_tid = CharField(index=True)  # Index for faster lookups
 
 def is_item_in_db_column_with_index(db_tag=None, track_tag=None):
     """
@@ -706,15 +709,16 @@ def sync_fs_to_db(force_resync=True, flac_files=None, last_flac_mtime=1):
         """
         master.backup(db)
     except:
-        master.create_tables([AlbumArtist, Music])
+        master.create_tables([AlbumArtist, Music, MusicSpotifyTID])
         master.commit()
         master.backup(db)
     if force_resync:
         # Rescan again to avoid crash when file is deleted while running this program
-        flac_files = find_flacs(music_root_dir)
+        if flac_files is None:
+            flac_files = find_flacs(music_root_dir)
         last_flac_mtime = get_last_flac_mtime(flac_files)
-        db.drop_tables([AlbumArtist, Music])
-        db.create_tables([AlbumArtist, Music])
+        db.drop_tables([AlbumArtist, Music, MusicSpotifyTID])
+        db.create_tables([AlbumArtist, Music, MusicSpotifyTID])
 
     metadata, warning_flag = generate_metadata_with_warnings(music_root_dir, flac_files)
     if warning_flag:
@@ -780,6 +784,10 @@ def update_trackid_in_db(spotify_tid=None, streamhash=None, existing_tid=None):
     # All checks passed so update the DB
     query = Music.update(SPOTIFY_TID=tid_to_add).where(Music.STREAMHASH == streamhash)
     query.execute()
+    with db.atomic():  # Use transactions for efficiency
+        MusicSpotifyTID.insert_many(
+            [{"music": streamhash, "spotify_tid": tid} for tid in tid_to_add]
+        ).execute()
 
 
 def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=False, owner_only=True):
@@ -965,6 +973,12 @@ def import_altColumns():
             altTITLE=item['altTITLE'], blackTITLE=item['blackTITLE'], SPOTIFY_TID=item['SPOTIFY_TID']
         ).where(Music.STREAMHASH == item['STREAMHASH'])
         query.execute()
+        MusicSpotifyTID.delete().where(MusicSpotifyTID.music == item['STREAMHASH']).execute()
+        if item['SPOTIFY_TID']:
+            with db.atomic(): # Use transactions for efficiency
+                MusicSpotifyTID.insert_many(
+                    [{"music": item['STREAMHASH'], "spotify_tid": tid} for tid in item['SPOTIFY_TID']]
+                ).execute()
 
     db.backup(master)
     master.execute_sql('VACUUM;')
