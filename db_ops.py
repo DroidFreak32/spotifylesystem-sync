@@ -961,6 +961,7 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
             # TAG: cd213e2f
             item['PATH'] = item['PATH'][0]
         matched_paths.append(item['PATH'])
+        # matched_paths.append("../" + item['PATH'])
 
     unmatched_dict = list2dictmerge(deepcopy(unmatched_list))
     matched_dict = list2dictmerge(deepcopy(matched_list))

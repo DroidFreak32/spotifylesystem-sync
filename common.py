@@ -415,6 +415,14 @@ def generate_m3u(playlist_name='playlist', track_paths=[]):
             print(item, file=p)
     print("\nPlaylist generated at: " + location)
 
+def generate_m3u_separate_dir(playlist_name='playlist', track_paths=[]):
+    location = os.path.join(music_root_dir + "/PLAYLISTS/", playlist_name + '.m3u8')
+    with open(location, 'w', encoding='utf-8') as p:
+        print(f"#EXTM3U\n#PLAYLIST:{playlist_name}", file=p)
+        for item in track_paths:
+            print(item, file=p)
+    print("\nPlaylist generated at: " + location)
+
 def dump_to_json(obj=None, file_name="tmp.json"):
     with open(file_name, 'w') as json_file:
         json.dump(obj, json_file, indent=4)
