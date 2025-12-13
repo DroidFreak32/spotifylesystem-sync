@@ -1017,7 +1017,8 @@ def import_altColumns():
     master.backup(db)
 
     answer = input(f"Enter the name of alt_columns.json file: ")
-    if os.path.exists(os.path.join(os.getcwd(), answer)):
+    full_path = os.path.join(os.getcwd(), answer)
+    if os.path.exists(os.path.join(os.getcwd(), answer))  and os.path.isfile(full_path):
         json_file_path = os.path.join(os.getcwd(), answer)
     else:
         json_file_path = 'altColumns.json'
