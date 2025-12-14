@@ -342,7 +342,7 @@ def handle_tid_update(row, spotify_tid, spotify_linked_tid, db_track_contains_ti
                             existing_tid=row.SPOTIFY_TID)
     return unique_tids
 
-def process_db_row(row, track_metadata, album_artist, db_track_contains_tid):
+def process_db_row(row, track_metadata, album_artist, db_track_contains_tid, skip_prompts):
     """
     Processes a single DB row to check for a match against track metadata.
     Returns a tuple: (match_data, status_code)
@@ -388,7 +388,9 @@ def process_db_row(row, track_metadata, album_artist, db_track_contains_tid):
             """
             We don't have an exact match, so prompt user to verify and update alternate / blacklist tags in DB.
             """
-            answer = handle_title_interaction(row, track_metadata)
+            if not skip_prompts:
+                answer = handle_title_interaction(row, track_metadata)
+            else: answer = 'X'
 
             if answer == 'a' or answer == 'y':
                 print(f"\n*** Ignoring Title ***")
@@ -459,7 +461,9 @@ def process_db_row(row, track_metadata, album_artist, db_track_contains_tid):
                     # If subsequent iterations do not get this track then it will be a part of unmatched list.
                     return None, 0
 
-                answer = handle_album_interaction(row, track_metadata, bypass_album)
+                if not skip_prompts:
+                    answer = handle_album_interaction(row, track_metadata, bypass_album)
+                else: answer = 'X'
 
                 if answer == 'n' or answer == 'N':
                     add_to_black_album(row, track_metadata)
@@ -498,7 +502,7 @@ def process_db_row(row, track_metadata, album_artist, db_track_contains_tid):
                     return None, 0
     return None, 0
 
-def search_track_in_db(track_metadata=None, album_artists=None):
+def search_track_in_db(track_metadata=None, album_artists=None, skip_prompts=False):
     """
     Scans the DB for a given spotify track and returns a match or an empty list.
         - First perform a case-insensitive match of the AlbumArtist
@@ -575,7 +579,7 @@ def search_track_in_db(track_metadata=None, album_artists=None):
                 # album_artist_tracks = album_artist.tracks
 
             for row in album_artist_tracks:
-                match_data, status = process_db_row(row, track_metadata, album_artist, db_track_contains_tid)
+                match_data, status = process_db_row(row, track_metadata, album_artist, db_track_contains_tid, skip_prompts=skip_prompts)
                 if status == 99: return 99
                 if status == 9: return 9
                 if status == 1: result.append(match_data)
@@ -834,6 +838,150 @@ def match_existing_spotify_tids(spotify_playlist_tracks):
 
     return pre_matched_tracks_by_spot_tid, remaining_tracks
 
+def generate_local_playlists_from_dump(playlist_dump_file="playlist_dump.json"):
+
+    """
+    TODO: Parallelize DB searching by adding a flag to bypass any user prompts and just store all the SUCCESS results
+            then strip these tracks and redo the classic brute-force searching which then asks for prompts.
+            For large number of songs of the artist, this method could be used:
+    album_artist = AlbumArtist.get(...)
+    fast_result = a_pool.starmap(search_track_in_db, zip(spotify_playlist_tracks_merged['Arctic Monkeys'], repeat(album_artist)))
+    """
+    # Flags to quit generating playlists.
+    skip_generation_and_save = False
+    abort_abort = False
+
+    user_id = spotify_ops.get_spotify_userid()
+
+    # Copy DB in memory to avoid mistakes being reflected into the main DB.
+    master = CSqliteExtDatabase(db_path)
+    master.backup(db)
+
+    if(os.path.exists(playlist_dump_file)):
+        with open(playlist_dump_file, "r") as jsonfile:
+            all_playlists = json.loads(jsonfile.read())
+    else:
+        print(f"Playlist file {playlist_dump_file} does not exist!")
+        input("Press any key to continue")
+        return
+
+    for spotify_playlist_name in all_playlists.keys():
+        spotify_playlist_tracks = all_playlists[spotify_playlist_name]
+
+        spotify_playlist_track_total = len(spotify_playlist_tracks)
+
+        matched_list = []
+        matched_paths = []
+        unmatched_track_ids = []
+        unmatched_list = []
+
+        pre_matched_tracks_by_spot_tid, spotify_playlist_tracks = match_existing_spotify_tids(spotify_playlist_tracks)
+
+        spotify_playlist_tracks_merged = list2dictmerge(
+            deepcopy(spotify_playlist_tracks))
+
+        offset = 0
+        for spotify_album_artist, _ in spotify_playlist_tracks_merged.items():
+            try:
+                album_artists = get_album_artist_from_merged_data(spotify_album_artist, spotify_playlist_tracks_merged)
+            except DoesNotExist:
+                # try:
+                #     # Maybe some casing is different
+                #     album_artist = AlbumArtist.get(
+                #         AlbumArtist.ALBUMARTIST == spotify_album_artist.casefold())
+                # except DoesNotExist:
+                    print(f"Artist: {spotify_album_artist} does not exist")
+                    # Add all tracks of this artist to unmatched tracks and increase offset accordingly
+                    skipped_tracks = []
+                    for track in spotify_playlist_tracks_merged[spotify_album_artist]:
+                        skipped_tracks.append(
+                            {'ALBUMARTIST': spotify_album_artist} | track
+                        )
+
+                        if track['SPOTIFY_TID'] != track['SPOTIFY_LINKED_TID']:
+                            unmatched_track_ids.append(spotify_ops.return_saved_tid(
+                                [track['SPOTIFY_TID'], track['SPOTIFY_LINKED_TID']]
+                            ))
+                        else:
+                            unmatched_track_ids.append(track['SPOTIFY_TID'])
+
+                    unmatched_list += skipped_tracks
+                    offset += len(skipped_tracks)
+                    continue
+
+            for playlist_track in spotify_playlist_tracks_merged[spotify_album_artist]:
+                skip_generation_and_save = False
+                abort_abort = False
+                offset += 1
+                print(
+                    f"Querying DB for tracks: {offset} / {spotify_playlist_track_total}", end="\r")
+
+                result = \
+                    search_track_in_db(track_metadata=playlist_track, album_artists=album_artists, skip_prompts=True)
+                if result == 9:
+                    skip_generation_and_save = True
+                    break
+                elif result == 99:
+                    abort_abort = True
+                    break
+                if len(result) > 1:
+                    print(
+                        f"{bcolors.FAIL}Multiple Matches found: {result}{bcolors.ENDC}")
+                    # TODO: Ask user for correct match by checking playlist_track['SPOTIFY']
+                    continue
+                elif len(result) == 0:
+                    unmatched_track = {'ALBUMARTIST': spotify_album_artist} | playlist_track
+                    unmatched_list.append(unmatched_track)
+                    if unmatched_track['SPOTIFY_TID'] != unmatched_track['SPOTIFY_LINKED_TID']:
+                        unmatched_track_ids.append(spotify_ops.return_saved_tid(
+                            [unmatched_track['SPOTIFY_TID'], unmatched_track['SPOTIFY_LINKED_TID']]
+                        ))
+                    else:
+                        unmatched_track_ids.append(unmatched_track['SPOTIFY_TID'])
+                    # print(f"No result found for {playlist_track['ALBUMARTIST']} - {playlist_track['TITLE']}")
+                    continue
+                matched_list += result
+            if abort_abort:
+                print(f"{bcolors.WARNING}Aborting!{bcolors.ENDC}")
+                return
+            elif skip_generation_and_save:
+                break
+
+        # for item in matched_list:
+        #     update_trackid_in_db(spotify_tid=item['SPOTIFY_TID'], streamhash=item['STREAMHASH'])
+
+        matched_list += pre_matched_tracks_by_spot_tid
+        # Sorting based on PLAYLIST_ORDER, thanks https://stackoverflow.com/a/73050/6437140
+        matched_list_sorted = sorted(matched_list, key=lambda d: d['PLAYLIST_ORDER'])
+
+        for item in matched_list_sorted:
+            if isinstance(liststr_to_list(item['PATH']), list):
+                # Use the 1st PATH. TODO: Make this more accurate by checking Album
+                # TAG: cd213e2f
+                item['PATH'] = item['PATH'][0]
+            matched_paths.append(item['PATH'])
+            # matched_paths.append("../" + item['PATH'])
+
+        unmatched_dict = list2dictmerge(deepcopy(unmatched_list))
+        matched_dict = list2dictmerge(deepcopy(matched_list))
+        print(f"\n{len(matched_list)}/{spotify_playlist_track_total} tracks Matched. ")
+
+        generate_m3u(playlist_name=spotify_playlist_name, track_paths=matched_paths)
+        if len(unmatched_track_ids) > 0:
+            spotify_ops.generate_playlist_from_tracks(track_ids=unmatched_track_ids,
+                                                        playlist_name=spotify_playlist_name)
+
+        with open("unmatched.json", "w") as jsonfile:
+            encoded_json = json.dumps(unmatched_dict, indent=4, sort_keys=True, ensure_ascii=False)
+            jsonfile.write(encoded_json)
+        with open("matched.json", "w") as jsonfile:
+            encoded_json = json.dumps(matched_dict, indent=4, sort_keys=True, ensure_ascii=False)
+            jsonfile.write(encoded_json)
+
+    db.backup(master)
+    master.execute_sql('VACUUM;')
+
+
 def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=False, owner_only=True):
 
     """
@@ -847,11 +995,14 @@ def generate_local_playlist(all_saved_tracks=False, skip_playlist_generation=Fal
     skip_generation_and_save = False
     abort_abort = False
 
+    user_id = spotify_ops.get_spotify_userid()
+    playlist_id = spotify_ops.select_user_playlist(user_id=user_id, owner_only=owner_only)
+
     # Copy DB in memory to avoid mistakes being reflected into the main DB.
     master = CSqliteExtDatabase(db_path)
     master.backup(db)
     if not all_saved_tracks:
-        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.fetch_playlist_tracks(owner_only=owner_only)
+        spotify_playlist_name, spotify_playlist_tracks = spotify_ops.fetch_playlist_tracks(user_id=user_id, playlist_id=playlist_id, owner_only=owner_only)
     else:
         # spotify_playlist_name, spotify_playlist_tracks = spotify_ops.get_my_saved_tracks()
         # with open("allmytracks.json", "w") as jsonfile:

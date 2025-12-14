@@ -10,6 +10,13 @@ sp = get_spotify_connection()
 
 logger = logging.getLogger(__name__)
 
+def get_spotify_userid(user_id=None):
+    if user_id is None:
+        user_id = sp.me()['id']
+    else:
+        user_id = sp.user(user_id)['id']
+    return user_id
+
 def get_missing_playlist_items_from_trackids(playlist_id=None, track_ids=None):
     """
     For some unknown reason not all tracks gets added in the playlist.

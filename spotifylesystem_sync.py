@@ -1,6 +1,6 @@
 from common import cls, missing_lrc
 from db_ops import cleanup_db, sync_fs_to_db, export_altColumns, import_altColumns, partial_sync, \
-    generate_local_playlist
+    generate_local_playlist, generate_local_playlists_from_dump
 
 import time
 
@@ -65,6 +65,7 @@ MENU_OPTIONS = [
     # Use lambda to pass arguments to the function without executing it immediately
     ("Export all saved playlists in your profile", lambda: dump_all_my_playlists(owner_only=False)),
     ("Export owned playlists in your profile", lambda: dump_all_my_playlists(owner_only=True)),
+    ("Generate m3u8 of exported playlists dump JSON", generate_local_playlists_from_dump),
     ("Export whitelist & blacklist", export_altColumns),
     ("Import whitelist & blacklist", import_altColumns),
     ("Cleanup duplicates in db", cleanup_db),
