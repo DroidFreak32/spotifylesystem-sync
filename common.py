@@ -27,7 +27,6 @@ global spotify_client_secret
 global redirect_uri
 global multitag_files
 
-
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -426,6 +425,21 @@ def generate_m3u_separate_dir(playlist_name='playlist', track_paths=[]):
 def dump_to_json(obj=None, file_name="tmp.json"):
     with open(file_name, 'w') as json_file:
         json.dump(obj, json_file, indent=4)
+
+def group_tracks_by_albumartist(tracks):
+    """
+    Groups a list of track dictionaries by their ALBUMARTIST.
+
+    @param tracks: List of track dictionaries (e.g., from cleanup_playlist)
+    @return: Dictionary where keys are ALBUMARTIST and values are lists of tracks
+    """
+    grouped = {}
+    for track in tracks:
+        artist = track.get('ALBUMARTIST', 'Unknown Artist')
+        if artist not in grouped:
+            grouped[artist] = []
+        grouped[artist].append(track)
+    return grouped
 
 if __name__ == '__main__':
     print("Main")
